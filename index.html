@@ -11,19 +11,7 @@
     <body>
         <div class="content">
             <div class="pure-g">
-                <div class="pure-u-1-2">
-                    <form class="pure-form">
-                        <select class="pure-u-1" size="3" id="pc-list">
-                        </select>
-                        <div class="pure-g">
-                            <button class="pure-u-1-2 pure-button">New</button>
-                            <button class="pure-u-1-2 pure-button">Del</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="pure-u-1-2" id="pc-view">
-                    <character></character>
-                </div>
+                <charman></charman>
             </div>
         </div>
 
@@ -31,58 +19,23 @@
             Nephilim Savage Worlds edition Character Manager
         </footer>
 
-        <script type="riot/tag">
-<die-select>
-    <select name="fighting">
-        <option value=""></option>
-        <option value="4">d4</option>
-        <option value="6">d6</option>
-        <option value="8">d8</option>
-        <option value="10">d10</option>
-        <option value="12">d12</option>
-    </select>
-</die-select>
-<character>
-    <form class="pure-form">
-        <table class="pure-table pure-table-striped">
-           <tbody>
-               <tr>
-                   <th>Name</th><td><input type="text" name="name"/></td>
-               </tr>
-               <tr>
-                   <th>Fighting</th><td><die-select></die-select></td>
-               </tr>
-           </tbody>
-        </table>
-    </form>
-</character>
-        </script>
-
         <script src="./jquery.min.js"></script>
         <script src="./riot+compiler.min.js"></script>
+        <script src="./charman.tag" type="riot/tag"></script>
         <script src="./diceRoller.js"></script>
         <script src="./Character.js"></script>
         <script src="./app.js"></script>
         <script>
-$(document).ready(function () {
-    app.init();
-    riot.mount('character');
+            $(document).ready(function () {
+                riot.mount('charman');
 
-    riot.route('/', function () {
-        console.log('The list of char')
-    });
+                riot.route('/', function () {
+                    console.log('The list of char');
+                    //loading
+                });
 
-    riot.route('/char/*', function (name) {
-        console.log('View ' + name);
-        app.model.forEach(function (item) {
-            if (item.name === name) {
-                $('#pc-view [name=name]').val(item.name);
-                $('#pc-view [name=fighting]').val(item.fighting);
-            }
-        });
-    });
-    riot.route.start(true)
-});
+                riot.route.start(true)
+            });
         </script>
     </body>
 </html>

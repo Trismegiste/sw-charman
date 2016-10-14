@@ -2,7 +2,7 @@
  * Character object
  */
 
-var Character = function () {
+function Character() {
     this.name = '';
     this.currentWounds = 0;
     this.spentToken = 0;
@@ -29,5 +29,6 @@ var Character = function () {
     this.rangedToBeHit = function () {
         return 4;
     };
-};
+}
+;
 
