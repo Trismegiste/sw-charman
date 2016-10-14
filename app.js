@@ -4,20 +4,19 @@
 
 var app = {
     init: function () {
-        var pc = new Character();
-        pc.name = 'Arkel';
-        pc.property["Chanceux"] = true;
-        pc.property["Très Chanceux"] = true;
-        pc.property["Gamin"] = true;
-        app.addCharacter(pc);
+        var pc1 = new Character();
+        pc1.name = 'Arkel';
+        pc1.fighting = 8;
+        app.addCharacter(pc1);
+
+        var pc2 = new Character();
+        pc2.name = 'Dracka';
+        pc2.fighting = 12;
+        app.addCharacter(pc2);
+
         // event
         $('#pc-list').on('change', function (e) {
-            app.model.forEach(function (item) {
-                var search = $('#pc-list').val();
-                if (item.name === search) {
-                    $('#pc-view').html(JSON.stringify(item, null, 2));
-                }
-            });
+            riot.route('char/' + $('#pc-list').val());
         });
 
     },
