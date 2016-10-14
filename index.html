@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nephilim Savage Worlds edition Character Manager</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./pure-min.css"/>
+        <link rel="stylesheet" href="./grids-responsive-min.css"/>
+        <link rel="stylesheet" href="./main.css"/>
+    </head>
+    <body>
+        <div class="content">
+            <div class="pure-g">
+                <div class="pure-u-1-2">
+                    <form class="pure-form">
+                        <select class="pure-u-1" size="3">
+                            <option>tot</option>
+                            <option>tot</option>
+                            <option>tot</option>
+                        </select>
+                        <div class="pure-g">
+                            <button class="pure-u-1-2 pure-button">New</button>
+                            <button class="pure-u-1-2 pure-button">Del</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="pure-u-1-2 pc-view">
+
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            Nephilim Savage Worlds edition Character Manager
+        </footer>
+        <script src="./jquery.min.js"></script>
+        <script src="./diceRoller.js"></script>
+        <script src="./Character.js"></script>
+        <script src="./app.js"></script>
+        <script>
+            $(document).ready(function () {
+                app.init();
+            });
+        </script>
+    </body>
+</html>
