@@ -24,16 +24,9 @@
         <script src="./charman.tag" type="riot/tag"></script>
         <script src="./diceRoller.js"></script>
         <script src="./Character.js"></script>
-        <script src="./app.js"></script>
         <script>
             $(document).ready(function () {
                 riot.mount('charman');
-
-                riot.route('/', function () {
-                    console.log('The list of char');
-                    //loading
-                });
-
                 riot.route.start(true)
             });
         </script>

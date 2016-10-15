@@ -22,8 +22,8 @@
         </ul>
         <div class="pure-g">
             <form class="pure-form">
-                <button class="pure-u-1-2 pure-button">New</button>
-                <button class="pure-u-1-2 pure-button">Del</button>
+                <button class="pure-u-1-2 pure-button" onclick={ persist }>Save</button>
+                <button class="pure-u-1-2 pure-button" onclick={ restore }>Load</button>
             </form>
         </div>
     </div>
@@ -43,26 +43,34 @@
     </div>
 
     <script>
-        var pc1 = new Character();
-        pc1.name = 'Arkel';
-        pc1.fighting = 8;
 
-        var pc2 = new Character();
-        pc2.name = 'Dracka';
-        pc2.fighting = 12;
-
-        this.characterList = [pc1, pc2];
-        this.current = {};
+        this.characterList = [];
         self = this;
+
+        riot.route('/', function () {
+            console.log('The list of char');
+            self.current = {};
+            self.update();
+        });
 
         riot.route('/char/*', function (name) {
             console.log('View ' + name);
+            self.current = {};
             self.characterList.forEach(function (item) {
                 if (item.name === name) {
                     self.current = item;
-                    self.update();
                 }
             });
+            self.update();
         });
+
+        persist() {
+            localStorage.setItem('sw-character-list', JSON.stringify(self.characterList));
+        };
+
+        restore() {
+           self.characterList = JSON.parse(localStorage.getItem('sw-character-list'));
+           riot.route('/');
+        };
     </script>
 </charman>
