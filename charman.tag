@@ -62,6 +62,9 @@
                     <tr>
                         <th>Toughness</th><td>{current.getToughness()}</td>
                     </tr>
+                    <tr>
+                        <th>Parry</th><td>{current.getParry()}</td>
+                    </tr>
                 </tbody>
             </table>
         </form>
