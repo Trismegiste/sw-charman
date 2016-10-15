@@ -2,6 +2,10 @@
     margin: 2em;
 }
 
+.valign-widget {
+    padding-top: 0.6em;
+}
+
 footer {
     margin: 2em;
     font-size: 60%;

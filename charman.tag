@@ -67,6 +67,34 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="pure-g">
+                <div class="pure-u-1-4 valign-widget">Wounds</div>
+                <div class="pure-u-1-4">
+                    <select name="wounds" value="{current.currentWounds}">
+                        <option value="0">0</option>
+                        <option value="-1">-1</option>
+                        <option value="-2">-2</option>
+                        <option value="-3">-3</option>
+                        <option value="-4">Crit.</option>
+                    </select>
+                </div>
+                <div class="pure-u-1-4 valign-widget">Fatigue</div>
+                <div class="pure-u-1-4">
+                    <select name="fatigue" value="{current.currentFatigue}">
+                        <option value="0">0</option>
+                        <option value="-1">-1</option>
+                        <option value="-2">-2</option>
+                        <option value="-4">Crit.</option>
+                    </select>
+                </div>
+            </div>
+            <div class="pure-g">
+                <div class="pure-u-1-3 valign-widget">Spent token</div>
+                <div class="pure-u-1-3">
+                    <input type="number" name="token" value="{current.spentToken}"/>
+                </div>
+                <div class="pure-u-1-3 valign-widget">/ {current.getMaxToken()}</div>
+            </div>
         </form>
     </div>
 
@@ -97,6 +125,9 @@
                 if (item.name === self.current.name) {
                     item.vigor = self.vigor.value;
                     item.fighting = self.fighting.value;
+                    item.currentWounds = self.wounds.value;
+                    item.currentFatigue = self.fatigue.value;
+                    item.spentToken = self.token.value;
                     self.current = item;
                 }
             });
