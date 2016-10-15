@@ -90,12 +90,13 @@
         });
 
         updateModel() {
-            console.log(self.name.value)
-            console.log(self.fighting.value)
-            console.log(self.vigor.value)
-
-            self.current.vigor = self.vigor.value;
-            console.log(self.current)
+            self.characterList.forEach(function (item) {
+                if (item.name === self.current.name) {
+                    item.vigor = self.vigor.value;
+                    item.fighting = self.fighting.value;
+                    self.current = item;
+                }
+            });
         }
 
         persist() {
