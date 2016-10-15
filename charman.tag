@@ -36,7 +36,13 @@
                     </tr>
                     <tr>
                         <th>Fighting</th><td><die-select name="fighting" value="{current.fighting}"></die-select></td>
-                </tr>
+                    </tr>
+                    <tr>
+                        <th>Vigor</th><td><die-select name="vigor" value="{current.vigor}"></die-select></td>
+                    </tr>
+                    <tr>
+                        <th>Toughness</th><td>{current.getToughness()}</td>
+                    </tr>
                 </tbody>
             </table>
         </form>
@@ -64,12 +70,29 @@
             self.update();
         });
 
+        updateModel() {
+            console.log(self.name.value)
+            console.log(self.fighting.value)
+            console.log(self.vigor.value)
+
+            self.current.vigor = self.vigor.value;
+            console.log(self.current)
+        }
+
         persist() {
             localStorage.setItem('sw-character-list', JSON.stringify(self.characterList));
         };
 
         restore() {
-           self.characterList = JSON.parse(localStorage.getItem('sw-character-list'));
+           var flat = JSON.parse(localStorage.getItem('sw-character-list'));
+           self.characterList = [];
+
+           flat.forEach(function(item) {
+               Object.keys(Character.prototype).forEach(function(key){
+                   item[key] = Character.prototype[key];
+               });
+               self.characterList.push(item);
+           })
            riot.route('/');
         };
     </script>
