@@ -2,8 +2,8 @@
     <div class="pure-u-1-2">
         <nav class="pure-menu">
             <ul class="pure-menu-list">
-                <li each="{ characterList }" class="pure-menu-item">
-                    <a href="#char/{ name }" class="pure-menu-link">{ name }</a>
+                <li each="{ pc, i in characterList }" class="pure-menu-item">
+                    <a href="#char/{ i }" class="pure-menu-link">{ pc.name }</a>
                 </li>
             </ul>
         </nav>
@@ -102,14 +102,11 @@
             self.update();
         });
 
-        riot.route('/char/*', function (name) {
-            console.log('View ' + name);
+        riot.route('/char/*', function (id) {
             self.resetCurrent();
-            self.characterList.forEach(function (item) {
-                if (item.name === name) {
-                    self.current = item;
-                }
-            });
+            if (self.characterList[id] !== undefined) {
+                self.current = self.characterList[id];
+            }
             self.update();
         });
 
