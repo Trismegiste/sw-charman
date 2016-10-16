@@ -18,48 +18,37 @@
     </div>
     <div class="pure-u-1-1 pure-u-md-1-2" id="pc-view">
         <form class="pure-form" onchange="{ updateModel }">
-            <table class="pure-table pure-table-striped">
-                <tbody>
-                    <tr>
-                        <th>Name</th><td><input type="text" name="name" value="{current.name}"/></td>
-                    </tr>
-                    <tr>
-                        <th>Fighting</th>
-                        <td>
-                            <select name="fighting" value="{current.fighting}">
-                                <option value="0"></option>
-                                <option value="4">d4</option>
-                                <option value="6">d6</option>
-                                <option value="8">d8</option>
-                                <option value="10">d10</option>
-                                <option value="12">d12</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Vigor</th>
-                        <td>
-                            <select name="vigor" value="{current.vigor}">
-                                <option value="4">d4</option>
-                                <option value="6">d6</option>
-                                <option value="8">d8</option>
-                                <option value="10">d10</option>
-                                <option value="12">d12</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Toughness</th><td>{current.getToughness()}</td>
-                    </tr>
-                    <tr>
-                        <th>Parry</th><td>{current.getParry()}</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="pure-g">
-                <div class="pure-u-1-4 valign-widget">Wounds</div>
+            <fieldset class="pure-g">
+                <div class="pure-u-1-4"><label>Name</label></div>
+                <div class="pure-u-3-4"><input class="pure-input-1" type="text" name="name" value="{current.name}" required="true"/></div>
+                <div class="pure-u-1-4"><label>Fighting</label></div>
                 <div class="pure-u-1-4">
-                    <select name="wounds" value="{current.currentWounds}">
+                    <select name="fighting" value="{current.fighting}">
+                        <option value="0"></option>
+                        <option value="4">d4</option>
+                        <option value="6">d6</option>
+                        <option value="8">d8</option>
+                        <option value="10">d10</option>
+                        <option value="12">d12</option>
+                    </select>
+                </div>
+                <div class="pure-u-1-4"><label>Vigor</label></div>
+                <div class="pure-u-1-4">
+                    <select name="vigor" value="{current.vigor}">
+                        <option value="4">d4</option>
+                        <option value="6">d6</option>
+                        <option value="8">d8</option>
+                        <option value="10">d10</option>
+                        <option value="12">d12</option>
+                    </select>
+                </div>
+                <div class="pure-u-1-4"><label>Toughness</label></div>
+                <div class="pure-u-1-4"><label>{current.getToughness()}</label></div>
+                <div class="pure-u-1-4"><label>Parry</label></div>
+                <div class="pure-u-1-4"><label>{current.getParry()}</label></div>
+                <div class="pure-u-1-4"><label>Wounds</label></div>
+                <div class="pure-u-1-4">
+                <select name="wounds" value="{current.currentWounds}">
                         <option value="0">0</option>
                         <option value="-1">-1</option>
                         <option value="-2">-2</option>
@@ -67,7 +56,7 @@
                         <option value="-4">Crit.</option>
                     </select>
                 </div>
-                <div class="pure-u-1-4 valign-widget">Fatigue</div>
+                <div class="pure-u-1-4"><label>Fatigue</label></div>
                 <div class="pure-u-1-4">
                     <select name="fatigue" value="{current.currentFatigue}">
                         <option value="0">0</option>
@@ -76,14 +65,12 @@
                         <option value="-4">Crit.</option>
                     </select>
                 </div>
-            </div>
-            <div class="pure-g">
-                <div class="pure-u-1-3 valign-widget">Spent token</div>
+                <div class="pure-u-1-3"><label>Spent token</label></div>
                 <div class="pure-u-1-3">
-                    <input type="number" name="token" value="{current.spentToken}"/>
+                    <input type="number" name="token" value="{current.spentToken}" class="pure-input-1"/>
                 </div>
-                <div class="pure-u-1-3 valign-widget">/ {current.getMaxToken()}</div>
-            </div>
+                <div class="pure-u-1-3"><label>/ {current.getMaxToken()}</label></div>
+            </fieldset>
             <div class="pure-g">
                 <div class="pure-u-1-3"><a class="pure-button" onclick="{ onReset }">Reset</a></div>
                 <div class="pure-u-1-3"><a class="pure-button pure-button-primary" onclick="{ onAppend }">Append</a></div>

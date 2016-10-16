@@ -2,10 +2,6 @@
     margin: 0.6em;
 }
 
-.valign-widget {
-    padding-top: 0.6em;
-}
-
 footer {
     margin: 2em;
     font-size: 60%;
@@ -22,4 +18,13 @@ footer {
 
 .button-warning {
     background: rgb(223, 117, 20); /* this is an orange */
+}
+
+.pure-form label {
+    margin-bottom: 0.3em;
+    display: block;
+}
+
+.pure-form input, .pure-form select {
+    margin-bottom: 0.3em;
 }
