@@ -85,8 +85,9 @@
                 <div class="pure-u-1-3 valign-widget">/ {current.getMaxToken()}</div>
             </div>
             <div class="pure-g">
-                <div class="pure-u-1-2"><a class="pure-button button-error" onclick="{ onReset }">Reset</a></div>
-                <div class="pure-u-1-2"><a class="pure-button pure-button-primary" onclick="{ onAppend }">Append</a></div>
+                <div class="pure-u-1-3"><a class="pure-button" onclick="{ onReset }">Reset</a></div>
+                <div class="pure-u-1-3"><a class="pure-button pure-button-primary" onclick="{ onAppend }">Append</a></div>
+                <div class="pure-u-1-3"><a class="pure-button button-error" onclick="{ onDelete }">Delete</a></div>
             </div>
         </form>
     </div>
@@ -106,13 +107,11 @@
             self.resetCurrent();
             if (self.characterList[id] !== undefined) {
                 self.current = self.characterList[id];
-                self.characterIndex = id;
             }
             self.update();
         });
 
         resetCurrent() {
-            self.characterIndex = undefined;
             self.current = new Character();
         }
 
@@ -127,8 +126,9 @@
 
         updateModel() {
             self.updateCurrent();
-            if (self.characterIndex !== undefined) {
-                self.characterList[self.characterIndex] = self.current;
+            var idx = self.characterList.indexOf(self.current);
+            if (idx !== -1) {
+                self.characterList[idx] = self.current;
             }
         }
 
@@ -150,7 +150,7 @@
         };
 
         onReset() {
-            self.current = {};
+            self.resetCurrent()
             riot.route('/');
         }
 
@@ -163,6 +163,15 @@
             self.resetCurrent();
             self.updateCurrent();
             self.characterList.push(self.current);
+            riot.route('/char/' + (self.characterList.length - 1));
+        }
+
+        onDelete() {
+            var idx = self.characterList.indexOf(self.current);
+            if (idx !== -1) {
+                self.characterList.splice(idx, 1);
+            }
+            riot.route('/');
         }
     </script>
 </charman>
