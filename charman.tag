@@ -1,25 +1,12 @@
-<die-select>
-    <select name="{ opts.name }">
-        <option value=""></option>
-        <option value="4">d4</option>
-        <option value="6">d6</option>
-        <option value="8">d8</option>
-        <option value="10">d10</option>
-        <option value="12">d12</option>
-    </select>
-
-    <script>
-        this.on('update', function () {
-            // Appel à querySelector contextualisé
-            $(this.root.querySelectorAll('select')).val(this.opts.value);
-        });
-    </script>
-</die-select>
 <charman>
     <div class="pure-u-1-2">
-        <ul>
-            <li each={ characterList }><a href="#char/{ name }">{ name }</a></li>
-        </ul>
+        <nav class="pure-menu">
+            <ul class="pure-menu-list">
+                <li each="{ characterList }" class="pure-menu-item">
+                    <a href="#char/{ name }" class="pure-menu-link">{ name }</a>
+                </li>
+            </ul>
+        </nav>
         <div class="pure-g">
             <form class="pure-form">
                 <button class="pure-u-1-2 pure-button" onclick={ persist }>Save</button>
@@ -129,6 +116,7 @@
                     item.currentFatigue = self.fatigue.value;
                     item.spentToken = self.token.value;
                     self.current = item;
+                    return;
                 }
             });
         }
