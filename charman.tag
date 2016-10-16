@@ -106,11 +106,13 @@
             self.resetCurrent();
             if (self.characterList[id] !== undefined) {
                 self.current = self.characterList[id];
+                self.characterIndex = id;
             }
             self.update();
         });
 
         resetCurrent() {
+            self.characterIndex = undefined;
             self.current = new Character();
         }
 
@@ -125,12 +127,9 @@
 
         updateModel() {
             self.updateCurrent();
-            self.characterList.forEach(function (item) {
-                if (item.name === self.current.name) {
-                    item = self.current;
-                    return;
-                }
-            });
+            if (self.characterIndex !== undefined) {
+                self.characterList[self.characterIndex] = self.current;
+            }
         }
 
         persist() {
