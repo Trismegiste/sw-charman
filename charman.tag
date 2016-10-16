@@ -2,8 +2,8 @@
     <div class="pure-u-1-2">
         <nav class="pure-menu">
             <ul class="pure-menu-list">
-                <li each="{ characterList }" class="pure-menu-item">
-                    <a href="#char/{ name }" class="pure-menu-link">{ name }</a>
+                <li each="{ pc, i in characterList }" class="pure-menu-item">
+                    <a href="#char/{ i }" class="pure-menu-link">{ pc.name }</a>
                 </li>
             </ul>
         </nav>
@@ -85,8 +85,9 @@
                 <div class="pure-u-1-3 valign-widget">/ {current.getMaxToken()}</div>
             </div>
             <div class="pure-g">
-                <div class="pure-u-1-2"><a class="pure-button button-error" onclick="{ onReset }">Reset</a></div>
-                <div class="pure-u-1-2"><a class="pure-button pure-button-primary" onclick="{ onAppend }">Append</a></div>
+                <div class="pure-u-1-3"><a class="pure-button" onclick="{ onReset }">Reset</a></div>
+                <div class="pure-u-1-3"><a class="pure-button pure-button-primary" onclick="{ onAppend }">Append</a></div>
+                <div class="pure-u-1-3"><a class="pure-button button-error" onclick="{ onDelete }">Delete</a></div>
             </div>
         </form>
     </div>
@@ -102,14 +103,11 @@
             self.update();
         });
 
-        riot.route('/char/*', function (name) {
-            console.log('View ' + name);
+        riot.route('/char/*', function (id) {
             self.resetCurrent();
-            self.characterList.forEach(function (item) {
-                if (item.name === name) {
-                    self.current = item;
-                }
-            });
+            if (self.characterList[id] !== undefined) {
+                self.current = self.characterList[id];
+            }
             self.update();
         });
 
@@ -128,12 +126,10 @@
 
         updateModel() {
             self.updateCurrent();
-            self.characterList.forEach(function (item) {
-                if (item.name === self.current.name) {
-                    item = self.current;
-                    return;
-                }
-            });
+            var idx = self.characterList.indexOf(self.current);
+            if (idx !== -1) {
+                self.characterList[idx] = self.current;
+            }
         }
 
         persist() {
@@ -154,7 +150,7 @@
         };
 
         onReset() {
-            self.current = {};
+            self.resetCurrent()
             riot.route('/');
         }
 
@@ -167,6 +163,15 @@
             self.resetCurrent();
             self.updateCurrent();
             self.characterList.push(self.current);
+            riot.route('/char/' + (self.characterList.length - 1));
+        }
+
+        onDelete() {
+            var idx = self.characterList.indexOf(self.current);
+            if (idx !== -1) {
+                self.characterList.splice(idx, 1);
+            }
+            riot.route('/');
         }
     </script>
 </charman>
