@@ -98,13 +98,13 @@
 
         riot.route('/', function () {
             console.log('The list of char');
-            self.current = {};
+            self.resetCurrent();
             self.update();
         });
 
         riot.route('/char/*', function (name) {
             console.log('View ' + name);
-            self.current = {};
+            self.resetCurrent();
             self.characterList.forEach(function (item) {
                 if (item.name === name) {
                     self.current = item;
@@ -113,15 +113,24 @@
             self.update();
         });
 
+        resetCurrent() {
+            self.current = new Character();
+        }
+
+        updateCurrent() {
+            self.current.name = self.name.value;
+            self.current.vigor = self.vigor.value;
+            self.current.fighting = self.fighting.value;
+            self.current.currentWounds = self.wounds.value;
+            self.current.currentFatigue = self.fatigue.value;
+            self.current.spentToken = self.token.value;
+        }
+
         updateModel() {
+            self.updateCurrent();
             self.characterList.forEach(function (item) {
                 if (item.name === self.current.name) {
-                    item.vigor = self.vigor.value;
-                    item.fighting = self.fighting.value;
-                    item.currentWounds = self.wounds.value;
-                    item.currentFatigue = self.fatigue.value;
-                    item.spentToken = self.token.value;
-                    self.current = item;
+                    item = self.current;
                     return;
                 }
             });
@@ -150,10 +159,10 @@
         }
 
         onAppend() {
-            var pc = new Character();
-            pc.name = self.name.value;
-            self.characterList.push(pc);
-            self.updateModel();
+            self.current = new Character();
+            self.updateCurrent();
+            self.characterList.push(self.current);
+            //self.updateModel();
         }
     </script>
 </charman>
