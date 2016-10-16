@@ -8,10 +8,12 @@
             </ul>
         </nav>
         <div class="pure-g">
-            <form class="pure-form">
-                <button class="pure-u-1-2 pure-button" onclick={ persist }>Save</button>
-                <button class="pure-u-1-2 pure-button" onclick={ restore }>Load</button>
-            </form>
+            <div class="pure-u-1-2">
+                <a class="button-warning pure-button" onclick={ persist }>Save</a>
+            </div>
+            <div class="pure-u-1-2">
+                <a class="pure-button pure-button-primary" onclick={ restore }>Load</a>
+            </div>
         </div>
     </div>
     <div class="pure-u-1-2" id="pc-view">
@@ -25,7 +27,7 @@
                         <th>Fighting</th>
                         <td>
                             <select name="fighting" value="{current.fighting}">
-                                <option value=""></option>
+                                <option value="0"></option>
                                 <option value="4">d4</option>
                                 <option value="6">d6</option>
                                 <option value="8">d8</option>
@@ -82,6 +84,10 @@
                 </div>
                 <div class="pure-u-1-3 valign-widget">/ {current.getMaxToken()}</div>
             </div>
+            <div class="pure-g">
+                <div class="pure-u-1-2"><a class="pure-button button-error" onclick="{ onReset }">Reset</a></div>
+                <div class="pure-u-1-2"><a class="pure-button pure-button-primary" onclick="{ onAppend }">Append</a></div>
+            </div>
         </form>
     </div>
 
@@ -137,5 +143,17 @@
            })
            riot.route('/');
         };
+
+        onReset() {
+            self.current = {};
+            riot.route('/');
+        }
+
+        onAppend() {
+            var pc = new Character();
+            pc.name = self.name.value;
+            self.characterList.push(pc);
+            self.updateModel();
+        }
     </script>
 </charman>
