@@ -159,10 +159,14 @@
         }
 
         onAppend() {
-            self.current = new Character();
+            // checking non-empty name
+            if (self.name.value == '') {
+                return;
+            }
+            // checking
+            self.resetCurrent();
             self.updateCurrent();
             self.characterList.push(self.current);
-            //self.updateModel();
         }
     </script>
 </charman>
