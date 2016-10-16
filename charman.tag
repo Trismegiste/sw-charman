@@ -1,22 +1,22 @@
 <charman>
-    <div class="pure-u-1-2">
-        <nav class="pure-menu">
+    <div class="pure-u-1-1 pure-u-md-1-2">
+        <nav class="pure-menu pure-menu-horizontal">
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link" onclick={ persist }>Save</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link" onclick={ restore }>Load</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link" onclick={ export }>Export</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link" onclick={ import }>Import</a></li>
+            </ul>
+        </nav>
+        <nav class="pure-menu char-list">
             <ul class="pure-menu-list">
                 <li each="{ pc, i in characterList }" class="pure-menu-item">
-                    <a href="#char/{ i }" class="pure-menu-link">{ pc.name }</a>
+                    <a href="#char/{ i }" class="pure-menu-link">{ pc.name } (vs XXX W:{pc.currentWounds})</a>
                 </li>
             </ul>
         </nav>
-        <div class="pure-g">
-            <div class="pure-u-1-2">
-                <a class="button-warning pure-button" onclick={ persist }>Save</a>
-            </div>
-            <div class="pure-u-1-2">
-                <a class="pure-button pure-button-primary" onclick={ restore }>Load</a>
-            </div>
-        </div>
     </div>
-    <div class="pure-u-1-2" id="pc-view">
+    <div class="pure-u-1-1 pure-u-md-1-2" id="pc-view">
         <form class="pure-form" onchange="{ updateModel }">
             <table class="pure-table pure-table-striped">
                 <tbody>
