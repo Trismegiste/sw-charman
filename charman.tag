@@ -73,7 +73,9 @@
             </div>
             <div class="pure-u-1-3"><label>Spent token</label></div>
             <div class="pure-u-1-3">
-                <input type="number" name="token" value="{current.spentToken}" class="pure-input-2-3"/>
+                <input type="number" name="token"
+                       value="{current.spentToken}" class="pure-input-2-3"
+                       min="0" max="{current.getMaxToken()}"/>
             </div>
             <div class="pure-u-1-3"><label>/ {current.getMaxToken()}</label></div>
             <div class="pure-u-1-3"><a class="pure-button" onclick="{ onReset }">Reset</a></div>
