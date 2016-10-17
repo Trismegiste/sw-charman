@@ -11,6 +11,7 @@ var Character = function () {
     this.fighting = 0;
     this.vigor = 4;
     this.target = '';
+    this.shaken = false;
 };
 
 Character.prototype = {
