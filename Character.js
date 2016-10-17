@@ -10,6 +10,7 @@ var Character = function () {
     this.property = {};
     this.fighting = 0;
     this.vigor = 4;
+    this.target = '';
 };
 
 Character.prototype = {
