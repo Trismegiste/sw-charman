@@ -41,10 +41,10 @@
                     <option value="12">d12</option>
                 </select>
             </div>
-            <div class="pure-u-1-4"><label>Toughness</label></div>
-            <div class="pure-u-1-4"><input type="text" value="{current.getToughness()}" readonly="true" class="pure-input-2-3"/></div>
             <div class="pure-u-1-4"><label>Parry</label></div>
             <div class="pure-u-1-4"><input type="text" value="{current.getParry()}" readonly="true" class="pure-input-2-3"/></div>
+            <div class="pure-u-1-4"><label>Toughness</label></div>
+            <div class="pure-u-1-4"><input type="text" value="{current.getToughness()}" readonly="true" class="pure-input-2-3"/></div>
             <div class="pure-u-1-4"><label>Wounds</label></div>
             <div class="pure-u-1-4">
             <select name="wounds" value="{current.currentWounds}">
