@@ -54,7 +54,7 @@
             <div class="pure-u-1-4"><input type="text" value="{current.getToughness()}" readonly="true" class="pure-input-2-3"/></div>
             <div class="pure-u-1-4"><label>Wounds</label></div>
             <div class="pure-u-1-4">
-            <select name="wounds" value="{current.currentWounds}">
+                <select name="wounds" value="{current.currentWounds}">
                     <option value="0">0</option>
                     <option value="-1">-1</option>
                     <option value="-2">-2</option>
@@ -64,8 +64,8 @@
             </div>
             <div class="pure-u-1-2">
                 <label class="pure-checkbox">
-                    <input type="checkbox" name="shaken" checked="{ current.shaken }"/>
                     Shaken
+                    <input type="checkbox" name="shaken" checked="{ current.shaken }"/>
                 </label>
             </div>
             <div class="pure-u-1-3"><label>Spent token</label></div>
@@ -109,7 +109,7 @@
             self.current.vigor = self.vigor.value;
             self.current.fighting = self.fighting.value;
             self.current.currentWounds = self.wounds.value;
-            self.current.shaken = self.shaken.value;
+            self.current.shaken = self.shaken.checked;
             self.current.spentToken = self.token.value;
             self.current.target = self.target.value;
         }
