@@ -28,3 +28,12 @@ footer {
 .pure-form input, .pure-form select {
     margin-bottom: 0.3em;
 }
+
+.char-list {
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+.top-menu {
+    margin-bottom: 1em;
+}

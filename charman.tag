@@ -1,6 +1,6 @@
 <charman>
     <div class="pure-u-1-1 pure-u-md-1-2">
-        <nav class="pure-menu pure-menu-horizontal">
+        <nav class="pure-menu pure-menu-horizontal top-menu">
             <ul class="pure-menu-list">
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link" onclick={ persist }>Save</a></li>
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link" onclick={ restore }>Load</a></li>
@@ -18,6 +18,7 @@
     </div>
     <div class="pure-u-1-1 pure-u-md-1-2" id="pc-view">
         <form class="pure-form" onchange="{ updateModel }">
+            <legend>Character's traits</legend>
             <fieldset class="pure-g">
                 <div class="pure-u-1-4"><label>Name</label></div>
                 <div class="pure-u-3-4"><input class="pure-input-1" type="text" name="name" value="{current.name}" required="true"/></div>
@@ -43,9 +44,9 @@
                     </select>
                 </div>
                 <div class="pure-u-1-4"><label>Toughness</label></div>
-                <div class="pure-u-1-4"><label>{current.getToughness()}</label></div>
+                <div class="pure-u-1-4"><input type="text" value="{current.getToughness()}" readonly="true" class="pure-input-2-3"/></div>
                 <div class="pure-u-1-4"><label>Parry</label></div>
-                <div class="pure-u-1-4"><label>{current.getParry()}</label></div>
+                <div class="pure-u-1-4"><input type="text" value="{current.getParry()}" readonly="true" class="pure-input-2-3"/></div>
                 <div class="pure-u-1-4"><label>Wounds</label></div>
                 <div class="pure-u-1-4">
                 <select name="wounds" value="{current.currentWounds}">
@@ -67,7 +68,7 @@
                 </div>
                 <div class="pure-u-1-3"><label>Spent token</label></div>
                 <div class="pure-u-1-3">
-                    <input type="number" name="token" value="{current.spentToken}" class="pure-input-1"/>
+                    <input type="number" name="token" value="{current.spentToken}" class="pure-input-2-3"/>
                 </div>
                 <div class="pure-u-1-3"><label>/ {current.getMaxToken()}</label></div>
             </fieldset>
