@@ -127,16 +127,16 @@
         };
 
         restore() {
-           var flat = JSON.parse(localStorage.getItem('sw-character-list'));
-           self.characterList = [];
+            self.characterList = [];
+            self.opts.repo.loadCurrent()
+                .then(function (arr) {
+                    console.log('load ' + arr.length);
+                    arr.forEach(function (item) {
+                        self.characterList.push(item);
+                    })
+                })
 
-           flat.forEach(function(item) {
-               Object.keys(Character.prototype).forEach(function(key){
-                   item[key] = Character.prototype[key];
-               });
-               self.characterList.push(item);
-           })
-           riot.route('/');
+            riot.route('/');
         };
 
         onReset() {

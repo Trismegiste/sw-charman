@@ -53,7 +53,7 @@ Repository.prototype.saveCurrent = function (arr) {
 }
 
 Repository.prototype.loadCurrent = function () {
-
+    return this.cnx.current.toArray()
 }
 
 
