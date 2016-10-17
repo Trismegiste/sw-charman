@@ -84,6 +84,7 @@
 
         this.characterList = []
         var self = this
+        self.current = new Character();
 
         riot.route('/', function () {
             console.log('The list of char');
@@ -122,7 +123,7 @@
         }
 
         persist() {
-            localStorage.setItem('sw-character-list', JSON.stringify(self.characterList));
+            self.opts.repo.saveCurrent(self.characterList);
         };
 
         restore() {

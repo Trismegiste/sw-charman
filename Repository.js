@@ -7,12 +7,17 @@ var Repository = function () {
     this.cnx.version(1).stores({
         character: 'name'
     });
+    this.cnx.version(2).stores({
+        character: 'name',
+        current: '++'
+    });
 
     this.cnx.open().catch(function (e) {
         alert("Open failed: " + e);
     });
 
     this.cnx.character.mapToClass(Character);
+    this.cnx.current.mapToClass(Character);
 };
 
 Repository.prototype.findByPk = function (pk) {
@@ -25,10 +30,30 @@ Repository.prototype.findAll = function () {
 
 Repository.prototype.persist = function (character) {
     this.cnx.character.put(character)
-            .then(function (event) {
+            .then(function () {
                 console.log('success');
             })
             .catch(function (error) {
                 console.log("Ooops: " + error);
             });
 };
+
+Repository.prototype.saveCurrent = function (arr) {
+    var self = this;
+    self.cnx.current.clear()
+    arr.forEach(function (item) {
+        self.cnx.current.add(item)
+                .then(function () {
+                    console.log('success');
+                })
+                .catch(function (error) {
+                    console.log("Ooops: " + error);
+                });
+    });
+}
+
+Repository.prototype.loadCurrent = function () {
+
+}
+
+
