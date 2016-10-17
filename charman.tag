@@ -134,9 +134,9 @@
                     arr.forEach(function (item) {
                         self.characterList.push(item);
                     })
+                    self.update();
+                    riot.route('/');
                 })
-
-            riot.route('/');
         };
 
         onReset() {
