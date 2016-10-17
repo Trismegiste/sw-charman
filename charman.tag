@@ -70,9 +70,9 @@
             </div>
             <div class="pure-u-1-3"><label>Spent token</label></div>
             <div class="pure-u-1-3">
-                <input type="number" name="token"
-                       value="{current.spentToken}" class="pure-input-2-3"
-                       min="0" max="{current.getMaxToken()}"/>
+                <select name="token" value="{current.spentToken}">
+                    <option each="{val, idx in tokenChoices}" value="{idx}">{val}</option>
+                </select>
             </div>
             <div class="pure-u-1-3"><label>/ {current.getMaxToken()}</label></div>
             <div class="pure-u-1-3"><a class="pure-button" onclick="{ onReset }">Reset</a></div>
@@ -83,8 +83,11 @@
 
     <script>
 
-        this.characterList = [];
-        self = this;
+        this.characterList = []
+        this.tokenChoices = [0, 1, 2, 3]
+        self = this
+
+
 
         riot.route('/', function () {
             console.log('The list of char');
