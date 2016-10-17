@@ -17,7 +17,7 @@
         </nav>
     </div>
     <div class="pure-u-1-1 pure-u-md-1-2" id="pc-view">
-        <form class="pure-form pure-g">
+        <form class="pure-form pure-g" onchange="{ updateModel }">
             <div class="pure-u-1-4"><label>Name</label></div>
             <div class="pure-u-3-4"><input class="pure-input-1" type="text" name="name" value="{current.name}" required="true"/></div>
             <div class="pure-u-1-4"><label>Fighting</label></div>
