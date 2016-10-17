@@ -70,8 +70,7 @@
             </div>
             <div class="pure-u-1-3"><label>Spent token</label></div>
             <div class="pure-u-1-3">
-                <select name="token" value="{current.spentToken}">
-                    <option each="{val, idx in tokenChoices}" value="{idx}">{val}</option>
+                <select name="token" value="{current.spentToken}" max="{current.getMaxToken()}" riot-tag="token-select">
                 </select>
             </div>
             <div class="pure-u-1-3"><label>/ {current.getMaxToken()}</label></div>
@@ -84,10 +83,7 @@
     <script>
 
         this.characterList = []
-        this.tokenChoices = [0, 1, 2, 3]
-        self = this
-
-
+        var self = this
 
         riot.route('/', function () {
             console.log('The list of char');
@@ -168,3 +164,18 @@
         }
     </script>
 </charman>
+
+<token-select>
+    <option each="{val, idx in tokenChoices}" value="{idx}">{val}</option>
+
+    <script>
+        this.tokenChoices = [];
+        var self = this;
+
+        this.on('update', function() {
+            for(var k=0; k<=self.opts.max; k++) {
+                self.tokenChoices[k] = k;
+            }
+        });
+    </script>
+</token-select>
