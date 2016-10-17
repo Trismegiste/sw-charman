@@ -14,23 +14,22 @@
             </div>
         </div>
 
-        <footer>
-            Nephilim Savage Worlds edition Character Manager
-        </footer>
+        <my-footer></my-footer>
 
-        <script src="./dexie.min.js"></script>
-        <script src="./Character.js"></script>
+        <script src="./jquery.min.js"></script>
+        <script src="./riot+compiler.min.js"></script>
+        <script src="./charman.tag" type="riot/tag"></script>
+        <script src="./my-footer.tag" type="riot/tag"></script>
+        <script src="./diceRoller.js"></script>
         <script src="./Repository.js"></script>
+        <script src="./Character.js"></script>
+        <script src="./dexie.min.js"></script>
 
         <script>
             var db = new Repository();
-            var pc = new Character();
-            pc.name = 'wush';
-            pc.currentWounds = Math.floor(-4 * Math.random());
-            db.persist(pc);
-            db.findByPk('wush').then(function (c) {
-                console.log(c);
-            })
+            var repo = new Repository()
+            riot.mount('*', {repo: repo})
+            riot.route.start(true)
         </script>
     </body>
 </html>
