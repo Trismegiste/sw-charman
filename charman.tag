@@ -11,7 +11,7 @@
         <nav class="pure-menu char-list">
             <ul class="pure-menu-list">
                 <li each="{ pc, i in characterList }" class="pure-menu-item">
-                    <a href="#char/{ i }" class="pure-menu-link">{ pc.name } (vs XXX W:{pc.currentWounds})</a>
+                    <a href="#char/{ i }" class="pure-menu-link">{ pc.name } (vs {pc.target} W:{pc.currentWounds})</a>
                 </li>
             </ul>
         </nav>
