@@ -22,6 +22,7 @@
         <script src="./jquery.min.js"></script>
         <script src="./riot+compiler.min.js"></script>
         <script src="./charman.tag" type="riot/tag"></script>
+        <script src="./my-footer.tag" type="riot/tag"></script>
         <script src="./diceRoller.js"></script>
         <script src="./Repository.js"></script>
         <script src="./Character.js"></script>
@@ -29,7 +30,7 @@
         <script>
             $(document).ready(function () {
                 var repo = new Repository()
-                riot.mount('charman', {repo: repo})
+                riot.mount('*', {repo: repo})
                 riot.route.start(true)
             });
         </script>
