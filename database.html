@@ -11,7 +11,6 @@
     <body>
         <div class="content">
             <div class="pure-g">
-                <charman></charman>
             </div>
         </div>
 
@@ -19,19 +18,19 @@
             Nephilim Savage Worlds edition Character Manager
         </footer>
 
-        <script src="./jquery.min.js"></script>
-        <script src="./riot+compiler.min.js"></script>
-        <script src="./charman.tag" type="riot/tag"></script>
-        <script src="./diceRoller.js"></script>
-        <script src="./Repository.js"></script>
-        <script src="./Character.js"></script>
         <script src="./dexie.min.js"></script>
+        <script src="./Character.js"></script>
+        <script src="./Repository.js"></script>
+
         <script>
-            $(document).ready(function () {
-                var repo = new Repository()
-                riot.mount('charman', {repo: repo})
-                riot.route.start(true)
-            });
+            var db = new Repository();
+            var pc = new Character();
+            pc.name = 'wush';
+            pc.currentWounds = Math.floor(-4 * Math.random());
+            db.persist(pc);
+            db.findByPk('wush').then(function (c) {
+                console.log(c);
+            })
         </script>
     </body>
 </html>

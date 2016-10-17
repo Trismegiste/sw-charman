@@ -84,6 +84,7 @@
 
         this.characterList = []
         var self = this
+        self.current = new Character();
 
         riot.route('/', function () {
             console.log('The list of char');
@@ -122,20 +123,20 @@
         }
 
         persist() {
-            localStorage.setItem('sw-character-list', JSON.stringify(self.characterList));
+            self.opts.repo.saveCurrent(self.characterList);
         };
 
         restore() {
-           var flat = JSON.parse(localStorage.getItem('sw-character-list'));
-           self.characterList = [];
-
-           flat.forEach(function(item) {
-               Object.keys(Character.prototype).forEach(function(key){
-                   item[key] = Character.prototype[key];
-               });
-               self.characterList.push(item);
-           })
-           riot.route('/');
+            self.characterList = [];
+            self.opts.repo.loadCurrent()
+                .then(function (arr) {
+                    console.log('load ' + arr.length);
+                    arr.forEach(function (item) {
+                        self.characterList.push(item);
+                    })
+                    self.update();
+                    riot.route('/');
+                })
         };
 
         onReset() {
