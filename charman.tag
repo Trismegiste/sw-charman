@@ -20,6 +20,13 @@
         <form class="pure-form pure-g" onchange="{ updateModel }">
             <div class="pure-u-1-4"><label>Name</label></div>
             <div class="pure-u-3-4"><input class="pure-input-1" type="text" name="name" value="{current.name}" required="true"/></div>
+            <div class="pure-u-1-4"><label>Target</label></div>
+            <div class="pure-u-3-4">
+                <select class="pure-input-1" name="target" value="{current.target}">
+                    <option value=""></option>
+                    <option each="{characterList}" value="{name}">{name}</option>
+                </select>
+            </div>
             <div class="pure-u-1-4"><label>Fighting</label></div>
             <div class="pure-u-1-4">
                 <select name="fighting" value="{current.fighting}">
@@ -105,6 +112,7 @@
             self.current.currentWounds = self.wounds.value;
             self.current.currentFatigue = self.fatigue.value;
             self.current.spentToken = self.token.value;
+            self.current.target = self.target.value;
         }
 
         updateModel() {
