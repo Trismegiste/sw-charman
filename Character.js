@@ -8,10 +8,12 @@ var Character = function () {
     this.spentToken = 0;
     this.currentFatigue = 0;
     this.property = {};
-    this.fighting = 0;
-    this.vigor = 4;
+    this.attack = 0;
+    this.damage = '';
+    this.toughness = 4;
     this.target = '';
     this.shaken = false;
+    this.toHit = 2;
 };
 
 Character.prototype = {
@@ -20,15 +22,6 @@ Character.prototype = {
                 + (this.property['Très Chanceux'] ? 1 : 0)
                 + (this.property['Malchanceux'] ? -1 : 0)
                 + (this.property['Gamin'] ? 1 : 0);
-    },
-    getParry: function () {
-        return 2 + Math.floor(this.fighting / 2);
-    },
-    getToughness: function () {
-        return 2 + Math.floor(this.vigor / 2);
-    },
-    rangedToBeHit: function () {
-        return 4;
     },
     restart: function () {
         this.currentWounds = 0;
