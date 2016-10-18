@@ -1,6 +1,0 @@
-/*
- * Main app
- */
-
-var app = {
-};

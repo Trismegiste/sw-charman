@@ -19,7 +19,6 @@
             Nephilim Savage Worlds edition Character Manager
         </footer>
 
-        <script src="./jquery.min.js"></script>
         <script src="./riot+compiler.min.js"></script>
         <script src="./charman.tag" type="riot/tag"></script>
         <script src="./my-footer.tag" type="riot/tag"></script>
@@ -28,11 +27,9 @@
         <script src="./Character.js"></script>
         <script src="./dexie.min.js"></script>
         <script>
-            $(document).ready(function () {
-                var repo = new Repository()
-                riot.mount('*', {repo: repo})
-                riot.route.start(true)
-            });
+            var repo = new Repository()
+            riot.mount('*', {repo: repo})
+            riot.route.start(true)
         </script>
     </body>
 </html>
