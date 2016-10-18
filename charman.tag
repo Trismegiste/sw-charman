@@ -234,21 +234,18 @@
         onAppend(event) {
             // looped item
             var item = event.item
-            console.log('search '+item.name);
             self.parent.opts.repo.findByPk(item.name).then(function(pc) {
                 console.log('found '+pc.name);
                 self.parent.characterList.push(pc);
                 self.parent.update()
             })
         }
-        
+
         onDelete(event) {
             // looped item
             var item = event.item
-            //self.parent.opts.repo.deleteByPk(item.name)
-            console.log('search '+item.name);
-            self.parent.opts.repo.deleteByPk(item.name).then(function(pc) {
-                console.log('delete '+pc.name);
+            self.parent.opts.repo.deleteByPk(item.name).then(function() {
+                console.log('delete '+item.name);
                 self.parent.update()
             })
         }
