@@ -2,10 +2,14 @@
     margin: 0.6em;
 }
 
-footer {
+footer.terminal {
     margin: 2em;
     font-size: 60%;
     text-align: center;
+}
+
+footer.form-spacing {
+    margin-top: 0.5em;
 }
 
 .button-success {

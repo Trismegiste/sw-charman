@@ -67,9 +67,11 @@
                 <select name="token" value="{current.spentToken}" max="{current.getMaxToken()}" riot-tag="token-select">
                 </select>
             </div>
-            <div class="pure-u-1-3"><a class="pure-button" onclick="{ onReset }">Reset</a></div>
-            <div class="pure-u-1-3"><a class="pure-button pure-button-primary" onclick="{ onAppend }">Append</a></div>
-            <div class="pure-u-1-3"><a class="pure-button button-error" onclick="{ onDelete }">Delete</a></div>
+            <footer class="form-spacing">
+                <div class="pure-u-1-3"><a class="pure-button" onclick="{ onReset }">Reset</a></div>
+                <div class="pure-u-1-3"><a class="pure-button pure-button-primary" onclick="{ onAppend }">Append</a></div>
+                <div class="pure-u-1-3"><a class="pure-button button-error" onclick="{ onDelete }">Delete</a></div>
+            </footer>
         </form>
     </div>
 
