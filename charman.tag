@@ -5,10 +5,10 @@
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link" onclick={ persist }>Save</a></li>
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link" onclick={ restore }>Load</a></li>
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link" onclick={ export }>Export</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link" onclick={ import }>{ repository ? 'Close' : 'Import'}</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link" onclick={ import }>{ openedRepository ? 'Close' : 'Import'}</a></li>
             </ul>
         </nav>
-        <listing-repository></listing-repository>
+        <listing-repository if="{ openedRepository }" repository="{ opts.repo }"></listing-repository>
         <nav class="pure-menu char-list">
             <ul class="pure-menu-list">
                 <li each="{ pc, i in characterList }" class="pure-menu-item">
@@ -81,6 +81,7 @@
         this.characterList = []
         var self = this
         self.current = new Character();
+        self.openedRepository = false;
 
         riot.route('/', function () {
             console.log('The list of char');
@@ -187,19 +188,8 @@
         }
 
         import() {
-            if (self.repository === undefined) {
-                self.repository = [];
-                self.opts.repo.findAll()
-                        .then(function(arr){
-                            arr.forEach(function(obj){
-                                self.repository.push(obj);
-                            })
-                            self.update()
-                        })
-            } else {
-                self.repository = undefined
-                self.update()
-            }
+            self.openedRepository = ! self.openedRepository
+            self.update()
         }
     </script>
 </charman>
@@ -220,21 +210,31 @@
 </token-select>
 
 <listing-repository>
-    <nav if="{ parent.repository }">
-        <table class="pure-table pure-table-striped">
-            <tr each="{ parent.repository }">
-                <td><a href="#" onclick="{ parent.onAppend }">{name}</a></td>
-                <td><a href="#" class="pure-button button-error" onclick="{ parent.onDelete }">&times;</a></td>
-            </tr>
-        </table>
-    </nav>
+    <table class="pure-table pure-table-striped">
+        <tr each="{ listing }">
+            <td><a href="#" onclick="{ parent.onAppend }">{name}</a></td>
+            <td><a href="#" class="pure-button button-error" onclick="{ parent.onDelete }">&times;</a></td>
+        </tr>
+    </table>
     <script>
         var self = this;
+        self.listing = [];
+
+        this.on('update', function() {
+            console.log('refresh')
+            self.opts.repository.findAll()
+                     .then(function(arr){
+                        self.listing = [];
+                         arr.forEach(function(obj){
+                             self.listing.push(obj);
+                         })
+                     })
+        })
 
         onAppend(event) {
             // looped item
             var item = event.item
-            self.parent.opts.repo.findByPk(item.name).then(function(pc) {
+            self.opts.repository.findByPk(item.name).then(function(pc) {
                 console.log('found '+pc.name);
                 self.parent.characterList.push(pc);
                 self.parent.update()
@@ -244,9 +244,14 @@
         onDelete(event) {
             // looped item
             var item = event.item
-            self.parent.opts.repo.deleteByPk(item.name).then(function() {
+            self.opts.repository.deleteByPk(item.name).then(function() {
                 console.log('delete '+item.name);
-                self.parent.update()
+                self.listing.forEach(function(obj, idx) {
+                    if (obj.name === item.name) {
+                        self.listing.splice(idx, 1)
+                    }
+                })
+                self.update()
             })
         }
     </script>
