@@ -11,7 +11,7 @@
         <nav class="pure-menu char-list">
             <ul class="pure-menu-list">
                 <li each="{ pc, i in characterList }" class="pure-menu-item">
-                    <a href="#char/{ i }" class="pure-menu-link">{ pc.name } (vs {pc.target} W:{pc.currentWounds})</a>
+                    <a href="#char/{ i }" class="pure-menu-link">{ pc.name } [vs {pc.target} / W:{pc.currentWounds}{pc.shaken ? '+S' : ''}]</a>
                 </li>
             </ul>
         </nav>
@@ -27,9 +27,9 @@
                     <option each="{characterList}" value="{name}">{name}</option>
                 </select>
             </div>
-            <div class="pure-u-1-4"><label>Fighting</label></div>
+            <div class="pure-u-1-4"><label>Attack</label></div>
             <div class="pure-u-1-4">
-                <select name="fighting" value="{current.fighting}">
+                <select name="attack" value="{current.attack}">
                     <option value="0"></option>
                     <option value="4">d4</option>
                     <option value="6">d6</option>
@@ -38,20 +38,20 @@
                     <option value="12">d12</option>
                 </select>
             </div>
-            <div class="pure-u-1-4"><label>Vigor</label></div>
-            <div class="pure-u-1-4">
-                <select name="vigor" value="{current.vigor}">
-                    <option value="4">d4</option>
-                    <option value="6">d6</option>
-                    <option value="8">d8</option>
-                    <option value="10">d10</option>
-                    <option value="12">d12</option>
-                </select>
+            <div class="pure-u-1-2">
+                <label class="pure-checkbox">
+                    Shaken
+                    <input type="checkbox" name="shaken" checked="{ current.shaken }"/>
+                </label>
             </div>
-            <div class="pure-u-1-4"><label>Parry</label></div>
-            <div class="pure-u-1-4"><input type="text" value="{current.getParry()}" readonly="true" class="pure-input-2-3"/></div>
+            <div class="pure-u-1-4"><label>Damage</label></div>
+            <div class="pure-u-3-4">
+                <input type="text" name="damage" value="{ current.damage }" class="pure-input-1"/>
+            </div>
+            <div class="pure-u-1-4"><label>To Hit</label></div>
+            <div class="pure-u-1-4"><input type="number" value="{current.toHit}" name="toHit" class="pure-input-2-3"/></div>
             <div class="pure-u-1-4"><label>Toughness</label></div>
-            <div class="pure-u-1-4"><input type="text" value="{current.getToughness()}" readonly="true" class="pure-input-2-3"/></div>
+            <div class="pure-u-1-4"><input type="number" value="{current.toughness}" name="toughness" class="pure-input-2-3"/></div>
             <div class="pure-u-1-4"><label>Wounds</label></div>
             <div class="pure-u-1-4">
                 <select name="wounds" value="{current.currentWounds}">
@@ -62,18 +62,11 @@
                     <option value="-4">Crit.</option>
                 </select>
             </div>
-            <div class="pure-u-1-2">
-                <label class="pure-checkbox">
-                    Shaken
-                    <input type="checkbox" name="shaken" checked="{ current.shaken }"/>
-                </label>
-            </div>
-            <div class="pure-u-1-3"><label>Spent token</label></div>
-            <div class="pure-u-1-3">
+            <div class="pure-u-1-4"><label>Token</label></div>
+            <div class="pure-u-1-4">
                 <select name="token" value="{current.spentToken}" max="{current.getMaxToken()}" riot-tag="token-select">
                 </select>
             </div>
-            <div class="pure-u-1-3"></div>
             <div class="pure-u-1-3"><a class="pure-button" onclick="{ onReset }">Reset</a></div>
             <div class="pure-u-1-3"><a class="pure-button pure-button-primary" onclick="{ onAppend }">Append</a></div>
             <div class="pure-u-1-3"><a class="pure-button button-error" onclick="{ onDelete }">Delete</a></div>
@@ -106,8 +99,10 @@
 
         updateCurrent() {
             self.current.name = self.name.value;
-            self.current.vigor = self.vigor.value;
-            self.current.fighting = self.fighting.value;
+            self.current.toughness = self.toughness.value;
+            self.current.attack = self.attack.value;
+            self.current.damage = self.damage.value;
+            self.current.toHit = self.toHit.value;
             self.current.currentWounds = self.wounds.value;
             self.current.shaken = self.shaken.checked;
             self.current.spentToken = self.token.value;
