@@ -169,7 +169,10 @@
             if (self.current.name != '') {
                 var temp = Object.assign(Object.create(self.current), self.current);
                 temp.restart();
-                self.opts.repo.persist(temp);
+                self.opts.repo.persist(temp)
+                        .then(function() {
+                            self.update();
+                        })
                 self.notice(temp.name + ' stored', 'success')
             }
         }
@@ -237,7 +240,8 @@
             self.opts.repository.findByPk(item.name).then(function(pc) {
                 console.log('found '+pc.name);
                 self.parent.characterList.push(pc);
-                self.parent.update()
+                //self.parent.update()
+                riot.route('/char/' + (self.parent.characterList.length - 1))
             })
         }
 
@@ -246,8 +250,9 @@
             var item = event.item
             self.opts.repository.deleteByPk(item.name).then(function() {
                 console.log('delete '+item.name);
+                // because item is not a Character (bad cloning ?), indexOf is not working
                 self.listing.forEach(function(obj, idx) {
-                    if (obj.name === item.name) {
+                    if (obj.name === item.name) {  // name is unique in DB
                         self.listing.splice(idx, 1)
                     }
                 })

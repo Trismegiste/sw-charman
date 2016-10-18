@@ -29,10 +29,11 @@
     <script src="./Character.js"></script>
     <script src="./dexie.min.js"></script>
     <script>
+        riot.route.start(true);
         var repo = new Repository();
         riot.mount('charman', {repo: repo});
         riot.mount('my-footer');
-        riot.route.start(true);
+        riot.route('/')
     </script>
 </body>
 </html>

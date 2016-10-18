@@ -34,13 +34,7 @@ Repository.prototype.findAll = function () {
 };
 
 Repository.prototype.persist = function (character) {
-    this.cnx.character.put(character)
-            .then(function () {
-                console.log('success');
-            })
-            .catch(function (error) {
-                console.log("Ooops: " + error);
-            });
+    return this.cnx.character.put(character)
 };
 
 Repository.prototype.saveCurrent = function (arr) {
