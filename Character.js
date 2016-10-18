@@ -29,6 +29,13 @@ Character.prototype = {
     },
     rangedToBeHit: function () {
         return 4;
+    },
+    restart: function () {
+        this.currentWounds = 0;
+        this.spentToken = 0;
+        this.currentFatigue = 0;
+        this.target = '';
+        this.shaken = false;
     }
 };
 

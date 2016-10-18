@@ -167,7 +167,9 @@
         // export the current form
         export() {
             if (self.current.name != '') {
-                self.opts.repo.persist(self.current);
+                var temp = Object.assign(Object.create(self.current), self.current);
+                temp.restart();
+                self.opts.repo.persist(temp);
             }
         }
     </script>
