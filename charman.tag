@@ -8,15 +8,7 @@
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link" onclick={ import }>{ repository ? 'Close' : 'Import'}</a></li>
             </ul>
         </nav>
-        <nav if="{ repository }">
-            <table class="pure-table pure-table-striped">
-                <tr each="{ char, idx in repository }">
-                    <td>{idx}</td>
-                    <td>{char.name}</td>
-                    <td><a href="#delete" class="pure-button pure-button-primary button-error">&times;</a></td>
-                </tr>
-            </table>
-        </nav>
+        <listing-repository></listing-repository>
         <nav class="pure-menu char-list">
             <ul class="pure-menu-list">
                 <li each="{ pc, i in characterList }" class="pure-menu-item">
@@ -226,3 +218,39 @@
         });
     </script>
 </token-select>
+
+<listing-repository>
+    <nav if="{ parent.repository }">
+        <table class="pure-table pure-table-striped">
+            <tr each="{ parent.repository }">
+                <td><a href="#" onclick="{ parent.onAppend }">{name}</a></td>
+                <td><a href="#" class="pure-button button-error" onclick="{ parent.onDelete }">&times;</a></td>
+            </tr>
+        </table>
+    </nav>
+    <script>
+        var self = this;
+
+        onAppend(event) {
+            // looped item
+            var item = event.item
+            console.log('search '+item.name);
+            self.parent.opts.repo.findByPk(item.name).then(function(pc) {
+                console.log('found '+pc.name);
+                self.parent.characterList.push(pc);
+                self.parent.update()
+            })
+        }
+        
+        onDelete(event) {
+            // looped item
+            var item = event.item
+            //self.parent.opts.repo.deleteByPk(item.name)
+            console.log('search '+item.name);
+            self.parent.opts.repo.deleteByPk(item.name).then(function(pc) {
+                console.log('delete '+pc.name);
+                self.parent.update()
+            })
+        }
+    </script>
+</listing-repository>

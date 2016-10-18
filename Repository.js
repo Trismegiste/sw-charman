@@ -24,6 +24,11 @@ Repository.prototype.findByPk = function (pk) {
     return this.cnx.character.get(pk);
 };
 
+Repository.prototype.deleteByPk = function (pk) {
+    return this.cnx.character.delete(pk);
+};
+
+
 Repository.prototype.findAll = function () {
     return this.cnx.character.toArray();
 };
