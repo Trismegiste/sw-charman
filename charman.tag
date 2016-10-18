@@ -213,7 +213,7 @@
 </token-select>
 
 <listing-repository>
-    <table class="pure-table pure-table-striped">
+    <table class="pure-table pure-table-striped v-spacing">
         <tr each="{ listing }">
             <td><a href="#" onclick="{ parent.onAppend }">{name}</a></td>
             <td><a href="#" class="pure-button button-error" onclick="{ parent.onDelete }">&times;</a></td>
