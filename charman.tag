@@ -5,8 +5,17 @@
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link" onclick={ persist }>Save</a></li>
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link" onclick={ restore }>Load</a></li>
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link" onclick={ export }>Export</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link" onclick={ import }>Import</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link" onclick={ import }>{ repository ? 'Close' : 'Import'}</a></li>
             </ul>
+        </nav>
+        <nav if="{ repository }">
+            <table class="pure-table pure-table-striped">
+                <tr each="{ char, idx in repository }">
+                    <td>{idx}</td>
+                    <td>{char.name}</td>
+                    <td><a href="#delete" class="pure-button pure-button-primary button-error">&times;</a></td>
+                </tr>
+            </table>
         </nav>
         <nav class="pure-menu char-list">
             <ul class="pure-menu-list">
@@ -183,6 +192,22 @@
                     }]
                 }
             });
+        }
+
+        import() {
+            if (self.repository === undefined) {
+                self.repository = [];
+                self.opts.repo.findAll()
+                        .then(function(arr){
+                            arr.forEach(function(obj){
+                                self.repository.push(obj);
+                            })
+                            self.update()
+                        })
+            } else {
+                self.repository = undefined
+                self.update()
+            }
         }
     </script>
 </charman>
