@@ -8,8 +8,9 @@ footer.terminal {
     text-align: center;
 }
 
-footer.form-spacing {
+.button-spacing {
     margin-top: 0.5em;
+    text-align: center;
 }
 
 .button-success {
