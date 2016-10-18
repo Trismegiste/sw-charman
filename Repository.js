@@ -24,18 +24,17 @@ Repository.prototype.findByPk = function (pk) {
     return this.cnx.character.get(pk);
 };
 
+Repository.prototype.deleteByPk = function (pk) {
+    return this.cnx.character.delete(pk);
+};
+
+
 Repository.prototype.findAll = function () {
     return this.cnx.character.toArray();
 };
 
 Repository.prototype.persist = function (character) {
-    this.cnx.character.put(character)
-            .then(function () {
-                console.log('success');
-            })
-            .catch(function (error) {
-                console.log("Ooops: " + error);
-            });
+    return this.cnx.character.put(character)
 };
 
 Repository.prototype.saveCurrent = function (arr) {

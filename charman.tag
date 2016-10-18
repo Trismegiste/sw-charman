@@ -5,9 +5,10 @@
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link" onclick={ persist }>Save</a></li>
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link" onclick={ restore }>Load</a></li>
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link" onclick={ export }>Export</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link" onclick={ import }>Import</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link" onclick={ import }>{ openedRepository ? 'Close' : 'Import'}</a></li>
             </ul>
         </nav>
+        <listing-repository if="{ openedRepository }" repository="{ opts.repo }"></listing-repository>
         <nav class="pure-menu char-list">
             <ul class="pure-menu-list">
                 <li each="{ pc, i in characterList }" class="pure-menu-item">
@@ -80,6 +81,7 @@
         this.characterList = []
         var self = this
         self.current = new Character();
+        self.openedRepository = false;
 
         riot.route('/', function () {
             console.log('The list of char');
@@ -167,7 +169,10 @@
             if (self.current.name != '') {
                 var temp = Object.assign(Object.create(self.current), self.current);
                 temp.restart();
-                self.opts.repo.persist(temp);
+                self.opts.repo.persist(temp)
+                        .then(function() {
+                            self.update();
+                        })
                 self.notice(temp.name + ' stored', 'success')
             }
         }
@@ -183,6 +188,11 @@
                     }]
                 }
             });
+        }
+
+        import() {
+            self.openedRepository = ! self.openedRepository
+            self.update()
         }
     </script>
 </charman>
@@ -201,3 +211,53 @@
         });
     </script>
 </token-select>
+
+<listing-repository>
+    <table class="pure-table pure-table-striped v-spacing">
+        <tr each="{ listing }">
+            <td><a href="#" onclick="{ parent.onAppend }">{name}</a></td>
+            <td><a href="#" class="pure-button button-error" onclick="{ parent.onDelete }">&times;</a></td>
+        </tr>
+    </table>
+    <script>
+        var self = this;
+        self.listing = [];
+
+        this.on('update', function() {
+            console.log('refresh')
+            self.opts.repository.findAll()
+                     .then(function(arr){
+                        self.listing = [];
+                         arr.forEach(function(obj){
+                             self.listing.push(obj);
+                         })
+                     })
+        })
+
+        onAppend(event) {
+            // looped item
+            var item = event.item
+            self.opts.repository.findByPk(item.name).then(function(pc) {
+                console.log('found '+pc.name);
+                self.parent.characterList.push(pc);
+                //self.parent.update()
+                riot.route('/char/' + (self.parent.characterList.length - 1))
+            })
+        }
+
+        onDelete(event) {
+            // looped item
+            var item = event.item
+            self.opts.repository.deleteByPk(item.name).then(function() {
+                console.log('delete '+item.name);
+                // because item is not a Character (bad cloning ?), indexOf is not working
+                self.listing.forEach(function(obj, idx) {
+                    if (obj.name === item.name) {  // name is unique in DB
+                        self.listing.splice(idx, 1)
+                    }
+                })
+                self.update()
+            })
+        }
+    </script>
+</listing-repository>
