@@ -55,4 +55,17 @@ Repository.prototype.loadCurrent = function () {
     return this.cnx.current.toArray()
 }
 
-
+Repository.prototype.createFromDump = function (str) {
+    var self = this;
+    this.cnx.character.clear();
+    var dataset = JSON.parse(str);
+    dataset.forEach(function (item, idx) {
+        self.cnx.character.add(item)
+                .then(function () {
+                    console.log('success');
+                })
+                .catch(function (error) {
+                    console.log("Ooops: " + error);
+                });
+    })
+}
