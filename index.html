@@ -7,27 +7,31 @@
         <link rel="stylesheet" href="./pure-min.css"/>
         <link rel="stylesheet" href="./grids-responsive-min.css"/>
         <link rel="stylesheet" href="./main.css"/>
+        <link rel="stylesheet" href="./toasts.css"/>
     </head>
     <body>
         <div class="content">
+            <rg-toasts></rg-toasts>
             <div class="pure-g">
                 <charman></charman>
             </div>
         </div>
 
-        <my-footer></my-footer>
+    <my-footer></my-footer>
 
-        <script src="./riot+compiler.min.js"></script>
-        <script src="./charman.tag" type="riot/tag"></script>
-        <script src="./my-footer.tag" type="riot/tag"></script>
-        <script src="./diceRoller.js"></script>
-        <script src="./Repository.js"></script>
-        <script src="./Character.js"></script>
-        <script src="./dexie.min.js"></script>
-        <script>
-            var repo = new Repository()
-            riot.mount('*', {repo: repo})
-            riot.route.start(true)
-        </script>
-    </body>
+    <script src="./riot+compiler.min.js"></script>
+    <script src="./rg-toasts.js"></script>
+    <script src="./charman.tag" type="riot/tag"></script>
+    <script src="./my-footer.tag" type="riot/tag"></script>
+    <script src="./diceRoller.js"></script>
+    <script src="./Repository.js"></script>
+    <script src="./Character.js"></script>
+    <script src="./dexie.min.js"></script>
+    <script>
+        var repo = new Repository();
+        riot.mount('charman', {repo: repo});
+        riot.mount('my-footer');
+        riot.route.start(true);
+    </script>
+</body>
 </html>

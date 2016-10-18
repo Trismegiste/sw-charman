@@ -124,6 +124,7 @@
 
         persist() {
             self.opts.repo.saveCurrent(self.characterList);
+            self.notice('Current state saved', 'success')
         };
 
         restore() {
@@ -170,7 +171,21 @@
                 var temp = Object.assign(Object.create(self.current), self.current);
                 temp.restart();
                 self.opts.repo.persist(temp);
+                self.notice(temp.name + ' stored', 'success')
             }
+        }
+
+        notice(msg, level) {
+            var tags = riot.mount('rg-toasts', {
+                toasts: {
+                    position: 'bottomright',
+                    toasts: [{
+                            type: level,
+                            text: msg,
+                            timeout: 2000
+                    }]
+                }
+            });
         }
     </script>
 </charman>
