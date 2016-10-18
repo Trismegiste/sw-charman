@@ -163,6 +163,13 @@
             }
             riot.route('/');
         }
+
+        // export the current form
+        export() {
+            if (self.current.name != '') {
+                self.opts.repo.persist(self.current);
+            }
+        }
     </script>
 </charman>
 
