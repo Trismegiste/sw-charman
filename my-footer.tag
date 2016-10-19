@@ -1,5 +1,5 @@
 <my-footer>
     <footer class="terminal">
-        Nephilim Savage Worlds edition Character Manager
+        SW Character Manager - <a href="./dump.html">Dump database</a>
     </footer>
 </my-footer>

@@ -13,8 +13,14 @@
         <div class="content">
             <rg-toasts></rg-toasts>
             <div class="pure-g">
-                <charman></charman>
+                <div class="pure-g">
+                    <div class="pure-u-1">
+                        <h2>Dump and Recreate database</h2>
+                        <a href="./">Go back to Character Manager</a>
+                    </div>
+                </div>
             </div>
+            <dump-database></dump-database>
         </div>
 
     <my-footer></my-footer>
@@ -22,20 +28,17 @@
     <script src="./polyfill.js"></script>
     <script src="./riot+compiler.min.js"></script>
     <script src="./rg-toasts.js"></script>
-    <script src="./toasty-mixin.js"></script>
-    <script src="./charman.tag" type="riot/tag"></script>
+    <script src="./dump-database.tag" type="riot/tag"></script>
     <script src="./my-footer.tag" type="riot/tag"></script>
-    <script src="./diceRoller.js"></script>
+    <script src="./toasty-mixin.js"></script>
     <script src="./Repository.js"></script>
     <script src="./Character.js"></script>
     <script src="./dexie.min.js"></script>
     <script>
         riot.mixin('toasty', Toasty)
-        riot.route.start(true);
         var repo = new Repository();
-        riot.mount('charman', {repo: repo});
+        riot.mount('dump-database', {repository: repo});
         riot.mount('my-footer');
-        riot.route('/')
     </script>
 </body>
 </html>

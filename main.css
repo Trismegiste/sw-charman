@@ -47,3 +47,7 @@ footer.terminal {
 .v-spacing {
     margin-bottom: 0.5em;
 }
+
+h2 {
+    font-weight: 300;
+}
