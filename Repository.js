@@ -57,15 +57,19 @@ Repository.prototype.loadCurrent = function () {
 
 Repository.prototype.createFromDump = function (str) {
     var self = this;
-    this.cnx.character.clear();
-    var dataset = JSON.parse(str);
-    dataset.forEach(function (item, idx) {
-        self.cnx.character.add(item)
-                .then(function () {
-                    console.log('success');
-                })
-                .catch(function (error) {
-                    console.log("Ooops: " + error);
-                });
-    })
+    try {
+        var dataset = JSON.parse(str);
+        this.cnx.character.clear();
+        dataset.forEach(function (item, idx) {
+            self.cnx.character.add(item)
+                    .then(function () {
+                        console.log('success');
+                    })
+                    .catch(function (error) {
+                        console.log("Ooops: " + error);
+                    });
+        })
+    } catch (e) {
+        console.log("parse error")
+    }
 }
