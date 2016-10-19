@@ -24,7 +24,7 @@
         onCreate() {
             if (self.dumpdb.value != '') {
                 this.opts.repository.createFromDump(self.dumpdb.value)
-                self.notice('wesh', 'success')
+                self.notice('Create Repository for Characters', 'success')
             }
         }
     </script>
