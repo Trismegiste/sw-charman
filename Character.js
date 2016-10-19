@@ -29,6 +29,10 @@ Character.prototype = {
         this.currentFatigue = 0;
         this.target = '';
         this.shaken = false;
+    },
+    // this method is just an hint about how this character is lethal
+    getLethality: function () {
+        return Math.floor(0.1 * (this.attack / 2 * ((this.toughness - 3) / 2 + (this.toHit - 2))))
     }
 };
 

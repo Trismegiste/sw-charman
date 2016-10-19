@@ -214,9 +214,10 @@
 </token-select>
 
 <listing-repository>
-    <table class="pure-table pure-table-striped v-spacing">
+    <table class="pure-table pure-table-horizontal v-spacing">
         <tr each="{ listing }">
             <td><a href="#" onclick="{ parent.onAppend }">{name}</a></td>
+            <td>{getLethality()}</td>
             <td><a href="#" class="pure-button button-error" onclick="{ parent.onDelete }">&times;</a></td>
         </tr>
     </table>
