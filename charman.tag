@@ -77,7 +77,7 @@
     </div>
 
     <script>
-
+        this.mixin('toasty')
         this.characterList = []
         var self = this
         self.current = new Character();
@@ -175,19 +175,6 @@
                         })
                 self.notice(temp.name + ' stored', 'success')
             }
-        }
-
-        notice(msg, level) {
-            var tags = riot.mount('rg-toasts', {
-                toasts: {
-                    position: 'bottomright',
-                    toasts: [{
-                            type: level,
-                            text: msg,
-                            timeout: 2000
-                    }]
-                }
-            });
         }
 
         import() {

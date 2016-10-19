@@ -8,6 +8,7 @@
     <script>
         this.dumpContent = ''
         self = this
+        this.mixin('toasty')
 
         onDump() {
             this.opts.repository.findAll().then(function(arr) {
@@ -23,6 +24,7 @@
         onCreate() {
             if (self.dumpdb.value != '') {
                 this.opts.repository.createFromDump(self.dumpdb.value)
+                self.notice('wesh', 'success')
             }
         }
     </script>

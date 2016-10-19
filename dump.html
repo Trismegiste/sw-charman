@@ -24,11 +24,12 @@
     <script src="./rg-toasts.js"></script>
     <script src="./dump-database.tag" type="riot/tag"></script>
     <script src="./my-footer.tag" type="riot/tag"></script>
-    <script src="./diceRoller.js"></script>
+    <script src="./toasty-mixin.js"></script>
     <script src="./Repository.js"></script>
     <script src="./Character.js"></script>
     <script src="./dexie.min.js"></script>
     <script>
+        riot.mixin('toasty', Toasty)
         var repo = new Repository();
         riot.mount('dump-database', {repository: repo});
         riot.mount('my-footer');
