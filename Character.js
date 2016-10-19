@@ -32,7 +32,7 @@ Character.prototype = {
     },
     // this method is just an hint about how this character is lethal
     getLethality: function () {
-        return Math.floor(0.1 * (this.attack / 2 * ((this.toughness - 3) / 2 + (this.toHit - 2))))
+        return Math.floor(0.2 * (this.attack / 2 * ((this.toughness - 3) / 2 + (this.toHit - 2))))
     }
 };
 
