@@ -127,7 +127,6 @@
             }
         }
 
-
         var subRoute = riot.route.create()
         subRoute('/char/*', function (id) {
             self.model.trigger('reset');

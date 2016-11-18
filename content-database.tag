@@ -6,6 +6,11 @@
             <td><a href="#" class="pure-button button-error" onclick="{ parent.onDelete }">&times;</a></td>
         </tr>
     </table>
+    <footer class="pure-g button-spacing">
+        <div class="pure-u-1">
+            <a href="#dump" class="pure-button button-warning">Dump/create DB</a>
+        </div>
+    </footer>
     <script>
         this.mixin('toasty')
         this.mixin('model')

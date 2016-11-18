@@ -25,6 +25,7 @@ footer.terminal {
 
 .button-warning {
     background: rgb(223, 117, 20); /* this is an orange */
+    color: white;
 }
 
 .pure-form label {
@@ -50,5 +51,5 @@ footer.terminal {
 }
 
 h2 {
-    font-weight: 300;
+    font-weight: 100;
 }
