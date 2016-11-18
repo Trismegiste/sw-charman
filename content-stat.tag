@@ -76,16 +76,18 @@
             // checking
             self.model.trigger('reset');
             self.updateCurrent();
-            self.characterList.push(self.current);
-            riot.route('/char/' + (self.characterList.length - 1));
+            self.model.characterList.push(self.model.current);
+            self.notice(self.model.current.name + ' created', 'success')
+            riot.route('char/' + (self.model.characterList.length - 1));
         }
 
         onDelete() {
-            var idx = self.characterList.indexOf(self.current);
+            var idx = self.model.characterList.indexOf(self.model.current);
             if (idx !== -1) {
-                self.characterList.splice(idx, 1);
+                self.model.characterList.splice(idx, 1);
             }
-            riot.route('/');
+            self.notice(self.model.current.name + ' deleted', 'error')
+            riot.route('stat');
         }
 
         updateCurrent() {
