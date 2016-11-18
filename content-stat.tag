@@ -85,9 +85,9 @@
             var idx = self.model.characterList.indexOf(self.model.current);
             if (idx !== -1) {
                 self.model.characterList.splice(idx, 1);
+                self.notice(self.model.current.name + ' deleted', 'error')
+                riot.route('list');
             }
-            self.notice(self.model.current.name + ' deleted', 'error')
-            riot.route('stat');
         }
 
         updateCurrent() {

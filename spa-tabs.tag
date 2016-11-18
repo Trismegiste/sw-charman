@@ -19,6 +19,9 @@
         <div class="pure-u-1-1 {hidden: !isActiveTab('stat')}">
             <content-stat repo="{this.opts.repository}"></content-stat>
         </div>
+        <div class="pure-u-1-1 {hidden: !isActiveTab('database')}">
+            <content-database repository="{this.opts.repository}"></content-database>
+        </div>
     </div>
     <script>
         this.menuTab = [
