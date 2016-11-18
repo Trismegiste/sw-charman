@@ -1,5 +1,5 @@
 <content-database>
-    <table class="pure-table pure-table-striped v-spacing">
+    <table class="pure-table pure-table-striped v-spacing" style="width: 100%">
         <tr each="{ listing }">
             <td><a href="#" onclick="{ parent.onAppend }">{name}</a></td>
             <td>{getLethality()}</td>

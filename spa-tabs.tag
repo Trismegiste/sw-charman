@@ -10,9 +10,6 @@
         </ul>
     </nav>
     <div class="pure-g">
-        <div each="{tab, i in menuTab}" class="pure-u-1-1 {hidden: !parent.isActiveTab(tab.ref)}">
-            { tab.title }
-        </div>
         <div class="pure-u-1-1 {hidden: !isActiveTab('list')}">
             <content-list repo="{this.opts.repository}"></content-list>
         </div>
@@ -21,6 +18,9 @@
         </div>
         <div class="pure-u-1-1 {hidden: !isActiveTab('database')}">
             <content-database repository="{this.opts.repository}"></content-database>
+        </div>
+        <div class="pure-u-1-1 {hidden: !isActiveTab('detail')}">
+            <content-detail repo="{this.opts.repository}"></content-detail>
         </div>
     </div>
     <script>
