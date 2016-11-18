@@ -48,5 +48,9 @@
                 self.update()
             })
         }
+
+        this.model.on('update-db', function() {
+            self.update()
+        })
     </script>
 </content-database>

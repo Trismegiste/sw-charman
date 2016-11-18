@@ -51,11 +51,14 @@
                 </select>
             </div>
         </form>
-        <footer class="pure-g button-spacing">
+        <div class="pure-g button-spacing">
             <div class="pure-u-1-3"><a class="pure-button" onclick="{ onReset }">Reset</a></div>
             <div class="pure-u-1-3"><a class="pure-button pure-button-primary" onclick="{ onAppend }">Append</a></div>
             <div class="pure-u-1-3"><a class="pure-button button-error" onclick="{ onDelete }">Delete</a></div>
-        </footer>
+        </div>
+        <div class="pure-g button-spacing">
+            <div class="pure-u-1"><a class="pure-button button-success" onclick="{ storeToRepository }">Store to DB</a></div>
+        </div>
     </div>
 
     <script>
@@ -110,6 +113,20 @@
                 self.model.characterList[idx] = self.model.current;
             }
         }
+
+        // store the current char into the Repository
+        storeToRepository() {
+            if (self.model.current.name != '') {
+                var temp = Object.assign(Object.create(self.model.current), self.model.current);
+                temp.restart();
+                self.opts.repo.persist(temp)
+                        .then(function() {
+                            self.notice(temp.name + ' stored', 'success')
+                            self.model.trigger('update-db');
+                        })
+            }
+        }
+
 
         var subRoute = riot.route.create()
         subRoute('/char/*', function (id) {

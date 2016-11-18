@@ -9,12 +9,13 @@ footer.terminal {
 }
 
 .button-spacing {
-    margin-top: 0.5em;
+    margin-top: 1em;
     text-align: center;
 }
 
 .button-success {
     background: rgb(28, 184, 65); /* this is a green */
+    color: white;
 }
 
 .button-error {
