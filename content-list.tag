@@ -2,7 +2,9 @@
     <nav class="pure-menu char-list">
         <ul class="pure-menu-list">
             <li each="{ pc, i in characterList }" class="pure-menu-item">
-                <a href="#char/{ i }" class="pure-menu-link">{ pc.name } [vs {pc.target} / W:{pc.currentWounds}{pc.shaken ? '+S' : ''}]</a>
+                <a href="#char/{ i }" class="pure-menu-link">
+                    { pc.name } [vs {pc.target} / W:{pc.currentWounds}{pc.shaken ? '+S' : ''}]
+                </a>
             </li>
         </ul>
     </nav>
@@ -21,6 +23,10 @@
         var self = this
         self.current = new Character();
 
+        resetCurrent() {
+            self.current = new Character();
+        }
+
         persist() {
             self.opts.repo.saveCurrent(self.characterList);
             self.notice('Current state saved', 'success')
@@ -35,8 +41,16 @@
                         self.characterList.push(item);
                     })
                     self.update();
-                    riot.route('/');
                 })
         };
+
+        var subRoute = riot.route.create()
+        subRoute('/char/*', function (id) {
+            self.resetCurrent();
+            if (self.characterList[id] !== undefined) {
+                self.current = self.characterList[id];
+            }
+            subRoute('stat',self.current.name,true)
+        });
     </script>
 </content-list>
