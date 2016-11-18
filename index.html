@@ -23,13 +23,16 @@
     <script src="./toasty-mixin.js"></script>
     <script src="./spa-tabs.tag" type="riot/tag"></script>
     <script src="./content-list.tag" type="riot/tag"></script>
+    <script src="./content-stat.tag" type="riot/tag"></script>
     <script src="./my-footer.tag" type="riot/tag"></script>
     <script src="./diceRoller.js"></script>
-    <script src="./Repository.js"></script>
     <script src="./Character.js"></script>
+    <script src="./Repository.js"></script>
+    <script src="./Model.js"></script>
     <script src="./dexie.min.js"></script>
     <script>
         riot.mixin('toasty', Toasty)
+        riot.mixin('model', {model: new Model()});
         riot.route.start(true);
         var repo = new Repository();
         riot.mount('*');

@@ -17,7 +17,7 @@
             <content-list repo="{this.opts.repository}"></content-list>
         </div>
         <div class="pure-u-1-1 {hidden: !isActiveTab('stat')}">
-            <content-char repo="{this.opts.repository}"></content-char>
+            <content-stat repo="{this.opts.repository}"></content-stat>
         </div>
     </div>
     <script>

@@ -1,7 +1,7 @@
 <content-list>
     <nav class="pure-menu char-list">
         <ul class="pure-menu-list">
-            <li each="{ pc, i in characterList }" class="pure-menu-item">
+            <li each="{ pc, i in model.characterList }" class="pure-menu-item">
                 <a href="#char/{ i }" class="pure-menu-link">
                     { pc.name } [vs {pc.target} / W:{pc.currentWounds}{pc.shaken ? '+S' : ''}]
                 </a>
@@ -19,26 +19,21 @@
 
     <script>
         this.mixin('toasty')
-        this.characterList = []
+        this.mixin('model')
         var self = this
-        self.current = new Character();
-
-        resetCurrent() {
-            self.current = new Character();
-        }
 
         persist() {
-            self.opts.repo.saveCurrent(self.characterList);
+            self.opts.repo.saveCurrent(self.model.characterList);
             self.notice('Current state saved', 'success')
         };
 
         restore() {
-            self.characterList = [];
+            self.model.characterList = [];
             self.opts.repo.loadCurrent()
                 .then(function (arr) {
                     console.log('load ' + arr.length);
                     arr.forEach(function (item) {
-                        self.characterList.push(item);
+                        self.model.characterList.push(item);
                     })
                     self.update();
                 })
@@ -46,11 +41,11 @@
 
         var subRoute = riot.route.create()
         subRoute('/char/*', function (id) {
-            self.resetCurrent();
-            if (self.characterList[id] !== undefined) {
-                self.current = self.characterList[id];
+            self.model.trigger('reset');
+            if (self.model.characterList[id] !== undefined) {
+                self.model.current = self.model.characterList[id];
             }
-            subRoute('stat',self.current.name,true)
+            subRoute('stat',self.model.current.name,true)
         });
     </script>
 </content-list>
