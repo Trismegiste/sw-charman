@@ -12,9 +12,7 @@
     <body>
         <div class="content">
             <rg-toasts></rg-toasts>
-            <div class="pure-g">
-                <charman></charman>
-            </div>
+            <spa-tabs repository="{repo}"></spa-tabs>
         </div>
 
     <my-footer></my-footer>
@@ -23,7 +21,8 @@
     <script src="./riot+compiler.min.js"></script>
     <script src="./rg-toasts.js"></script>
     <script src="./toasty-mixin.js"></script>
-    <script src="./charman.tag" type="riot/tag"></script>
+    <script src="./spa-tabs.tag" type="riot/tag"></script>
+    <script src="./content-list.tag" type="riot/tag"></script>
     <script src="./my-footer.tag" type="riot/tag"></script>
     <script src="./diceRoller.js"></script>
     <script src="./Repository.js"></script>
@@ -33,9 +32,8 @@
         riot.mixin('toasty', Toasty)
         riot.route.start(true);
         var repo = new Repository();
-        riot.mount('charman', {repo: repo});
-        riot.mount('my-footer');
-        riot.route('/')
+        riot.mount('*');
+        riot.route('list')
     </script>
 </body>
 </html>
