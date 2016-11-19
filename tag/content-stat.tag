@@ -12,14 +12,7 @@
             </div>
             <div class="pure-u-1-4"><label>Attack</label></div>
             <div class="pure-u-1-4">
-                <select name="attack" value="{model.current.attack}">
-                    <option value="0"></option>
-                    <option value="4">d4</option>
-                    <option value="6">d6</option>
-                    <option value="8">d8</option>
-                    <option value="10">d10</option>
-                    <option value="12">d12</option>
-                </select>
+                <select name="attack" value="{model.current.attack}" data-is="dice-option"></select>
             </div>
             <div class="pure-u-1-2">
                 <label class="pure-checkbox">
