@@ -56,6 +56,7 @@
         }
 
         onChangeDominant(e) {
+            // @todo reset radio
             self.model.pentacle.dominant = self.dominant.value;
         }
 

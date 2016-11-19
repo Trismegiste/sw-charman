@@ -33,6 +33,11 @@ footer.terminal {
     display: block;
 }
 
+content-stat .pure-form label {
+    text-align: right;
+    margin-right: 0.3em;
+}
+
 .pure-form input, .pure-form select {
     margin-bottom: 0.3em;
 }

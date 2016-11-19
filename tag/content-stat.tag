@@ -24,9 +24,9 @@
             <input type="text" name="damage" value="{ model.current.damage }" class="pure-input-1"/>
         </div>
         <div class="pure-u-1-4"><label>To Hit</label></div>
-        <div class="pure-u-1-4"><input type="number" value="{model.current.toHit}" name="toHit" class="pure-input-2-3"/></div>
-        <div class="pure-u-1-4"><label>Toughness</label></div>
-        <div class="pure-u-1-4"><input type="number" value="{model.current.toughness}" name="toughness" class="pure-input-2-3"/></div>
+        <div class="pure-u-1-4"><input type="number" value="{model.current.toHit}" name="toHit" class="pure-input-1"/></div>
+        <div class="pure-u-1-4"><label>Tough.</label></div>
+        <div class="pure-u-1-4"><input type="number" value="{model.current.toughness}" name="toughness" class="pure-input-1"/></div>
         <div class="pure-u-1-4"><label>Wounds</label></div>
         <div class="pure-u-1-4">
             <select name="wounds" value="{model.current.currentWounds}">
@@ -39,7 +39,7 @@
         </div>
         <div class="pure-u-1-4"><label>Token</label></div>
         <div class="pure-u-1-4">
-            <select name="token" value="{model.current.spentToken}" max="{model.current.getMaxToken()}" data-is="token-option">
+            <select name="token" value="{model.current.spentToken}" max="{model.current.getMaxToken()}" data-is="token-option" class="pure-input-1">
             </select>
         </div>
     </form>
