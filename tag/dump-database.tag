@@ -10,7 +10,7 @@
 
     <script>
         this.dumpContent = ''
-        self = this
+        var self = this
         this.mixin('toasty')
 
         onDump() {
