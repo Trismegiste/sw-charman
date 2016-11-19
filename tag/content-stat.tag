@@ -40,7 +40,7 @@
             </div>
             <div class="pure-u-1-4"><label>Token</label></div>
             <div class="pure-u-1-4">
-                <select name="token" value="{model.current.spentToken}" max="{model.current.getMaxToken()}" riot-tag="token-select">
+                <select name="token" value="{model.current.spentToken}" max="{model.current.getMaxToken()}" data-is="token-option">
                 </select>
             </div>
         </form>
@@ -130,18 +130,3 @@
         });
     </script>
 </content-stat>
-
-<token-select>
-    <option each="{val, idx in tokenChoices}" value="{idx}">{val}</option>
-
-    <script>
-        this.tokenChoices = [];
-        var self = this;
-
-        this.on('update', function() {
-            for(var k=0; k<=self.opts.max; k++) {
-                self.tokenChoices[k] = k;
-            }
-        });
-    </script>
-</token-select>
