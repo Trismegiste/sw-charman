@@ -13,6 +13,10 @@ footer.terminal {
     text-align: center;
 }
 
+form label.centered {
+    text-align: center;
+}
+
 .button-success {
     background: rgb(28, 184, 65); /* this is a green */
     color: white;

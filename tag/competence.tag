@@ -15,7 +15,7 @@
                 <input if="{ editable }" name="competenceName" value="{title}" class="pure-input-1"/>
             </div>
             <div class="pure-u-1-4">
-                <label style="text-align: center">{attr}</label>
+                <label class="centered">{attr}</label>
             </div>
             <div class="pure-u-1-4">
                 <select name="competenceValue" class="pure-input-1"
@@ -23,9 +23,9 @@
                         onchange="{ parent.onUpdateValue }"></select>
             </div>
         </virtual>
-
-        <div class="pure-u-1-4"><label>Pts.</label></div>
-        <div class="pure-u-1-4"><label>{ compteur }</label></div>
+        <div class="pure-u-1-2"></div>
+        <div class="pure-u-1-4"><label class="centered">Pts.</label></div>
+        <div class="pure-u-1-4"><label class="centered">{ compteur }</label></div>
     </form>
     <script>
         this.competenceList = [

@@ -10,7 +10,7 @@
             </div>
         </virtual>
         <div class="pure-u-1-4"><label>Pts.</label></div>
-        <div class="pure-u-1-4"><label>{ compteur }</label></div>
+        <div class="pure-u-1-4"><label class="centered">{ compteur }</label></div>
     </form>
     <script>
         this.attributList = [
@@ -20,6 +20,7 @@
         var self = this;
 
         onChange() {
+            // @todo inside Character
             self.compteur = 0
             for (var k = 0; k < 5; k++) {
                 self.compteur += (self[self.attributList[k]].value - 4) / 2
