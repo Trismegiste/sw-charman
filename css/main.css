@@ -58,3 +58,7 @@ footer.terminal {
 h2 {
     font-weight: 100;
 }
+
+content-detail section, content-detail header {
+    margin-bottom: 1em;
+}
