@@ -19,6 +19,9 @@
     <section>
         <unique-ka></unique-ka>
     </section>
+    <section>
+        <competence></competence>
+    </section>
     <script>
         this.typeList = [
             {value: 'nephilim', title: 'Nephilim', build: function () {
