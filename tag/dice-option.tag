@@ -7,5 +7,7 @@
         {val: 8, label:'d8'},
         {val: 10, label:'d10'},
         {val: 12, label:'d12'},
-    ]
+        {val: 13, label:'L+1'},
+        {val: 14, label:'L+2'}
+   ]
 </dice-option>
