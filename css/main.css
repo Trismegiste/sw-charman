@@ -28,12 +28,7 @@ footer.terminal {
     color: white;
 }
 
-.pure-form label {
-    margin-bottom: 0.3em;
-    display: block;
-}
-
-content-stat .pure-form label {
+.form-label-aligned label {
     text-align: right;
     margin-right: 0.3em;
 }

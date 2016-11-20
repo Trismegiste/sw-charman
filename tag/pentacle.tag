@@ -1,26 +1,26 @@
 <pentacle>
     <form class="pure-form">
         <legend>Pentacle</legend>
-        <fieldset>
+        <div>
             Ka dominant
             <select name="dominant" value="{ model.pentacle.dominant }" onchange="{ onChangeDominant }">
                 <option each="{ka in equilibrePentacle}" value="{ka.dominant}">{ ka.dominant }</option>
             </select>
-        </fieldset>
-        <fieldset>
+        </div>
+        <div>
             Neutre favorable
             <virtual each="{ka, idx in getNeutre(model.pentacle.dominant)}">
                 <input type="radio" name="neutre" value="{ka}"
                        checked="{ model.pentacle.neutreFav == ka }"/>{ka}
             </virtual>
-        </fieldset>
-        <fieldset>
+        </div>
+        <div>
             Opposé majeur
             <virtual each="{ka, idx in getOppose(model.pentacle.dominant)}">
                 <input type="radio" name="oppose" value="{ka}"
                        checked="{ model.pentacle.opposeMaj == ka }"/>{ka}
             </virtual>
-        </fieldset>
+        </div>
     </form>
     <script>
         this.equilibrePentacle = [
