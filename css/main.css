@@ -37,6 +37,11 @@ footer.terminal {
     margin-bottom: 0.3em;
 }
 
+.pure-form label {
+    display: block;
+    margin-bottom: 0.3em;
+}
+
 .char-list {
     margin-right: 1em;
     margin-bottom: 1em;
