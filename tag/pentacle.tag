@@ -33,16 +33,10 @@
         </virtual>
     </form>
     <script>
-        this.equilibrePentacle = [
-            {dominant: 'feu', neutre: ['air', 'terre'], oppose: ['eau', 'lune']},
-            {dominant: 'lune', neutre: ['eau', 'terre'], oppose: ['air', 'feu']},
-            {dominant: 'air', neutre: ['feu', 'eau'], oppose: ['terre', 'lune']},
-            {dominant: 'terre', neutre: ['feu', 'lune'], oppose: ['eau', 'air']},
-            {dominant: 'eau', neutre: ['lune', 'air'], oppose: ['terre', 'feu']}
-        ]
+        this.mixin('model')
+        this.equilibrePentacle = this.model.equilibrePentacle
 
         this.model = {pentacle: {dominant: 'feu', neutreFav: 'terre', opposeMaj: 'lune'}}
-        this.currentNeutre = [];
         var self = this;
 
         getNeutre(dominant) {

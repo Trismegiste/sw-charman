@@ -5,8 +5,8 @@
             <div class="pure-u-1">
                 <select name="type" value="{ model.type }" class="pure-input-1">
                     <option value="nephilim">Nephilim</option>
-                    <option value="monoka">Effet-dragon</option>
-                    <option value="monoka">Créature de Kabbale</option>
+                    <option value="effetdragon">Effet-dragon</option>
+                    <option value="kabbale">Créature de Kabbale</option>
                     <option value="humain">Humain</option>
                 </select>
             </div>
