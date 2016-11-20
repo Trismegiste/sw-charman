@@ -10,14 +10,13 @@
             </div>
         </virtual>
         <div class="pure-u-1-4"><label>Pts.</label></div>
-        <div class="pure-u-1-4"><label class="centered">{ compteur }</label></div>
+        <div class="pure-u-1-4"><label class="centered">{ model.current.getAttributePoint() }</label></div>
     </form>
     <script>
         this.mixin('model')
         this.attributList = [
             'AGI', 'FOR', 'VIG', 'INT', 'ÂME'
         ]
-        this.compteur = 0;
         var self = this;
 
         onChange() {
@@ -25,7 +24,6 @@
             self.attributList.forEach(function(key) {
                 obj[key] = self[key].value
             })
-            self.compteur = self.model.current.getAttributePoint()
         }
     </script>
 </attribut>

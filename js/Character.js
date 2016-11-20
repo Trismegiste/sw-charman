@@ -39,7 +39,6 @@ Character.prototype = {
         var sum = 0
         var self = this
         Object.keys(this.attribute).forEach(function (key) {
-            console.log(key);
             sum += (self.attribute[key] - 4) / 2
         })
 
