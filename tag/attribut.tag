@@ -13,6 +13,7 @@
         <div class="pure-u-1-4"><label class="centered">{ compteur }</label></div>
     </form>
     <script>
+        this.mixin('model')
         this.attributList = [
             'AGI', 'FOR', 'VIG', 'INT', 'ÂME'
         ]
@@ -20,11 +21,11 @@
         var self = this;
 
         onChange() {
-            // @todo inside Character
-            self.compteur = 0
-            for (var k = 0; k < 5; k++) {
-                self.compteur += (self[self.attributList[k]].value - 4) / 2
-            }
+            var obj = self.model.current.attribute;
+            self.attributList.forEach(function(key) {
+                obj[key] = self[key].value
+            })
+            self.compteur = self.model.current.getAttributePoint()
         }
     </script>
 </attribut>
