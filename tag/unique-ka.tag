@@ -1,16 +1,23 @@
-<attribut>
+<unique-ka>
     <form class="pure-form pure-g form-label-aligned">
-        <legend class="pure-u-1">Attributs</legend>
-        <virtual each="{ attr in attributList }">
-            <div class="pure-u-1-4"><label>{attr}</label></div>
-            <div class="pure-u-1-4">
-                <select name="{attr}" class="pure-input-1" data-is="dice-option"></select>
-            </div>
-        </virtual>
+        <legend class="pure-u-1">Ka</legend>
+        <div class="pure-u-1-2">
+            <select name="uniqueKa" class="pure-input-1" value="{ model.uniqueKa }" onchange="{
+                        onChangeKa
+                    }">
+                <option each="{ka in model.kaList}" value="{ka}">{ ka }</option>
+            </select>
+        </div>
+        <div class="pure-u-1-4">
+            <label>INI</label>
+        </div>
+        <div class="pure-u-1-4">
+            <select name="initiation" class="pure-input-1" data-is="dice-option" value="{ model.initiation }"></select>
+        </div>
     </form>
     <script>
-        this.attributList = [
-            'AGI', 'FOR', 'VIG', 'INT', 'ÂME'
-        ]
+        this.mixin('model')
+        this.model.uniqueKa = 'feu'
+        this.model.initiation = '8';
     </script>
-</attribut>
+</unique-ka>

@@ -18,4 +18,7 @@
     <section>
         <attribut></attribut>
     </section>
+    <section>
+        <unique-ka></unique-ka>
+    </section>
 </content-detail>
