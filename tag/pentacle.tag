@@ -1,5 +1,5 @@
 <pentacle>
-    <form class="pure-form pure-g form-label-aligned">
+    <form class="pure-form pure-g">
         <legend class="pure-u-1">Pentacle</legend>
         <div class="pure-u-1-3">
             <label>Ka dom.</label>

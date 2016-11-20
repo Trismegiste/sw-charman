@@ -1,6 +1,6 @@
 <content-detail>
     <header>
-        <form class="pure-form pure-g form-label-aligned">
+        <form class="pure-form pure-g">
             <div class="pure-u-1-3">
                 <label>Template</label>
             </div>
