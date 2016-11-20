@@ -1,5 +1,5 @@
 <content-stat>
-    <form class="pure-form pure-g form-label-aligned" onchange="{ updateModel }">
+    <form class="pure-form pure-g form-label-aligned" onchange="{ updateCurrent }">
         <div class="pure-u-1-4"><label>Name</label></div>
         <div class="pure-u-3-4"><input class="pure-input-1" type="text" name="name" value="{model.current.name}" required="true"/></div>
         <div class="pure-u-1-4"><label>Target</label></div>
@@ -95,14 +95,6 @@
             obj.shaken = self.shaken.checked;
             obj.spentToken = self.token.value;
             obj.target = self.target.value;
-        }
-
-        updateModel() {
-            self.updateCurrent();
-            var idx = self.model.characterList.indexOf(self.model.current);
-            if (idx !== -1) {
-                self.model.characterList[idx] = self.model.current;
-            }
         }
 
         // store the current char into the Repository
