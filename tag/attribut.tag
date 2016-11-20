@@ -6,7 +6,7 @@
         <virtual each="{ attr in attributList }">
             <div class="pure-u-1-4"><label>{attr}</label></div>
             <div class="pure-u-1-4">
-                <select name="{attr}" class="pure-input-1" data-is="dice-option"></select>
+                <select name="{attr}" class="pure-input-1" data-is="dice-option" value="{ model.current.attribute[attr] }"></select>
             </div>
         </virtual>
         <div class="pure-u-1-4"><label>Pts.</label></div>
