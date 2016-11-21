@@ -2,9 +2,10 @@
     <form class="pure-form pure-g form-label-aligned" onchange="{
                 onChangeKa
             }">
-        <legend class="pure-u-1">Ka</legend>
+        <legend class="pure-u-1">{ opts.title || 'Ka'}</legend>
         <div class="pure-u-1-2">
             <select name="uniqueKa" class="pure-input-1" value="{ model.current.uniqueKa.ka }">
+                <option></option>
                 <option each="{ka in model.kaList}" value="{ka}">{ ka }</option>
             </select>
         </div>
