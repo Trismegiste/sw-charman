@@ -1,46 +1,56 @@
 <content-detail>
     <header>
-        <form class="pure-form pure-g" onchange="{ onChange }">
+        <form class="pure-form pure-g" onchange="{
+                    onChange
+                }">
             <legend class="pure-u-1">Template</legend>
             <div class="pure-u-1">
-                <select name="type" value="{ model.type }" class="pure-input-1">
+                <select name="type" value="{ model.current.type }" class="pure-input-1">
                     <option value=""></option>
-                    <option each="{type in typeList}" value="{type.value}">{type.title}</option>
+                    <option each="{key, type in typeList}" value="{key}">{type.title}</option>
                 </select>
             </div>
         </form>
     </header>
-    <section>
+    <section if="{ model.current.type == 'nephilim' }">
         <pentacle></pentacle>
     </section>
     <section>
         <attribut></attribut>
     </section>
-    <section>
-        <unique-ka></unique-ka>
+    <section if="{ model.current.type == 'nephilim' || model.current.type == 'humain' }">
+        <unique-ka title="Ka-Soleil" ka="soleil" value="4"></unique-ka>
+    </section>
+    <section if="{ model.current.type == 'effetdragon' || model.current.type == 'kabbale' }">
+        <unique-ka value="4"></unique-ka>
     </section>
     <section>
         <competence></competence>
     </section>
     <script>
-        this.typeList = [
-            {value: 'nephilim', title: 'Nephilim', build: function () {
+        this.mixin('model')
+        this.typeList = {
+            nephilim: {title: 'Nephilim', build: function () {
+
                 }
             },
-            {value: 'effetdragon', title: 'Effet-dragon', build: function () {
+            effetdragon: {title: 'Effet-dragon', build: function () {
                 }
             },
-            {value: 'kabbale', title: 'Créature de Kabbale', build: function () {
+            kabbale: {title: 'Créature de Kabbale', build: function () {
                 }
             },
-            {value: 'humain', title: 'Humain', build: function () {
+            humain: {title: 'Humain', build: function () {
                 }
             }
-        ]
+        }
+        var self = this;
 
         onChange() {
-            // reset and init with build
-            console.log(this.type.value)
+            //self.trigger('reset');
+            var newType = self.type.value
+            self.model.current.type = newType
+            self.typeList[newType].build(self.model.current)
         }
     </script>
 </content-detail>

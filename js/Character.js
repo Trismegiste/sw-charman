@@ -3,6 +3,7 @@
  */
 
 var Character = function () {
+    this.type = 'virtual';
     this.name = '';
     this.currentWounds = 0;
     this.spentToken = 0;
