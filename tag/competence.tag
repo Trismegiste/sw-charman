@@ -2,7 +2,7 @@
     <form class="pure-form pure-g" onchange="{
                 onChange
             }">
-        <legend class="pure-u-1">Compétences</legend>
+        <legend class="pure-u-1">{ opts.title || 'Compétences' }</legend>
         <div class="pure-u-1">
             <select name="competence" class="pure-input-1" onchange="{ onAppendCompetence }">
                 <option></option>

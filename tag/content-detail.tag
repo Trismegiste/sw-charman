@@ -12,20 +12,30 @@
             </div>
         </form>
     </header>
+    <!-- magic essence -->
     <section if="{ model.current.type == 'nephilim' }">
         <pentacle></pentacle>
-    </section>
-    <section>
-        <attribut></attribut>
-    </section>
-    <section if="{ model.current.type == 'nephilim' || model.current.type == 'humain' }">
-        <unique-ka title="Ka-Soleil" ka="soleil" value="4"></unique-ka>
     </section>
     <section if="{ model.current.type == 'effetdragon' || model.current.type == 'kabbale' }">
         <unique-ka value="4"></unique-ka>
     </section>
+    <section if="{ model.current.type == 'humain' }">
+        <unique-ka title="Initiation" ka="soleil" value="4"></unique-ka>
+    </section>
+    <!-- attributes -->
+    <section>
+        <attribut></attribut>
+    </section>
+    <!-- comp -->
     <section>
         <competence></competence>
+    </section>
+    <!-- simulacre -->
+    <section if="{ model.current.type == 'nephilim' }">
+        <unique-ka title="Simulacre" ka="soleil" value="4"></unique-ka>
+    </section>
+    <section if="{ model.current.type == 'nephilim' }">
+        <competence title="Compétences simulacre"></competence>
     </section>
     <script>
         this.mixin('model')
