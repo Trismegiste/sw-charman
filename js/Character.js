@@ -19,6 +19,7 @@ var Character = function () {
     this.attribute = {}
     this.pentacle = {}
     this.uniqueKa = {}
+    this.competence = [[], []]
 };
 
 Character.prototype = {
@@ -46,6 +47,11 @@ Character.prototype = {
             sum += (self.attribute[key] - 4) / 2
         })
 
+        return sum;
+    },
+    getCompetencePoint: function (group) {
+        var sum = 0
+        
         return sum;
     }
 };

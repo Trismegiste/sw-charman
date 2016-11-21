@@ -35,7 +35,7 @@
         <unique-ka title="Simulacre" ka="soleil" value="4"></unique-ka>
     </section>
     <section if="{ model.current.type == 'nephilim' }">
-        <competence title="Compétences simulacre"></competence>
+        <competence group="1" title="Compétences simulacre"></competence>
     </section>
     <script>
         this.mixin('model')
