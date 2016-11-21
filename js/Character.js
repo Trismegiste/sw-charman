@@ -16,6 +16,7 @@ var Character = function () {
     this.shaken = false;
     this.toHit = 2;
     this.attribute = {}
+    this.pentacle = {}
 };
 
 Character.prototype = {
