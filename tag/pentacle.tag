@@ -1,5 +1,7 @@
 <pentacle>
-    <form class="pure-form pure-g form-label-aligned" onchange="{ onChange }">
+    <form class="pure-form pure-g form-label-aligned" onchange="{
+                onChange
+            }">
         <legend class="pure-u-1">Pentacle</legend>
         <div class="pure-u-1-4">
             <label>Ka dom.</label>
@@ -45,11 +47,24 @@
         var self = this;
 
         onChange() {
-            // @todo reset radio
             self.model.current.pentacle = {
                 dominant: self.dominant.value,
-                initiation: self.initiation.value
+                initiation: self.initiation.value,
+                neutreFav: '',
+                opposeMaj: ''
             }
+            // manage neutre fav
+            self.neutre.forEach(function (radio) {
+                if (radio.checked) {
+                    self.model.current.pentacle.neutreFav = radio.value
+                }
+            })
+            // manage opp maj
+            self.oppose.forEach(function (radio) {
+                if (radio.checked) {
+                    self.model.current.pentacle.opposeMaj = radio.value
+                }
+            })
         }
     </script>
 </pentacle>

@@ -36,7 +36,7 @@ Model.prototype = {
             }
         }
 
-        return []
+        return ['', '']
     },
     getOppose: function (dominant) {
         for (var k = 0; k < 5; k++) {
@@ -45,7 +45,7 @@ Model.prototype = {
             }
         }
 
-        return []
+        return ['', '']
     },
     clone: function (obj) {
         // Handle the 3 simple types, and null or undefined
