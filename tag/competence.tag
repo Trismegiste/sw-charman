@@ -28,23 +28,22 @@
         <div class="pure-u-1-4"><label class="centered">{ compteur }</label></div>
     </form>
     <script>
+        this.mixin('model')
         this.competenceList = [
             {title: 'Combat', attr: 'AGI', editable: false},
             {title: 'Connaissance', attr: 'INT', editable: true}
         ]
         this.compteur = 0;
-        this.model = {
-            competence: [
-                {title: 'Tir', attr: 'AGI', editable: false, value: 8}
-            ]
-        };
+        this.model.competence = [
+            {title: 'Tir', attr: 'AGI', editable: false, value: 8}
+        ]
         var self = this;
 
         onAppendCompetence(e) {
             for(var k = 0; k < self.competenceList.length; k++) {
                 if (self.competenceList[k].title === e.target.value) {
                     var found = self.competenceList[k]
-                    var temp = Object.assign(Object.create(found), found);
+                    var temp = self.model.clone(found)
                     temp.value = 4;
                     self.model.competence.push(temp)
                 }

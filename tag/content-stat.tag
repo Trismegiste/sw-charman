@@ -67,9 +67,7 @@
             if (self.name.value == '') {
                 return;
             }
-            // checking
-            self.model.trigger('reset');
-            self.updateCurrent();
+            self.model.current = self.model.clone(self.model.current)
             self.model.characterList.push(self.model.current);
             self.notice(self.model.current.name + ' created', 'success')
             riot.route('char/' + (self.model.characterList.length - 1));
@@ -100,7 +98,7 @@
         // store the current char into the Repository
         storeToRepository() {
             if (self.model.current.name != '') {
-                var temp = Object.assign(Object.create(self.model.current), self.model.current);
+                var temp = self.model.clone(self.model.current);
                 temp.restart();
                 self.opts.repo.persist(temp)
                         .then(function() {
