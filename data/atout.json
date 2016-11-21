@@ -1,0 +1,644 @@
+[
+    {
+        "titre": "Acrobate",
+        "prerequis": "N, Agi d8, For d6",
+        "descr": "+2 aux jets d'Agilité liés à la souplesse, +1 en Parade si non-encombré.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Afflux de Pouvoir",
+        "prerequis": "Joker, A, Compétence d'Arcane d10",
+        "descr": "+2d6 PP en cas de Joker lors de l'Initiative.",
+        "enabled": "0"
+    },
+    {
+        "titre": "Ambidextre",
+        "prerequis": "N, Agi d8",
+        "descr": "Ignore le malus de -2 pour la main non directrice.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Adepte",
+        "prerequis": "N, Arcanes (Miracles), Foi d8, Combat d8",
+        "descr": "For+d4 pour les attaques à mains nues ; toujours considéré armé ; peut lancer certains pouvoirs en tant qu'actions libres (voir texte)",
+        "enabled": "0"
+    },
+    {
+        "titre": "Arcanes",
+        "prerequis": "N, Spécial",
+        "descr": "Permet de disposer de pouvoirs surnaturels.",
+        "enabled": "0"
+    },
+    {
+        "titre": "Arme fétiche",
+        "prerequis": "N, Combat ou Tir d10",
+        "descr": "+1 en Combat ou en Tir avec une arme précise.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Arme fétiche adorée",
+        "prerequis": "V, Arme fétiche",
+        "descr": "+2 en Combat ou en Tir avec une arme précise.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Arts martiaux",
+        "prerequis": "N, Combat d6",
+        "descr": "For+d4 pour les attaques à mains nues ; toujours considéré armé",
+        "enabled": "1"
+    },
+    {
+        "titre": "Maîtrise des arts martiaux",
+        "prerequis": "V, Art martiaux, Combat d10",
+        "descr": "For+d6 pour les attaques à mains nues",
+        "enabled": "1"
+    },
+    {
+        "titre": "As",
+        "prerequis": "N, Agi d8",
+        "descr": "+2 en Conduite, Navigation et Pilotage. Peut faire un jet de Résistance pour un véhicule en réussissant un jet à -2.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Assassin",
+        "prerequis": "N, Agi d8, Combat d6, Discrétion d8, Escalade d6",
+        "descr": "+2 aux dégâts contre une cible surprise",
+        "enabled": "1"
+    },
+    {
+        "titre": "Balayage",
+        "prerequis": "N, For d8, Combat d8",
+        "descr": "Attaque tous les adversaires adjacents à -2.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Grand balayage",
+        "prerequis": "V, Balayage",
+        "descr": "Attaque tous les adversaires adjacents.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Bagarreur",
+        "prerequis": "N, For d8",
+        "descr": "+2 aux dégâts à mains nues",
+        "enabled": "1"
+    },
+    {
+        "titre": "Cogneur",
+        "prerequis": "A, Bagarreur",
+        "descr": "Le dé de bonus de dégâts à mains nues passe à d8",
+        "enabled": "1"
+    },
+    {
+        "titre": "Bidouilleur",
+        "prerequis": "N, voir texte",
+        "descr": "+2 aux jets de Réparation, temps de réparation réduit de moitié avec un Relance.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Blocage",
+        "prerequis": "A, Combat d8",
+        "descr": "Parade +1",
+        "enabled": "1"
+    },
+    {
+        "titre": "Grand blocage",
+        "prerequis": "V, Blocage",
+        "descr": "Parade +2",
+        "enabled": "1"
+    },
+    {
+        "titre": "Brave",
+        "prerequis": "N, Âme d6 +2",
+        "descr": "+2 aux jets de Terreur",
+        "enabled": "0"
+    },
+    {
+        "titre": "Bricoleur de génie",
+        "prerequis": "N, voir texte",
+        "descr": "Peut bidouiller un engin une fois par session de jeu.",
+        "enabled": "0"
+    },
+    {
+        "titre": "Champion",
+        "prerequis": "N, voir texte",
+        "descr": "+2 au dégâts et en Résistance contre le mal d'origine surnaturelle.",
+        "enabled": "0"
+    },
+    {
+        "titre": "Chanceux",
+        "prerequis": "N",
+        "descr": "+1 Jeton par session.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Très Chanceux",
+        "prerequis": "N, Chanceux",
+        "descr": "+2 Jetons par session.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Charismatique",
+        "prerequis": "N, Âme d8",
+        "descr": "Charisme +2",
+        "enabled": "1"
+    },
+    {
+        "titre": "Combat à deux armes",
+        "prerequis": "N, Agi d8",
+        "descr": "Peut attaquer avec une arme dans chaque main sans subir le malus d'Actions multiples",
+        "enabled": "1"
+    },
+    {
+        "titre": "Combatif",
+        "prerequis": "A",
+        "descr": "+2 pour récupérer d'un état Secoué.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Commandement",
+        "prerequis": "N, Int d6",
+        "descr": "Les troupes ont un bonus de +1 pour récupérer d'un état Secoué.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Grande aura de commandement",
+        "prerequis": "N, Commandement",
+        "descr": "L'aura de commandement a un rayon de 10 cases.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Inspiration",
+        "prerequis": "A, Commandement",
+        "descr": "Les troupes ont un bonus de +1 à leurs jets d'Âme.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Acolyte",
+        "prerequis": "L, Joker",
+        "descr": "Un Joker Novice se met au service du personnage.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Contacts",
+        "prerequis": "N",
+        "descr": "Peut demander de l'aide à des amis bien placés.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Contre-attaque",
+        "prerequis": "A, Combat d8",
+        "descr": "Attaque gratuite par Round à -2 contre un adversaire ayant raté son attaque.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Grand contre-attaque",
+        "prerequis": "V, Contre-attaque",
+        "descr": "Comme ci-dessus, sans le malus de -2.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Costaud",
+        "prerequis": "N, For d6, Vig d6",
+        "descr": "Résistance +1, limite de poids à 8 x For",
+        "enabled": "1"
+    },
+    {
+        "titre": "Coup Puissant",
+        "prerequis": "Joker, A, Combat d10",
+        "descr": "Double les dégâts en mêlée en cas de Joker lors de l'Initiative.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Courage liquide",
+        "prerequis": "N, Vig d6",
+        "descr": "Gagne un dé de Vigueur en buvant 25 cl d'alcool fort.",
+        "enabled": "0"
+    },
+    {
+        "titre": "Dans le mille !",
+        "prerequis": "Joker, A, Tir/Lancer d10",
+        "descr": "Double les dégâts à distance en cas de Joker lors de l'Initiative.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Débrouillard",
+        "prerequis": "N, Int d6, Réparation d6, Perception d8",
+        "descr": "Peut improviser des gadgets.",
+        "enabled": "0"
+    },
+    {
+        "titre": "Dégaine comme l'éclair",
+        "prerequis": "N, Agi d8",
+        "descr": "Peut dégainer une arme en action gratuite.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Don des langues",
+        "prerequis": "N, Int d6",
+        "descr": "Commence le jeu en maîtrisant un nombre de langues égal à son dé d'Intellect ; possibilité de se faire comprendre par n'importe qui avec un jet d'Intellect à -2 après une semaine d'immersion.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Drain de l'âme",
+        "prerequis": "A, voir texte",
+        "descr": "Spécial.",
+        "enabled": "0"
+    },
+    {
+        "titre": "Endurci",
+        "prerequis": "L",
+        "descr": "Résistance +1",
+        "enabled": "1"
+    },
+    {
+        "titre": "Coriace",
+        "prerequis": "L, Endurci",
+        "descr": "Résistance +2",
+        "enabled": "1"
+    },
+    {
+        "titre": "Enragé",
+        "prerequis": "N",
+        "descr": "Voir texte.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Érudit",
+        "prerequis": "N, d8 dans les Compétences concernées",
+        "descr": "+2 dans deux Connaissances.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Esquive",
+        "prerequis": "A, Agi d8",
+        "descr": "-1 aux attaques à distance contre le personnage.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Grande esquive",
+        "prerequis": "V, Esquive",
+        "descr": "-2 aux attaques à distance contre le personnage.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Extraction",
+        "prerequis": "N, Agi d8",
+        "descr": "Empêche une attaque ennemie sur une retraite avec un jet d'Agilité.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Grande extraction",
+        "prerequis": "N, Extraction",
+        "descr": "Comme ci-dessus. Avec une Relance, empêche toutes les attaques.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Ferveur",
+        "prerequis": "V, Âme d8, Commandement",
+        "descr": "Les troupes ont un bonus de +1 aux dégâts.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Florentine",
+        "prerequis": "N, Agi d8, Combat d8",
+        "descr": "+1 en Combat contre les cibles n'ayant qu'une arme et sans bouclier. Ignore 1 point de bonus pour des attaquants multiples.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Forestier",
+        "prerequis": "N, Âme d6, Survie d8, Pistage d8",
+        "descr": "+2 en Survie, Pistage et Discrétion.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Frappe éclair",
+        "prerequis": "N, Agi d8",
+        "descr": "Peut attaquer un adversaire se portant au contact.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Frappe Foudroyante",
+        "prerequis": "H, Frappe éclair",
+        "descr": "Peut attaque tous les adversaires se portant au contact.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Frénésie",
+        "prerequis": "A, Combat d10",
+        "descr": "Peut faire une attaque supplémentaire avec un malus de -2.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Frénésie Suprême",
+        "prerequis": "V, Frénésie",
+        "descr": "Peut faire une attaque supplémentaire.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Serrez les Rang !",
+        "prerequis": "A, Int d8, Commandement",
+        "descr": "Les troupes ont un bonus de +1 aux Résistance.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Guérison rapide",
+        "prerequis": "N, Vigueur d8",
+        "descr": "+2 au jets de guérison naturelle.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Guérisseur",
+        "prerequis": "N, Âme d8",
+        "descr": "+2 au jets de Soins.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Guerrier saint / impie",
+        "prerequis": "N, voir texte",
+        "descr": "Voir texte",
+        "enabled": "0"
+    },
+    {
+        "titre": "Increvable",
+        "prerequis": "N, Joker, Âme d8",
+        "descr": "Ignore le malus de Blessures sur les jets lorsqu'il passe dans un État critique.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Trompe-la-mort",
+        "prerequis": "V, Increvable",
+        "descr": "50 % de chance de survivre à une « mort ».",
+        "enabled": "1"
+    },
+    {
+        "titre": "Instinct de tueur",
+        "prerequis": "H",
+        "descr": "Remporte les oppositions en cas d'égalité. Possibilité de relancer un 1 sur un jet Opposé.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Investigateur",
+        "prerequis": "N, Int d8, Investigation d8, Réseaux d8",
+        "descr": "+2 en Investigation et Réseaux.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Leader naturel",
+        "prerequis": "N, Âme d8, Commandement",
+        "descr": "Le leader peut donner des Jetons à ses troupes.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Lien animal",
+        "prerequis": "N",
+        "descr": "Le personnage peut donner des Jetons à ses animaux.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Lien mutuel",
+        "prerequis": "N, Joker, Âme d8",
+        "descr": "Le personnage peut donner des Jetons à ses compagnons.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Mage",
+        "prerequis": "N, voir texte",
+        "descr": "Chaque Relance sur le jet d'Arcanes réduit le coût en pouvoir du sort de 1.",
+        "enabled": "0"
+    },
+    {
+        "titre": "Maître d'armes",
+        "prerequis": "L, Combat d12",
+        "descr": "Parade +1",
+        "enabled": "1"
+    },
+    {
+        "titre": "Maître d'armes légendaire",
+        "prerequis": "L, Maître d'armes",
+        "descr": "Parade +2",
+        "enabled": "1"
+    },
+    {
+        "titre": "Maître des bêtes",
+        "prerequis": "N, Âme d8",
+        "descr": "Vous obtenez un compagnon animal.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Meneur d'hommes",
+        "prerequis": "V, Commandement",
+        "descr": "Dé Joker à d10 pour les jets de groupe des alliés",
+        "enabled": "1"
+    },
+    {
+        "titre": "Mentaliste",
+        "prerequis": "N, Arcanes (Psioniques), Int d8, Psioniques d6",
+        "descr": "+2 pour tout jet de Psioniques Opposé.",
+        "enabled": "0"
+    },
+    {
+        "titre": "Nerfs d'acier",
+        "prerequis": "N, Joker, Vigueur d8",
+        "descr": "Ignore 1 point de malus lié aux Blessures.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Nerfs d'acier trempé",
+        "prerequis": "N, Nerfs d'acier",
+        "descr": "Ignore 2 points de malus liés aux Blessures.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Noble",
+        "prerequis": "N",
+        "descr": "Riche, Charisme +2, Statut et richesse.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Nouveau Pouvoir",
+        "prerequis": "N, Arcanes",
+        "descr": "Le personnage obtient un nouveau pouvoir.",
+        "enabled": "0"
+    },
+    {
+        "titre": "Panache",
+        "prerequis": "N, Âme d8",
+        "descr": "+2 en cas d'utilisation de Jeton pour un jet de Trait (y compris pour un jet d'Encaissement)",
+        "enabled": "1"
+    },
+    {
+        "titre": "Poigne Ferme",
+        "prerequis": "N, Agi d8",
+        "descr": "Ignore la pénalité lié à une Plateforme instable.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Points de Pouvoir",
+        "prerequis": "N, Arcanes",
+        "descr": "+5 PP, une fois par Rang.",
+        "enabled": "0"
+    },
+    {
+        "titre": "Professionnel",
+        "prerequis": "L, d12 dans le Trait",
+        "descr": "Le Trait passe à d12+1",
+        "enabled": "1"
+    },
+    {
+        "titre": "Expert",
+        "prerequis": "L, Professionnel dans le Trait",
+        "descr": "Le Trait passe à d12+2",
+        "enabled": "1"
+    },
+    {
+        "titre": "Maître",
+        "prerequis": "L, Joker, Expert dans le Trait",
+        "descr": "Le dé Joker passe à d10 pour ce Trait.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Recycleur",
+        "prerequis": "N, Chanceux",
+        "descr": "Possibilité de trouver un équipement utile une fois par session",
+        "enabled": "1"
+    },
+    {
+        "titre": "Résistance aux arcanes",
+        "prerequis": "N, Âme d8",
+        "descr": "Armure +2 contre la magie, +2 pour résister aux pouvoirs.",
+        "enabled": "0"
+    },
+    {
+        "titre": "Grande résistance aux arcanes",
+        "prerequis": "N, Résistance aux arcanes",
+        "descr": "Armure +4 contre la magie, +4 pour résister aux pouvoirs.",
+        "enabled": "0"
+    },
+    {
+        "titre": "Riche",
+        "prerequis": "N",
+        "descr": "3 fois les fonds de départ, 75 000 $ de salaire annuel.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Très riche",
+        "prerequis": "N, Riche",
+        "descr": "5 fois les fonds de départ, 250 000 $ de salaire annuel.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Rock n' Roll !",
+        "prerequis": "A, Tir d8",
+        "descr": "Le tireur ignore le malus de Tir automatique s'il ne se déplace pas.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Sans pitié",
+        "prerequis": "A",
+        "descr": "Peut utiliser des Jetons sur les jets de dégâts.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Séduisant",
+        "prerequis": "N",
+        "descr": "Charisme +2",
+        "enabled": "1"
+    },
+    {
+        "titre": "Très séduisant",
+        "prerequis": "N, Séduisant",
+        "descr": "Charisme +4",
+        "enabled": "1"
+    },
+    {
+        "titre": "Sixième sens",
+        "prerequis": "N",
+        "descr": "Jet de Perception à -2 pour anticiper pièges et embuscades.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Source de pouvoir",
+        "prerequis": "A, Âme d6, Arcanes",
+        "descr": "Regagne 1 PP toutes les 30 minutes.",
+        "enabled": "0"
+    },
+    {
+        "titre": "Grande source de pouvoir",
+        "prerequis": "V, Source de pouvoir",
+        "descr": "Regagne 1 PP toutes les 15 minutes.",
+        "enabled": "0"
+    },
+    {
+        "titre": "Suivants",
+        "prerequis": "L, Joker",
+        "descr": "Attire 5 suivants.",
+        "enabled": "0"
+    },
+    {
+        "titre": "Tacticien",
+        "prerequis": "A, Joker, Int d8, Conn. (Bataille) d6",
+        "descr": "Le joueur fait un jet de Connaissance (Bataille) et gagne une carte d'action par Succès et Relance. Il peut par la suiteremplacer la carte d'un allié par une de celles-ci durant le combat.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Tête froide",
+        "prerequis": "A, Int d8",
+        "descr": "Agit sur la meilleure de deux cartes en combat.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Sang-froid",
+        "prerequis": "A, Tête Froide",
+        "descr": "Agit sur la meilleure de trois cartes en combat.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Tireur d'élite",
+        "prerequis": "A",
+        "descr": "La manœuvre Visée (+2 en Tir) est automatique si le personnage ne se déplace pas.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Touche-à-tout",
+        "prerequis": "N, Int d10",
+        "descr": "Pas de malus de -2 sur les jets de Connaissance non maitrisées.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Tueur de géant",
+        "prerequis": "V",
+        "descr": "+1d6 aux dégâts contre les grandes créatures.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Véloce",
+        "prerequis": "N, Agi d6",
+        "descr": "Allure +2, le dé de Course passe à d10.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Vif",
+        "prerequis": "N",
+        "descr": "Défausse les cartes de 5 ou moins lors de l'Initiative.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Vigilant",
+        "prerequis": "N",
+        "descr": "+2 en Perception",
+        "enabled": "1"
+    },
+    {
+        "titre": "Voleur",
+        "prerequis": "N, Agi d8, Escalade d6, Crochetage d6, Discrétion d8",
+        "descr": "+2 en Escalade, Crochetage, Discrétion, et pour désamorcer les pièges.",
+        "enabled": "1"
+    },
+    {
+        "titre": "Volonté de Fer",
+        "prerequis": "N, Intimidation d6",
+        "descr": "+2 en Intimidation et Sarcasme, +2 pour y résister.",
+        "enabled": "1"
+    }
+]
