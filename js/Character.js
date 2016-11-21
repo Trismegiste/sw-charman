@@ -3,7 +3,6 @@
  */
 
 var Character = function () {
-    this.type = 'virtual';
     this.name = '';
     this.currentWounds = 0;
     this.spentToken = 0;
@@ -15,8 +14,11 @@ var Character = function () {
     this.target = '';
     this.shaken = false;
     this.toHit = 2;
+    // detail
+    this.type = 'virtual';
     this.attribute = {}
     this.pentacle = {}
+    this.uniqueKa = {}
 };
 
 Character.prototype = {
