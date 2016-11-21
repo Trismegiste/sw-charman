@@ -29,12 +29,15 @@
     <script>
         this.mixin('model')
         this.group = opts.group || 0;
-        this.competenceList = [
-            {title: 'Combat', attr: 'AGI', editable: false},
-            {title: 'Connaissance', attr: 'INT', editable: true},
-            {title: 'Tir', attr: 'AGI', editable: false}
-        ]
         var self = this;
+
+        fetch('./data/competence.json')
+                .then(function(response){
+                    return response.json()
+                })
+                .then(function(data){
+                    self.competenceList = data
+                })
 
         onAppendCompetence(e) {
             for(var k = 0; k < self.competenceList.length; k++) {

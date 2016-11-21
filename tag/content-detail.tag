@@ -23,7 +23,7 @@
         <unique-ka title="Initiation" ka="soleil" value="4"></unique-ka>
     </section>
     <!-- attributes -->
-    <section>
+    <section if="{ model.current.type != 'nephilim' }">
         <attribut></attribut>
     </section>
     <!-- comp -->
@@ -33,6 +33,9 @@
     <!-- simulacre -->
     <section if="{ model.current.type == 'nephilim' }">
         <unique-ka title="Simulacre" ka="soleil" value="4"></unique-ka>
+    </section>
+    <section if="{ model.current.type == 'nephilim' }">
+        <attribut></attribut>
     </section>
     <section if="{ model.current.type == 'nephilim' }">
         <competence group="1" title="Compétences simulacre"></competence>

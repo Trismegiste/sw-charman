@@ -51,7 +51,10 @@ Character.prototype = {
     },
     getCompetencePoint: function (group) {
         var sum = 0
-        
+        for(var k=0; k < this.competence[group].length; k++) {
+            sum += (this.competence[group][k].value - 2) / 2
+        }
+
         return sum;
     }
 };
