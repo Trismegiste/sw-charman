@@ -1,57 +1,58 @@
-<content-stat class="webcomponent">
-    <form class="pure-form pure-g form-label-aligned" onchange="{ updateCurrent }">
-        <div class="pure-u-1-4"><label>Name</label></div>
-        <div class="pure-u-3-4"><input class="pure-input-1" type="text" name="name" value="{model.current.name}" required="true"/></div>
-        <div class="pure-u-1-4"><label>Target</label></div>
-        <div class="pure-u-3-4">
-            <select class="pure-input-1" name="target" value="{model.current.target}">
-                <option value=""></option>
-                <option each="{model.characterList}" value="{name}">{name}</option>
-            </select>
+<content-stat class="webcomponent pure-g">
+    <div class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
+        <form class="pure-form pure-g form-label-aligned" onchange="{ updateCurrent }">
+            <div class="pure-u-1-4"><label>Name</label></div>
+            <div class="pure-u-3-4"><input class="pure-input-1" type="text" name="name" value="{model.current.name}" required="true"/></div>
+            <div class="pure-u-1-4"><label>Target</label></div>
+            <div class="pure-u-3-4">
+                <select class="pure-input-1" name="target" value="{model.current.target}">
+                    <option value=""></option>
+                    <option each="{model.characterList}" value="{name}">{name}</option>
+                </select>
+            </div>
+            <div class="pure-u-1-4"><label>Attack</label></div>
+            <div class="pure-u-1-4">
+                <select name="attack" value="{model.current.attack}" data-is="dice-option"></select>
+            </div>
+            <div class="pure-u-1-2">
+                <label class="pure-checkbox">
+                    Shaken
+                    <input type="checkbox" name="shaken" checked="{ model.current.shaken }"/>
+                </label>
+            </div>
+            <div class="pure-u-1-4"><label>Damage</label></div>
+            <div class="pure-u-3-4">
+                <input type="text" name="damage" value="{ model.current.damage }" class="pure-input-1"/>
+            </div>
+            <div class="pure-u-1-4"><label>To Hit</label></div>
+            <div class="pure-u-1-4"><input type="number" value="{model.current.toHit}" name="toHit" class="pure-input-1"/></div>
+            <div class="pure-u-1-4"><label>Tough.</label></div>
+            <div class="pure-u-1-4"><input type="number" value="{model.current.toughness}" name="toughness" class="pure-input-1"/></div>
+            <div class="pure-u-1-4"><label>Wounds</label></div>
+            <div class="pure-u-1-4">
+                <select name="wounds" value="{model.current.currentWounds}">
+                    <option value="0">0</option>
+                    <option value="-1">-1</option>
+                    <option value="-2">-2</option>
+                    <option value="-3">-3</option>
+                    <option value="-4">Crit.</option>
+                </select>
+            </div>
+            <div class="pure-u-1-4"><label>Token</label></div>
+            <div class="pure-u-1-4">
+                <select name="token" value="{model.current.spentToken}" max="{model.current.getMaxToken()}" data-is="token-option" class="pure-input-1">
+                </select>
+            </div>
+        </form>
+        <div class="pure-g button-spacing">
+            <div class="pure-u-1-3"><a class="pure-button" onclick="{ onReset }">Reset</a></div>
+            <div class="pure-u-1-3"><a class="pure-button pure-button-primary" onclick="{ onAppend }">Append</a></div>
+            <div class="pure-u-1-3"><a class="pure-button button-error" onclick="{ onDelete }">Delete</a></div>
         </div>
-        <div class="pure-u-1-4"><label>Attack</label></div>
-        <div class="pure-u-1-4">
-            <select name="attack" value="{model.current.attack}" data-is="dice-option"></select>
+        <div class="pure-g button-spacing">
+            <div class="pure-u-1"><a class="pure-button button-success" onclick="{ storeToRepository }">Store to DB</a></div>
         </div>
-        <div class="pure-u-1-2">
-            <label class="pure-checkbox">
-                Shaken
-                <input type="checkbox" name="shaken" checked="{ model.current.shaken }"/>
-            </label>
-        </div>
-        <div class="pure-u-1-4"><label>Damage</label></div>
-        <div class="pure-u-3-4">
-            <input type="text" name="damage" value="{ model.current.damage }" class="pure-input-1"/>
-        </div>
-        <div class="pure-u-1-4"><label>To Hit</label></div>
-        <div class="pure-u-1-4"><input type="number" value="{model.current.toHit}" name="toHit" class="pure-input-1"/></div>
-        <div class="pure-u-1-4"><label>Tough.</label></div>
-        <div class="pure-u-1-4"><input type="number" value="{model.current.toughness}" name="toughness" class="pure-input-1"/></div>
-        <div class="pure-u-1-4"><label>Wounds</label></div>
-        <div class="pure-u-1-4">
-            <select name="wounds" value="{model.current.currentWounds}">
-                <option value="0">0</option>
-                <option value="-1">-1</option>
-                <option value="-2">-2</option>
-                <option value="-3">-3</option>
-                <option value="-4">Crit.</option>
-            </select>
-        </div>
-        <div class="pure-u-1-4"><label>Token</label></div>
-        <div class="pure-u-1-4">
-            <select name="token" value="{model.current.spentToken}" max="{model.current.getMaxToken()}" data-is="token-option" class="pure-input-1">
-            </select>
-        </div>
-    </form>
-    <div class="pure-g button-spacing">
-        <div class="pure-u-1-3"><a class="pure-button" onclick="{ onReset }">Reset</a></div>
-        <div class="pure-u-1-3"><a class="pure-button pure-button-primary" onclick="{ onAppend }">Append</a></div>
-        <div class="pure-u-1-3"><a class="pure-button button-error" onclick="{ onDelete }">Delete</a></div>
     </div>
-    <div class="pure-g button-spacing">
-        <div class="pure-u-1"><a class="pure-button button-success" onclick="{ storeToRepository }">Store to DB</a></div>
-    </div>
-
     <script>
         this.mixin('toasty')
         this.mixin('model')

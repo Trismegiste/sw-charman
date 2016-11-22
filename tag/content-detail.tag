@@ -1,5 +1,5 @@
-<content-detail>
-    <header class="webcomponent">
+<content-detail class="pure-g">
+    <header class="webcomponent pure-u-1 pure-u-md-1-2">
         <form class="pure-form pure-g" onchange="{
                     onChange
                 }">
@@ -12,7 +12,7 @@
             </div>
         </form>
     </header>
-    <section class="webcomponent">
+    <section class="webcomponent pure-u-1 pure-u-md-1-2">
         <!-- magic essence -->
         <pentacle if="{ model.current.type == 'nephilim' }"></pentacle>
         <unique-ka if="{ model.current.type == 'effetdragon' || model.current.type == 'kabbale' }"
@@ -21,20 +21,20 @@
                    title="Initiation" ka="soleil" value="4"></unique-ka>
     </section>
     <!-- attributes -->
-    <attribut if="{ model.current.type != 'nephilim' }" class="webcomponent"></attribut>
+    <attribut if="{ model.current.type != 'nephilim' }" class="webcomponent pure-u-1 pure-u-md-1-2"></attribut>
     <!-- comp -->
-    <competence class="webcomponent"></competence>
+    <competence class="webcomponent pure-u-1 pure-u-md-1-2"></competence>
     <!-- handicaps / chutes -->
-    <section class="webcomponent">
+    <section class="webcomponent pure-u-1 pure-u-md-1-2">
         <handicap filter="nephilim" title="Chutes" if="{ model.current.type == 'nephilim' }"></handicap>
         <handicap filter="humain" if="{ model.current.type == 'humain' }"></handicap>
     </section>
     <section if="{ model.current.type == 'nephilim' }" class="webcomponent">
         <!-- simulacre -->
-        <unique-ka title="Simulacre" ka="soleil" value="4"></unique-ka>
-        <attribut></attribut>
-        <competence group="1" title="Compétences simulacre"></competence>
-        <handicap filter="humain" group="1" title="Handicaps simulacre"></handicap>
+        <unique-ka title="Simulacre" ka="soleil" value="4" class="pure-u-1 pure-u-md-1-2"></unique-ka>
+        <attribut class="pure-u-1 pure-u-md-1-2"></attribut>
+        <competence group="1" title="Compétences simulacre" class="pure-u-1 pure-u-md-1-2"></competence>
+        <handicap filter="humain" group="1" title="Handicaps simulacre" class="pure-u-1 pure-u-md-1-2"></handicap>
     </section>
     <script>
         this.mixin('model')
