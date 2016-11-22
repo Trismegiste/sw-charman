@@ -96,5 +96,9 @@
             }
         }
 
+        this.model.on('update-hindrance', function() {
+            self.update()
+        })
+
     </script>
 </atout>

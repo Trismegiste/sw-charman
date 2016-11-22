@@ -61,5 +61,9 @@
             }
         }
 
+        onChange() {
+            self.model.trigger('update-hindrance')
+        }
+
     </script>
 </handicap>

@@ -38,7 +38,9 @@
               class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></handicap>
     <competence if="{ model.current.type == 'nephilim' }" group="1"
                 title="Compétences simulacre" class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></competence>
-    <atout class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3" group="1" filter="humain"></atout>
+    <atout if="{ model.current.type == 'nephilim' }"
+           class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"
+           group="1" filter="humain" title="Atouts simulacre"></atout>
     <script>
         this.mixin('model')
         this.typeList = {

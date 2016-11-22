@@ -53,16 +53,25 @@ Character.prototype = {
     },
     getCompetencePoint: function (group) {
         var sum = 0
-        for(var k=0; k < this.competence[group].length; k++) {
+        for (var k = 0; k < this.competence[group].length; k++) {
             sum += (this.competence[group][k].value - 2) / 2
         }
 
         return sum;
     },
     getXP: function (group) {
-        var sum = 0
+        var nb = this.atout[group].length - this.getHindrancePoint(group) / 2
 
-        return this.atout[group].length
+        return 5 * (nb + (nb > 16 ? nb - 16 : 0))
+    },
+    getHindrancePoint: function (group) {
+        var sum = 0
+        var tab = this.handicap[group]
+        for (var h in tab) {
+            sum += (tab[h].value == 'Mineur') ? 1 : 2
+        }
+
+        return sum;
     }
 };
 
