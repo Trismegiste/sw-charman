@@ -7,16 +7,20 @@
                 <option each="{ atoutList }" value="{titre}">{titre}</option>
             </select>
         </div>
-        <virtual each="{ model.current.atout[group] }">
-            <div class="pure-u-1-2">
-                <label>{titre}</label>
+        <virtual each="{ atout, idx in model.current.atout[group] }">
+            <div class="pure-u-1-{ atout.info == '1' ? '2' : '1' }">
+                <label><input type='radio' name="selectedEdge" value="{idx}">{atout.titre}</label>
             </div>
-            <div class="pure-u-1-2">
-                <input if="{ info == '1' }" name="atoutInfo" value="{detail}"
+            <div class="pure-u-1-2" if="{ atout.info == '1' }">
+                <input name="atoutInfo" value="{atout.detail}"
                        class="pure-input-1" onchange="{ parent.onUpdateDetail }"/>
             </div>
         </virtual>
-        <div class="pure-u-1-2"></div>
+        <div class="pure-u-1-2">
+            <button class="pure-button" onclick="{ onMoveUp }">&uparrow;</button>
+            <button class="pure-button" onclick="{ onDelete }">&times;</button>
+            <button class="pure-button" onclick="{ onMoveDown }">&downarrow;</button>
+        </div>
         <div class="pure-u-1-4"><label class="centered">XP</label></div>
         <div class="pure-u-1-4"><label class="centered">{ model.current.getXP(group) }</label></div>
     </form>
@@ -44,11 +48,21 @@
         }
 
         onUpdateDetail(e) {
+            console.log()
             var tab = self.model.current.atout[self.group];
-            var idx = tab.indexOf(e.item)
+            var idx = tab.indexOf(e.item.atout)
             if (-1 !== idx) {
                 tab[idx].detail = e.target.value
             }
+        }
+
+        onDelete(e) {
+            var tab = self.model.current.atout[self.group];
+            self.selectedEdge.forEach(function (radio) {
+                if (radio.checked) {
+                    tab.splice(radio.value, 1)
+                }
+            })
         }
 
     </script>
