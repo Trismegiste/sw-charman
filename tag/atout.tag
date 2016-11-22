@@ -4,7 +4,9 @@
         <div class="pure-u-1">
             <select name="atout" class="pure-input-1" onchange="{ onAppendAtout }">
                 <option></option>
-                <option each="{ atoutList }" value="{titre}" if="{ enabled=='1' }">{titre}</option>
+                <optgroup each="{ race in filter }" label="{race}">
+                    <option each="{ atoutList[race] }" value="{titre}" if="{ enabled=='1' }">{titre}</option>
+                </optgroup>
             </select>
         </div>
         <virtual each="{ model.current.atout[group] }">
@@ -33,6 +35,7 @@
         this.mixin('model')
         this.group = opts.group || 0;
         this.checkedAtout = undefined;
+        this.filter = opts.filter.split(" ")
         var self = this;
 
         fetch('./data/atout.json')
@@ -40,15 +43,18 @@
                     return response.json()
                 })
                 .then(function(data){
-                    self.atoutList = data[opts.filter]
+                    self.atoutList = data
                 })
 
         onAppendAtout(e) {
-            for(var k = 0; k < self.atoutList.length; k++) {
-                if (self.atoutList[k].titre === e.target.value) {
-                    var found = self.atoutList[k]
-                    var temp = self.model.clone(found)
-                    self.model.current.atout[self.group].push(temp)
+            for(var race in self.atoutList) {
+                var raceList = self.atoutList[race]
+                for(var k = 0; k < raceList.length; k++) {
+                    if (raceList[k].titre === e.target.value) {
+                        var found = raceList[k]
+                        var temp = self.model.clone(found)
+                        self.model.current.atout[self.group].push(temp)
+                    }
                 }
             }
         }
