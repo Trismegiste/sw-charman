@@ -60,7 +60,7 @@ Character.prototype = {
         return sum;
     },
     getXP: function (group) {
-        var nb = this.atout[group].length - this.getHindrancePoint(group) / 2
+        var nb = this.atout[group].length - this.getHindrancePoint(group) / 2 - 1
 
         return 5 * (nb + (nb > 16 ? nb - 16 : 0))
     },
