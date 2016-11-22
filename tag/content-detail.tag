@@ -1,5 +1,5 @@
 <content-detail class="pure-g">
-    <header class="webcomponent pure-u-1 pure-u-md-1-2">
+    <header class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
         <form class="pure-form pure-g" onchange="{
                     onChange
                 }">
@@ -12,7 +12,7 @@
             </div>
         </form>
     </header>
-    <section class="webcomponent pure-u-1 pure-u-md-1-2">
+    <section class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
         <!-- magic essence -->
         <pentacle if="{ model.current.type == 'nephilim' }"></pentacle>
         <unique-ka if="{ model.current.type == 'effetdragon' || model.current.type == 'kabbale' }"
@@ -21,23 +21,23 @@
                    title="Initiation" ka="soleil" value="4"></unique-ka>
     </section>
     <!-- attributes -->
-    <attribut if="{ model.current.type != 'nephilim' }" class="webcomponent pure-u-1 pure-u-md-1-2"></attribut>
+    <attribut if="{ model.current.type != 'nephilim' }" class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></attribut>
     <!-- comp -->
-    <competence class="webcomponent pure-u-1 pure-u-md-1-2"></competence>
+    <competence class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></competence>
     <!-- handicaps / chutes -->
-    <handicap filter="nephilim" title="Chutes" if="{ model.current.type == 'nephilim' }" class="webcomponent pure-u-1 pure-u-md-1-2"></handicap>
-    <handicap filter="humain" if="{ model.current.type == 'humain' }" class="webcomponent pure-u-1 pure-u-md-1-2"></handicap>
+    <handicap filter="nephilim" title="Chutes" if="{ model.current.type == 'nephilim' }" class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></handicap>
+    <handicap filter="humain" if="{ model.current.type == 'humain' }" class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></handicap>
     <!-- atouts -->
-    <atout class="webcomponent pure-u-1 pure-u-md-1-2" filter="humain"></atout>
+    <atout class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3" filter="nephilim"></atout>
     <!-- simulacre -->
     <unique-ka if="{ model.current.type == 'nephilim' }" title="Simulacre"
-               ka="soleil" value="4" class="webcomponent pure-u-1 pure-u-md-1-2"></unique-ka>
-    <attribut if="{ model.current.type == 'nephilim' }" class="webcomponent pure-u-1 pure-u-md-1-2"></attribut>
+               ka="soleil" value="4" class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></unique-ka>
+    <attribut if="{ model.current.type == 'nephilim' }" class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></attribut>
     <competence if="{ model.current.type == 'nephilim' }" group="1"
-                title="Compétences simulacre" class="webcomponent pure-u-1 pure-u-md-1-2"></competence>
+                title="Compétences simulacre" class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></competence>
     <handicap if="{ model.current.type == 'nephilim' }"
               filter="humain" group="1" title="Handicaps simulacre"
-              class="webcomponent pure-u-1 pure-u-md-1-2"></handicap>
+              class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></handicap>
     <script>
         this.mixin('model')
         this.typeList = {
