@@ -1,10 +1,24 @@
 {
     "humain": [
         {
+            "titre": "Acolyte",
+            "prerequis": "L, Joker",
+            "descr": "Un Joker Novice se met au service du personnage.",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
             "titre": "Acrobate",
             "prerequis": "N, Agi d8, For d6",
             "descr": "+2 aux jets d'Agilité liés à la souplesse, +1 en Parade si non-encombré.",
             "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Adepte",
+            "prerequis": "N, Arcanes (Miracles), Foi d8, Combat d8",
+            "descr": "For+d4 pour les attaques à mains nues ; toujours considéré armé ; peut lancer certains pouvoirs en tant qu'actions libres (voir texte)",
+            "enabled": "0",
             "info": "0"
         },
         {
@@ -19,13 +33,6 @@
             "prerequis": "N, Agi d8",
             "descr": "Ignore le malus de -2 pour la main non directrice.",
             "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Adepte",
-            "prerequis": "N, Arcanes (Miracles), Foi d8, Combat d8",
-            "descr": "For+d4 pour les attaques à mains nues ; toujours considéré armé ; peut lancer certains pouvoirs en tant qu'actions libres (voir texte)",
-            "enabled": "0",
             "info": "0"
         },
         {
@@ -50,16 +57,23 @@
             "info": "0"
         },
         {
+            "titre": "Artisan",
+            "prerequis": "N",
+            "descr": "Jet INT",
+            "enabled": "1",
+            "info": "1"
+        },
+        {
+            "titre": "Artiste",
+            "prerequis": "N",
+            "descr": "Jet ÂME",
+            "enabled": "1",
+            "info": "1"
+        },
+        {
             "titre": "Arts martiaux",
             "prerequis": "N, Combat d6",
             "descr": "For+d4 pour les attaques à mains nues ; toujours considéré armé",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Maîtrise des arts martiaux",
-            "prerequis": "V, Art martiaux, Combat d10",
-            "descr": "For+d6 pour les attaques à mains nues",
             "enabled": "1",
             "info": "0"
         },
@@ -78,20 +92,6 @@
             "info": "0"
         },
         {
-            "titre": "Balayage",
-            "prerequis": "N, For d8, Combat d8",
-            "descr": "Attaque tous les adversaires adjacents à -2.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Grand balayage",
-            "prerequis": "V, Balayage",
-            "descr": "Attaque tous les adversaires adjacents.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
             "titre": "Bagarreur",
             "prerequis": "N, For d8",
             "descr": "+2 aux dégâts à mains nues",
@@ -99,9 +99,9 @@
             "info": "0"
         },
         {
-            "titre": "Cogneur",
-            "prerequis": "A, Bagarreur",
-            "descr": "Le dé de bonus de dégâts à mains nues passe à d8",
+            "titre": "Balayage",
+            "prerequis": "N, For d8, Combat d8",
+            "descr": "Attaque tous les adversaires adjacents à -2.",
             "enabled": "1",
             "info": "0"
         },
@@ -116,13 +116,6 @@
             "titre": "Blocage",
             "prerequis": "A, Combat d8",
             "descr": "Parade +1",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Grand blocage",
-            "prerequis": "V, Blocage",
-            "descr": "Parade +2",
             "enabled": "1",
             "info": "0"
         },
@@ -155,16 +148,16 @@
             "info": "0"
         },
         {
-            "titre": "Très Chanceux",
-            "prerequis": "N, Chanceux",
-            "descr": "+2 Jetons par session.",
+            "titre": "Charismatique",
+            "prerequis": "N, Âme d8",
+            "descr": "Charisme +2",
             "enabled": "1",
             "info": "0"
         },
         {
-            "titre": "Charismatique",
-            "prerequis": "N, Âme d8",
-            "descr": "Charisme +2",
+            "titre": "Cogneur",
+            "prerequis": "A, Bagarreur",
+            "descr": "Le dé de bonus de dégâts à mains nues passe à d8",
             "enabled": "1",
             "info": "0"
         },
@@ -190,27 +183,6 @@
             "info": "0"
         },
         {
-            "titre": "Grande aura de commandement",
-            "prerequis": "N, Commandement",
-            "descr": "L'aura de commandement a un rayon de 10 cases.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Inspiration",
-            "prerequis": "A, Commandement",
-            "descr": "Les troupes ont un bonus de +1 à leurs jets d'Âme.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Acolyte",
-            "prerequis": "L, Joker",
-            "descr": "Un Joker Novice se met au service du personnage.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
             "titre": "Contacts",
             "prerequis": "N",
             "descr": "Peut demander de l'aide à des amis bien placés.",
@@ -225,9 +197,9 @@
             "info": "0"
         },
         {
-            "titre": "Grand contre-attaque",
-            "prerequis": "V, Contre-attaque",
-            "descr": "Comme ci-dessus, sans le malus de -2.",
+            "titre": "Coriace",
+            "prerequis": "L, Endurci",
+            "descr": "Résistance +2",
             "enabled": "1",
             "info": "0"
         },
@@ -295,13 +267,6 @@
             "info": "0"
         },
         {
-            "titre": "Coriace",
-            "prerequis": "L, Endurci",
-            "descr": "Résistance +2",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
             "titre": "Enragé",
             "prerequis": "N",
             "descr": "Voir texte.",
@@ -323,23 +288,16 @@
             "info": "0"
         },
         {
-            "titre": "Grande esquive",
-            "prerequis": "V, Esquive",
-            "descr": "-2 aux attaques à distance contre le personnage.",
+            "titre": "Expert",
+            "prerequis": "L, Professionnel dans le Trait",
+            "descr": "Le Trait passe à d12+2",
             "enabled": "1",
-            "info": "0"
+            "info": "1"
         },
         {
             "titre": "Extraction",
             "prerequis": "N, Agi d8",
             "descr": "Empêche une attaque ennemie sur une retraite avec un jet d'Agilité.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Grande extraction",
-            "prerequis": "N, Extraction",
-            "descr": "Comme ci-dessus. Avec une Relance, empêche toutes les attaques.",
             "enabled": "1",
             "info": "0"
         },
@@ -393,10 +351,59 @@
             "info": "0"
         },
         {
-            "titre": "Serrez les Rang !",
-            "prerequis": "A, Int d8, Commandement",
-            "descr": "Les troupes ont un bonus de +1 aux Résistance.",
+            "titre": "Grand balayage",
+            "prerequis": "V, Balayage",
+            "descr": "Attaque tous les adversaires adjacents.",
             "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Grand blocage",
+            "prerequis": "V, Blocage",
+            "descr": "Parade +2",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Grand contre-attaque",
+            "prerequis": "V, Contre-attaque",
+            "descr": "Comme ci-dessus, sans le malus de -2.",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Grande aura de commandement",
+            "prerequis": "N, Commandement",
+            "descr": "L'aura de commandement a un rayon de 10 cases.",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Grande esquive",
+            "prerequis": "V, Esquive",
+            "descr": "-2 aux attaques à distance contre le personnage.",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Grande extraction",
+            "prerequis": "N, Extraction",
+            "descr": "Comme ci-dessus. Avec une Relance, empêche toutes les attaques.",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Grande résistance aux arcanes",
+            "prerequis": "N, Résistance aux arcanes",
+            "descr": "Armure +4 contre la magie, +4 pour résister aux pouvoirs.",
+            "enabled": "0",
+            "info": "0"
+        },
+        {
+            "titre": "Grande source de pouvoir",
+            "prerequis": "V, Source de pouvoir",
+            "descr": "Regagne 1 PP toutes les 15 minutes.",
+            "enabled": "0",
             "info": "0"
         },
         {
@@ -428,9 +435,9 @@
             "info": "0"
         },
         {
-            "titre": "Trompe-la-mort",
-            "prerequis": "V, Increvable",
-            "descr": "50 % de chance de survivre à une « mort ».",
+            "titre": "Inspiration",
+            "prerequis": "A, Commandement",
+            "descr": "Les troupes ont un bonus de +1 à leurs jets d'Âme.",
             "enabled": "1",
             "info": "0"
         },
@@ -477,6 +484,13 @@
             "info": "0"
         },
         {
+            "titre": "Maître",
+            "prerequis": "L, Joker, Expert dans le Trait",
+            "descr": "Le dé Joker passe à d10 pour ce Trait.",
+            "enabled": "1",
+            "info": "1"
+        },
+        {
             "titre": "Maître d'armes",
             "prerequis": "L, Combat d12",
             "descr": "Parade +1",
@@ -494,6 +508,13 @@
             "titre": "Maître des bêtes",
             "prerequis": "N, Âme d8",
             "descr": "Vous obtenez un compagnon animal.",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Maîtrise des arts martiaux",
+            "prerequis": "V, Art martiaux, Combat d10",
+            "descr": "For+d6 pour les attaques à mains nues",
             "enabled": "1",
             "info": "0"
         },
@@ -565,21 +586,7 @@
             "prerequis": "L, d12 dans le Trait",
             "descr": "Le Trait passe à d12+1",
             "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Expert",
-            "prerequis": "L, Professionnel dans le Trait",
-            "descr": "Le Trait passe à d12+2",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Maître",
-            "prerequis": "L, Joker, Expert dans le Trait",
-            "descr": "Le dé Joker passe à d10 pour ce Trait.",
-            "enabled": "1",
-            "info": "0"
+            "info": "1"
         },
         {
             "titre": "Recycleur",
@@ -596,13 +603,6 @@
             "info": "0"
         },
         {
-            "titre": "Grande résistance aux arcanes",
-            "prerequis": "N, Résistance aux arcanes",
-            "descr": "Armure +4 contre la magie, +4 pour résister aux pouvoirs.",
-            "enabled": "0",
-            "info": "0"
-        },
-        {
             "titre": "Riche",
             "prerequis": "N",
             "descr": "3 fois les fonds de départ, 75 000 $ de salaire annuel.",
@@ -610,16 +610,16 @@
             "info": "0"
         },
         {
-            "titre": "Très riche",
-            "prerequis": "N, Riche",
-            "descr": "5 fois les fonds de départ, 250 000 $ de salaire annuel.",
+            "titre": "Rock n' Roll !",
+            "prerequis": "A, Tir d8",
+            "descr": "Le tireur ignore le malus de Tir automatique s'il ne se déplace pas.",
             "enabled": "1",
             "info": "0"
         },
         {
-            "titre": "Rock n' Roll !",
-            "prerequis": "A, Tir d8",
-            "descr": "Le tireur ignore le malus de Tir automatique s'il ne se déplace pas.",
+            "titre": "Sang-froid",
+            "prerequis": "A, Tête Froide",
+            "descr": "Agit sur la meilleure de trois cartes en combat.",
             "enabled": "1",
             "info": "0"
         },
@@ -638,9 +638,9 @@
             "info": "0"
         },
         {
-            "titre": "Très séduisant",
-            "prerequis": "N, Séduisant",
-            "descr": "Charisme +4",
+            "titre": "Serrez les Rang !",
+            "prerequis": "A, Int d8, Commandement",
+            "descr": "Les troupes ont un bonus de +1 aux Résistance.",
             "enabled": "1",
             "info": "0"
         },
@@ -655,13 +655,6 @@
             "titre": "Source de pouvoir",
             "prerequis": "A, Âme d6, Arcanes",
             "descr": "Regagne 1 PP toutes les 30 minutes.",
-            "enabled": "0",
-            "info": "0"
-        },
-        {
-            "titre": "Grande source de pouvoir",
-            "prerequis": "V, Source de pouvoir",
-            "descr": "Regagne 1 PP toutes les 15 minutes.",
             "enabled": "0",
             "info": "0"
         },
@@ -687,13 +680,6 @@
             "info": "0"
         },
         {
-            "titre": "Sang-froid",
-            "prerequis": "A, Tête Froide",
-            "descr": "Agit sur la meilleure de trois cartes en combat.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
             "titre": "Tireur d'élite",
             "prerequis": "A",
             "descr": "La manœuvre Visée (+2 en Tir) est automatique si le personnage ne se déplace pas.",
@@ -704,6 +690,34 @@
             "titre": "Touche-à-tout",
             "prerequis": "N, Int d10",
             "descr": "Pas de malus de -2 sur les jets de Connaissance non maitrisées.",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Très Chanceux",
+            "prerequis": "N, Chanceux",
+            "descr": "+2 Jetons par session.",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Très riche",
+            "prerequis": "N, Riche",
+            "descr": "5 fois les fonds de départ, 250 000 $ de salaire annuel.",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Très séduisant",
+            "prerequis": "N, Séduisant",
+            "descr": "Charisme +4",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Trompe-la-mort",
+            "prerequis": "V, Increvable",
+            "descr": "50 % de chance de survivre à une « mort ».",
             "enabled": "1",
             "info": "0"
         },
@@ -748,141 +762,147 @@
             "descr": "+2 en Intimidation et Sarcasme, +2 pour y résister.",
             "enabled": "1",
             "info": "0"
-        },
-        {
-            "titre": "Artisan",
-            "prerequis": "N",
-            "descr": "Jet INT",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "Artiste",
-            "prerequis": "N",
-            "descr": "Jet ÂME",
-            "enabled": "1",
-            "info": "1"
         }
     ],
     "nephilim": [
         {
             "titre": "Accès à un Akasha",
             "prerequis": "Nephilim",
-            "descr": "Rives localisations de 2 Portes et des 2 Clefs & d4 en Plans subtils",
+            "descr": "Rives avec 2 Portes et d4 en Plans subtils",
+            "enabled": "1",
             "info": "0"
         },
         {
             "titre": "Admirateurs",
             "prerequis": "Nephilim, [Réseaux d8+ ou Persuasion d8+ ou Charisme +2+] et Arcanes mineurs d4+",
             "descr": "groupe constitué de 5+2d4 humains profanes",
+            "enabled": "1",
             "info": "0"
         },
         {
             "titre": "Adopté Arcane majeur",
             "prerequis": "cf Codex AM",
             "descr": "Adopté & d4 en Arcanes majeurs",
+            "enabled": "1",
             "info": "0"
         },
         {
             "titre": "Artefact",
             "prerequis": "Nephilim",
             "descr": "1 er ou 2 e cercle & PUI=15",
+            "enabled": "1",
             "info": "0"
         },
         {
             "titre": "Artefact Atlante",
             "prerequis": "L",
             "descr": "Cénobite",
+            "enabled": "1",
             "info": "0"
         },
         {
             "titre": "Augmentation Initiation",
             "prerequis": "Nephilim",
             "descr": "Augmente le niveau d'Initiation (INI) de 2 puces",
+            "enabled": "1",
             "info": "0"
         },
         {
             "titre": "Cénobite MdK",
             "prerequis": "Nephilim, V, Séminariste même MdK + 2 autres Seminariste",
             "descr": "Tipheret, Geburah, Chesed",
+            "enabled": "1",
             "info": "1"
         },
         {
             "titre": "Compréhension solaire",
             "prerequis": "Nephilim, BG, incompatible Ombre",
             "descr": "+ 6 pts Compétence profanes",
+            "enabled": "1",
             "info": "0"
         },
         {
             "titre": "Disciple",
             "prerequis": "Nephilim",
             "descr": "Premier Cercle de Magie + 10 Mots",
+            "enabled": "1",
             "info": "1"
         },
         {
             "titre": "Domaines Analogiques",
             "prerequis": "Disciple",
             "descr": "+ 10 Mots",
+            "enabled": "1",
             "info": "1"
         },
         {
             "titre": "Effet-Dragon",
             "prerequis": "Nephilim",
             "descr": "INI du nephilim -1TDD. Retrouve en 2d6 jours",
+            "enabled": "1",
             "info": "0"
         },
         {
             "titre": "Enchantement d'outil",
             "prerequis": "Outil Alchimique",
             "descr": "+0 au lieu de +1 et production +1 substance",
+            "enabled": "1",
             "info": "1"
         },
         {
             "titre": "Glorieux Alliage",
             "prerequis": "L, 9 Substances au blanc, Outil du glorieux alliage",
             "descr": "3 e cercle d'Alchimie",
+            "enabled": "1",
             "info": "1"
         },
         {
             "titre": "Inconnaissable MdK",
             "prerequis": "L, Cénobite",
             "descr": "Kabbale du 3 e cercle",
+            "enabled": "1",
             "info": "1"
         },
         {
             "titre": "Magicien",
             "prerequis": "Disciple, V, 30 Mots",
             "descr": "sortilèges du Deuxième Cercle",
+            "enabled": "1",
             "info": "0"
         },
         {
             "titre": "Magistère",
             "prerequis": "L, Magicien, 50 Mots",
             "descr": "sortilèges du Troisième Cercle",
+            "enabled": "1",
             "info": "0"
         },
         {
             "titre": "Nephilim",
             "prerequis": "Race",
             "descr": "INI démarre à d4 + 0 puce",
+            "enabled": "1",
             "info": "0"
         },
         {
             "titre": "Outil Alchimique",
             "prerequis": "Nephilim",
             "descr": "Cornue, Forge, Creuset, Alambic et Athanor",
+            "enabled": "1",
             "info": "1"
         },
         {
             "titre": "Séminariste MdK",
             "prerequis": "Nephilim",
             "descr": "Kabbale du 1 er cercle",
+            "enabled": "1",
             "info": "1"
         },
         {
             "titre": "Substances d'œuvre au Blanc",
             "prerequis": "V, 3 atouts Outil, Outils des substances",
             "descr": "2 e cercle alchimique (le Leukossi)",
+            "enabled": "1",
             "info": "1"
         }
     ],
@@ -1033,6 +1053,29 @@
         {
             "titre": "Vol",
             "descr": "Vol à l'allure indiquée",
+            "enabled": "1",
+            "info": "1"
+        }
+    ],
+    "general": [
+        {
+            "titre": "Attribut +1TDD",
+            "prerequis": "Limité à 1 par rang",
+            "descr": "Un attribut augmente d'un type de dé",
+            "enabled": "1",
+            "info": "1"
+        },
+        {
+            "titre": "2 Compétences +1TDD",
+            "prerequis": "si compétence < attribut",
+            "descr": "2 compétences augmentent d'un type de dé",
+            "enabled": "1",
+            "info": "1"
+        },
+        {
+            "titre": "1 Compétence +1TDD",
+            "prerequis": "si compétence ≥ attribut",
+            "descr": "1 compétences augmente d'un type de dé",
             "enabled": "1",
             "info": "1"
         }

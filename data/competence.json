@@ -15,6 +15,10 @@
         "attr": "INT",
         "editable": false
     }, {
+        "title": "Connaissance Bataille",
+        "attr": "INT",
+        "editable": false
+    }, {
         "title": "Connaissance Science",
         "attr": "INT",
         "editable": false

@@ -26,7 +26,8 @@
             <div class="pure-u-3-8">
                 <label>
                     <input type="radio" name="neutre" value="{ka}"
-                           checked="{ model.current.pentacle.neutreFav == ka }"/>{ka}
+                           checked="{ model.current.pentacle.neutreFav == ka }"/>
+                    {ka}
                 </label>
             </div>
         </virtual>
@@ -37,7 +38,8 @@
             <div class="pure-u-3-8">
                 <label>
                     <input type="radio" name="oppose" value="{ka}"
-                           checked="{ model.current.pentacle.opposeMaj == ka }"/>{ka}
+                           checked="{ model.current.pentacle.opposeMaj == ka }"/>
+                    {ka}
                 </label>
             </div>
         </virtual>

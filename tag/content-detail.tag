@@ -28,7 +28,7 @@
     <handicap filter="nephilim" title="Chutes" if="{ model.current.type == 'nephilim' }" class="webcomponent pure-u-1 pure-u-md-1-2"></handicap>
     <handicap filter="humain" if="{ model.current.type == 'humain' }" class="webcomponent pure-u-1 pure-u-md-1-2"></handicap>
     <!-- atouts -->
-    <atout class="webcomponent pure-u-1 pure-u-md-1-2"></atout>
+    <atout class="webcomponent pure-u-1 pure-u-md-1-2" filter="humain"></atout>
     <!-- simulacre -->
     <unique-ka if="{ model.current.type == 'nephilim' }" title="Simulacre"
                ka="soleil" value="4" class="webcomponent pure-u-1 pure-u-md-1-2"></unique-ka>

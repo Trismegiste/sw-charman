@@ -4,7 +4,7 @@
         <div class="pure-u-1">
             <select name="atout" class="pure-input-1" onchange="{ onAppendAtout }">
                 <option></option>
-                <option each="{ atoutList }" value="{titre}">{titre}</option>
+                <option each="{ atoutList }" value="{titre}" if="{ enabled=='1' }">{titre}</option>
             </select>
         </div>
         <virtual each="{ model.current.atout[group] }">
@@ -39,7 +39,7 @@
                     return response.json()
                 })
                 .then(function(data){
-                    self.atoutList = data['humain']
+                    self.atoutList = data[opts.filter]
                 })
 
         onAppendAtout(e) {
