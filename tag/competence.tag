@@ -1,5 +1,5 @@
 <competence>
-    <form class="pure-form pure-g" onchange="{onChange}">
+    <form class="pure-form pure-g">
         <legend class="pure-u-1">{ opts.title || 'Compétences' }</legend>
         <div class="pure-u-1">
             <select name="competence" class="pure-input-1" onchange="{ onAppendCompetence }">

@@ -21,6 +21,7 @@ var Character = function () {
     this.uniqueKa = {}
     this.competence = [[], []]
     this.handicap = [[], []]
+    this.atout = [[], []]
 };
 
 Character.prototype = {
@@ -57,6 +58,11 @@ Character.prototype = {
         }
 
         return sum;
+    },
+    getXP: function (group) {
+        var sum = 0
+
+        return this.atout[group].length
     }
 };
 
