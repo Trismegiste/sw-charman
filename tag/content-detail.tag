@@ -25,22 +25,23 @@
     <!-- comp -->
     <competence class="webcomponent pure-u-1 pure-u-md-1-2"></competence>
     <!-- handicaps / chutes -->
-    <section class="webcomponent pure-u-1 pure-u-md-1-2">
-        <handicap filter="nephilim" title="Chutes" if="{ model.current.type == 'nephilim' }"></handicap>
-        <handicap filter="humain" if="{ model.current.type == 'humain' }"></handicap>
-    </section>
-    <section if="{ model.current.type == 'nephilim' }" class="webcomponent">
-        <!-- simulacre -->
-        <unique-ka title="Simulacre" ka="soleil" value="4" class="pure-u-1 pure-u-md-1-2"></unique-ka>
-        <attribut class="pure-u-1 pure-u-md-1-2"></attribut>
-        <competence group="1" title="Compétences simulacre" class="pure-u-1 pure-u-md-1-2"></competence>
-        <handicap filter="humain" group="1" title="Handicaps simulacre" class="pure-u-1 pure-u-md-1-2"></handicap>
-    </section>
+    <handicap filter="nephilim" title="Chutes" if="{ model.current.type == 'nephilim' }" class="webcomponent pure-u-1 pure-u-md-1-2"></handicap>
+    <handicap filter="humain" if="{ model.current.type == 'humain' }" class="webcomponent pure-u-1 pure-u-md-1-2"></handicap>
+    <!-- atouts -->
+    <atout class="webcomponent pure-u-1 pure-u-md-1-2"></atout>
+    <!-- simulacre -->
+    <unique-ka if="{ model.current.type == 'nephilim' }" title="Simulacre"
+               ka="soleil" value="4" class="webcomponent pure-u-1 pure-u-md-1-2"></unique-ka>
+    <attribut if="{ model.current.type == 'nephilim' }" class="webcomponent pure-u-1 pure-u-md-1-2"></attribut>
+    <competence if="{ model.current.type == 'nephilim' }" group="1"
+                title="Compétences simulacre" class="webcomponent pure-u-1 pure-u-md-1-2"></competence>
+    <handicap if="{ model.current.type == 'nephilim' }"
+              filter="humain" group="1" title="Handicaps simulacre"
+              class="webcomponent pure-u-1 pure-u-md-1-2"></handicap>
     <script>
         this.mixin('model')
         this.typeList = {
             nephilim: {title: 'Nephilim', build: function () {
-
                 }
             },
             effetdragon: {title: 'Effet-dragon', build: function () {
@@ -56,7 +57,6 @@
         var self = this;
 
         onChange() {
-            //self.trigger('reset');
             var newType = self.type.value
             self.model.current.type = newType
             self.typeList[newType].build(self.model.current)
