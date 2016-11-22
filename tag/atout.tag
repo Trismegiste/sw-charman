@@ -7,12 +7,16 @@
                 <option each="{ atoutList }" value="{titre}">{titre}</option>
             </select>
         </div>
-        <virtual each="{ atout, idx in model.current.atout[group] }">
-            <div class="pure-u-1-{ atout.info == '1' ? '2' : '1' }">
-                <label><input type='radio' name="selectedEdge" value="{idx}">{atout.titre}</label>
+        <virtual each="{ model.current.atout[group] }">
+            <div class="pure-u-1-{ info == '1' ? '2' : '1' }">
+                <label>
+                    <input type='radio' name="selectedEdge"
+                              checked="{checkedAtout == this}" onclick="{ onCheckedEdge }">
+                    {titre}
+                </label>
             </div>
-            <div class="pure-u-1-2" if="{ atout.info == '1' }">
-                <input name="atoutInfo" value="{atout.detail}"
+            <div class="pure-u-1-2" if="{ info == '1' }">
+                <input name="atoutInfo" value="{detail}"
                        class="pure-input-1" onchange="{ parent.onUpdateDetail }"/>
             </div>
         </virtual>
@@ -27,6 +31,7 @@
     <script>
         this.mixin('model')
         this.group = opts.group || 0;
+        this.checkedAtout = undefined;
         var self = this;
 
         fetch('./data/atout.json')
@@ -48,21 +53,47 @@
         }
 
         onUpdateDetail(e) {
-            console.log()
             var tab = self.model.current.atout[self.group];
-            var idx = tab.indexOf(e.item.atout)
+            var idx = tab.indexOf(e.item)
             if (-1 !== idx) {
                 tab[idx].detail = e.target.value
             }
         }
 
+        onCheckedEdge(e) {
+            self.checkedAtout = e.item;
+        }
+
         onDelete(e) {
             var tab = self.model.current.atout[self.group];
-            self.selectedEdge.forEach(function (radio) {
-                if (radio.checked) {
-                    tab.splice(radio.value, 1)
+            var idx = tab.indexOf(self.checkedAtout)
+            if (-1 !== idx) {
+                tab.splice(idx, 1)
+            }
+        }
+
+        onMoveUp(e) {
+            var tab = self.model.current.atout[self.group];
+            var idx = tab.indexOf(self.checkedAtout)
+            if (-1 !== idx) {
+                if (idx > 0) {
+                    var tmp = tab[idx - 1]
+                    tab[idx - 1] = tab[idx]
+                    tab[idx] = tmp;
                 }
-            })
+            }
+        }
+
+        onMoveDown(e) {
+            var tab = self.model.current.atout[self.group];
+            var idx = tab.indexOf(self.checkedAtout)
+            if (-1 !== idx) {
+                if (idx < (tab.length - 1)) {
+                    var tmp = tab[idx + 1]
+                    tab[idx + 1] = tab[idx]
+                    tab[idx] = tmp
+                }
+            }
         }
 
     </script>
