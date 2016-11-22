@@ -1,260 +1,492 @@
-[
-    {
-        "titre": "Anémique",
-        "niveau": "Mineur",
-        "descr": "-2 aux jets de Vigueur pour résister aux maladies ou aux effets de l'environnement.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Arrogant",
-        "niveau": "Majeur",
-        "descr": "Le personnage est le meilleur dans un domaine, et se sent obligé de dominer les autres.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Aveugle",
-        "niveau": "Majeur",
-        "descr": "-6 à toutes les actions impliquant la vision, -2 sur les jet sociaux et gain d'un Atout supplémentaire.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Bavard",
-        "niveau": "Mineur",
-        "descr": "Le personnage ne sait pas tenir sa langue.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Bizarrerie",
-        "niveau": "Mineur",
-        "descr": "Le personnage a une obsession ou une autre bizarrerie de comportement.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Boiteux",
-        "niveau": "Majeur",
-        "descr": "-2 en Allure, et le dé de course est d4.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Borgne",
-        "niveau": "Majeur",
-        "descr": "-1 en charisme si non masqué, -2 pour tous les jets qui nécessitent une perception de la\nprofondeur.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Chimères",
-        "niveau": "Mineur/Majeur",
-        "descr": "Le personnage croit des choses non fondées.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Code de l'honneur",
-        "niveau": "Majeur",
-        "descr": "Le personnage tient toujours sa parole et agit en gentleman.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Couard",
-        "niveau": "Majeur",
-        "descr": "-2 en Tripes.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Cul-de-jatte",
-        "niveau": "Majeur",
-        "descr": "-2 en Allure, et le dé de course est d4. Sans une jambe de bois, l'allure passe à 2, et -2 aux compétences nécessitant une mobilité.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Cupide",
-        "niveau": "Mineur/Majeur",
-        "descr": "Le personnage est obsédé par la richesse.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Curieux",
-        "niveau": "Majeur",
-        "descr": "Le personnage veut tout savoir.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Deux mains gauches",
-        "niveau": "Mineur",
-        "descr": "-2 en réparation, un jet de compétence de 1 sur l'utilisation d'un objet technologique provoque une défaillance.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Dur d'oreille",
-        "niveau": "Mineur/Majeur",
-        "descr": "-2 en Perception si mineur. Sourd si Majeur",
-        "enabled": "1"
-    },
-    {
-        "titre": "Ennemi",
-        "niveau": "Mineur/Majeur",
-        "descr": "Le personnage a un ou plusieurs ennemis connus.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Frêle",
-        "niveau": "Majeur",
-        "descr": "-1 en Résistance.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Gamin",
-        "niveau": "Majeur",
-        "descr": "3 points d'attributs, 10 points de compétences, +1 Jeton par session.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Héroïque",
-        "niveau": "Majeur",
-        "descr": "Le personnage est héroïque et vient en aide à tous ceux qui en ont besoin.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Ignorant",
-        "niveau": "Majeur",
-        "descr": "-2 en Connaissance Commune",
-        "enabled": "1"
-    },
-    {
-        "titre": "Illettré",
-        "niveau": "Mineur",
-        "descr": "Le personnage ne sait ni lire ni écrire.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Loyal",
-        "niveau": "Mineur",
-        "descr": "Le héros ne trahira jamais ses amis.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Malchanceux",
-        "niveau": "Majeur",
-        "descr": "Un Jeton de moins par session.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Manchot",
-        "niveau": "Majeur",
-        "descr": "Le personnage n'a qu'un bras valide. -4 aux actions qui nécessitent deux bras (Escalade).",
-        "enabled": "1"
-    },
-    {
-        "titre": "Mauvaise habitude",
-        "niveau": "Mineur/Majeur",
-        "descr": "Le personnage a une habitude énervante ou une addiction.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Moche",
-        "niveau": "Mineur",
-        "descr": "-2 en Charisme à cause de son apparence hideuse.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Myope",
-        "niveau": "Mineur/Majeur",
-        "descr": "-2 en Combat ou Perception à plus de 5.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Obèse",
-        "niveau": "Mineur",
-        "descr": "+1 en Résistance, -1 en Allure, et le dé de course est d4.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Pacifiste",
-        "niveau": "Mineur/Majeur",
-        "descr": "Le personnage combat seulement pour se défendre et ne combattra jamais si le handicap est Majeur.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Paria",
-        "niveau": "Mineur",
-        "descr": "-2 en Charisme. Mal vu dans la société de référence.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Phobie",
-        "niveau": "Mineur/Majeur",
-        "descr": "-2 ou -4 sur les jets de Traits quand quand le personnage se retrouve au contact de l'objet\nde sa phobie.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Poches Percées",
-        "niveau": "Mineur",
-        "descr": "Fonds de départ divisés par 2. En général, impossibilité de faire des économies.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Présomptueux",
-        "niveau": "Majeur",
-        "descr": "Le héros pense qu'il peut arriver à tout.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Prudent",
-        "niveau": "Mineur",
-        "descr": "Le personnage est excessivement prudent.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Rancunier",
-        "niveau": "Mineur/Majeur",
-        "descr": "Le personnage est revanchard, allant jusqu'à tuer pour se venger si le handicap est Majeur.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Recherché",
-        "niveau": "Mineur/Majeur",
-        "descr": "Les autorités recherchent le personnage pour une ou plusieurs infractions à la loi.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Rien à perdre",
-        "niveau": "Mineur",
-        "descr": "Le héros souhaite mourir une fois une certaine tache accomplie.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Sale Caractère",
-        "niveau": "Mineur",
-        "descr": "-2 en Charisme à cause de sa mauvaise humeur perpétuelle.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Sanguinaire",
-        "niveau": "Majeur",
-        "descr": "Ne fait jamais de prisonniers. -4 en Charisme si cela se sait.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Sceptique",
-        "niveau": "Mineur",
-        "descr": "Le personnage ne croit pas au surnaturel.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Serment",
-        "niveau": "Mineur/Majeur",
-        "descr": "Le héros a fait un serment envers lui-même, un groupe, une divinité ou une religion.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Têtu",
-        "niveau": "Mineur",
-        "descr": "Le héros veut toujours avoir raison.",
-        "enabled": "1"
-    },
-    {
-        "titre": "Vieux",
-        "niveau": "Majeur",
-        "descr": "-1 en Allure, -1 en Force et en Vigueur, 5 points supplémentaires pour des compétences liées à l'Intellect.",
-        "enabled": "1"
-    }
-]
+{
+    "humain": [
+        {
+            "titre": "Anémique",
+            "niveau": "Mineur",
+            "descr": "-2 aux jets de Vigueur pour résister aux maladies ou aux effets de l'environnement.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Arrogant",
+            "niveau": "Majeur",
+            "descr": "Le personnage est le meilleur dans un domaine, et se sent obligé de dominer les autres.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Aveugle",
+            "niveau": "Majeur",
+            "descr": "-6 à toutes les actions impliquant la vision, -2 sur les jet sociaux et gain d'un Atout supplémentaire.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Bavard",
+            "niveau": "Mineur",
+            "descr": "Le personnage ne sait pas tenir sa langue.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Bizarrerie",
+            "niveau": "Mineur",
+            "descr": "Le personnage a une obsession ou une autre bizarrerie de comportement.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Boiteux",
+            "niveau": "Majeur",
+            "descr": "-2 en Allure, et le dé de course est d4.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Borgne",
+            "niveau": "Majeur",
+            "descr": "-1 en charisme si non masqué, -2 pour tous les jets qui nécessitent une perception de la\nprofondeur.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Chimères",
+            "niveau": "Min/Maj",
+            "descr": "Le personnage croit des choses non fondées.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Code de l'honneur",
+            "niveau": "Majeur",
+            "descr": "Le personnage tient toujours sa parole et agit en gentleman.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Couard",
+            "niveau": "Majeur",
+            "descr": "-2 en Tripes.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Cul-de-jatte",
+            "niveau": "Majeur",
+            "descr": "-2 en Allure, et le dé de course est d4. Sans une jambe de bois, l'allure passe à 2, et -2 aux compétences nécessitant une mobilité.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Cupide",
+            "niveau": "Min/Maj",
+            "descr": "Le personnage est obsédé par la richesse.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Curieux",
+            "niveau": "Majeur",
+            "descr": "Le personnage veut tout savoir.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Deux mains gauches",
+            "niveau": "Mineur",
+            "descr": "-2 en réparation, un jet de compétence de 1 sur l'utilisation d'un objet technologique provoque une défaillance.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Dur d'oreille",
+            "niveau": "Min/Maj",
+            "descr": "-2 en Perception si mineur. Sourd si Majeur",
+            "enabled": "1"
+        },
+        {
+            "titre": "Ennemi",
+            "niveau": "Min/Maj",
+            "descr": "Le personnage a un ou plusieurs ennemis connus.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Frêle",
+            "niveau": "Majeur",
+            "descr": "-1 en Résistance.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Gamin",
+            "niveau": "Majeur",
+            "descr": "3 points d'attributs, 10 points de compétences, +1 Jeton par session.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Héroïque",
+            "niveau": "Majeur",
+            "descr": "Le personnage est héroïque et vient en aide à tous ceux qui en ont besoin.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Ignorant",
+            "niveau": "Majeur",
+            "descr": "-2 en Connaissance Commune",
+            "enabled": "1"
+        },
+        {
+            "titre": "Illettré",
+            "niveau": "Mineur",
+            "descr": "Le personnage ne sait ni lire ni écrire.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Loyal",
+            "niveau": "Mineur",
+            "descr": "Le héros ne trahira jamais ses amis.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Malchanceux",
+            "niveau": "Majeur",
+            "descr": "Un Jeton de moins par session.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Manchot",
+            "niveau": "Majeur",
+            "descr": "Le personnage n'a qu'un bras valide. -4 aux actions qui nécessitent deux bras (Escalade).",
+            "enabled": "1"
+        },
+        {
+            "titre": "Mauvaise habitude",
+            "niveau": "Min/Maj",
+            "descr": "Le personnage a une habitude énervante ou une addiction.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Moche",
+            "niveau": "Mineur",
+            "descr": "-2 en Charisme à cause de son apparence hideuse.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Myope",
+            "niveau": "Min/Maj",
+            "descr": "-2 en Combat ou Perception à plus de 5.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Obèse",
+            "niveau": "Mineur",
+            "descr": "+1 en Résistance, -1 en Allure, et le dé de course est d4.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Pacifiste",
+            "niveau": "Min/Maj",
+            "descr": "Le personnage combat seulement pour se défendre et ne combattra jamais si le handicap est Majeur.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Paria",
+            "niveau": "Mineur",
+            "descr": "-2 en Charisme. Mal vu dans la société de référence.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Phobie",
+            "niveau": "Min/Maj",
+            "descr": "-2 ou -4 sur les jets de Traits quand quand le personnage se retrouve au contact de l'objet\nde sa phobie.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Poches Percées",
+            "niveau": "Mineur",
+            "descr": "Fonds de départ divisés par 2. En général, impossibilité de faire des économies.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Présomptueux",
+            "niveau": "Majeur",
+            "descr": "Le héros pense qu'il peut arriver à tout.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Prudent",
+            "niveau": "Mineur",
+            "descr": "Le personnage est excessivement prudent.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Rancunier",
+            "niveau": "Min/Maj",
+            "descr": "Le personnage est revanchard, allant jusqu'à tuer pour se venger si le handicap est Majeur.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Recherché",
+            "niveau": "Min/Maj",
+            "descr": "Les autorités recherchent le personnage pour une ou plusieurs infractions à la loi.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Rien à perdre",
+            "niveau": "Mineur",
+            "descr": "Le héros souhaite mourir une fois une certaine tache accomplie.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Sale Caractère",
+            "niveau": "Mineur",
+            "descr": "-2 en Charisme à cause de sa mauvaise humeur perpétuelle.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Sanguinaire",
+            "niveau": "Majeur",
+            "descr": "Ne fait jamais de prisonniers. -4 en Charisme si cela se sait.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Sceptique",
+            "niveau": "Mineur",
+            "descr": "Le personnage ne croit pas au surnaturel.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Serment",
+            "niveau": "Min/Maj",
+            "descr": "Le héros a fait un serment envers lui-même, un groupe, une divinité ou une religion.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Têtu",
+            "niveau": "Mineur",
+            "descr": "Le héros veut toujours avoir raison.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Vieux",
+            "niveau": "Majeur",
+            "descr": "-1 en Allure, -1 en Force et en Vigueur, 5 points supplémentaires pour des compétences liées à l'Intellect.",
+            "enabled": "1"
+        }
+    ],
+    "nephilim": [
+        {
+            "titre": "Amour perdu",
+            "niveau": "Min/Maj",
+            "descr": "Maladresse SO d'un Ka = torpeur nostalgique pour 2d4 rounds. 1d4 heures si Majeur",
+            "enabled": "1"
+        },
+        {
+            "titre": "Ancien homoncule",
+            "niveau": "Min/Maj",
+            "descr": "Une puce de Ka par semaine si stase à moins de 5 km. 5 m si Majeur",
+            "enabled": "1"
+        },
+        {
+            "titre": "Archaïque",
+            "niveau": "Mineur",
+            "descr": "Bloqué à la technologie de l'Antiquité",
+            "enabled": "1"
+        },
+        {
+            "titre": "Blessure permanente",
+            "niveau": "Mineur",
+            "descr": "Jour opposé majeur : +2 blessures",
+            "enabled": "1"
+        },
+        {
+            "titre": "Chasse saturnale",
+            "niveau": "Mineur",
+            "descr": "Traqué pendant le mois d'orichalque",
+            "enabled": "1"
+        },
+        {
+            "titre": "Collabo Myste",
+            "niveau": "Majeur",
+            "descr": "Vous êtes un Myste",
+            "enabled": "0"
+        },
+        {
+            "titre": "Compagnon homoncule",
+            "niveau": "Min/Maj",
+            "descr": "sacrifice d'une puce par an. 4 puces par an si Majeur",
+            "enabled": "1"
+        },
+        {
+            "titre": "Contaminé",
+            "niveau": "Min/Maj",
+            "descr": "Contact avec KLN : Ka-élément ejecté sur echec FD 4. Mineur prochaine GC, Majeur : définitif",
+            "enabled": "1"
+        },
+        {
+            "titre": "Cruxim",
+            "niveau": "Min/Maj",
+            "descr": "Charisme – 1 avec les nephilim. Mineur : pas d'action occulte avec l'opposé majeur. Majeur : Magie de Cruxim",
+            "enabled": "1"
+        },
+        {
+            "titre": "Enchantement Atlante",
+            "niveau": "Mineur",
+            "descr": "Lien & effets mnemos indésirables d'un sanctuaire atlante",
+            "enabled": "1"
+        },
+        {
+            "titre": "Enkhaïbaté",
+            "niveau": "Min/Maj",
+            "descr": "Charisme - 2 avec les nephilim. Maladresse de SO = perte de puces  doublée. Majeur : en plus crise de khaïba",
+            "enabled": "1"
+        },
+        {
+            "titre": "Ennemi DraKaon",
+            "niveau": "Min/Maj",
+            "descr": "Ennemi une fois par scenario. Majeur : une fois par session",
+            "enabled": "1"
+        },
+        {
+            "titre": "Ex-collabo",
+            "niveau": "Mineur",
+            "descr": "Ex-collabo avec un arcane mineur. Chantage potentiel",
+            "enabled": "1"
+        },
+        {
+            "titre": "Facilement détourné",
+            "niveau": "Mineur",
+            "descr": "Votre nephilim a certains buts personnels qui passent en priorité",
+            "enabled": "1"
+        },
+        {
+            "titre": "Hanté",
+            "niveau": "Min/Maj",
+            "descr": "Poursuivi par entité une fois pas séance. Majeur : une fois par session",
+            "enabled": "1"
+        },
+        {
+            "titre": "Incarnation sélective",
+            "niveau": "Min/Maj",
+            "descr": "Mineur : mâle ou femelle. Majeur : 1/10 de la population",
+            "enabled": "1"
+        },
+        {
+            "titre": "Khaïba chronique",
+            "niveau": "Min/Maj",
+            "descr": "Crise de Khaïba toutes les GC. Majeur : contrôlé par MJ",
+            "enabled": "1"
+        },
+        {
+            "titre": "Khaïba réminiscent",
+            "niveau": "Min/Maj",
+            "descr": "Charisme - 2 avec les nephilim. Maladresse de SO = perte de Ka doublée. Majeur : Ka instable jusqu'à Grande Conjonction ou sacrifice",
+            "enabled": "1"
+        },
+        {
+            "titre": "Laissez les vivre",
+            "niveau": "Mineur",
+            "descr": "Vous considérez que tout être de Ka (excepté d'orichalque) a droit à la vie. Prêt à tout sauf dissipation",
+            "enabled": "1"
+        },
+        {
+            "titre": "Maudit du simulacre",
+            "niveau": "Mineur",
+            "descr": "Effets-Œdipe en pagaille. Malus de 3 pour sonder un Ka-Soleil avant incarnation. 1Er simulacre tiré aléatoirement.",
+            "enabled": "1"
+        },
+        {
+            "titre": "Message d'espoir ",
+            "niveau": "Min/Maj",
+            "descr": "Message de Ka, 1 puce par an. Majeur : 4 puces par an",
+            "enabled": "1"
+        },
+        {
+            "titre": "Métamorphe sur-développé",
+            "niveau": "Mineur",
+            "descr": "ASP réduit de 2",
+            "enabled": "1"
+        },
+        {
+            "titre": "Narcose réminiscente ",
+            "niveau": "Min/Maj",
+            "descr": "Désincarné, perte de Ka 4 fois plus rapide. Majeur : 16 plus rapide",
+            "enabled": "1"
+        },
+        {
+            "titre": "Ombre prolongée ",
+            "niveau": "Min/Maj",
+            "descr": "Durée ombre multipliée par 2. Majeur : par 5",
+            "enabled": "1"
+        },
+        {
+            "titre": "Pentacle dangereux",
+            "niveau": "Min/Maj",
+            "descr": "Effet-dragon sur Maladresse de SO. KAD – 1TDD / + 1 TDD",
+            "enabled": "1"
+        },
+        {
+            "titre": "Pentacle déformé",
+            "niveau": "Min/Maj",
+            "descr": "Charisme de -1 avec intégriste. Mineur : 0/+2/+2/+3/+3. Majeur : -1 TDD/+1/+2/+3/+1",
+            "enabled": "1"
+        },
+        {
+            "titre": "Petite stase",
+            "niveau": "Mineur",
+            "descr": "Les 5 contenances sont de 1/1/2/3/5",
+            "enabled": "1"
+        },
+        {
+            "titre": "Peur de l'ombre",
+            "niveau": "Min/Maj",
+            "descr": "Passage en Ombre sur un simple 1. Majeur : quelque-soit le résultat",
+            "enabled": "1"
+        },
+        {
+            "titre": "Peur de la narcose",
+            "niveau": "Min/Maj",
+            "descr": "Mineur : évite endroits isolés. Majeur : pas de métabonus si danger. Effet-jésus : 1er Ka-soleil à posséder",
+            "enabled": "1"
+        },
+        {
+            "titre": "Phobie saturnienne",
+            "niveau": "Min/Maj",
+            "descr": "Samedi : pas de plus haute SO + TOC. Majeur : en plus, plus haute SO à -2 pendant le mois d'Orichalque. ",
+            "enabled": "1"
+        },
+        {
+            "titre": "Résistance amoindrie",
+            "niveau": "Min/Maj",
+            "descr": "Mineur : blessure orichalque = Ombre. Majeur : Blessures orichalque doublées",
+            "enabled": "1"
+        },
+        {
+            "titre": "Sensibilité accrue",
+            "niveau": "Min/Maj",
+            "descr": "Orichalque à 10 cases : Malus de 1 à toutes les SO. Majeur : malus de -2",
+            "enabled": "1"
+        },
+        {
+            "titre": "Sensible au KLN",
+            "niveau": "Min/Maj",
+            "descr": "1 puce par blessure causée par KLN. Min : temp, Maj : définitif",
+            "enabled": "1"
+        },
+        {
+            "titre": "Signe distinctif",
+            "niveau": "Mineur",
+            "descr": "signe distinctif étrange & profane. Synarchie au courant",
+            "enabled": "1"
+        },
+        {
+            "titre": "666",
+            "niveau": "Mineur",
+            "descr": "Aucune action occulte avec le Ka-Lune. Ka-ouïe. Charisme – 1 avec les nephilim",
+            "enabled": "1"
+        },
+        {
+            "titre": "Stase imparfaite",
+            "niveau": "Min/Maj",
+            "descr": "Mineur : perte de 1 puce par semaine. Majeur : par jour",
+            "enabled": "1"
+        },
+        {
+            "titre": "Stase inefficace",
+            "niveau": "Min/Maj",
+            "descr": "Mineur : 1 puce max à puiser. Majeur : impossible de puiser dedans + pas d'Alchimie",
+            "enabled": "1"
+        },
+        {
+            "titre": "Traqué par un Arcane Mineur",
+            "niveau": "Min/Maj",
+            "descr": "Mineur : A chaque scénario. Majeur : par session. A moins qu'il n'accumule ses forces",
+            "enabled": "1"
+        }
+    ]
+}
