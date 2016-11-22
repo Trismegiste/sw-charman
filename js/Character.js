@@ -20,6 +20,7 @@ var Character = function () {
     this.pentacle = {}
     this.uniqueKa = {}
     this.competence = [[], []]
+    this.handicap = [[], []]
 };
 
 Character.prototype = {

@@ -30,6 +30,13 @@
     <section>
         <competence></competence>
     </section>
+    <!-- handicaps & chutes -->
+    <section if="{ model.current.type == 'nephilim' }">
+        <handicap filter="nephilim" title="Chutes"></handicap>
+    </section>
+    <section if="{ model.current.type == 'humain' }">
+        <handicap filter="humain"></handicap>
+    </section>
     <!-- simulacre -->
     <section if="{ model.current.type == 'nephilim' }">
         <unique-ka title="Simulacre" ka="soleil" value="4"></unique-ka>
@@ -39,6 +46,9 @@
     </section>
     <section if="{ model.current.type == 'nephilim' }">
         <competence group="1" title="Compétences simulacre"></competence>
+    </section>
+    <section if="{ model.current.type == 'nephilim' }">
+        <handicap filter="humain" group="1" title="Handicaps simulacre"></handicap>
     </section>
     <script>
         this.mixin('model')
