@@ -22,22 +22,23 @@
     </section>
     <!-- attributes -->
     <attribut if="{ model.current.type != 'nephilim' }" class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></attribut>
-    <!-- comp -->
-    <competence class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></competence>
     <!-- handicaps / chutes -->
     <handicap filter="nephilim" title="Chutes" if="{ model.current.type == 'nephilim' }" class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></handicap>
     <handicap filter="humain" if="{ model.current.type == 'humain' }" class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></handicap>
+    <!-- comp -->
+    <competence class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></competence>
     <!-- atouts -->
     <atout class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3" filter="nephilim"></atout>
     <!-- simulacre -->
     <unique-ka if="{ model.current.type == 'nephilim' }" title="Simulacre"
                ka="soleil" value="4" class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></unique-ka>
     <attribut if="{ model.current.type == 'nephilim' }" class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></attribut>
-    <competence if="{ model.current.type == 'nephilim' }" group="1"
-                title="Compétences simulacre" class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></competence>
     <handicap if="{ model.current.type == 'nephilim' }"
               filter="humain" group="1" title="Handicaps simulacre"
               class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></handicap>
+    <competence if="{ model.current.type == 'nephilim' }" group="1"
+                title="Compétences simulacre" class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></competence>
+    <atout class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3" group="1" filter="humain"></atout>
     <script>
         this.mixin('model')
         this.typeList = {
