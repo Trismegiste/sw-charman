@@ -20,13 +20,14 @@
                        class="pure-input-1" onchange="{ parent.onUpdateDetail }"/>
             </div>
         </virtual>
-        <div class="pure-u-1-2">
+        <div class="pure-u-1-3">
             <button class="pure-button" onclick="{ onMoveUp }">&uparrow;</button>
-            <button class="pure-button" onclick="{ onDelete }">&times;</button>
             <button class="pure-button" onclick="{ onMoveDown }">&downarrow;</button>
         </div>
-        <div class="pure-u-1-4"><label class="centered">XP</label></div>
-        <div class="pure-u-1-4"><label class="centered">{ model.current.getXP(group) }</label></div>
+        <div class="pure-u-1-3">
+            <button class="pure-button button-error" onclick="{ onDelete }">&times;</button>
+        </div>
+        <div class="pure-u-1-3"><label class="centered">XP { model.current.getXP(group) }</label></div>
     </form>
     <script>
         this.mixin('model')
