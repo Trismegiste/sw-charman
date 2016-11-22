@@ -1,4 +1,4 @@
-.content {
+.xxxxxxxxxcontent {
     margin: 0.6em;
 }
 
@@ -63,6 +63,6 @@ h2 {
     font-weight: 100;
 }
 
-content-detail section, content-detail header {
-    margin-bottom: 1em;
+.webcomponent form {
+    margin: 0 0.6em 1em;
 }

@@ -1,4 +1,4 @@
-<content-stat>
+<content-stat class="webcomponent">
     <form class="pure-form pure-g form-label-aligned" onchange="{ updateCurrent }">
         <div class="pure-u-1-4"><label>Name</label></div>
         <div class="pure-u-3-4"><input class="pure-input-1" type="text" name="name" value="{model.current.name}" required="true"/></div>

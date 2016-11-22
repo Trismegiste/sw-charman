@@ -1,7 +1,11 @@
-<dump-database>
-    <h2>Dump/create DB</h2>
+<dump-database class="webcomponent">
     <div class="pure-g">
-        <div class="pure-u-1-1"><form class="pure-form"><input type="text" name="dumpdb" class="pure-input-1" value="{ dumpContent }"/></form></div>
+        <div class="pure-u-1-1">
+            <form class="pure-form">
+                <h2>Dump/create DB</h2>
+                <input type="text" name="dumpdb" class="pure-input-1" value="{ dumpContent }"/>
+            </form>
+        </div>
     </div>
     <footer class="pure-g button-spacing">
         <div class="pure-u-1-2"><a class="pure-button pure-input-1" onclick="{ onDump }">Dump DB</a></div>

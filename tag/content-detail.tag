@@ -1,5 +1,5 @@
 <content-detail>
-    <header>
+    <header class="webcomponent">
         <form class="pure-form pure-g" onchange="{
                     onChange
                 }">
@@ -12,42 +12,28 @@
             </div>
         </form>
     </header>
-    <!-- magic essence -->
-    <section if="{ model.current.type == 'nephilim' }">
-        <pentacle></pentacle>
-    </section>
-    <section if="{ model.current.type == 'effetdragon' || model.current.type == 'kabbale' }">
-        <unique-ka value="4"></unique-ka>
-    </section>
-    <section if="{ model.current.type == 'humain' }">
-        <unique-ka title="Initiation" ka="soleil" value="4"></unique-ka>
+    <section class="webcomponent">
+        <!-- magic essence -->
+        <pentacle if="{ model.current.type == 'nephilim' }"></pentacle>
+        <unique-ka if="{ model.current.type == 'effetdragon' || model.current.type == 'kabbale' }"
+                   value="4"></unique-ka>
+        <unique-ka if="{ model.current.type == 'humain' }"
+                   title="Initiation" ka="soleil" value="4"></unique-ka>
     </section>
     <!-- attributes -->
-    <section if="{ model.current.type != 'nephilim' }">
-        <attribut></attribut>
-    </section>
+    <attribut if="{ model.current.type != 'nephilim' }" class="webcomponent"></attribut>
     <!-- comp -->
-    <section>
-        <competence></competence>
+    <competence class="webcomponent"></competence>
+    <!-- handicaps / chutes -->
+    <section class="webcomponent">
+        <handicap filter="nephilim" title="Chutes" if="{ model.current.type == 'nephilim' }"></handicap>
+        <handicap filter="humain" if="{ model.current.type == 'humain' }"></handicap>
     </section>
-    <!-- handicaps & chutes -->
-    <section if="{ model.current.type == 'nephilim' }">
-        <handicap filter="nephilim" title="Chutes"></handicap>
-    </section>
-    <section if="{ model.current.type == 'humain' }">
-        <handicap filter="humain"></handicap>
-    </section>
-    <!-- simulacre -->
-    <section if="{ model.current.type == 'nephilim' }">
+    <section if="{ model.current.type == 'nephilim' }" class="webcomponent">
+        <!-- simulacre -->
         <unique-ka title="Simulacre" ka="soleil" value="4"></unique-ka>
-    </section>
-    <section if="{ model.current.type == 'nephilim' }">
         <attribut></attribut>
-    </section>
-    <section if="{ model.current.type == 'nephilim' }">
         <competence group="1" title="Compétences simulacre"></competence>
-    </section>
-    <section if="{ model.current.type == 'nephilim' }">
         <handicap filter="humain" group="1" title="Handicaps simulacre"></handicap>
     </section>
     <script>
