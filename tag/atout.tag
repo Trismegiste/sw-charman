@@ -31,6 +31,11 @@
         </div>
         <div class="pure-u-1-3"><label class="centered">XP { model.current.getXP(group) }</label></div>
     </form>
+    <style>
+        atout button {
+            margin-top: 0.6em;
+        }
+    </style>
     <script>
         this.mixin('model')
         this.group = opts.group || 0;
