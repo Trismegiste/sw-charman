@@ -73,3 +73,7 @@ Repository.prototype.createFromDump = function (str) {
         console.log("parse error")
     }
 }
+
+Repository.prototype.create = function () {
+    return new Character()
+}

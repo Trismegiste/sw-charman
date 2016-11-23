@@ -1,0 +1,141 @@
+[{
+        "title": "Combat",
+        "attr": "AGI",
+        "editable": false
+    }, {
+        "title": "Conduite",
+        "attr": "AGI",
+        "editable": false
+    }, {
+        "title": "Connaissance",
+        "attr": "INT",
+        "editable": true
+    }, {
+        "title": "Connaissance Art",
+        "attr": "INT",
+        "editable": false
+    }, {
+        "title": "Connaissance Bataille",
+        "attr": "INT",
+        "editable": false
+    }, {
+        "title": "Connaissance Science",
+        "attr": "INT",
+        "editable": false
+    }, {
+        "title": "Connaissance Eco/Gestion",
+        "attr": "INT",
+        "editable": false
+    }, {
+        "title": "Connaissance Lettre",
+        "attr": "INT",
+        "editable": false
+    }, {
+        "title": "Connaissance Informatique",
+        "attr": "INT",
+        "editable": false
+    }, {
+        "title": "Connaissance Langue",
+        "attr": "INT",
+        "editable": true
+    }, {
+        "title": "Crochetage",
+        "attr": "AGI",
+        "editable": false
+    }, {
+        "title": "Discrétion",
+        "attr": "AGI",
+        "editable": false
+    }, {
+        "title": "Équitation",
+        "attr": "AGI",
+        "editable": false
+    }, {
+        "title": "Escalade",
+        "attr": "FOR",
+        "editable": false
+    }, {
+        "title": "Intimidation",
+        "attr": "ÂME",
+        "editable": false
+    }, {
+        "title": "Jeu",
+        "attr": "INT",
+        "editable": false
+    }, {
+        "title": "Lancer",
+        "attr": "AGI",
+        "editable": false
+    }, {
+        "title": "Natation",
+        "attr": "AGI",
+        "editable": false
+    }, {
+        "title": "Navigation",
+        "attr": "AGI",
+        "editable": false
+    }, {
+        "title": "Perception",
+        "attr": "INT",
+        "editable": false
+    }, {
+        "title": "Persuasion",
+        "attr": "ÂME",
+        "editable": false
+    }, {
+        "title": "Pilotage",
+        "attr": "AGI",
+        "editable": false
+    }, {
+        "title": "Pistage",
+        "attr": "INT",
+        "editable": false
+    }, {
+        "title": "Recherche",
+        "attr": "INT",
+        "editable": false
+    }, {
+        "title": "Réparation",
+        "attr": "INT",
+        "editable": false
+    }, {
+        "title": "Réseaux",
+        "attr": "INT",
+        "editable": false
+    }, {
+        "title": "Sarcasme",
+        "attr": "INT",
+        "editable": false
+    }, {
+        "title": "Soins",
+        "attr": "INT",
+        "editable": false
+    }, {
+        "title": "Survie",
+        "attr": "INT",
+        "editable": false
+    }, {
+        "title": "Tir",
+        "attr": "AGI",
+        "editable": false
+    }, {
+        "title": "Plans subtils",
+        "attr": "INI",
+        "editable": false
+    }, {
+        "title": "Ésotérisme",
+        "attr": "INI",
+        "editable": false
+    }, {
+        "title": "Arcanes majeurs",
+        "attr": "INI",
+        "editable": false
+    }, {
+        "title": "Arcanes mineurs",
+        "attr": "INI",
+        "editable": false
+    }, {
+        "title": "Histoire invisible",
+        "attr": "INI",
+        "editable": false
+    }]

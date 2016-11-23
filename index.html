@@ -4,38 +4,50 @@
         <title>Nephilim Savage Worlds edition Character Manager</title>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" href="./pure-min.css"/>
-        <link rel="stylesheet" href="./grids-responsive-min.css"/>
-        <link rel="stylesheet" href="./main.css"/>
-        <link rel="stylesheet" href="./toasts.css"/>
+        <link rel="stylesheet" href="./css/pure-min.css"/>
+        <link rel="stylesheet" href="./css/grids-responsive-min.css"/>
+        <link rel="stylesheet" href="./css/main.css"/>
+        <link rel="stylesheet" href="./css/toasts.css"/>
     </head>
     <body>
         <div class="content">
             <rg-toasts></rg-toasts>
-            <div class="pure-g">
-                <charman></charman>
-            </div>
+            <spa-tabs repository="{repo}"></spa-tabs>
         </div>
 
     <my-footer></my-footer>
 
-    <script src="./polyfill.js"></script>
-    <script src="./riot+compiler.min.js"></script>
-    <script src="./rg-toasts.js"></script>
-    <script src="./toasty-mixin.js"></script>
-    <script src="./charman.tag" type="riot/tag"></script>
-    <script src="./my-footer.tag" type="riot/tag"></script>
-    <script src="./diceRoller.js"></script>
-    <script src="./Repository.js"></script>
-    <script src="./Character.js"></script>
-    <script src="./dexie.min.js"></script>
+    <script src="./js/fetch.js"></script>
+    <script src="./js/riot+compiler.min.js"></script>
+    <script src="./js/rg-toasts.js"></script>
+    <script src="./js/toasty-mixin.js"></script>
+    <script src="./tag/spa-tabs.tag" type="riot/tag"></script>
+    <script src="./tag/content-list.tag" type="riot/tag"></script>
+    <script src="./tag/atout.tag" type="riot/tag"></script>
+    <script src="./tag/content-stat.tag" type="riot/tag"></script>
+    <script src="./tag/content-database.tag" type="riot/tag"></script>
+    <script src="./tag/dice-option.tag" type="riot/tag"></script>
+    <script src="./tag/pentacle.tag" type="riot/tag"></script>
+    <script src="./tag/unique-ka.tag" type="riot/tag"></script>
+    <script src="./tag/attribut.tag" type="riot/tag"></script>
+    <script src="./tag/handicap.tag" type="riot/tag"></script>
+    <script src="./tag/competence.tag" type="riot/tag"></script>
+    <script src="./tag/token-option.tag" type="riot/tag"></script>
+    <script src="./tag/content-detail.tag" type="riot/tag"></script>
+    <script src="./tag/dump-database.tag" type="riot/tag"></script>
+    <script src="./tag/my-footer.tag" type="riot/tag"></script>
+    <script src="./js/diceRoller.js"></script>
+    <script src="./js/Character.js"></script>
+    <script src="./js/Repository.js"></script>
+    <script src="./js/Model.js"></script>
+    <script src="./js/dexie.min.js"></script>
     <script>
         riot.mixin('toasty', Toasty)
+        riot.mixin('model', {model: new Model()});
         riot.route.start(true);
         var repo = new Repository();
-        riot.mount('charman', {repo: repo});
-        riot.mount('my-footer');
-        riot.route('/')
+        riot.mount('*');
+        riot.route('list')
     </script>
 </body>
 </html>
