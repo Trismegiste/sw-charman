@@ -37,7 +37,7 @@
         }
     </style>
     <script>
-        this.mixin('model')
+        this.model = globalModel
         this.group = opts.group || 0;
         this.checkedAtout = undefined;
         this.filter = opts.filter.split(" ")

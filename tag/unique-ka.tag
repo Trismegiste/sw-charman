@@ -20,7 +20,7 @@
         </div>
     </form>
     <script>
-        this.mixin('model')
+        this.model = globalModel
         var self = this
 
         onChangeKa() {

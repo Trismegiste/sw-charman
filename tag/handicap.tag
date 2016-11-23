@@ -22,7 +22,7 @@
         </virtual>
     </form>
     <script>
-        this.mixin('model')
+        this.model = globalModel
         this.group = opts.group || 0;
         var self = this;
 
