@@ -13,7 +13,7 @@
             <div class="pure-u-1-{ info == '1' ? '2' : '1' }">
                 <label>
                     <input type='radio' name="selectedEdge"
-                              checked="{checkedAtout == this}" onclick="{ onCheckedEdge }">
+                              checked="{checkedAtout == this}" onclick="{ onCheckedEdge }"/>
                     {titre}
                 </label>
             </div>
