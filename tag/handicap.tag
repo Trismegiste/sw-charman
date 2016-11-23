@@ -3,7 +3,7 @@
         <legend class="pure-u-1">{ opts.title || 'Handicaps' }</legend>
         <div class="pure-u-1">
             <select name="handicap" class="pure-input-1" onchange="{ onAppendHandicap }">
-                <option></option>
+                <option value="0">Cliquez pour ajouter...</option>
                 <option each="{ handicapList }" value="{titre}">{titre}</option>
             </select>
         </div>
@@ -41,6 +41,7 @@
                     var temp = self.model.clone(found)
                     temp.value = (temp.niveau == 'Majeur') ? 'Majeur' : 'Mineur';
                     self.model.current.handicap[self.group].push(temp)
+                    e.target.value = 0;
                 }
             }
         }

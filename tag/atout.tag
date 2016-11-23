@@ -3,7 +3,7 @@
         <legend class="pure-u-1">{ opts.title || 'Atouts' }</legend>
         <div class="pure-u-1">
             <select name="atout" class="pure-input-1" onchange="{ onAppendAtout }">
-                <option></option>
+                <option value="0">Cliquez pour ajouter...</option>
                 <optgroup each="{ race in filter }" label="{race}">
                     <option each="{ atoutList[race] }" value="{titre}" if="{ enabled=='1' }">{titre}</option>
                 </optgroup>
@@ -54,6 +54,7 @@
                         var found = raceList[k]
                         var temp = self.model.clone(found)
                         self.model.current.atout[self.group].push(temp)
+                        e.target.value = 0;
                     }
                 }
             }
