@@ -899,6 +899,13 @@
             "info": "1"
         },
         {
+            "titre": "Spécial",
+            "prerequis": "Nephilim",
+            "descr": "customisable",
+            "enabled": "1",
+            "info": "1"
+        },
+        {
             "titre": "Substances d'œuvre au Blanc",
             "prerequis": "V, 3 atouts Outil, Outils des substances",
             "descr": "2 e cercle alchimique (le Leukossi)",

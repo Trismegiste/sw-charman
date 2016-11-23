@@ -119,14 +119,6 @@
         "attr": "AGI",
         "editable": false
     }, {
-        "title": "Plans subtils",
-        "attr": "INI",
-        "editable": false
-    }, {
-        "title": "Ésotérisme",
-        "attr": "INI",
-        "editable": false
-    }, {
         "title": "Arcanes majeurs",
         "attr": "INI",
         "editable": false
@@ -135,7 +127,20 @@
         "attr": "INI",
         "editable": false
     }, {
+        "title": "Ésotérisme",
+        "attr": "INI",
+        "editable": false
+    }, {
         "title": "Histoire invisible",
         "attr": "INI",
         "editable": false
-    }]
+    }, {
+        "title": "Plans subtils",
+        "attr": "INI",
+        "editable": false
+    }, {
+        "title": "Spécial",
+        "attr": "INI",
+        "editable": true
+    }
+]
