@@ -19,7 +19,7 @@
 
     <script>
         this.mixin('toasty')
-        this.mixin('model')
+        this.model = globalModel
         var self = this
 
         persist() {
@@ -39,13 +39,5 @@
                 })
         };
 
-        var subRoute = riot.route.create()
-        subRoute('/char/*', function (id) {
-            self.model.trigger('reset');
-            if (self.model.characterList[id] !== undefined) {
-                self.model.current = self.model.characterList[id];
-            }
-            subRoute('stat',self.model.current.name,true)
-        });
     </script>
 </content-list>

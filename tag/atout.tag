@@ -13,7 +13,7 @@
             <div class="pure-u-1-{ info == '1' ? '2' : '1' }">
                 <label>
                     <input type='radio' name="selectedEdge"
-                              checked="{checkedAtout == this}" onclick="{ onCheckedEdge }">
+                              checked="{checkedAtout == this}" onclick="{ onCheckedEdge }"/>
                     {titre}
                 </label>
             </div>
@@ -37,7 +37,7 @@
         }
     </style>
     <script>
-        this.mixin('model')
+        this.model = globalModel
         this.group = opts.group || 0;
         this.checkedAtout = undefined;
         this.filter = opts.filter.split(" ")

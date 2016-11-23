@@ -47,7 +47,7 @@
            class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"
            group="1" filter="general humain" title="Atouts simulacre"></atout>
     <script>
-        this.mixin('model')
+        this.model = globalModel
         this.typeList = {
             nephilim: {title: 'Nephilim', build: function () {
                 }

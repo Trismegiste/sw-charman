@@ -55,7 +55,7 @@
     </div>
     <script>
         this.mixin('toasty')
-        this.mixin('model')
+        this.model = globalModel
         var self = this
 
         onReset() {

@@ -43,9 +43,9 @@
     <script src="./js/dexie.min.js"></script>
     <script>
         riot.mixin('toasty', Toasty)
-        riot.mixin('model', {model: new Model()});
         riot.route.start(true);
         var repo = new Repository();
+        var globalModel = new Model()
         riot.mount('*');
         riot.route('list')
     </script>

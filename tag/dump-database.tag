@@ -38,7 +38,6 @@
         var subRoute = riot.route.create()
         subRoute('/dump', function () {
             self.parent.activeTab = 'dump'
-            console.log(self.parent)
             self.parent.update()
         });
     </script>

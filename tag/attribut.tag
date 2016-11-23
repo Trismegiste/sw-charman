@@ -13,7 +13,7 @@
         <div class="pure-u-1-4"><label class="centered">{ model.current.getAttributePoint() }</label></div>
     </form>
     <script>
-        this.mixin('model')
+        this.model = globalModel
         this.attributList = [
             'AGI', 'FOR', 'VIG', 'INT', 'ÂME'
         ]

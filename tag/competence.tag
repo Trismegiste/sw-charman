@@ -27,7 +27,7 @@
         <div class="pure-u-1-4"><label class="centered">{ model.current.getCompetencePoint(group) }</label></div>
     </form>
     <script>
-        this.mixin('model')
+        this.model = globalModel
         this.group = opts.group || 0;
         var self = this;
 
