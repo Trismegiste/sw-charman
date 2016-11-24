@@ -35,16 +35,19 @@
                if="{ ['kabbale', 'effetdragon'].indexOf(model.current.type) != -1 }"></atout>
     </section>
     <!-- simulacre -->
-    <section class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3" if="{ model.current.type == 'nephilim' }">
+    <section if="{ model.current.type == 'nephilim' }" class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
         <unique-ka title="Simulacre" ka="soleil" value="4"></unique-ka>
         <attribut></attribut>
         <handicap filter="humain" group="1" title="Handicaps simulacre"></handicap>
     </section>
-    <competence if="{ model.current.type == 'nephilim' }" group="1"
-                title="Compétences simulacre" class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></competence>
+    <competence if="{ model.current.type == 'nephilim' }"
+                group="1" title="Compétences simulacre"
+                class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></competence>
     <atout if="{ model.current.type == 'nephilim' }"
-           class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"
-           group="1" filter="general humain" title="Atouts simulacre"></atout>
+           group="1" filter="general humain" title="Atouts simulacre"
+           class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></atout>
+    <histoire-invisible if="{ model.current.type == 'nephilim' }"
+                        class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></histoire-invisible>
     <script>
         this.model = SwCharman.model
         this.typeList = {

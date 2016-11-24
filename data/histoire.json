@@ -1,0 +1,684 @@
+[
+    {
+        "Période": "Les Guerres Elémentaires",
+        "Titre": "L’arche de Noé",
+        "Lieu": "Monde",
+        "Mystères": "3"
+    },
+    {
+        "Période": "Les Guerres Elémentaires",
+        "Titre": "Les Fils des Étoiles",
+        "Lieu": "Monde",
+        "Mystères": "1"
+    },
+    {
+        "Période": "Les Guerres Elémentaires",
+        "Titre": "Les Guerres Selenim",
+        "Lieu": "Monde",
+        "Mystères": "3"
+    },
+    {
+        "Période": "Les Guerres Elémentaires",
+        "Titre": "L’ombre de Rebis",
+        "Lieu": "Monde",
+        "Mystères": "1"
+    },
+    {
+        "Période": "Les Guerres Elémentaires",
+        "Titre": "Le Bouclier de Lune",
+        "Lieu": "Monde",
+        "Mystères": "1"
+    },
+    {
+        "Période": "Les Guerres Elémentaires",
+        "Titre": "Les Défricheurs",
+        "Lieu": "Monde",
+        "Mystères": "1"
+    },
+    {
+        "Période": "Les Guerres Elémentaires",
+        "Titre": "Les Clans",
+        "Lieu": "Monde",
+        "Mystères": "1"
+    },
+    {
+        "Période": "Les Guerres Elémentaires",
+        "Titre": "Le Sanctuaire Boréal",
+        "Lieu": "Pôles",
+        "Mystères": "2"
+    },
+    {
+        "Période": "Les Guerres Elémentaires",
+        "Titre": "La Venise des Glaces",
+        "Lieu": "Pôles",
+        "Mystères": "1"
+    },
+    {
+        "Période": "Les Guerres Elémentaires",
+        "Titre": "La Promesse de l’Hadès",
+        "Lieu": "Europe",
+        "Mystères": "3"
+    },
+    {
+        "Période": "Les Guerres Elémentaires",
+        "Titre": "Le Premier Age d’Erin",
+        "Lieu": "Europe",
+        "Mystères": "1"
+    },
+    {
+        "Période": "Les Guerres Elémentaires",
+        "Titre": "Les Cousins Ennemis",
+        "Lieu": "Amérique",
+        "Mystères": "1"
+    },
+    {
+        "Période": "Les Guerres Elémentaires",
+        "Titre": "La Chute d’Éden",
+        "Lieu": "Moyen-orient",
+        "Mystères": "3"
+    },
+    {
+        "Période": "Les Guerres Elémentaires",
+        "Titre": "La Tour de Babel",
+        "Lieu": "Moyen-orient",
+        "Mystères": "2"
+    },
+    {
+        "Période": "Les Guerres Elémentaires",
+        "Titre": "Le Premier Havre de Concorde",
+        "Lieu": "Asie",
+        "Mystères": "1"
+    },
+    {
+        "Période": "Les Compacts Secrets",
+        "Titre": "Les 2e et 3e Âges d’Erin",
+        "Lieu": "Europe",
+        "Mystères": "1"
+    },
+    {
+        "Période": "Les Compacts Secrets",
+        "Titre": "Les prémisses du Sanctuaire du Couchant",
+        "Lieu": "Europe",
+        "Mystères": "1",
+        "R+C": "1"
+    },
+    {
+        "Période": "Les Compacts Secrets",
+        "Titre": "La Voie du Dragon",
+        "Lieu": "Europe",
+        "Mystères": "1",
+        "R+C": "1"
+    },
+    {
+        "Période": "Les Compacts Secrets",
+        "Titre": "Le Compromis d’Egypte",
+        "Lieu": "Afrique",
+        "Mystères": "3",
+        "R+C": "2",
+        "Synarchie": "2"
+    },
+    {
+        "Période": "Les Compacts Secrets",
+        "Titre": "La Place de la Vérité",
+        "Lieu": "Afrique",
+        "Mystères": "3",
+        "R+C": "2",
+        "Synarchie": "1"
+    },
+    {
+        "Période": "Les Compacts Secrets",
+        "Titre": "L’Horizon du Disque Solaire",
+        "Lieu": "Afrique",
+        "Mystères": "3",
+        "R+C": "2",
+        "Synarchie": "2",
+        "Temple": "3"
+    },
+    {
+        "Période": "Les Compacts Secrets",
+        "Titre": "Les gardiens de la Sapience Infinie",
+        "Lieu": "Méditerranée",
+        "Mystères": "2",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "2"
+    },
+    {
+        "Période": "Les Compacts Secrets",
+        "Titre": "L’Aïon des Podarcides",
+        "Lieu": "Méditerranée",
+        "Mystères": "1",
+        "R+C": "1"
+    },
+    {
+        "Période": "Les Compacts Secrets",
+        "Titre": "L’Aïon des Atrides",
+        "Lieu": "Méditerranée",
+        "Mystères": "2",
+        "R+C": "1"
+    },
+    {
+        "Période": "Les Compacts Secrets",
+        "Titre": "Le Souffle des Muses",
+        "Lieu": "Méditerranée",
+        "Mystères": "1",
+        "R+C": "1"
+    },
+    {
+        "Période": "Les Compacts Secrets",
+        "Titre": "Les Cités-états des Pourvoyeurs d’Esprit",
+        "Lieu": "Moyen-orient",
+        "Mystères": "1",
+        "R+C": "1"
+    },
+    {
+        "Période": "Les Compacts Secrets",
+        "Titre": "Le Trône de Lilith",
+        "Lieu": "Moyen-orient",
+        "Mystères": "1",
+        "R+C": "1"
+    },
+    {
+        "Période": "Les Compacts Secrets",
+        "Titre": "Les Sages Blancs du Roi du Monde",
+        "Lieu": "Asie",
+        "Mystères": "1",
+        "R+C": "3"
+    },
+    {
+        "Période": "Les Compacts Secrets",
+        "Titre": "Le Deuxième Havre de Concorde",
+        "Lieu": "Asie",
+        "Mystères": "1",
+        "R+C": "1"
+    },
+    {
+        "Période": "Les Compacts Secrets",
+        "Titre": "Le Compact du Tao et du Te",
+        "Lieu": "Asie",
+        "Mystères": "3",
+        "R+C": "2"
+    },
+    {
+        "Période": "L’ Hermétisme",
+        "Titre": "Le Sanctuaire du Couchant",
+        "Lieu": "Europe",
+        "Mystères": "1",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "1"
+    },
+    {
+        "Période": "L’ Hermétisme",
+        "Titre": "La Guerre du Couchant",
+        "Lieu": "Europe",
+        "Mystères": "3",
+        "R+C": "1",
+        "Synarchie": "2",
+        "Temple": "3"
+    },
+    {
+        "Période": "L’ Hermétisme",
+        "Titre": "La Chute de Troie",
+        "Lieu": "Méditerranée",
+        "Mystères": "3",
+        "R+C": "1"
+    },
+    {
+        "Période": "L’ Hermétisme",
+        "Titre": "L’Émergence de Rome",
+        "Lieu": "Méditerranée",
+        "Mystères": "2",
+        "R+C": "1",
+        "Synarchie": "2",
+        "Temple": "1"
+    },
+    {
+        "Période": "L’ Hermétisme",
+        "Titre": "Le Monde Romain",
+        "Lieu": "Méditerranée",
+        "Mystères": "3",
+        "R+C": "1",
+        "Synarchie": "2",
+        "Temple": "3"
+    },
+    {
+        "Période": "L’ Hermétisme",
+        "Titre": "Le Lion de Macédoine",
+        "Lieu": "Méditerranée",
+        "Mystères": "2",
+        "R+C": "3",
+        "Synarchie": "2",
+        "Temple": "1"
+    },
+    {
+        "Période": "L’ Hermétisme",
+        "Titre": "L’Exode",
+        "Lieu": "Proche-Orient",
+        "Mystères": "2",
+        "R+C": "1"
+    },
+    {
+        "Période": "L’ Hermétisme",
+        "Titre": "Le Règne de Salomon",
+        "Lieu": "Proche-Orient",
+        "Mystères": "1",
+        "R+C": "2",
+        "Synarchie": "3",
+        "Temple": "1"
+    },
+    {
+        "Période": "L’ Hermétisme",
+        "Titre": "L’Incident Jésus",
+        "Lieu": "Proche-Orient",
+        "Mystères": "2",
+        "R+C": "2",
+        "Synarchie": "1",
+        "Temple": "2"
+    },
+    {
+        "Période": "L’ Hermétisme",
+        "Titre": "Le Trône d’Ombre et de Lumière",
+        "Lieu": "Moyen-orient",
+        "Mystères": "1",
+        "R+C": "1",
+        "Synarchie": "2",
+        "Temple": "1"
+    },
+    {
+        "Période": "L’ Hermétisme",
+        "Titre": "Le Trône de Lumière",
+        "Lieu": "Moyen-orient",
+        "Mystères": "2",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "1"
+    },
+    {
+        "Période": "L’ Hermétisme",
+        "Titre": "Les Serviteurs des Ténèbres",
+        "Lieu": "Amérique",
+        "Mystères": "1",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "1"
+    },
+    {
+        "Période": "L’ Hermétisme",
+        "Titre": "La Chute de Carthage",
+        "Lieu": "Afrique",
+        "Mystères": "2",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "1"
+    },
+    {
+        "Période": "L’ Hermétisme",
+        "Titre": "Les Nobles Vérités et Principes",
+        "Lieu": "Asie",
+        "Mystères": "1",
+        "R+C": "1",
+        "Synarchie": "2",
+        "Temple": "1"
+    },
+    {
+        "Période": "L’ Hermétisme",
+        "Titre": "La Grande Muraille",
+        "Lieu": "Asie",
+        "Mystères": "1",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "1"
+    },
+    {
+        "Période": "Les Guerres Secrètes",
+        "Titre": "La Fin des Phares Cosmiques",
+        "Lieu": "Monde",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "1"
+    },
+    {
+        "Période": "Les Guerres Secrètes",
+        "Titre": "Les Arthuriades",
+        "Lieu": "Europe",
+        "Mystères": "1",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "2"
+    },
+    {
+        "Période": "Les Guerres Secrètes",
+        "Titre": "Le Retour des Bohémiens",
+        "Lieu": "Europe",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "1"
+    },
+    {
+        "Période": "Les Guerres Secrètes",
+        "Titre": "La Révélation Alchimique",
+        "Lieu": "Europe",
+        "R+C": "1",
+        "Synarchie": "2",
+        "Temple": "1"
+    },
+    {
+        "Période": "Les Guerres Secrètes",
+        "Titre": "Le Temps des Abbayes",
+        "Lieu": "Europe",
+        "R+C": "2",
+        "Synarchie": "3",
+        "Temple": "1"
+    },
+    {
+        "Période": "Les Guerres Secrètes",
+        "Titre": "Les Croisades",
+        "Lieu": "Europe",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "3"
+    },
+    {
+        "Période": "Les Guerres Secrètes",
+        "Titre": "Le Temps des Cathédrales",
+        "Lieu": "Europe",
+        "Mystères": "2",
+        "R+C": "2",
+        "Synarchie": "3",
+        "Temple": "3"
+    },
+    {
+        "Période": "Les Guerres Secrètes",
+        "Titre": "Les Enfants du Graal",
+        "Lieu": "Europe",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "3"
+    },
+    {
+        "Période": "Les Guerres Secrètes",
+        "Titre": "La Chute du Temple",
+        "Lieu": "Europe",
+        "Mystères": "1",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "3"
+    },
+    {
+        "Période": "Les Guerres Secrètes",
+        "Titre": "La Guerre de Cent Ans",
+        "Lieu": "Europe",
+        "Mystères": "1",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "3"
+    },
+    {
+        "Période": "Les Guerres Secrètes",
+        "Titre": "Le Prophète des Soumis",
+        "Lieu": "Moyen-orient",
+        "Mystères": "2",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "1"
+    },
+    {
+        "Période": "Les Guerres Secrètes",
+        "Titre": "Le Refuge Maya",
+        "Lieu": "Amérique",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "1"
+    },
+    {
+        "Période": "Les Guerres Secrètes",
+        "Titre": "Le Soleil des Ténèbres",
+        "Lieu": "Amérique",
+        "Mystères": "1",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "1"
+    },
+    {
+        "Période": "Les Guerres Secrètes",
+        "Titre": "Le Sanctuaire des Enfants de Phu",
+        "Lieu": "Asie",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "1"
+    },
+    {
+        "Période": "Les Guerres Secrètes",
+        "Titre": "La Horde d’Or",
+        "Lieu": "Asie",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "3"
+    },
+    {
+        "Période": "Les Nouveaux Mondes",
+        "Titre": "Les Portes de l’Alhambra",
+        "Lieu": "Europe",
+        "Mystères": "1",
+        "R+C": "1",
+        "Synarchie": "3",
+        "Temple": "2"
+    },
+    {
+        "Période": "Les Nouveaux Mondes",
+        "Titre": "Le Couffin d’or",
+        "Lieu": "Europe",
+        "Mystères": "1",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "2"
+    },
+    {
+        "Période": "Les Nouveaux Mondes",
+        "Titre": "La Renaissance",
+        "Lieu": "Europe",
+        "Mystères": "2",
+        "R+C": "2",
+        "Synarchie": "2",
+        "Temple": "1"
+    },
+    {
+        "Période": "Les Nouveaux Mondes",
+        "Titre": "Les Guerres de Religion",
+        "Lieu": "Europe",
+        "Mystères": "1",
+        "R+C": "1",
+        "Synarchie": "3",
+        "Temple": "3"
+    },
+    {
+        "Période": "Les Nouveaux Mondes",
+        "Titre": "La Nouvelle Camelot",
+        "Lieu": "Europe",
+        "Mystères": "1",
+        "R+C": "2",
+        "Synarchie": "1",
+        "Temple": "3"
+    },
+    {
+        "Période": "Les Nouveaux Mondes",
+        "Titre": "La Rose+Croix",
+        "Lieu": "Europe",
+        "Mystères": "1",
+        "R+C": "3",
+        "Synarchie": "2",
+        "Temple": "2"
+    },
+    {
+        "Période": "Les Nouveaux Mondes",
+        "Titre": "Le Roi-Soleil",
+        "Lieu": "Europe",
+        "Mystères": "3",
+        "R+C": "3",
+        "Synarchie": "3",
+        "Temple": "2"
+    },
+    {
+        "Période": "Les Nouveaux Mondes",
+        "Titre": "Le Siècle des Lumières",
+        "Lieu": "Europe",
+        "Mystères": "1",
+        "R+C": "2",
+        "Synarchie": "3",
+        "Temple": "1"
+    },
+    {
+        "Période": "Les Nouveaux Mondes",
+        "Titre": "Le Poids de son Regard",
+        "Lieu": "Europe",
+        "Mystères": "1",
+        "R+C": "2",
+        "Synarchie": "3",
+        "Temple": "1"
+    },
+    {
+        "Période": "Les Nouveaux Mondes",
+        "Titre": "L’Ordre Hermétique de l’Aube Dorée",
+        "Lieu": "Europe",
+        "Mystères": "2",
+        "R+C": "3",
+        "Synarchie": "2",
+        "Temple": "3"
+    },
+    {
+        "Période": "Les Nouveaux Mondes",
+        "Titre": "Le Nouveau Continent",
+        "Lieu": "Amérique du nord",
+        "Mystères": "1",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "3"
+    },
+    {
+        "Période": "Les Nouveaux Mondes",
+        "Titre": "Les Guerres Indiennes",
+        "Lieu": "Amérique du nord",
+        "Mystères": "2",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "3"
+    },
+    {
+        "Période": "Les Nouveaux Mondes",
+        "Titre": "La Conquête de l’Ouest",
+        "Lieu": "Amérique du nord",
+        "Mystères": "2",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "3"
+    },
+    {
+        "Période": "Les Nouveaux Mondes",
+        "Titre": "Les Cités d’Or",
+        "Lieu": "Amérique centrale et du Sud",
+        "Mystères": "1",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "3"
+    },
+    {
+        "Période": "Les Nouveaux Mondes",
+        "Titre": "Les Conquistadors",
+        "Lieu": "Amérique centrale et du Sud",
+        "Mystères": "1",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "3"
+    },
+    {
+        "Période": "La Révélation",
+        "Titre": "La grande Guerre",
+        "Lieu": "Monde",
+        "Mystères": "1",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "1"
+    },
+    {
+        "Période": "La Révélation",
+        "Titre": "Les Années Noires",
+        "Lieu": "Monde",
+        "Mystères": "3",
+        "R+C": "3",
+        "Synarchie": "2",
+        "Temple": "3"
+    },
+    {
+        "Période": "La Révélation",
+        "Titre": "Le Gouvernement Mondial",
+        "Lieu": "Monde",
+        "Mystères": "1",
+        "R+C": "1",
+        "Synarchie": "3",
+        "Temple": "2"
+    },
+    {
+        "Période": "La Révélation",
+        "Titre": "La Menace Communiste",
+        "Lieu": "Monde",
+        "Mystères": "1",
+        "R+C": "1",
+        "Synarchie": "3",
+        "Temple": "2"
+    },
+    {
+        "Période": "La Révélation",
+        "Titre": "La CEE",
+        "Lieu": "Europe",
+        "Mystères": "1",
+        "R+C": "1",
+        "Synarchie": "3",
+        "Temple": "1"
+    },
+    {
+        "Période": "La Révélation",
+        "Titre": "La Terre Promise",
+        "Lieu": "Proche et Moyen-Orient",
+        "Mystères": "1",
+        "R+C": "1",
+        "Synarchie": "3",
+        "Temple": "1"
+    },
+    {
+        "Période": "La Révélation",
+        "Titre": "Les Années Rugissantes",
+        "Lieu": "Amérique",
+        "Mystères": "1",
+        "R+C": "1",
+        "Synarchie": "3",
+        "Temple": "3"
+    },
+    {
+        "Période": "La Révélation",
+        "Titre": "Le Papillon Obsidienne",
+        "Lieu": "Amérique",
+        "Mystères": "1",
+        "R+C": "1",
+        "Synarchie": "1",
+        "Temple": "2"
+    },
+    {
+        "Période": "La Révélation",
+        "Titre": "La Nouvelle Frontière",
+        "Lieu": "Amérique",
+        "Mystères": "1",
+        "R+C": "3",
+        "Synarchie": "2",
+        "Temple": "3"
+    },
+    {
+        "Période": "La Révélation",
+        "Titre": "Le Toit du Monde",
+        "Lieu": "Asie",
+        "Mystères": "1",
+        "R+C": "2",
+        "Synarchie": "1",
+        "Temple": "1"
+    }
+]
