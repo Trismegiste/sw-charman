@@ -43,18 +43,10 @@ NephilimRendering.prototype = {
         return choice[val]
     },
     getHistoire: function () {
-        var periode = [
-            "Les Guerres Elémentaires",
-            "Les Compacts Secrets",
-            "L’ Hermétisme",
-            "Les Guerres Secrètes",
-            "Les Nouveaux Mondes",
-            "La Révélation"
-        ]
         var view = [];
-        for (var k in periode) {
-            var titre = periode[k];
-            view.push(titre + ': ' + this.character.incarnation[titre].Titre)
+        for (var key in this.character.incarnation) {
+            var periode = this.character.incarnation[key];
+            view.push(periode['Période'] + ': ' + periode.Titre)
         }
         return view.join("\n")
     }
