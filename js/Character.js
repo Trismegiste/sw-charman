@@ -73,6 +73,19 @@ Character.prototype = {
         }
 
         return sum;
+    },
+    getCoeffArcaneMineur: function () {
+        var arcane = {"Mystères": 0, "R+C": 0, "Synarchie": 0, "Temple": 0}
+        for (var idx in this.incarnation) {
+            var ev = this.incarnation[idx]
+            for (am in arcane) {
+                if (ev.hasOwnProperty(am)) {
+                    arcane[am] += parseInt(ev[am]);
+                }
+            }
+        }
+
+        return arcane;
     }
 };
 
