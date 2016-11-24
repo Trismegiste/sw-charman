@@ -8,6 +8,9 @@
                 <option each="{ ev in evenement[libelle] }" value="{ ev.Titre }">{ ev.Titre }</option>
             </select>
         </div>
+        <div class="pure-u-1-4 small-footnotes" each="{ name, val in model.current.getCoeffArcaneMineur() }">
+            { name } : {val}
+        </div>
     </form>
     <script>
         this.model = SwCharman.model
@@ -33,7 +36,6 @@
                         }
                         self.evenement[ev['Période']].push(ev)
                     }
-                    console.log(self.periode, self.evenement)
                 })
 
         onChange() {
@@ -49,7 +51,6 @@
                     }
                 }
             }
-            console.log(self.model.current.incarnation)
         }
     </script>
 </histoire-invisible>

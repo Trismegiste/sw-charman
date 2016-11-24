@@ -62,3 +62,9 @@ h2 {
 .webcomponent form {
     margin: 0 0.6em 1em;
 }
+
+.small-footnotes {
+    margin-top: 0.6em;
+    font-size: 80%;
+    text-align: center;
+}
