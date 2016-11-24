@@ -6,7 +6,7 @@
             <legend class="pure-u-1">Template</legend>
             <div class="pure-u-1">
                 <select name="type" value="{ model.current.type }" class="pure-input-1">
-                    <option value=""></option>
+                    <option value="virtual"></option>
                     <option each="{key, type in typeList}" value="{key}">{type.title}</option>
                 </select>
             </div>
@@ -69,7 +69,7 @@
         onChange() {
             var newType = self.type.value
             self.model.current.type = newType
-            self.typeList[newType].build(self.model.current)
+            //self.typeList[newType].build(self.model.current)
         }
     </script>
 </content-detail>
