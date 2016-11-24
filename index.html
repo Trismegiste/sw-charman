@@ -12,7 +12,7 @@
     <body>
         <div class="content">
             <rg-toasts></rg-toasts>
-            <spa-tabs repository="{repo}"></spa-tabs>
+            <spa-tabs></spa-tabs>
         </div>
 
     <my-footer></my-footer>
@@ -42,10 +42,14 @@
     <script src="./js/Model.js"></script>
     <script src="./js/dexie.min.js"></script>
     <script>
+        // container for this SPA
+        var SwCharman = {
+            repository: new Repository(),
+            model: new Model()
+        }
+        // Here we go
         riot.mixin('toasty', Toasty)
         riot.route.start(true);
-        var repo = new Repository();
-        var globalModel = new Model()
         riot.mount('*');
         riot.route('list')
     </script>

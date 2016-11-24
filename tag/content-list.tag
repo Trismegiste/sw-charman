@@ -19,17 +19,17 @@
 
     <script>
         this.mixin('toasty')
-        this.model = globalModel
+        this.model = SwCharman.model
         var self = this
 
         persist() {
-            self.opts.repo.saveCurrent(self.model.characterList);
+            SwCharman.repository.saveCurrent(self.model.characterList);
             self.notice('Current state saved', 'success')
         };
 
         restore() {
             self.model.characterList = [];
-            self.opts.repo.loadCurrent()
+            SwCharman.repository.loadCurrent()
                 .then(function (arr) {
                     console.log('load ' + arr.length);
                     arr.forEach(function (item) {

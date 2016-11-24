@@ -13,14 +13,14 @@
     </footer>
     <script>
         this.mixin('toasty')
-        this.model = globalModel
+        this.model = SwCharman.model
         var self = this
 
         self.listing = [];
 
         this.on('update', function() {
             console.log('refresh')
-            self.opts.repository.findAll()
+            SwCharman.repository.findAll()
                      .then(function(arr){
                         self.listing = [];
                          arr.forEach(function(obj){
@@ -32,7 +32,7 @@
         onAppend(event) {
             // looped item
             var item = event.item
-            self.opts.repository.findByPk(item.name).then(function(pc) {
+            SwCharman.repository.findByPk(item.name).then(function(pc) {
                 console.log('found ' + pc.name);
                 self.model.characterList.push(pc);
                 self.notice(pc.name + ' added', 'success')
@@ -42,7 +42,7 @@
         onDelete(event) {
             // looped item
             var item = event.item
-            self.opts.repository.deleteByPk(item.name).then(function() {
+            SwCharman.repository.deleteByPk(item.name).then(function() {
                 console.log('delete '+item.name);
                 // because item is not a Character (bad cloning ?), indexOf is not working
                 self.listing.forEach(function(obj, idx) {

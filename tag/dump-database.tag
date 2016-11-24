@@ -18,7 +18,7 @@
         this.mixin('toasty')
 
         onDump() {
-            this.opts.repository.findAll().then(function(arr) {
+            SwCharman.repository.findAll().then(function(arr) {
                 var temp = [];
                 arr.forEach(function(item, idx) {
                     temp.push(item);
@@ -30,7 +30,7 @@
 
         onCreate() {
             if (self.dumpdb.value != '') {
-                this.opts.repository.createFromDump(self.dumpdb.value)
+                SwCharman.repository.createFromDump(self.dumpdb.value)
                 self.notice('Create Repository for Characters', 'success')
             }
         }

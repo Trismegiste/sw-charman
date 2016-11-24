@@ -22,7 +22,7 @@
         </virtual>
     </form>
     <script>
-        this.model = globalModel
+        this.model = SwCharman.model
         this.group = opts.group || 0;
         var self = this;
 

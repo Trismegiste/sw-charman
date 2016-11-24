@@ -20,7 +20,7 @@
         </div>
     </form>
     <script>
-        this.model = globalModel
+        this.model = SwCharman.model
         var self = this
 
         onChangeKa() {

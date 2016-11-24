@@ -27,7 +27,7 @@
         <div class="pure-u-1-4"><label class="centered">{ model.current.getCompetencePoint(group) }</label></div>
     </form>
     <script>
-        this.model = globalModel
+        this.model = SwCharman.model
         this.group = opts.group || 0;
         var self = this;
 

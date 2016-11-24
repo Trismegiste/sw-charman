@@ -55,7 +55,7 @@
     </div>
     <script>
         this.mixin('toasty')
-        this.model = globalModel
+        this.model = SwCharman.model
         var self = this
 
         onReset() {
@@ -101,7 +101,7 @@
             if (self.model.current.name != '') {
                 var temp = self.model.clone(self.model.current);
                 temp.restart();
-                self.opts.repo.persist(temp)
+                SwCharman.repository.persist(temp)
                         .then(function() {
                             self.notice(temp.name + ' stored', 'success')
                             self.model.trigger('update-db');

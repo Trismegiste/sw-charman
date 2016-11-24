@@ -11,19 +11,19 @@
     </nav>
     <div class="pure-g">
         <div class="pure-u-1-1 {hidden: !isActiveTab('list')}">
-            <content-list repo="{this.opts.repository}"></content-list>
+            <content-list></content-list>
         </div>
         <div class="pure-u-1-1 {hidden: !isActiveTab('stat')}">
-            <content-stat repo="{this.opts.repository}"></content-stat>
+            <content-stat></content-stat>
         </div>
         <div class="pure-u-1-1 {hidden: !isActiveTab('database')}">
-            <content-database repository="{this.opts.repository}"></content-database>
+            <content-database></content-database>
         </div>
         <div class="pure-u-1-1 {hidden: !isActiveTab('detail')}">
-            <content-detail repo="{this.opts.repository}"></content-detail>
+            <content-detail></content-detail>
         </div>
         <div class="pure-u-1-1 {hidden: !isActiveTab('dump')}">
-            <dump-database repository="{this.opts.repository}"></dump-database>
+            <dump-database></dump-database>
         </div>
     </div>
     <script>
