@@ -1,0 +1,192 @@
+[
+    {
+        "element": "feu",
+        "humeur": "sec",
+        "nom": "Le Cyclope"
+    },
+    {
+        "element": "feu",
+        "humeur": "humide",
+        "nom": "La Diablesse"
+    },
+    {
+        "element": "feu",
+        "humeur": "humide",
+        "nom": "La Succube"
+    },
+    {
+        "element": "feu",
+        "humeur": "chaud",
+        "nom": "Le Djinn"
+    },
+    {
+        "element": "feu",
+        "humeur": "sec",
+        "nom": "La Hlorànide"
+    },
+    {
+        "element": "feu",
+        "humeur": "froid",
+        "nom": "Le Phoenix"
+    },
+    {
+        "element": "feu",
+        "humeur": "humide",
+        "nom": "La Salamandre"
+    },
+    {
+        "element": "feu",
+        "humeur": "humide",
+        "nom": "Le Démon"
+    },
+    {
+        "element": "feu",
+        "humeur": "sec",
+        "nom": "Le Basilic"
+    },
+    {
+        "element": "lune",
+        "humeur": "lunatique",
+        "nom": "Le Serpent"
+    },
+    {
+        "element": "lune",
+        "humeur": "lunatique",
+        "nom": "La Méduse"
+    },
+    {
+        "element": "lune",
+        "humeur": "lunatique",
+        "nom": "La Lamie"
+    },
+    {
+        "element": "lune",
+        "humeur": "lunatique",
+        "nom": "La Chimère"
+    },
+    {
+        "element": "lune",
+        "humeur": "lunatique",
+        "nom": "Le Naga"
+    },
+    {
+        "element": "lune",
+        "humeur": "lunatique",
+        "nom": "La Bansidh"
+    },
+    {
+        "element": "lune",
+        "humeur": "lunatique",
+        "nom": "Le Spectre"
+    },
+    {
+        "element": "lune",
+        "humeur": "lunatique",
+        "nom": "L'Oni"
+    },
+    {
+        "element": "air",
+        "humeur": "sec",
+        "nom": "L'Ange"
+    },
+    {
+        "element": "air",
+        "humeur": "froid",
+        "nom": "L'Efreet"
+    },
+    {
+        "element": "air",
+        "humeur": "chaud",
+        "nom": "Le Pégase"
+    },
+    {
+        "element": "air",
+        "humeur": "froid",
+        "nom": "Le Simurgh"
+    },
+    {
+        "element": "air",
+        "humeur": "chaud",
+        "nom": "Le Sylphe"
+    },
+    {
+        "element": "air",
+        "humeur": "humide",
+        "nom": "Le Zéphyr"
+    },
+    {
+        "element": "terre",
+        "humeur": "humide",
+        "nom": "Le Dactyle"
+    },
+    {
+        "element": "terre",
+        "humeur": "humide",
+        "nom": "L'Elfe"
+    },
+    {
+        "element": "terre",
+        "humeur": "froid",
+        "nom": "La Mandragore"
+    },
+    {
+        "element": "terre",
+        "humeur": "froid",
+        "nom": "La Nymphe"
+    },
+    {
+        "element": "terre",
+        "humeur": "chaud",
+        "nom": "Le Satyre"
+    },
+    {
+        "element": "terre",
+        "humeur": "sec",
+        "nom": "Le Sphinx"
+    },
+    {
+        "element": "terre",
+        "humeur": "humide",
+        "nom": "La Pixie"
+    },
+    {
+        "element": "eau",
+        "humeur": "sec",
+        "nom": "La Naïade"
+    },
+    {
+        "element": "eau",
+        "humeur": "chaud",
+        "nom": "Le Néréis"
+    },
+    {
+        "element": "eau",
+        "humeur": "sec",
+        "nom": "Le Nixe"
+    },
+    {
+        "element": "eau",
+        "humeur": "humide",
+        "nom": "L'Ondine"
+    },
+    {
+        "element": "eau",
+        "humeur": "chaud",
+        "nom": "La Sirène"
+    },
+    {
+        "element": "eau",
+        "humeur": "froid",
+        "nom": "Le Triton"
+    },
+    {
+        "element": "eau",
+        "humeur": "froid",
+        "nom": "L'Hydre"
+    },
+    {
+        "element": "eau",
+        "humeur": "sec",
+        "nom": "Le Corail"
+    }
+]

@@ -23,6 +23,7 @@ var Character = function () {
     this.handicap = [[], []]
     this.atout = [[], []]
     this.incarnation = {}
+    this.metamorphe = {}
 };
 
 Character.prototype = {

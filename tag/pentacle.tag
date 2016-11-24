@@ -67,6 +67,13 @@
                     self.model.current.pentacle.opposeMaj = radio.value
                 }
             })
+            // for other components
         }
+
+        this.on('update', function() {
+            if (self.dominant.value) {
+                self.model.trigger('update-pentacle', self.dominant.value)
+            }
+        })
     </script>
 </pentacle>
