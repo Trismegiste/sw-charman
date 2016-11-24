@@ -8,7 +8,7 @@
         </div>
     </div>
     <footer class="pure-g button-spacing">
-        <div class="pure-u-1-2"><a class="pure-button pure-input-1" onclick="{ onDump }">Dump DB</a></div>
+        <div class="pure-u-1-2"><a class="pure-button pure-input-1 button-primary" onclick="{ onDump }">Dump DB</a></div>
         <div class="pure-u-1-2"><a class="pure-button pure-input-1 button-error" onclick="{ onCreate }">Create DB</a></div>
     </footer>
 

@@ -9,7 +9,7 @@
         </ul>
     </nav>
     <footer class="pure-g button-spacing">
-        <div class="pure-u-1-2"><a class="pure-button pure-button-primary" onclick="{
+        <div class="pure-u-1-2"><a class="pure-button button-primary" onclick="{
                     restore
                 }">Load</a></div>
         <div class="pure-u-1-2"><a class="pure-button button-error" onclick="{

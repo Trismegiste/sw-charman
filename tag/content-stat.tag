@@ -46,7 +46,7 @@
         </form>
         <div class="pure-g button-spacing">
             <div class="pure-u-1-3"><a class="pure-button" onclick="{ onReset }">Reset</a></div>
-            <div class="pure-u-1-3"><a class="pure-button pure-button-primary" onclick="{ onAppend }">Append</a></div>
+            <div class="pure-u-1-3"><a class="pure-button button-primary" onclick="{ onAppend }">Append</a></div>
             <div class="pure-u-1-3"><a class="pure-button button-error" onclick="{ onDelete }">Delete</a></div>
         </div>
         <div class="pure-g button-spacing">
