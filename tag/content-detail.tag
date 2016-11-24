@@ -48,6 +48,8 @@
            class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></atout>
     <histoire-invisible if="{ model.current.type == 'nephilim' }"
                         class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></histoire-invisible>
+    <metamorphe if="{ model.current.type == 'nephilim' }"
+                        class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></metamorphe>
     <script>
         this.model = SwCharman.model
         this.typeList = {
