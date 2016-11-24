@@ -4,17 +4,11 @@
             }">
         <legend class="pure-u-1">Métamorphe</legend>
         <div class="pure-u-1">
-            <select name="humeurFilter" class="pure-input-1" value="{ model.current.metamorphe.humeur }">
-                <option>Humeur...</option>
-                <option each="{ titre in humeurList }" value="{titre}">{titre}</option>
-            </select>
-        </div>
-        <div class="pure-u-1">
             <select name="metamorphe" class="pure-input-1" value="{ model.current.metamorphe.nom }">
-                <option>Cliquez pour ajouter...</option>
-                <option each="{ meta, idx in metamorpheList }" value="{idx}"
-                        if="{ (meta.humeur == currentHumeur) && (meta.element == model.current.pentacle.dominant) }">
-                    {meta.nom}
+                <option>Choix d'un métamorphe...</option>
+                <option each="{ meta, idx in metamorpheList }" value="{ meta.nom }"
+                        if="{ (meta.element == model.current.pentacle.dominant) }">
+                    {meta.nom} ({meta.humeur})
                 </option>
             </select>
         </div>
@@ -22,8 +16,6 @@
     <script>
         this.model = SwCharman.model
         this.metamorpheList = []
-        this.humeurList = []
-        this.currentHumeur = undefined
         var self = this;
 
         fetch('./data/metamorphe.json')
@@ -35,20 +27,17 @@
                 })
 
         this.model.on('update-pentacle', function (ka) {
-            self.humeurList = []
-            for (var k in self.metamorpheList) {
-                var meta = self.metamorpheList[k]
-                if ((ka === meta.element) && (-1 === self.humeurList.indexOf(meta.humeur))) {
-                    self.humeurList.push(meta.humeur)
-                }
-            }
-            console.log(self.humeurList)
             self.update()
         })
 
         onChange() {
-            self.currentHumeur = self.humeurFilter.value
-            self.model.current.metamorphe = self.metamorpheList[self.metamorphe.value]
+            var value = self.metamorphe.value;
+            for(var k in self.metamorpheList) {
+                var meta = self.metamorpheList[k];
+                if (value === meta.nom) {
+                    self.model.current.metamorphe = meta
+                }
+            }
         }
     </script>
 </metamorphe>
