@@ -44,8 +44,8 @@
         SwCharman.repository.findByPk('pdf')
                 .then(function (character) {
                     var docDefinition = new NephilimRendering(character);
-                    pdfMake.createPdf(docDefinition.getDocument()).download(character.type
-                            + '-' + character.name + '.pdf');
+                    //pdfMake.createPdf(docDefinition.getDocument()).download(character.type + '-' + character.name + '.pdf');
+                    pdfMake.createPdf(docDefinition.getDocument()).open()
                 })
     </script>
 </body>

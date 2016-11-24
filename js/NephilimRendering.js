@@ -4,6 +4,20 @@ var NephilimRendering = function (charac) {
 
 NephilimRendering.prototype = {
     getDocument: function () {
-        return {content: 'This is an sample PDF printed with pdfMake'};
+        return {
+            content: [
+                {
+                    table: {
+                        headerRows: 0,
+                        widths: ['33%', '33%', '33%'],
+                        body: [
+                            ['Nom: ' + this.character.name, 'Second', 'Third'],
+                            ['Value 1', 'Value 2', 'Value 3'],
+                            [{text: 'Bold value', bold: true}, 'Val 2', 'Val 3']
+                        ]
+                    }
+                }
+            ]
+        };
     }
 }
