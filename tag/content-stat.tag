@@ -70,7 +70,7 @@
             }
             self.model.current = self.model.clone(self.model.current)
             self.model.characterList.push(self.model.current);
-            self.notice(self.model.current.name + ' created', 'success')
+            self.notice(self.model.current.name + ' créé', 'primary')
             riot.route('char/' + (self.model.characterList.length - 1));
         }
 
@@ -78,7 +78,7 @@
             var idx = self.model.characterList.indexOf(self.model.current);
             if (idx !== -1) {
                 self.model.characterList.splice(idx, 1);
-                self.notice(self.model.current.name + ' deleted', 'error')
+                self.notice(self.model.current.name + ' effacé', 'error')
                 riot.route('list');
             }
         }
@@ -103,7 +103,7 @@
                 temp.restart();
                 SwCharman.repository.persist(temp)
                         .then(function() {
-                            self.notice(temp.name + ' stored', 'success')
+                            self.notice(temp.name + ' sauvegardé', 'success')
                             self.model.trigger('update-db');
                         })
             }

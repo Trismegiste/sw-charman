@@ -31,7 +31,7 @@
         onCreate() {
             if (self.dumpdb.value != '') {
                 SwCharman.repository.createFromDump(self.dumpdb.value)
-                self.notice('Create Repository for Characters', 'success')
+                self.notice('Création du Repository', 'error')
             }
         }
 

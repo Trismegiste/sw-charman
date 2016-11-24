@@ -24,7 +24,7 @@
 
         persist() {
             SwCharman.repository.saveCurrent(self.model.characterList);
-            self.notice('Current state saved', 'success')
+            self.notice('Etat courant enregistré', 'error')
         };
 
         restore() {

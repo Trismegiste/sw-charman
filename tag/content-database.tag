@@ -35,7 +35,7 @@
             SwCharman.repository.findByPk(item.name).then(function(pc) {
                 console.log('found ' + pc.name);
                 self.model.characterList.push(pc);
-                self.notice(pc.name + ' added', 'success')
+                self.notice(pc.name + ' ajouté', 'primary')
             })
         }
 
