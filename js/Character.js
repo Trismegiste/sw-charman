@@ -79,7 +79,7 @@ Character.prototype = {
         var arcane = {"Mystères": 0, "R+C": 0, "Synarchie": 0, "Temple": 0}
         for (var idx in this.incarnation) {
             var ev = this.incarnation[idx]
-            for (am in arcane) {
+            for (var am in arcane) {
                 if (ev.hasOwnProperty(am)) {
                     arcane[am] += parseInt(ev[am]);
                 }
@@ -87,6 +87,15 @@ Character.prototype = {
         }
 
         return arcane;
+    },
+    getAtoutCreation: function (group) {
+        var tab = []
+        var nbHandi = Math.ceil(this.getHindrancePoint(group) / 2)
+        for (var k = 0; k < (nbHandi + 1); k++) {
+            tab.push(this.atout[group][k])
+        }
+
+        return tab
     }
 };
 

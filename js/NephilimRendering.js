@@ -11,12 +11,11 @@ NephilimRendering.prototype = {
             content: [
                 {
                     table: {
-                        headerRows: 0,
                         widths: ['33%', '33%', '33%'],
                         body: [
                             [this.getIdentite(), {colSpan: 2, text: this.getHistoire(), fontSize: 10}, {}],
-                            ['Value 1', 'Value 2', 'Value 3'],
-                            [{text: 'Bold value', bold: true}, 'Val 2', 'Val 3']
+                            ['Compétences', 'Atouts création', 'Atouts'],
+                            [this.getCompetences(0), this.getAtoutCreation(0), this.getAtout(0)]
                         ]
                     }
                 }
@@ -34,7 +33,7 @@ NephilimRendering.prototype = {
     },
     getDiceText: function (val) {
         var choice = [];
-        for (var k = 4; k < 12; k++) {
+        for (var k = 4; k <= 12; k += 2) {
             choice[k] = 'd' + k
         }
         choice[13] = 'd12+1'
@@ -49,5 +48,62 @@ NephilimRendering.prototype = {
             view.push(periode['Période'] + ': ' + periode.Titre)
         }
         return view.join("\n")
+    },
+    getCompetences: function (group) {
+        var listing = {
+            table: {
+                widths: ['75%', '25%'],
+                body: []
+            },
+            layout: 'noBorders'
+        }
+
+        for (var k in this.character.competence[group]) {
+            var comp = this.character.competence[group][k]
+            listing.table.body.push([comp.title, this.getDiceText(comp.value)])
+        }
+
+        return listing
+    },
+    getAtoutCreation: function (group) {
+        var listing = {
+            table: {
+                widths: ['100%'],
+                body: []
+            },
+            layout: 'noBorders'
+        }
+        var atoutCreation = this.character.getAtoutCreation(group);
+        for (var k = 0; k < atoutCreation.length; k++) {
+            var atout = atoutCreation[k]
+            var titre = atout.titre
+            if (atout.hasOwnProperty('detail')) {
+                titre += ' ' + atout.detail
+            }
+            listing.table.body.push([titre])
+        }
+
+        return listing
+    },
+    getAtout: function (group) {
+        var listing = {
+            table: {
+                widths: ['10%', '90%'],
+                body: []
+            },
+            layout: 'noBorders'
+        }
+
+        var atoutCreation = this.character.getAtoutCreation(group);
+        for (var k = atoutCreation.length; k < this.character.atout[group].length; k++) {
+            var atout = this.character.atout[group][k]
+            var titre = atout.titre
+            if (atout.hasOwnProperty('detail')) {
+                titre += ' ' + atout.detail
+            }
+            listing.table.body.push(['5', titre])
+        }
+        console.log(listing)
+        return listing
     }
 }
