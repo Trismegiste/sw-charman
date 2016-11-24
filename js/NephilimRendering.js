@@ -15,7 +15,9 @@ NephilimRendering.prototype = {
                         body: [
                             [this.getIdentite(), {colSpan: 2, text: this.getHistoire(), fontSize: 10}, {}],
                             ['Compétences', 'Atouts création', 'Atouts'],
-                            [this.getCompetences(0), this.getAtoutCreation(0), this.getAtout(0)]
+                            [this.getCompetences(0), this.getAtoutCreation(0), this.getAtout(0)],
+                            ['wesh', 'Chutes', 'wesh'],
+                            ['wesh', this.getHandicap(0), 'wesh']
                         ]
                     }
                 }
@@ -94,16 +96,34 @@ NephilimRendering.prototype = {
             layout: 'noBorders'
         }
 
-        var atoutCreation = this.character.getAtoutCreation(group);
-        for (var k = atoutCreation.length; k < this.character.atout[group].length; k++) {
+        var offset = this.character.getAtoutCreation(group).length;
+        for (var k = offset; k < this.character.atout[group].length; k++) {
             var atout = this.character.atout[group][k]
             var titre = atout.titre
             if (atout.hasOwnProperty('detail')) {
                 titre += ' ' + atout.detail
             }
-            listing.table.body.push(['5', titre])
+            var nb = k - offset + 1;
+            var cost = 5 * (nb + (nb > 16 ? nb - 16 : 0))
+            listing.table.body.push([cost.toString(), titre])
         }
-        console.log(listing)
+
+        return listing
+    },
+    getHandicap: function (group) {
+        var listing = {
+            table: {
+                widths: ['85%', '15%'],
+                body: []
+            },
+            layout: 'noBorders'
+        }
+
+        for (var k in this.character.handicap[group]) {
+            var item = this.character.handicap[group][k]
+            listing.table.body.push([item.titre, item.value.substr(0, 3)])
+        }
+
         return listing
     }
 }
