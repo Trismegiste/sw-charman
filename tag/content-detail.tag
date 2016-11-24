@@ -35,12 +35,11 @@
                if="{ ['kabbale', 'effetdragon'].indexOf(model.current.type) != -1 }"></atout>
     </section>
     <!-- simulacre -->
-    <unique-ka if="{ model.current.type == 'nephilim' }" title="Simulacre"
-               ka="soleil" value="4" class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></unique-ka>
-    <attribut if="{ model.current.type == 'nephilim' }" class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></attribut>
-    <handicap if="{ model.current.type == 'nephilim' }"
-              filter="humain" group="1" title="Handicaps simulacre"
-              class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></handicap>
+    <section class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3" if="{ model.current.type == 'nephilim' }">
+        <unique-ka title="Simulacre" ka="soleil" value="4"></unique-ka>
+        <attribut></attribut>
+        <handicap filter="humain" group="1" title="Handicaps simulacre"></handicap>
+    </section>
     <competence if="{ model.current.type == 'nephilim' }" group="1"
                 title="Compétences simulacre" class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></competence>
     <atout if="{ model.current.type == 'nephilim' }"
