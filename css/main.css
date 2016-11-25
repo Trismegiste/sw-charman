@@ -44,18 +44,13 @@ form label.centered {
     margin-bottom: 0.3em;
 }
 
-.char-list {
-    margin-right: 1em;
-    margin-bottom: 1em;
-}
-
 .top-menu {
     margin-bottom: 0.6em;
     font-size: 140%;
 }
 
-.v-spacing {
-    margin-bottom: 0.5em;
+.checkable-listing input[type=radio] {
+    margin-right: 1em;
 }
 
 h2 {

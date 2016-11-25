@@ -1,7 +1,8 @@
 <content-list>
-    <nav class="pure-menu char-list">
+    <nav class="pure-menu">
         <ul class="pure-menu-list">
-            <li each="{ pc, i in model.characterList }" class="pure-menu-item">
+            <li each="{ pc, i in model.characterList }"
+                class="pure-menu-item {pure-menu-selected: pc == model.current}">
                 <a href="#char/{ i }" class="pure-menu-link">
                     { pc.name } [vs {pc.target} / W:{pc.currentWounds}{pc.shaken ? '+S' : ''}]
                 </a>
