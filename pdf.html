@@ -27,10 +27,9 @@
 
             SwCharman.repository.findByPk(q.key)
                     .then(function (character) {
-
                         var docDefinition = new NephilimRendering(character);
-                        //pdfMake.createPdf(docDefinition.getDocument()).download(character.type + '-' + character.name + '.pdf');
-                        pdfMake.createPdf(docDefinition.getDocument()).open()
+                        pdfMake.createPdf(docDefinition.getDocument()).download(character.type + '-' + character.name + '.pdf');
+                        //pdfMake.createPdf(docDefinition.getDocument()).open()
                         setTimeout("window.close()", 5000)
                     })
         </script>
