@@ -3,7 +3,7 @@
         <tr each="{ listing }">
             <td><a href="#" onclick="{ parent.onAppend }">{name}</a></td>
             <td>{getLethality()}</td>
-            <td><a href="#" class="pure-button button-error" onclick="{ parent.onDelete }">&times;</a></td>
+            <td><a href="#" class="pure-button button-error" onclick="{ parent.onDelete }"><i class="icon-trash-empty"></i></a></td>
         </tr>
     </table>
     <footer class="pure-g button-spacing">
@@ -43,7 +43,7 @@
             // looped item
             var item = event.item
             SwCharman.repository.deleteByPk(item.name).then(function() {
-                console.log('delete '+item.name);
+                self.notice(item.name + ' effacé', 'error')
                 // because item is not a Character (bad cloning ?), indexOf is not working
                 self.listing.forEach(function(obj, idx) {
                     if (obj.name === item.name) {  // name is unique in DB
