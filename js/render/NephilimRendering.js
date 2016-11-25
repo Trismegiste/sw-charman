@@ -26,6 +26,20 @@ NephilimRendering.prototype = {
                         ]
                     },
                     layout: 'noBorders'
+                },
+                {
+                    table: {
+                        widths: ['33%', '33%', '33%'],
+                        body: [
+                            [this.getAttribut(), this.getHandicap(1), this.getAtoutCreation(1)],
+                            [
+                                this.getCompetences(1),
+                                this.getAtout(1),
+                                {text: 'toto'}
+                            ]
+                        ]
+                    },
+                    layout: 'noBorders'
                 }
             ]
         };
@@ -102,7 +116,7 @@ NephilimRendering.prototype = {
             table: {
                 headerRows: 1,
                 widths: ['10%', '90%'],
-                body: [[{text: 'Atouts', colSpan: 2}, {}]]
+                body: [[{text: 'Progressions', colSpan: 2}, {}]]
             },
             layout: 'lightHorizontalLines',
             margin: [0, 5]
@@ -127,7 +141,7 @@ NephilimRendering.prototype = {
             table: {
                 headerRows: 1,
                 widths: ['85%', '15%'],
-                body: [[{text: 'Chutes', colSpan: 2}, {}]]
+                body: [[{text: 'Handicaps', colSpan: 2}, {}]]
             },
             layout: 'lightHorizontalLines',
             margin: [0, 5]
@@ -158,6 +172,27 @@ NephilimRendering.prototype = {
             },
             layout: 'lightHorizontalLines',
             margin: [0, 5]
+        }
+
+        return listing
+    },
+    getAttribut: function () {
+        var ka = this.character.uniqueKa;
+        var listing = {
+            table: {
+                headerRows: 1,
+                widths: ['75%', '25%'],
+                body: [
+                    [{text: 'Attributs', colSpan: 2}, {}],
+                    ['Ka-' + ka.ka, this.getDiceText(ka.initiation)],
+                ]
+            },
+            layout: 'lightHorizontalLines',
+            margin: [0, 5]
+        }
+        for (var key in this.character.attribute) {
+            var attr = this.character.attribute[key]
+            listing.table.body.push([key, this.getDiceText(attr)])
         }
 
         return listing
