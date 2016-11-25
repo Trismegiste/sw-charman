@@ -14,12 +14,14 @@ NephilimRendering.prototype = {
                         widths: ['33%', '33%', '33%'],
                         body: [
                             [this.getIdentite(), {colSpan: 2, text: this.getHistoire(), fontSize: 10}, {}],
-                            ['Compétences', 'Atouts création', 'Atouts'],
-                            [this.getCompetences(0), this.getAtoutCreation(0), this.getAtout(0)],
-                            ['wesh', 'Chutes', 'wesh'],
-                            ['wesh', this.getHandicap(0), 'wesh']
+                            [
+                                this.getCompetences(0),
+                                [this.getAtoutCreation(0), this.getHandicap(0)],
+                                this.getAtout(0)
+                            ]
                         ]
-                    }
+                    },
+                    layout: 'noBorders'
                 }
             ]
         };
@@ -54,10 +56,12 @@ NephilimRendering.prototype = {
     getCompetences: function (group) {
         var listing = {
             table: {
+                headerRows: 1,
                 widths: ['75%', '25%'],
-                body: []
+                body: [[{text: 'Compétences', colSpan: 2}, {}]]
             },
-            layout: 'noBorders'
+            layout: 'lightHorizontalLines',
+            margin: [0, 5]
         }
 
         for (var k in this.character.competence[group]) {
@@ -70,10 +74,12 @@ NephilimRendering.prototype = {
     getAtoutCreation: function (group) {
         var listing = {
             table: {
+                headerRows: 1,
                 widths: ['100%'],
-                body: []
+                body: [['Atouts de création']]
             },
-            layout: 'noBorders'
+            layout: 'lightHorizontalLines',
+            margin: [0, 5]
         }
         var atoutCreation = this.character.getAtoutCreation(group);
         for (var k = 0; k < atoutCreation.length; k++) {
@@ -90,10 +96,12 @@ NephilimRendering.prototype = {
     getAtout: function (group) {
         var listing = {
             table: {
+                headerRows: 1,
                 widths: ['10%', '90%'],
-                body: []
+                body: [[{text: 'Atouts', colSpan: 2}, {}]]
             },
-            layout: 'noBorders'
+            layout: 'lightHorizontalLines',
+            margin: [0, 5]
         }
 
         var offset = this.character.getAtoutCreation(group).length;
@@ -113,10 +121,12 @@ NephilimRendering.prototype = {
     getHandicap: function (group) {
         var listing = {
             table: {
+                headerRows: 1,
                 widths: ['85%', '15%'],
-                body: []
+                body: [[{text: 'Chutes', colSpan: 2}, {}]]
             },
-            layout: 'noBorders'
+            layout: 'lightHorizontalLines',
+            margin: [0, 5]
         }
 
         for (var k in this.character.handicap[group]) {
