@@ -4,49 +4,35 @@
         <title>Nephilim Savage Worlds edition Character Manager</title>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" href="./css/pure-min.css"/>
-        <link rel="stylesheet" href="./css/grids-responsive-min.css"/>
-        <link rel="stylesheet" href="./css/main.css"/>
-        <link rel="stylesheet" href="./css/toasts.css"/>
     </head>
     <body>
-        <div class="content">
-            <rg-toasts></rg-toasts>
-        </div>
+        <script src="./js/riot+compiler.min.js"></script>
 
-    <my-footer></my-footer>
+        <script src="./js/Character.js"></script>
+        <script src="./js/Repository.js"></script>
+        <script src="./js/Model.js"></script>
+        <script src="./js/NephilimRendering.js"></script>
+        <script src="./js/dexie.min.js"></script>
+        <script src="./js/pdf/pdfmake.min.js"></script>
+        <script src="./js/pdf/vfs_fonts.js"></script>
+        <script>
+            // container for this SPA
+            var SwCharman = {
+                repository: new Repository(),
+                model: new Model()
+            }
+            // Here we go
+            riot.route.start(true);
+            var q = riot.route.query()
 
-    <script src="./js/riot+compiler.min.js"></script>
-    <script src="./js/rg-toasts.js"></script>
-    <script src="./js/toasty-mixin.js"></script>
+            SwCharman.repository.findByPk(q.key)
+                    .then(function (character) {
 
-    <script src="./tag/content-database.tag" type="riot/tag"></script>
-    <script src="./tag/my-footer.tag" type="riot/tag"></script>
-
-    <script src="./js/Character.js"></script>
-    <script src="./js/Repository.js"></script>
-    <script src="./js/Model.js"></script>
-    <script src="./js/NephilimRendering.js"></script>
-    <script src="./js/dexie.min.js"></script>
-    <script src="./js/pdf/pdfmake.min.js"></script>
-    <script src="./js/pdf/vfs_fonts.js"></script>
-    <script>
-        // container for this SPA
-        var SwCharman = {
-            repository: new Repository(),
-            model: new Model()
-        }
-        // Here we go
-        riot.mixin('toasty', Toasty)
-        riot.route.start(true);
-        riot.mount('*');
-
-        SwCharman.repository.findByPk('pdf')
-                .then(function (character) {
-                    var docDefinition = new NephilimRendering(character);
-                    //pdfMake.createPdf(docDefinition.getDocument()).download(character.type + '-' + character.name + '.pdf');
-                    pdfMake.createPdf(docDefinition.getDocument()).open()
-                })
-    </script>
-</body>
+                        var docDefinition = new NephilimRendering(character);
+                        //pdfMake.createPdf(docDefinition.getDocument()).download(character.type + '-' + character.name + '.pdf');
+                        pdfMake.createPdf(docDefinition.getDocument()).open()
+                        setTimeout("window.close()", 5000)
+                    })
+        </script>
+    </body>
 </html>

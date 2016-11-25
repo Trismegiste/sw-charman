@@ -1,8 +1,10 @@
 <content-database>
     <table class="pure-table pure-table-striped v-spacing" style="width: 100%">
         <tr each="{ listing }">
+            <td><input type="radio"/></td>
             <td><a href="#" onclick="{ parent.onAppend }">{name}</a></td>
-            <td>{getLethality()}</td>
+            <td>{ type.substr(0,4) }</td>
+            <td><a target="_blank" href="pdf.html?key={name}" class="pure-button button-primary"><i class="icon-file-pdf"></i></a></td>
             <td><a href="#" class="pure-button button-error" onclick="{ parent.onDelete }"><i class="icon-trash-empty"></i></a></td>
         </tr>
     </table>
