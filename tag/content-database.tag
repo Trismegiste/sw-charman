@@ -43,7 +43,7 @@
             // looped item
             var item = event.item
             SwCharman.repository.deleteByPk(item.name).then(function() {
-                console.log('delete '+item.name);
+                self.notice(item.name + ' effacé', 'error')
                 // because item is not a Character (bad cloning ?), indexOf is not working
                 self.listing.forEach(function(obj, idx) {
                     if (obj.name === item.name) {  // name is unique in DB
