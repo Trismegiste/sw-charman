@@ -3,7 +3,7 @@
         <tr each="{ listing }">
             <td><a href="#" onclick="{ parent.onAppend }">{name}</a></td>
             <td>{getLethality()}</td>
-            <td><a href="#" class="pure-button button-error" onclick="{ parent.onDelete }">&times;</a></td>
+            <td><a href="#" class="pure-button button-error" onclick="{ parent.onDelete }"><i class="icon-trash-empty"></i></a></td>
         </tr>
     </table>
     <footer class="pure-g button-spacing">

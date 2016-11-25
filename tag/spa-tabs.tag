@@ -4,7 +4,7 @@
             <li each="{tab, i in menuTab}"
                 class="pure-menu-item {pure-menu-selected: parent.isActiveTab(tab.ref)}">
                 <a href="#{tab.ref}" class="pure-menu-link">
-                    { tab.title }
+                    <i class="{ tab.title }"></i>
                 </a>
             </li>
         </ul>
@@ -28,10 +28,10 @@
     </div>
     <script>
         this.menuTab = [
-            {ref: 'list', title: 'List'},
-            {ref: 'stat', title: 'Stats'},
-            {ref: 'detail', title: 'Detail'},
-            {ref: 'database', title: 'DB'}
+            {ref: 'list', title: 'icon-th-list'},
+            {ref: 'stat', title: 'icon-address-card-o'},
+            {ref: 'detail', title: 'icon-zoom-in'},
+            {ref: 'database', title: 'icon-database'}
         ]
         this.activeTab = 'list'
 

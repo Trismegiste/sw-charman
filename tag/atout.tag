@@ -23,11 +23,11 @@
             </div>
         </virtual>
         <div class="pure-u-1-3">
-            <button class="pure-button" onclick="{ onMoveUp }">&uparrow;</button>
-            <button class="pure-button" onclick="{ onMoveDown }">&downarrow;</button>
+            <button class="pure-button" onclick="{ onMoveUp }"><i class="icon-up-open"></i></button>
+            <button class="pure-button" onclick="{ onMoveDown }"><i class="icon-down-open"></i></button>
         </div>
         <div class="pure-u-1-3">
-            <button class="pure-button button-error" onclick="{ onDelete }">&times;</button>
+            <button class="pure-button button-error" onclick="{ onDelete }"><i class="icon-trash-empty"></i></button>
         </div>
         <div class="pure-u-1-3"><label class="centered">XP { model.current.getXP(group) }</label></div>
     </form>
