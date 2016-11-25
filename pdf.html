@@ -6,12 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
+        <div id="log"></div>
+
         <script src="./js/riot+compiler.min.js"></script>
 
         <script src="./js/Character.js"></script>
         <script src="./js/Repository.js"></script>
         <script src="./js/Model.js"></script>
         <script src="./js/NephilimRendering.js"></script>
+
         <script src="./js/dexie.min.js"></script>
         <script src="./js/pdf/pdfmake.min.js"></script>
         <script src="./js/pdf/vfs_fonts.js"></script>
@@ -25,11 +28,14 @@
             riot.route.start(true);
             var q = riot.route.query()
 
-            SwCharman.repository.findByPk(q.key)
+            SwCharman.repository.findByPk(decodeURIComponent(q.key))
                     .then(function (character) {
                         var docDefinition = new NephilimRendering(character);
                         pdfMake.createPdf(docDefinition.getDocument()).download(character.type + '-' + character.name + '.pdf');
                         //pdfMake.createPdf(docDefinition.getDocument()).open()
+                        setTimeout("window.close()", 5000)
+                    }).catch(function(e) {
+                        document.getElementById('log').innerHTML = "Error: " + (e.message || e)
                         setTimeout("window.close()", 5000)
                     })
         </script>

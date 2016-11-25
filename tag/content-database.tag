@@ -75,7 +75,7 @@
                 var radio = self.radiochoice[idx]
                 if (radio.checked) {
                     radio.checked = false;
-                    window.open('pdf.html?key=' + radio.value, '_blank')
+                    window.open('pdf.html?key=' + encodeURIComponent(radio.value), '_blank')
                 }
             }
         }
