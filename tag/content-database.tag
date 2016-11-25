@@ -1,16 +1,19 @@
 <content-database>
     <table class="pure-table pure-table-striped v-spacing" style="width: 100%">
         <tr each="{ listing }">
-            <td><input type="radio"/></td>
+            <td><input type="radio" name="radiochoice" value="{name}"/></td>
             <td><a href="#" onclick="{ parent.onAppend }">{name}</a></td>
-            <td>{ type.substr(0,4) }</td>
-            <td><a target="_blank" href="pdf.html?key={name}" class="pure-button button-primary"><i class="icon-file-pdf"></i></a></td>
-            <td><a href="#" class="pure-button button-error" onclick="{ parent.onDelete }"><i class="icon-trash-empty"></i></a></td>
         </tr>
     </table>
     <footer class="pure-g button-spacing">
-        <div class="pure-u-1">
+        <div class="pure-u-1-4">
+            <a target="_blank" href="#" class="pure-button button-primary"><i class="icon-file-pdf"></i></a>
+        </div>
+        <div class="pure-u-1-2">
             <a href="#dump" class="pure-button button-warning">Dump/create DB</a>
+        </div>
+        <div class="pure-u-1-4">
+            <a href="#" class="pure-button button-error" onclick="{ }"><i class="icon-trash-empty"></i></a>
         </div>
     </footer>
     <script>
