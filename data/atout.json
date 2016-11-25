@@ -278,7 +278,7 @@
             "prerequis": "N, d8 dans les Compétences concernées",
             "descr": "+2 dans deux Connaissances.",
             "enabled": "1",
-            "info": "0"
+            "info": "1"
         },
         {
             "titre": "Esquive",
@@ -784,7 +784,7 @@
             "prerequis": "cf Codex AM",
             "descr": "Adopté & d4 en Arcanes majeurs",
             "enabled": "1",
-            "info": "0"
+            "info": "1"
         },
         {
             "titre": "Artefact",
