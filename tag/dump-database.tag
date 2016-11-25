@@ -32,6 +32,7 @@
             if (self.dumpdb.value != '') {
                 SwCharman.repository.createFromDump(self.dumpdb.value)
                 self.notice('Création du Repository', 'error')
+                SwCharman.model.trigger('update-db')
             }
         }
 
