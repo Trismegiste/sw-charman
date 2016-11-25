@@ -9,7 +9,7 @@
     </table>
     <footer class="pure-g button-spacing">
         <div class="pure-u-1-4">
-            <a target="_blank" href="#" class="pure-button button-primary"><i class="icon-file-pdf"></i></a>
+            <a href="#" class="pure-button button-primary" onclick="{ onPdf }"><i class="icon-file-pdf"></i></a>
         </div>
         <div class="pure-u-1-2">
             <a href="#dump" class="pure-button button-warning">Dump/create DB</a>
@@ -47,7 +47,7 @@
         }
 
         onDelete() {
-            // looped item
+            // search the checked radio
             var item = self.radio
             for(var idx in self.radiochoice) {
                 var radio = self.radiochoice[idx]
@@ -65,7 +65,17 @@
                     })
                 }
             }
+        }
 
+        onPdf() {
+            // search the checked radio
+            var item = self.radio
+            for(var idx in self.radiochoice) {
+                var radio = self.radiochoice[idx]
+                if (radio.checked) {
+                    window.open('pdf.html?key='+radio.value,'_blank')
+                }
+            }
         }
 
         this.model.on('update-db', function() {
