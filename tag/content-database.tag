@@ -52,6 +52,7 @@
             for(var idx in self.radiochoice) {
                 var radio = self.radiochoice[idx]
                 if (radio.checked) {
+                    radio.checked = false;
                     var name = radio.value
                     SwCharman.repository.deleteByPk(name).then(function() {
                         self.notice(name + ' effacé', 'error')
@@ -73,7 +74,8 @@
             for(var idx in self.radiochoice) {
                 var radio = self.radiochoice[idx]
                 if (radio.checked) {
-                    window.open('pdf.html?key='+radio.value,'_blank')
+                    radio.checked = false;
+                    window.open('pdf.html?key=' + radio.value, '_blank')
                 }
             }
         }
