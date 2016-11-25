@@ -16,7 +16,11 @@ NephilimRendering.prototype = {
                             [this.getIdentite(), {colSpan: 2, text: this.getHistoire(), fontSize: 10}, {}],
                             [
                                 this.getCompetences(0),
-                                [this.getAtoutCreation(0), this.getHandicap(0)],
+                                [
+                                    this.getAtoutCreation(0),
+                                    this.getHandicap(0),
+                                    this.getAspect()
+                                ],
                                 this.getAtout(0)
                             ]
                         ]
@@ -132,6 +136,28 @@ NephilimRendering.prototype = {
         for (var k in this.character.handicap[group]) {
             var item = this.character.handicap[group][k]
             listing.table.body.push([item.titre, item.value.substr(0, 3)])
+        }
+
+        return listing
+    },
+    getAspect: function () {
+        var meta = this.character.metamorphe;
+        var rm = Math.floor(this.character.pentacle.initiation / 2) + 2
+        var asp = 12 - rm
+
+        var listing = {
+            table: {
+                headerRows: 1,
+                widths: ['70%', '30%'],
+                body: [
+                    [{text: 'Métamorphe', colSpan: 2}, {}],
+                    [meta.nom, meta.humeur],
+                    ['Aspect', asp.toString()],
+                    ['Résist. magique', rm.toString()]
+                ]
+            },
+            layout: 'lightHorizontalLines',
+            margin: [0, 5]
         }
 
         return listing
