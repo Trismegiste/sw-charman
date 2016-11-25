@@ -31,11 +31,15 @@ NephilimRendering.prototype = {
                     table: {
                         widths: ['33%', '33%', '33%'],
                         body: [
-                            [this.getAttribut(), this.getHandicap(1), this.getAtoutCreation(1)],
                             [
-                                this.getCompetences(1),
+                                this.getAttribut(),
+                                [this.getHandicap(1), this.getAtoutCreation(1)],
+                                this.getCompetences(1)
+                            ],
+                            [
                                 this.getAtout(1),
-                                {text: 'toto'}
+                                {text: ''},
+                                {text: ''}
                             ]
                         ]
                     },
