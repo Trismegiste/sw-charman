@@ -1,8 +1,10 @@
 <content-database>
-    <table class="pure-table pure-table-striped v-spacing" style="width: 100%">
+    <table class="pure-table pure-table-striped checkable-listing" style="width: 100%">
         <tr each="{ listing }">
-            <td><input type="radio" name="radiochoice" value="{name}"/></td>
-            <td><a href="#" onclick="{ parent.onAppend }">{name}</a></td>
+            <td>
+                <input type="radio" name="radiochoice" value="{name}"/>
+                <a href="#" onclick="{ parent.onAppend }">{name}</a>
+            </td>
         </tr>
     </table>
     <footer class="pure-g button-spacing">

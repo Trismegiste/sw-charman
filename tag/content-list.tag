@@ -1,5 +1,5 @@
 <content-list>
-    <nav class="pure-menu char-list">
+    <nav class="pure-menu">
         <ul class="pure-menu-list">
             <li each="{ pc, i in model.characterList }" class="pure-menu-item">
                 <a href="#char/{ i }" class="pure-menu-link">
