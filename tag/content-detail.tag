@@ -1,5 +1,5 @@
 <content-detail class="pure-g">
-    <header class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
+    <header class="{ blockStyle }">
         <form class="pure-form pure-g" onchange="{
                     onChange
                 }">
@@ -12,45 +12,45 @@
             </div>
         </form>
     </header>
-    <section class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
+    <section class="{ blockStyle }">
         <!-- magic essence -->
         <pentacle if="{ model.current.type == 'nephilim' }"></pentacle>
-        <unique-ka if="{ model.current.type == 'effetdragon' || model.current.type == 'kabbale' }"
-                   value="4"></unique-ka>
+        <unique-ka if="{ model.current.type == 'effetdragon' || model.current.type == 'kabbale' }"></unique-ka>
         <unique-ka if="{ model.current.type == 'humain' }"
-                   title="Initiation" ka="soleil" value="4"></unique-ka>
+                   title="Initiation" ka="soleil"></unique-ka>
     </section>
     <!-- attributes -->
-    <attribut if="{ model.current.type != 'nephilim' }" class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></attribut>
+    <attribut if="{ model.current.type != 'nephilim' }" class="{ blockStyle }"></attribut>
     <!-- handicaps / chutes -->
-    <handicap filter="nephilim" title="Chutes" if="{ model.current.type == 'nephilim' }" class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></handicap>
-    <handicap filter="humain" if="{ model.current.type == 'humain' }" class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></handicap>
+    <handicap filter="nephilim" title="Chutes" if="{ model.current.type == 'nephilim' }" class="{ blockStyle }"></handicap>
+    <handicap filter="humain" if="{ model.current.type == 'humain' }" class="{ blockStyle }"></handicap>
     <!-- comp -->
-    <competence class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></competence>
+    <competence class="{ blockStyle }"></competence>
     <!-- atouts -->
-    <section class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
+    <section class="{ blockStyle }">
         <atout filter="general humain" if="{ model.current.type == 'humain' }"></atout>
         <atout filter="nephilim humain general" if="{ model.current.type == 'nephilim' }"></atout>
         <atout filter="monstre humain general"
                if="{ ['kabbale', 'effetdragon'].indexOf(model.current.type) != -1 }"></atout>
     </section>
     <!-- simulacre -->
-    <section if="{ model.current.type == 'nephilim' }" class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
-        <unique-ka title="Simulacre" ka="soleil" value="4"></unique-ka>
+    <section if="{ model.current.type == 'nephilim' }" class="{ blockStyle }">
+        <unique-ka title="Simulacre" ka="soleil"></unique-ka>
         <attribut></attribut>
         <handicap filter="humain" group="1" title="Handicaps simulacre"></handicap>
     </section>
     <competence if="{ model.current.type == 'nephilim' }"
                 group="1" title="Compétences simulacre"
-                class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></competence>
+                class="{ blockStyle }"></competence>
     <atout if="{ model.current.type == 'nephilim' }"
            group="1" filter="general humain" title="Atouts simulacre"
-           class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></atout>
+           class="{ blockStyle }"></atout>
     <histoire-invisible if="{ model.current.type == 'nephilim' }"
-                        class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></histoire-invisible>
+                        class="{ blockStyle }"></histoire-invisible>
     <metamorphe if="{ model.current.type == 'nephilim' }"
-                        class="webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></metamorphe>
+                        class="{ blockStyle }"></metamorphe>
     <script>
+        this.blockStyle = "webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"
         this.model = SwCharman.model
         this.typeList = {
             nephilim: {title: 'Nephilim', build: function () {
