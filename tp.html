@@ -56,11 +56,11 @@
                                                     image: kaImg[0],
                                                     fit: [30, 30]
                                                 },
-                                                {text: 'd10', alignment: 'left', margin: [0, 5, 0, 0]},
+                                                {text: 'd10', alignment: 'left', style: 'verticalAlign'},
                                                 ''
                                             ],
                                             [
-                                                {text: "+1", alignment: 'right', margin: [0, 5, 0, 0]},
+                                                {text: "+1", alignment: 'right', style: 'verticalAlign'},
                                                 {
                                                     image: kaImg[1],
                                                     fit: [30, 30]
@@ -69,10 +69,10 @@
                                                     image: kaImg[2],
                                                     fit: [30, 30]
                                                 },
-                                                {text: "+2", alignment: 'left', margin: [0, 5, 0, 0]},
+                                                {text: "+2", alignment: 'left', style: 'verticalAlign'}
                                             ],
                                             [
-                                                {text: "+3", alignment: 'right', margin: [0, 5, 0, 0]},
+                                                {text: "+3", alignment: 'right', style: 'verticalAlign'},
                                                 {
                                                     image: kaImg[3],
                                                     fit: [30, 30]
@@ -81,13 +81,18 @@
                                                     image: kaImg[4],
                                                     fit: [30, 30]
                                                 },
-                                                {text: "+4", alignment: 'left', margin: [0, 5, 0, 0]}
+                                                {text: "+4", alignment: 'left', style: 'verticalAlign'}
                                             ]
                                         ]
                                     },
                                     layout: 'noBorders'
                                 }
-                            ]
+                            ],
+                            styles: {
+                                verticalAlign: {
+                                    margin: [0, 6, 0, 0]
+                                }
+                            }
                         }
                         pdfMake.createPdf(docDefinition).open()
 
