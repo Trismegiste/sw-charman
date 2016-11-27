@@ -13,6 +13,7 @@
         <script src="./js/Character.js"></script>
         <script src="./js/Repository.js"></script>
         <script src="./js/Model.js"></script>
+        <script src="./js/render/RenderingFactory.js"></script>
         <script src="./js/render/AbstractRendering.js"></script>
         <script src="./js/render/NephilimRendering.js"></script>
 
@@ -31,11 +32,13 @@
 
             SwCharman.repository.findByPk(decodeURIComponent(q.key))
                     .then(function (character) {
-                        var docDefinition = new NephilimRendering(character);
-                        pdfMake.createPdf(docDefinition.getDocument()).download(character.type + '-' + character.name + '.pdf');
+                        var factory = new RenderingFactory();
+                        var docDefinition = factory.create(character);
+                        var filename = character.type + '-' + character.name + '.pdf'
+                        pdfMake.createPdf(docDefinition.getDocument()).download(filename);
                         //pdfMake.createPdf(docDefinition.getDocument()).open()
                         setTimeout("window.close()", 5000)
-                    }).catch(function(e) {
+                    }).catch(function (e) {
                         document.getElementById('log').innerHTML = "Error: " + (e.stack || e)
                         //setTimeout("window.close()", 5000)
                     })
