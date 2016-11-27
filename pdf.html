@@ -13,6 +13,7 @@
         <script src="./js/Character.js"></script>
         <script src="./js/Repository.js"></script>
         <script src="./js/Model.js"></script>
+        <script src="./js/render/AbstractRendering.js"></script>
         <script src="./js/render/NephilimRendering.js"></script>
 
         <script src="./js/dexie.min.js"></script>
@@ -35,8 +36,8 @@
                         //pdfMake.createPdf(docDefinition.getDocument()).open()
                         setTimeout("window.close()", 5000)
                     }).catch(function(e) {
-                        document.getElementById('log').innerHTML = "Error: " + (e.message || e)
-                        setTimeout("window.close()", 5000)
+                        document.getElementById('log').innerHTML = "Error: " + (e.stack || e)
+                        //setTimeout("window.close()", 5000)
                     })
         </script>
     </body>
