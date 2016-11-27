@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="dump">TODO write content</div>
+
+        <script>
+
+            function toDataUrl(url) {
+                return new Promise(function (fulfill, reject) {
+                    var xhr = new XMLHttpRequest()
+                    xhr.responseType = 'blob'
+                    xhr.onload = function (e) {
+                        if (e.target.status === 200) {
+                            var reader = new FileReader()
+                            reader.onloadend = function (e) {
+                                fulfill(e.target.result)
+                            }
+                            reader.readAsDataURL(xhr.response)
+                        } else {
+                            reject(e)
+                        }
+                    }
+                    xhr.open('GET', url)
+                    xhr.send()
+                })
+            }
+
+            var p1 = toDataUrl('./img/soleil.png')
+            var p2 = toDataUrl('./img/lune-noire.png')
+            Promise.all([p1, p2])
+                    .then(function (data) {
+                        console.log(data)
+                    })
+                    .catch(function (e) {
+                        console.error(e.target.status)
+                    })
+        </script>
+    </body>
+</html>
