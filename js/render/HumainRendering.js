@@ -9,7 +9,6 @@ HumainRendering.prototype = Object.create(AbstractRendering.prototype)
 HumainRendering.prototype.constructor = HumainRendering
 
 HumainRendering.prototype.getDocument = function () {
-    console.log(this.character)
     return {
         content: [
             {
@@ -18,8 +17,8 @@ HumainRendering.prototype.getDocument = function () {
                     body: [
                         [
                             this.getAttribut(),
-                            [this.getHandicap(O), this.getAtoutCreation(O)],
-                            this.getCompetences(O)
+                            [this.getHandicap(0), this.getAtoutCreation(0)],
+                            this.getCompetences(0)
                         ],
                         [
                             this.getAtout(0),
