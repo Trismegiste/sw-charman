@@ -20,7 +20,15 @@
         </div>
         <div class="pure-u-1-2"></div>
         <div class="pure-u-1-2">
-            <puce name="puce" value="{ model.current.uniqueKa.puce }"></puce>
+            <div class="pure-g">
+                <div class="pure-u-1-4" each="{ idx in [1, 2, 3, 4] }">
+                    <label>
+                        <input type="checkbox" value="{ idx }" checked="{ idx <= model.current.uniqueKa.puce }" onclick="{
+                            parent.onClickPuce
+                        }"/>
+                    </label>
+                </div>
+            </div>
         </div>
     </form>
     <script>
@@ -28,11 +36,14 @@
         var self = this
 
         onChangeKa() {
-            self.model.current.uniqueKa = {
-                ka: self.uniqueKa.value,
-                initiation: self.initiation.value,
-                puce: self.puce.value
-            }
+            var obj = self.model.current.uniqueKa
+            obj.ka = self.uniqueKa.value
+            obj.initiation = self.initiation.value
+        }
+
+        onClickPuce(e) {
+            var obj = self.model.current.uniqueKa
+            obj.puce = e.target.checked ? e.item.idx : e.item.idx - 1;
         }
     </script>
 </unique-ka>
