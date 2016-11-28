@@ -19,6 +19,18 @@
             <select name="initiation" class="pure-input-1"
                     data-is="dice-option" value="{ model.current.pentacle.initiation }"></select>
         </div>
+        <div class="pure-u-1-2"></div>
+        <div class="pure-u-1-2">
+            <div class="pure-g">
+                <div class="pure-u-1-4" each="{ idx in [1, 2, 3, 4] }">
+                    <label>
+                        <input type="checkbox" value="{ idx }" checked="{ idx <= model.current.pentacle.puce }" onclick="{
+                            parent.onClickPuce
+                        }"/>
+                    </label>
+                </div>
+            </div>
+        </div>
         <div class="pure-u-1-4">
             <label>Neut. fav.</label>
         </div>
@@ -49,12 +61,13 @@
         var self = this;
 
         onChange() {
-            self.model.current.pentacle = {
-                dominant: self.dominant.value,
-                initiation: self.initiation.value,
-                neutreFav: '',
-                opposeMaj: ''
-            }
+            var obj = self.model.current.pentacle
+
+            obj.dominant = self.dominant.value
+            obj.initiation = self.initiation.value
+            obj.neutreFav = ''
+            obj.opposeMaj = ''
+
             // manage neutre fav
             self.neutre.forEach(function (radio) {
                 if (radio.checked) {
@@ -67,7 +80,11 @@
                     self.model.current.pentacle.opposeMaj = radio.value
                 }
             })
-            // for other components
+        }
+
+        onClickPuce(e) {
+            var obj = self.model.current.pentacle
+            obj.puce = e.target.checked ? e.item.idx : e.item.idx - 1;
         }
 
         this.on('update', function() {
