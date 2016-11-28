@@ -18,6 +18,10 @@
             <select name="initiation" class="pure-input-1" data-is="dice-option"
                     value="{ model.current.uniqueKa.initiation || opts.value }"></select>
         </div>
+        <div class="pure-u-1-2"></div>
+        <div class="pure-u-1-2">
+            <puce name="puce" value="{ model.current.uniqueKa.puce }"></puce>
+        </div>
     </form>
     <script>
         this.model = SwCharman.model
@@ -26,7 +30,8 @@
         onChangeKa() {
             self.model.current.uniqueKa = {
                 ka: self.uniqueKa.value,
-                initiation: self.initiation.value
+                initiation: self.initiation.value,
+                puce: self.puce.value
             }
         }
     </script>
