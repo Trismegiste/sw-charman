@@ -65,19 +65,19 @@
 
             obj.dominant = self.dominant.value
             obj.initiation = self.initiation.value
-            obj.neutreFav = ''
-            obj.opposeMaj = ''
+            obj.neutreFav = undefined
+            obj.opposeMaj = undefined
 
             // manage neutre fav
             self.neutre.forEach(function (radio) {
                 if (radio.checked) {
-                    self.model.current.pentacle.neutreFav = radio.value
+                    obj.neutreFav = radio.value
                 }
             })
             // manage opp maj
             self.oppose.forEach(function (radio) {
                 if (radio.checked) {
-                    self.model.current.pentacle.opposeMaj = radio.value
+                    obj.opposeMaj = radio.value
                 }
             })
         }
