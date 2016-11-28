@@ -25,5 +25,13 @@
                 obj[key] = self[key].value
             })
         }
+
+        this.model.on('init-attributs', function(val) {
+            var obj = self.model.current.attribute;
+            self.attributList.forEach(function(key) {
+                obj[key] = val
+            })
+            self.update()
+        })
     </script>
 </attribut>

@@ -18,7 +18,12 @@
             <select name="initiation" class="pure-input-1" data-is="dice-option"
                     value="{ model.current.uniqueKa.initiation || opts.value }"></select>
         </div>
-        <div class="pure-u-1-2"></div>
+        <div class="pure-u-1-2">
+            <label>
+                <input type="checkbox" name="linked"/>
+                Lié attributs
+            </label>
+        </div>
         <div class="pure-u-1-2">
             <div class="pure-g">
                 <div class="pure-u-1-4" each="{ idx in [1, 2, 3, 4] }">
@@ -39,6 +44,9 @@
             var obj = self.model.current.uniqueKa
             obj.ka = self.uniqueKa.value
             obj.initiation = self.initiation.value
+            if (self.linked.checked) {
+                self.model.trigger('init-attributs', obj.initiation)
+            }
         }
 
         onClickPuce(e) {
