@@ -3,6 +3,14 @@ var NephilimRendering = function (charac) {
         throw 'Bad type of ' + charac.name
     }
     AbstractRendering.call(this, charac)
+
+    this.prefix = {
+        'feu': 'pyr',
+        'eau': 'hydr',
+        'terre': 'faë',
+        'Lune': 'onir',
+        'air': 'eol'
+    }
 }
 
 NephilimRendering.prototype = Object.create(AbstractRendering.prototype)
@@ -15,7 +23,15 @@ NephilimRendering.prototype.getDocument = function () {
                 table: {
                     widths: ['33%', '33%', '33%'],
                     body: [
-                        [this.getIdentite(), {colSpan: 2, text: this.getHistoire(), fontSize: 10}, {}],
+                        [
+                            {colSpan: 2, stack: [
+                                    this.getIdentite(),
+                                    {ul: this.getHistoire(), fontSize: 10}
+                                ]
+                            },
+                            {},
+                            this.getPentacle()
+                        ],
                         [
                             this.getCompetences(0),
                             [
@@ -47,18 +63,21 @@ NephilimRendering.prototype.getDocument = function () {
                 },
                 layout: 'noBorders'
             }
-        ]
+        ],
+        styles: {
+            verticalAlign: {
+                margin: [0, 6, 0, 0]
+            }
+        }
     }
 }
 
 NephilimRendering.prototype.getIdentite = function () {
-    return [
-        'Nom: ' + this.character.name,
-        'Initiation: ' + this.getDiceText(this.character.pentacle.initiation),
-        'Ka dominant: ' + this.character.pentacle.dominant,
-        'Neutre fav: ' + this.character.pentacle.neutreFav,
-        'Opposé maj: ' + this.character.pentacle.opposeMaj
-    ]
+    var title = this.getTitle()
+    title = title.charAt(0).toUpperCase() + title.slice(1)
+            + ' '
+            + this.character.name.charAt(0).toUpperCase() + this.character.name.slice(1)
+    return title
 }
 
 NephilimRendering.prototype.getHistoire = function () {
@@ -67,7 +86,7 @@ NephilimRendering.prototype.getHistoire = function () {
         var periode = this.character.incarnation[key];
         view.push(periode['Période'] + ': ' + periode.Titre)
     }
-    return view.join("\n")
+    return view
 }
 
 NephilimRendering.prototype.getAspect = function () {
@@ -93,3 +112,68 @@ NephilimRendering.prototype.getAspect = function () {
     return listing
 }
 
+NephilimRendering.prototype.getTitle = function () {
+    return this.prefix[this.character.pentacle.dominant] + 'im'
+}
+
+NephilimRendering.prototype.getPentacle = function () {
+    var pentacle = this.character.pentacle
+    var equi = SwCharman.model.getEquilibreFor(pentacle.dominant)
+    // on cherche le neutre defav à partir du neutre fav
+    var idx = equi.neutre.indexOf(pentacle.neutreFav) // 0 ou 1
+    // si 0 => 1, si 1 => 0
+    pentacle.neutreDefav = equi.neutre[1 - idx]
+    // on cherche l'opposé mineur
+    idx = equi.oppose.indexOf(pentacle.opposeMaj) // 0 ou 1
+    pentacle.opposeMin = equi.oppose[1 - idx]
+
+    // for the table :
+    var kadom = [
+        pentacle.dominant,
+        pentacle.neutreFav,
+        pentacle.neutreDefav,
+        pentacle.opposeMin,
+        pentacle.opposeMaj
+    ]
+
+    return {
+        table: {
+            body: [
+                [
+                    '',
+                    {
+                        image: SwCharman.assetManager.get(kadom[0]),
+                        fit: [30, 30]
+                    },
+                    {text: 'd10', alignment: 'left', style: 'verticalAlign'},
+                    ''
+                ],
+                [
+                    {text: "+1", alignment: 'right', style: 'verticalAlign'},
+                    {
+                        image: SwCharman.assetManager.get(kadom[1]),
+                        fit: [30, 30]
+                    },
+                    {
+                        image: SwCharman.assetManager.get(kadom[2]),
+                        fit: [30, 30]
+                    },
+                    {text: "+2", alignment: 'left', style: 'verticalAlign'}
+                ],
+                [
+                    {text: "+3", alignment: 'right', style: 'verticalAlign'},
+                    {
+                        image: SwCharman.assetManager.get(kadom[3]),
+                        fit: [30, 30]
+                    },
+                    {
+                        image: SwCharman.assetManager.get(kadom[4]),
+                        fit: [30, 30]
+                    },
+                    {text: "+4", alignment: 'left', style: 'verticalAlign'}
+                ]
+            ]
+        },
+        layout: 'noBorders'
+    }
+}

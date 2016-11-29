@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nephilim Savage Worlds edition Character Manager</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <div id="log"></div>
+
+        <script src="./js/riot+compiler.min.js"></script>
+        <script src="./js/pdf/pdfmake.min.js"></script>
+        <script src="./js/pdf/vfs_fonts.js"></script>
+        <script src="./js/Character.js"></script>
+        <script src="./js/Model.js"></script>
+        <script src="./js/render/Asset.js"></script>
+        <script>
+
+            var model = new Model()
+            var assetManager = new Asset()
+
+            for (var idx in model.kaList) {
+                var ka = model.kaList[idx]
+                assetManager.append(ka, './img/' + ka + '.png')
+            }
+
+            assetManager.load().then(function () {
+
+                var docDefinition = {
+                    content: [
+                        {
+                            table: {
+                                body: [
+                                    [
+                                        '',
+                                        {
+                                            image: assetManager.get('feu'),
+                                            fit: [30, 30]
+                                        },
+                                        {text: 'd10', alignment: 'left', style: 'verticalAlign'},
+                                        ''
+                                    ],
+                                    [
+                                        {text: "+1", alignment: 'right', style: 'verticalAlign'},
+                                        {
+                                            image: assetManager.get('air'),
+                                            fit: [30, 30]
+                                        },
+                                        {
+                                            image: assetManager.get('terre'),
+                                            fit: [30, 30]
+                                        },
+                                        {text: "+2", alignment: 'left', style: 'verticalAlign'}
+                                    ],
+                                    [
+                                        {text: "+3", alignment: 'right', style: 'verticalAlign'},
+                                        {
+                                            image: assetManager.get('eau'),
+                                            fit: [30, 30]
+                                        },
+                                        {
+                                            image: assetManager.get('lune'),
+                                            fit: [30, 30]
+                                        },
+                                        {text: "+4", alignment: 'left', style: 'verticalAlign'}
+                                    ]
+                                ]
+                            },
+                            layout: 'noBorders'
+                        }
+                    ],
+                    styles: {
+                        verticalAlign: {
+                            margin: [0, 6, 0, 0]
+                        }
+                    }
+                }
+                pdfMake.createPdf(docDefinition).open()
+
+            }).catch(function (msg) {
+                console.error(msg)
+            })
+
+
+        </script>
+    </body>
+</html>

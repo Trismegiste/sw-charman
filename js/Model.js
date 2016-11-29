@@ -79,5 +79,14 @@ Model.prototype = {
         }
 
         throw new Error("Unable to copy obj! Its type isn't supported.");
+    },
+    getEquilibreFor: function (ka) {
+        for (var idx in this.equilibrePentacle) {
+            var eq = this.equilibrePentacle[idx]
+            if (eq.dominant === ka) {
+                return eq
+            }
+        }
+        throw new Error(ka + ' is not one of the five Ka')
     }
 }
