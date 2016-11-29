@@ -33,7 +33,10 @@ HumainRendering.prototype.getDocument = function () {
                     ]
                 },
                 layout: 'noBorders'
-            }
+            },
+            {text: 'Notes'},
+            this.getHandicapDescription(0),
+            this.getAtoutDescription(0)
         ],
         styles: {
             verticalAlign: {

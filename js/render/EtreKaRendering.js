@@ -25,7 +25,9 @@ EtreKaRendering.prototype.getDocument = function () {
                     ]
                 },
                 layout: 'noBorders'
-            }
+            },
+            {text: 'Notes'},
+            this.getAtoutDescription(0)
         ],
         styles: {
             verticalAlign: {

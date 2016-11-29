@@ -189,8 +189,10 @@ AbstractRendering.prototype.getAtoutDescription = function (group) {
     listing.push('ATOUTS ')
     for (var k in reducedAtoutList) {
         var atout = reducedAtoutList[k]
-        listing.push({text: atout.titre, bold: true})
-        listing.push(' (' + atout.prerequis + ') ')
+        listing.push({text: atout.titre + ' ', bold: true})
+        if (atout.hasOwnProperty('prerequis')) {
+            listing.push('(' + atout.prerequis + ') ')
+        }
         listing.push(atout.descr + ' / ')
     }
 
