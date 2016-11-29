@@ -20,6 +20,7 @@
         <script src="./js/render/EtreKaRendering.js"></script>
         <script src="./js/render/EffetdragonRendering.js"></script>
         <script src="./js/render/KabbaleRendering.js"></script>
+        <script src="./js/render/Asset.js"></script>
 
         <script src="./js/dexie.min.js"></script>
         <script src="./js/pdf/pdfmake.min.js"></script>
@@ -28,24 +29,36 @@
             // container for this SPA
             var SwCharman = {
                 repository: new Repository(),
-                model: new Model()
+                model: new Model(),
+                assetManager: new Asset()
             }
+            // init assets
+            for (var idx in SwCharman.model.kaList) {
+                var ka = SwCharman.model.kaList[idx]
+                SwCharman.assetManager.append(ka, './img/' + ka + '.png')
+            }
+
             // Here we go
             riot.route.start(true);
             var q = riot.route.query()
 
-            SwCharman.repository.findByPk(decodeURIComponent(q.key))
-                    .then(function (character) {
-                        var factory = new RenderingFactory();
-                        var docDefinition = factory.create(character);
-                        var filename = character.type + '-' + character.name + '.pdf'
-                        pdfMake.createPdf(docDefinition.getDocument()).download(filename);
-                        //pdfMake.createPdf(docDefinition.getDocument()).open()
-                        setTimeout("window.close()", 5000)
-                    }).catch(function (e) {
-                        document.getElementById('log').innerHTML = "Error: " + (e.stack || e)
-                        //setTimeout("window.close()", 5000)
-                    })
+            SwCharman.assetManager.load().then(function () {
+
+                SwCharman.repository.findByPk(decodeURIComponent(q.key)).then(function (character) {
+                    var factory = new RenderingFactory();
+                    var docDefinition = factory.create(character);
+                    var filename = character.type + '-' + character.name + '.pdf'
+                    pdfMake.createPdf(docDefinition.getDocument()).download(filename);
+                    //pdfMake.createPdf(docDefinition.getDocument()).open()
+                    setTimeout("window.close()", 5000)
+                }).catch(function (e) {
+                    document.getElementById('log').innerHTML = "Error: " + (e.stack || e)
+                    //setTimeout("window.close()", 5000)
+                })
+
+            }).catch(function (msg) {
+                console.error(msg)
+            })
         </script>
     </body>
 </html>
