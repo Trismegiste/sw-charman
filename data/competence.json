@@ -1,146 +1,182 @@
 [{
         "title": "Combat",
         "attr": "AGI",
+        "meta": "feu",
         "editable": false
     }, {
         "title": "Conduite",
         "attr": "AGI",
+        "meta": "eau",
         "editable": false
     }, {
         "title": "Connaissance",
         "attr": "INT",
+        "meta": "air",
         "editable": true
     }, {
         "title": "Connaissance Art",
         "attr": "INT",
+        "meta": "air",
         "editable": false
     }, {
         "title": "Connaissance Bataille",
         "attr": "INT",
+        "meta": "air",
         "editable": false
     }, {
         "title": "Connaissance Science",
         "attr": "INT",
+        "meta": "air",
         "editable": false
     }, {
         "title": "Connaissance Eco/Gestion",
         "attr": "INT",
+        "meta": "air",
         "editable": false
     }, {
         "title": "Connaissance Lettre",
         "attr": "INT",
+        "meta": "air",
         "editable": false
     }, {
         "title": "Connaissance Informatique",
         "attr": "INT",
+        "meta": "air",
         "editable": false
     }, {
         "title": "Connaissance Langue",
         "attr": "INT",
+        "meta": "air",
         "editable": true
     }, {
         "title": "Crochetage",
         "attr": "AGI",
+        "meta": "eau",
         "editable": false
     }, {
         "title": "Discrétion",
         "attr": "AGI",
+        "meta": "lune",
         "editable": false
     }, {
         "title": "Équitation",
         "attr": "AGI",
+        "meta": "terre",
         "editable": false
     }, {
         "title": "Escalade",
         "attr": "FOR",
+        "meta": "terre",
         "editable": false
     }, {
         "title": "Intimidation",
         "attr": "ÂME",
+        "meta": "feu",
         "editable": false
     }, {
         "title": "Jeu",
         "attr": "INT",
+        "meta": "lune",
         "editable": false
     }, {
         "title": "Lancer",
         "attr": "AGI",
+        "meta": "air",
         "editable": false
     }, {
         "title": "Natation",
         "attr": "AGI",
+        "meta": "eau",
         "editable": false
     }, {
         "title": "Navigation",
         "attr": "AGI",
+        "meta": "eau",
         "editable": false
     }, {
         "title": "Perception",
         "attr": "INT",
+        "meta": "air",
         "editable": false
     }, {
         "title": "Persuasion",
         "attr": "ÂME",
+        "meta": "lune",
         "editable": false
     }, {
         "title": "Pilotage",
         "attr": "AGI",
+        "meta": "eau",
         "editable": false
     }, {
         "title": "Pistage",
         "attr": "INT",
+        "meta": "terre",
         "editable": false
     }, {
         "title": "Recherche",
         "attr": "INT",
+        "meta": "air",
         "editable": false
     }, {
         "title": "Réparation",
         "attr": "INT",
+        "meta": "air",
         "editable": false
     }, {
         "title": "Réseaux",
         "attr": "INT",
+        "meta": "lune",
         "editable": false
     }, {
         "title": "Sarcasme",
         "attr": "INT",
+        "meta": "lune",
         "editable": false
     }, {
         "title": "Soins",
         "attr": "INT",
+        "meta": "terre",
         "editable": false
     }, {
         "title": "Survie",
         "attr": "INT",
+        "meta": "terre",
         "editable": false
     }, {
         "title": "Tir",
         "attr": "AGI",
+        "meta": "feu",
         "editable": false
     }, {
         "title": "Arcanes majeurs",
         "attr": "INI",
+        "meta": "na",
         "editable": false
     }, {
         "title": "Arcanes mineurs",
         "attr": "INI",
+        "meta": "na",
         "editable": false
     }, {
         "title": "Ésotérisme",
         "attr": "INI",
+        "meta": "na",
         "editable": false
     }, {
         "title": "Histoire invisible",
         "attr": "INI",
+        "meta": "na",
         "editable": false
     }, {
         "title": "Plans subtils",
         "attr": "INI",
+        "meta": "na",
         "editable": false
     }, {
         "title": "Spécial",
         "attr": "INI",
+        "meta": "na",
         "editable": true
     }
 ]
