@@ -37,6 +37,9 @@
                 var ka = SwCharman.model.kaList[idx]
                 SwCharman.assetManager.append(ka, './img/' + ka + '.png')
             }
+            for (var k = 0; k < 2; k++) {
+                SwCharman.assetManager.append('puce-' + k, './img/puce-' + k + '.png')
+            }
 
             // Here we go
             riot.route.start(true);
