@@ -8,7 +8,7 @@ var NephilimRendering = function (charac) {
         'feu': 'pyr',
         'eau': 'hydr',
         'terre': 'faër',
-        'Lune': 'onir',
+        'lune': 'onir',
         'air': 'éol'
     }
 }
