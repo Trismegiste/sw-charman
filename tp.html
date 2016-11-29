@@ -21,7 +21,7 @@
 
             for (var idx in model.kaList) {
                 var ka = model.kaList[idx]
-                assetManager.append(ka,'./img/' + ka + '.png')
+                assetManager.append(ka, './img/' + ka + '.png')
             }
 
             assetManager.load()
@@ -79,8 +79,8 @@
                         pdfMake.createPdf(docDefinition).open()
 
                     })
-                    .catch(function (e) {
-                        console.error(e.target.status)
+                    .catch(function (msg) {
+                        console.error(msg)
                     })
 
 

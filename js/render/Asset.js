@@ -48,12 +48,10 @@ Asset.prototype.load = function () {
                     fulfill()
                 })
                 .catch(function (e) {
-                    console.error(e)
-                    console.error(e.target.status)
-                    reject()
+                    var msg = 'Code ' + e.target.status + ' for ' + e.target.responseURL
+                    reject(msg)
                 })
     })
-
 }
 
 Asset.prototype.get = function (key) {
