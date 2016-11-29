@@ -7,9 +7,9 @@ var NephilimRendering = function (charac) {
     this.prefix = {
         'feu': 'pyr',
         'eau': 'hydr',
-        'terre': 'faë',
+        'terre': 'faër',
         'Lune': 'onir',
-        'air': 'eol'
+        'air': 'éol'
     }
 }
 
@@ -77,7 +77,7 @@ NephilimRendering.prototype.getIdentite = function () {
     title = title.charAt(0).toUpperCase() + title.slice(1)
             + ' '
             + this.character.name.charAt(0).toUpperCase() + this.character.name.slice(1)
-    return title
+    return {text: title, margin: [0, 6, 0, 6], fontSize: 16}
 }
 
 NephilimRendering.prototype.getHistoire = function () {
