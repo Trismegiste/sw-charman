@@ -48,9 +48,14 @@ Asset.prototype.load = function () {
                     fulfill()
                 })
                 .catch(function (e) {
+                    console.error(e)
                     console.error(e.target.status)
                     reject()
                 })
     })
 
+}
+
+Asset.prototype.get = function (key) {
+    return this.dictionary[key]
 }

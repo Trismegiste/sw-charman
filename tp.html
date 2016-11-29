@@ -13,38 +13,19 @@
         <script src="./js/pdf/vfs_fonts.js"></script>
         <script src="./js/Character.js"></script>
         <script src="./js/Model.js"></script>
+        <script src="./js/render/Asset.js"></script>
         <script>
 
             var model = new Model()
+            var assetManager = new Asset()
 
-            function toDataUrl(url) {
-                return new Promise(function (fulfill, reject) {
-                    var xhr = new XMLHttpRequest()
-                    xhr.responseType = 'blob'
-                    xhr.onload = function (e) {
-                        if (e.target.status === 200) {
-                            var reader = new FileReader()
-                            reader.onloadend = function (e) {
-                                fulfill(e.target.result)
-                            }
-                            reader.readAsDataURL(xhr.response)
-                        } else {
-                            reject(e)
-                        }
-                    }
-                    xhr.open('GET', url)
-                    xhr.send()
-                })
-            }
-
-            var loading = []
             for (var idx in model.kaList) {
                 var ka = model.kaList[idx]
-                loading.push(toDataUrl('./img/' + ka + '.png'))
+                assetManager.append(ka,'./img/' + ka + '.png')
             }
 
-            Promise.all(loading)
-                    .then(function (kaImg) {
+            assetManager.load()
+                    .then(function () {
 
                         var docDefinition = {
                             content: [
@@ -54,7 +35,7 @@
                                             [
                                                 '',
                                                 {
-                                                    image: kaImg[0],
+                                                    image: assetManager.get('feu'),
                                                     fit: [30, 30]
                                                 },
                                                 {text: 'd10', alignment: 'left', style: 'verticalAlign'},
@@ -63,11 +44,11 @@
                                             [
                                                 {text: "+1", alignment: 'right', style: 'verticalAlign'},
                                                 {
-                                                    image: kaImg[1],
+                                                    image: assetManager.get('air'),
                                                     fit: [30, 30]
                                                 },
                                                 {
-                                                    image: kaImg[2],
+                                                    image: assetManager.get('terre'),
                                                     fit: [30, 30]
                                                 },
                                                 {text: "+2", alignment: 'left', style: 'verticalAlign'}
@@ -75,11 +56,11 @@
                                             [
                                                 {text: "+3", alignment: 'right', style: 'verticalAlign'},
                                                 {
-                                                    image: kaImg[3],
+                                                    image: assetManager.get('eau'),
                                                     fit: [30, 30]
                                                 },
                                                 {
-                                                    image: kaImg[4],
+                                                    image: assetManager.get('lune'),
                                                     fit: [30, 30]
                                                 },
                                                 {text: "+4", alignment: 'left', style: 'verticalAlign'}
