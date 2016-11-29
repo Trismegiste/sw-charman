@@ -18,8 +18,10 @@ var Model = function () {
     ]
     // data 8 ka
     this.kaList = ['soleil', 'lune-noire', 'orichalque']
+    this.kaPentacle = []
     for (var k = 0; k < 5; k++) {
         this.kaList.push(this.equilibrePentacle[k].dominant)
+        this.kaPentacle.push(this.equilibrePentacle[k].dominant)
     }
 
     // event

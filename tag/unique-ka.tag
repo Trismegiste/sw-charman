@@ -8,7 +8,7 @@
                     value="{ model.current.uniqueKa.ka || opts.ka }"
                     disabled="{ opts.disabled }" >
                 <option></option>
-                <option each="{ka in model.kaList}" value="{ka}">{ ka }</option>
+                <option each="{ka in kaList}" value="{ka}">{ ka }</option>
             </select>
         </div>
         <div class="pure-u-1-4">
@@ -38,6 +38,7 @@
     </form>
     <script>
         this.model = SwCharman.model
+        this.kaList = (opts.mode == 5) ? this.model.kaPentacle : this.model.kaList
         var self = this
 
         onChangeKa() {

@@ -15,7 +15,8 @@
     <section class="{ blockStyle }">
         <!-- magic essence -->
         <pentacle if="{ model.current.type == 'nephilim' }"></pentacle>
-        <unique-ka if="{ model.current.type == 'effetdragon' || model.current.type == 'kabbale' }"></unique-ka>
+        <unique-ka if="{ model.current.type == 'effetdragon' }"></unique-ka>
+        <unique-ka if="{ model.current.type == 'kabbale' }" mode="5"></unique-ka>
         <unique-ka if="{ model.current.type == 'humain' }"
                    title="Initiation" ka="soleil"></unique-ka>
     </section>
