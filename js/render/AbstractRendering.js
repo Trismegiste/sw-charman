@@ -168,3 +168,60 @@ AbstractRendering.prototype.getMonoKa = function () {
         layout: 'noBorders'
     }
 }
+
+AbstractRendering.prototype.getAtoutDescription = function (group) {
+    var listing = []
+    // remove duplicate
+    var reducedAtoutList = []
+    var alreadyStacked = []
+    for (var k in this.character.atout[group]) {
+        var atout = this.character.atout[group][k]
+        if (-1 === alreadyStacked.indexOf(atout.titre)) {
+            alreadyStacked.push(atout.titre)
+            reducedAtoutList.push(atout)
+        }
+    }
+
+    reducedAtoutList.sort(function (a, b) {
+        return a.titre > b.titre
+    })
+
+    listing.push('ATOUTS ')
+    for (var k in reducedAtoutList) {
+        var atout = reducedAtoutList[k]
+        listing.push({text: atout.titre + ' ', bold: true})
+        if (atout.hasOwnProperty('prerequis')) {
+            listing.push('(' + atout.prerequis + ') ')
+        }
+        listing.push(atout.descr + ' / ')
+    }
+
+    return {text: listing, fontSize: 8}
+}
+
+AbstractRendering.prototype.getHandicapDescription = function (group) {
+    var listing = []
+    // remove duplicate
+    var reducedList = []
+    var alreadyStacked = []
+    for (var k in this.character.handicap[group]) {
+        var handi = this.character.handicap[group][k]
+        if (-1 === alreadyStacked.indexOf(handi.titre)) {
+            alreadyStacked.push(handi.titre)
+            reducedList.push(handi)
+        }
+    }
+
+    reducedList.sort(function (a, b) {
+        return a.titre > b.titre
+    })
+
+    listing.push('HANDICAP ')
+    for (var k in reducedList) {
+        var handi = reducedList[k]
+        listing.push({text: handi.titre + ' ', bold: true})
+        listing.push(handi.descr + ' / ')
+    }
+
+    return {text: listing, fontSize: 8}
+}

@@ -67,7 +67,12 @@ NephilimRendering.prototype.getDocument = function () {
                     ]
                 },
                 layout: 'noBorders'
-            }
+            },
+            {text: 'Notes'},
+            this.getHandicapDescription(0),
+            this.getAtoutDescription(0),
+            this.getHandicapDescription(1),
+            this.getAtoutDescription(1)
         ],
         styles: {
             verticalAlign: {
