@@ -171,8 +171,29 @@ NephilimRendering.prototype.getPentacle = function () {
                         fit: [30, 30]
                     },
                     {text: "+4", alignment: 'left', style: 'verticalAlign'}
-                ]
+                ],
+                ['', this.getPuce(pentacle.puce), {}, '']
             ]
+        },
+        layout: 'noBorders'
+    }
+}
+
+NephilimRendering.prototype.getPuce = function (nb) {
+    var tab = []
+    for (var k = 1; k <= 4; k++) {
+        var idx = (k <= nb) ? 1 : 0
+        tab.push({
+            image: SwCharman.assetManager.get('puce-' + idx),
+            fit: [10, 10]
+        })
+    }
+
+    return {
+        colSpan: 2,
+        margin: [2, 0, 0, 0],
+        table: {
+            body: [tab]
         },
         layout: 'noBorders'
     }
