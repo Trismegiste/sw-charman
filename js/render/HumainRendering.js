@@ -18,8 +18,7 @@ HumainRendering.prototype.getDocument = function () {
                         [
                             this.getIdentite(),
                             {},
-                            'ka'
-                    //        this.getMonoKa()
+                            this.getMonoKa()
                         ],
                         [
                             this.getAttribut(),
@@ -35,7 +34,12 @@ HumainRendering.prototype.getDocument = function () {
                 },
                 layout: 'noBorders'
             }
-        ]
+        ],
+        styles: {
+            verticalAlign: {
+                margin: [0, 6, 0, 0]
+            }
+        }
     }
 }
 
