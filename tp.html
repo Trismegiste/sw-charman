@@ -24,64 +24,62 @@
                 assetManager.append(ka, './img/' + ka + '.png')
             }
 
-            assetManager.load()
-                    .then(function () {
+            assetManager.load().then(function () {
 
-                        var docDefinition = {
-                            content: [
-                                {
-                                    table: {
-                                        body: [
-                                            [
-                                                '',
-                                                {
-                                                    image: assetManager.get('feu'),
-                                                    fit: [30, 30]
-                                                },
-                                                {text: 'd10', alignment: 'left', style: 'verticalAlign'},
-                                                ''
-                                            ],
-                                            [
-                                                {text: "+1", alignment: 'right', style: 'verticalAlign'},
-                                                {
-                                                    image: assetManager.get('air'),
-                                                    fit: [30, 30]
-                                                },
-                                                {
-                                                    image: assetManager.get('terre'),
-                                                    fit: [30, 30]
-                                                },
-                                                {text: "+2", alignment: 'left', style: 'verticalAlign'}
-                                            ],
-                                            [
-                                                {text: "+3", alignment: 'right', style: 'verticalAlign'},
-                                                {
-                                                    image: assetManager.get('eau'),
-                                                    fit: [30, 30]
-                                                },
-                                                {
-                                                    image: assetManager.get('lune'),
-                                                    fit: [30, 30]
-                                                },
-                                                {text: "+4", alignment: 'left', style: 'verticalAlign'}
-                                            ]
-                                        ]
-                                    },
-                                    layout: 'noBorders'
-                                }
-                            ],
-                            styles: {
-                                verticalAlign: {
-                                    margin: [0, 6, 0, 0]
-                                }
-                            }
+                var docDefinition = {
+                    content: [
+                        {
+                            table: {
+                                body: [
+                                    [
+                                        '',
+                                        {
+                                            image: assetManager.get('feu'),
+                                            fit: [30, 30]
+                                        },
+                                        {text: 'd10', alignment: 'left', style: 'verticalAlign'},
+                                        ''
+                                    ],
+                                    [
+                                        {text: "+1", alignment: 'right', style: 'verticalAlign'},
+                                        {
+                                            image: assetManager.get('air'),
+                                            fit: [30, 30]
+                                        },
+                                        {
+                                            image: assetManager.get('terre'),
+                                            fit: [30, 30]
+                                        },
+                                        {text: "+2", alignment: 'left', style: 'verticalAlign'}
+                                    ],
+                                    [
+                                        {text: "+3", alignment: 'right', style: 'verticalAlign'},
+                                        {
+                                            image: assetManager.get('eau'),
+                                            fit: [30, 30]
+                                        },
+                                        {
+                                            image: assetManager.get('lune'),
+                                            fit: [30, 30]
+                                        },
+                                        {text: "+4", alignment: 'left', style: 'verticalAlign'}
+                                    ]
+                                ]
+                            },
+                            layout: 'noBorders'
                         }
-                        pdfMake.createPdf(docDefinition).open()
+                    ],
+                    styles: {
+                        verticalAlign: {
+                            margin: [0, 6, 0, 0]
+                        }
+                    }
+                }
+                pdfMake.createPdf(docDefinition).open()
 
-                    })
-                    .catch(function (msg) {
-                        console.error(msg)
-                    })
+            }).catch(function (msg) {
+                console.error(msg)
+            })
 
 
         </script>
