@@ -4,6 +4,7 @@
             <td>
                 <input type="radio" name="radiochoice" value="{name}"/>
                 <a href="#" onclick="{ parent.onAppend }">{name}</a>
+                <i class="icon-{ type }"></i>
             </td>
         </tr>
     </table>
