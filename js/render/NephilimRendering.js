@@ -3,6 +3,14 @@ var NephilimRendering = function (charac) {
         throw 'Bad type of ' + charac.name
     }
     AbstractRendering.call(this, charac)
+
+    this.prefix = {
+        'feu': 'pyr',
+        'eau': 'hydr',
+        'terre': 'faë',
+        'Lune': 'onir',
+        'air': 'eol'
+    }
 }
 
 NephilimRendering.prototype = Object.create(AbstractRendering.prototype)
@@ -52,8 +60,12 @@ NephilimRendering.prototype.getDocument = function () {
 }
 
 NephilimRendering.prototype.getIdentite = function () {
+    var title = this.getTitle()
+    title = title.charAt(0).toUpperCase() + title.slice(1)
+            + ' '
+            + this.character.name.charAt(0).toUpperCase() + this.character.name.slice(1)
     return [
-        'Nom: ' + this.character.name,
+        title,
         'Initiation: ' + this.getDiceText(this.character.pentacle.initiation),
         'Ka dominant: ' + this.character.pentacle.dominant,
         'Neutre fav: ' + this.character.pentacle.neutreFav,
@@ -93,3 +105,6 @@ NephilimRendering.prototype.getAspect = function () {
     return listing
 }
 
+NephilimRendering.prototype.getTitle = function () {
+    return this.prefix[this.character.pentacle.dominant] + 'im'
+}
