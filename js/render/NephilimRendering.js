@@ -117,13 +117,32 @@ NephilimRendering.prototype.getTitle = function () {
 }
 
 NephilimRendering.prototype.getPentacle = function () {
+    var pentacle = this.character.pentacle
+    var equi = SwCharman.model.getEquilibreFor(pentacle.dominant)
+    // on cherche le neutre defav à partir du neutre fav
+    var idx = equi.neutre.indexOf(pentacle.neutreFav) // 0 ou 1
+    // si 0 => 1, si 1 => 0
+    pentacle.neutreDefav = equi.neutre[1 - idx]
+    // on cherche l'opposé mineur
+    idx = equi.oppose.indexOf(pentacle.opposeMaj) // 0 ou 1
+    pentacle.opposeMin = equi.oppose[1 - idx]
+
+    // for the table :
+    var kadom = [
+        pentacle.dominant,
+        pentacle.neutreFav,
+        pentacle.neutreDefav,
+        pentacle.opposeMin,
+        pentacle.opposeMaj
+    ]
+
     return {
         table: {
             body: [
                 [
                     '',
                     {
-                        image: SwCharman.assetManager.get('feu'),
+                        image: SwCharman.assetManager.get(kadom[0]),
                         fit: [30, 30]
                     },
                     {text: 'd10', alignment: 'left', style: 'verticalAlign'},
@@ -132,11 +151,11 @@ NephilimRendering.prototype.getPentacle = function () {
                 [
                     {text: "+1", alignment: 'right', style: 'verticalAlign'},
                     {
-                        image: SwCharman.assetManager.get('air'),
+                        image: SwCharman.assetManager.get(kadom[1]),
                         fit: [30, 30]
                     },
                     {
-                        image: SwCharman.assetManager.get('terre'),
+                        image: SwCharman.assetManager.get(kadom[2]),
                         fit: [30, 30]
                     },
                     {text: "+2", alignment: 'left', style: 'verticalAlign'}
@@ -144,11 +163,11 @@ NephilimRendering.prototype.getPentacle = function () {
                 [
                     {text: "+3", alignment: 'right', style: 'verticalAlign'},
                     {
-                        image: SwCharman.assetManager.get('eau'),
+                        image: SwCharman.assetManager.get(kadom[3]),
                         fit: [30, 30]
                     },
                     {
-                        image: SwCharman.assetManager.get('lune'),
+                        image: SwCharman.assetManager.get(kadom[4]),
                         fit: [30, 30]
                     },
                     {text: "+4", alignment: 'left', style: 'verticalAlign'}
