@@ -138,8 +138,6 @@ AbstractRendering.prototype.getPuce = function (nb) {
     }
 
     return {
-        colSpan: 2,
-        margin: [2, 0, 0, 0],
         table: {
             body: [tab]
         },

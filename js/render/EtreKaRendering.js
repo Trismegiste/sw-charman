@@ -51,6 +51,9 @@ EtreKaRendering.prototype.getIdentite = function () {
 
 EtreKaRendering.prototype.getMonoKa = function () {
     var essence = this.character.uniqueKa
+    var tablePuce = this.getPuce(essence.puce)
+    tablePuce.margin = [6, 6, 0, 0]
+
     return {
         table: {
             body: [
@@ -59,9 +62,8 @@ EtreKaRendering.prototype.getMonoKa = function () {
                         image: SwCharman.assetManager.get(essence.ka),
                         fit: [30, 30]
                     },
-                    {text: essence.initiation, alignment: 'left', style: 'verticalAlign'},
-                    //this.getPuce(essence.puce),
-                 //   {}
+                    {text: this.getDiceText(essence.initiation), alignment: 'left', style: 'verticalAlign'},
+                    tablePuce
                 ]
             ]
         },

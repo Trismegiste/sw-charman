@@ -141,6 +141,10 @@ NephilimRendering.prototype.getPentacle = function () {
         pentacle.opposeMaj
     ]
 
+    var tablePuce = this.getPuce(pentacle.puce)
+    tablePuce.colSpan = 2
+    tablePuce.margin = [2, 0, 0, 0]
+
     return {
         table: {
             body: [
@@ -177,7 +181,7 @@ NephilimRendering.prototype.getPentacle = function () {
                     },
                     {text: "+4", alignment: 'left', style: 'verticalAlign'}
                 ],
-                ['', this.getPuce(pentacle.puce), {}, '']
+                ['', tablePuce, {}, '']
             ]
         },
         layout: 'noBorders'
