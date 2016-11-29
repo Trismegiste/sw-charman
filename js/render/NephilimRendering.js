@@ -183,7 +183,10 @@ NephilimRendering.prototype.getPuce = function (nb) {
     var tab = []
     for (var k = 1; k <= 4; k++) {
         var idx = (k <= nb) ? 1 : 0
-        tab.push({image: SwCharman.assetManager.get('puce-' + idx)})
+        tab.push({
+            image: SwCharman.assetManager.get('puce-' + idx),
+            fit: [10, 10]
+        })
     }
 
     return {
