@@ -52,7 +52,7 @@ NephilimRendering.prototype.getDocument = function () {
                         [
                             {colSpan: 2, text: 'Simulacre', margin: [0, 6, 0, 6], fontSize: 16},
                             {},
-                            'Ka-soleil'
+                            this.getMonoKa()
                         ],
                         [
                             this.getAttribut(),
