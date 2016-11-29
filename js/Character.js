@@ -7,7 +7,6 @@ var Character = function () {
     this.currentWounds = 0;
     this.spentToken = 0;
     this.currentFatigue = 0;
-    this.property = {};
     this.attack = 0;
     this.damage = '';
     this.toughness = 4;
@@ -28,10 +27,7 @@ var Character = function () {
 
 Character.prototype = {
     getMaxToken: function () {
-        return 3 + (this.property['Chanceux'] ? 1 : 0)
-                + (this.property['Très Chanceux'] ? 1 : 0)
-                + (this.property['Malchanceux'] ? -1 : 0)
-                + (this.property['Gamin'] ? 1 : 0);
+        return 3
     },
     restart: function () {
         this.currentWounds = 0;
