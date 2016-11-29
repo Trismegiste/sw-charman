@@ -106,14 +106,12 @@ AbstractRendering.prototype.getHandicap = function (group) {
 }
 
 AbstractRendering.prototype.getAttribut = function () {
-    var ka = this.character.uniqueKa;
     var listing = {
         table: {
             headerRows: 1,
             widths: ['75%', '25%'],
             body: [
-                [{text: 'Attributs', colSpan: 2}, {}],
-                ['Ka-' + ka.ka, this.getDiceText(ka.initiation)],
+                [{text: 'Attributs', colSpan: 2}, {}]
             ]
         },
         layout: 'lightHorizontalLines',
