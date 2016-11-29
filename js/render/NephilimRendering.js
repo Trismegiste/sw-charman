@@ -23,7 +23,15 @@ NephilimRendering.prototype.getDocument = function () {
                 table: {
                     widths: ['33%', '33%', '33%'],
                     body: [
-                        [this.getIdentite(), {colSpan: 2, ul: this.getHistoire(), fontSize: 10}, {}],
+                        [
+                            {colSpan: 2, stack: [
+                                    this.getIdentite(),
+                                    {ul: this.getHistoire(), fontSize: 10}
+                                ]
+                            },
+                            {},
+                            this.getPentacle()
+                        ],
                         [
                             this.getCompetences(0),
                             [
@@ -55,7 +63,12 @@ NephilimRendering.prototype.getDocument = function () {
                 },
                 layout: 'noBorders'
             }
-        ]
+        ],
+        styles: {
+            verticalAlign: {
+                margin: [0, 6, 0, 0]
+            }
+        }
     }
 }
 
@@ -64,13 +77,7 @@ NephilimRendering.prototype.getIdentite = function () {
     title = title.charAt(0).toUpperCase() + title.slice(1)
             + ' '
             + this.character.name.charAt(0).toUpperCase() + this.character.name.slice(1)
-    return [
-        title,
-        'Initiation: ' + this.getDiceText(this.character.pentacle.initiation),
-        'Ka dominant: ' + this.character.pentacle.dominant,
-        'Neutre fav: ' + this.character.pentacle.neutreFav,
-        'Opposé maj: ' + this.character.pentacle.opposeMaj
-    ]
+    return title
 }
 
 NephilimRendering.prototype.getHistoire = function () {
@@ -107,4 +114,47 @@ NephilimRendering.prototype.getAspect = function () {
 
 NephilimRendering.prototype.getTitle = function () {
     return this.prefix[this.character.pentacle.dominant] + 'im'
+}
+
+NephilimRendering.prototype.getPentacle = function () {
+    return {
+        table: {
+            body: [
+                [
+                    '',
+                    {
+                        image: SwCharman.assetManager.get('feu'),
+                        fit: [30, 30]
+                    },
+                    {text: 'd10', alignment: 'left', style: 'verticalAlign'},
+                    ''
+                ],
+                [
+                    {text: "+1", alignment: 'right', style: 'verticalAlign'},
+                    {
+                        image: SwCharman.assetManager.get('air'),
+                        fit: [30, 30]
+                    },
+                    {
+                        image: SwCharman.assetManager.get('terre'),
+                        fit: [30, 30]
+                    },
+                    {text: "+2", alignment: 'left', style: 'verticalAlign'}
+                ],
+                [
+                    {text: "+3", alignment: 'right', style: 'verticalAlign'},
+                    {
+                        image: SwCharman.assetManager.get('eau'),
+                        fit: [30, 30]
+                    },
+                    {
+                        image: SwCharman.assetManager.get('lune'),
+                        fit: [30, 30]
+                    },
+                    {text: "+4", alignment: 'left', style: 'verticalAlign'}
+                ]
+            ]
+        },
+        layout: 'noBorders'
+    }
 }
