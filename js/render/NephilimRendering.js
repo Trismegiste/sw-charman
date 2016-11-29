@@ -50,6 +50,11 @@ NephilimRendering.prototype.getDocument = function () {
                     widths: ['33%', '33%', '33%'],
                     body: [
                         [
+                            {colSpan: 2, text: 'Simulacre', margin: [0, 6, 0, 6], fontSize: 16},
+                            {},
+                            'Ka-soleil'
+                        ],
+                        [
                             this.getAttribut(),
                             [this.getHandicap(1), this.getAtoutCreation(1)],
                             this.getCompetences(1)
@@ -77,7 +82,7 @@ NephilimRendering.prototype.getIdentite = function () {
     title = title.charAt(0).toUpperCase() + title.slice(1)
             + ' '
             + this.character.name.charAt(0).toUpperCase() + this.character.name.slice(1)
-    return {text: title, margin: [0, 0, 0, 6], fontSize: 16}
+    return {text: title, margin: [0, 6, 0, 6], fontSize: 16}
 }
 
 NephilimRendering.prototype.getHistoire = function () {
@@ -145,7 +150,7 @@ NephilimRendering.prototype.getPentacle = function () {
                         image: SwCharman.assetManager.get(kadom[0]),
                         fit: [30, 30]
                     },
-                    {text: 'd10', alignment: 'left', style: 'verticalAlign'},
+                    {text: this.getDiceText(pentacle.initiation), alignment: 'left', style: 'verticalAlign'},
                     ''
                 ],
                 [
@@ -174,26 +179,6 @@ NephilimRendering.prototype.getPentacle = function () {
                 ],
                 ['', this.getPuce(pentacle.puce), {}, '']
             ]
-        },
-        layout: 'noBorders'
-    }
-}
-
-NephilimRendering.prototype.getPuce = function (nb) {
-    var tab = []
-    for (var k = 1; k <= 4; k++) {
-        var idx = (k <= nb) ? 1 : 0
-        tab.push({
-            image: SwCharman.assetManager.get('puce-' + idx),
-            fit: [10, 10]
-        })
-    }
-
-    return {
-        colSpan: 2,
-        margin: [2, 0, 0, 0],
-        table: {
-            body: [tab]
         },
         layout: 'noBorders'
     }

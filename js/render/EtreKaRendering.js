@@ -13,6 +13,11 @@ EtreKaRendering.prototype.getDocument = function () {
                     widths: ['33%', '33%', '33%'],
                     body: [
                         [
+                            this.getIdentite(),
+                            {},
+                            this.getMonoKa()
+                        ],
+                        [
                             this.getAttribut(),
                             this.getAtoutCreation(0),
                             this.getCompetences(0)
@@ -26,6 +31,40 @@ EtreKaRendering.prototype.getDocument = function () {
                 },
                 layout: 'noBorders'
             }
-        ]
+        ],
+        styles: {
+            verticalAlign: {
+                margin: [0, 6, 0, 0]
+            }
+        }
+    }
+}
+
+EtreKaRendering.prototype.getIdentite = function () {
+    var title = this.getTitle()
+    console.log(title)
+    title = title.charAt(0).toUpperCase() + title.slice(1)
+            + ' '
+            + this.character.name.charAt(0).toUpperCase() + this.character.name.slice(1)
+    return {text: title, margin: [0, 0, 0, 6], fontSize: 16, colSpan: 2}
+}
+
+EtreKaRendering.prototype.getMonoKa = function () {
+    var essence = this.character.uniqueKa
+    return {
+        table: {
+            body: [
+                [
+                    {
+                        image: SwCharman.assetManager.get(essence.ka),
+                        fit: [30, 30]
+                    },
+                    {text: essence.initiation, alignment: 'left', style: 'verticalAlign'},
+                    //this.getPuce(essence.puce),
+                 //   {}
+                ]
+            ]
+        },
+        layout: 'noBorders'
     }
 }

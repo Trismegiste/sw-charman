@@ -7,3 +7,15 @@ var EffetdragonRendering = function (charac) {
 
 EffetdragonRendering.prototype = Object.create(EtreKaRendering.prototype)
 EffetdragonRendering.prototype.constructor = EffetdragonRendering
+
+EffetdragonRendering.prototype.getTitle = function () {
+    var ka = this.character.uniqueKa.ka
+    switch (ka) {
+        case 'lune-noire':
+            return 'entité'
+        case 'orichalque':
+            return 'daïmon'
+        default:
+            return 'effet-dragon'
+    }
+}

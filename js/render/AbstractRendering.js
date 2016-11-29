@@ -126,3 +126,23 @@ AbstractRendering.prototype.getAttribut = function () {
 
     return listing
 }
+
+AbstractRendering.prototype.getPuce = function (nb) {
+    var tab = []
+    for (var k = 1; k <= 4; k++) {
+        var idx = (k <= nb) ? 1 : 0
+        tab.push({
+            image: SwCharman.assetManager.get('puce-' + idx),
+            fit: [10, 10]
+        })
+    }
+
+    return {
+        colSpan: 2,
+        margin: [2, 0, 0, 0],
+        table: {
+            body: [tab]
+        },
+        layout: 'noBorders'
+    }
+}
