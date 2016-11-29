@@ -17,8 +17,8 @@ AbstractRendering.prototype.getDiceText = function (val) {
     return choice[val]
 }
 
-AbstractRendering.prototype.getCompetences = function (group) {
-    var listing = {
+AbstractRendering.prototype.getCompetencesHeader = function () {
+    return listing = {
         table: {
             headerRows: 1,
             widths: ['75%', '25%'],
@@ -27,6 +27,10 @@ AbstractRendering.prototype.getCompetences = function (group) {
         layout: 'lightHorizontalLines',
         margin: [0, 5]
     }
+}
+
+AbstractRendering.prototype.getCompetences = function (group) {
+    var listing = this.getCompetencesHeader()
 
     for (var k in this.character.competence[group]) {
         var comp = this.character.competence[group][k]

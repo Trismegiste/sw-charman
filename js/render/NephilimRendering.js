@@ -187,3 +187,18 @@ NephilimRendering.prototype.getPentacle = function () {
         layout: 'noBorders'
     }
 }
+
+NephilimRendering.prototype.getCompetences = function (group) {
+    var listing = this.getCompetencesHeader()
+
+    for (var k in this.character.competence[group]) {
+        var comp = this.character.competence[group][k]
+        var libelle = comp.title
+        if (comp.meta === this.character.pentacle.dominant) {
+            libelle = {text: libelle, bold: true}
+        }
+        listing.table.body.push([libelle, this.getDiceText(comp.value)])
+    }
+
+    return listing
+}
