@@ -7,3 +7,7 @@ var KabbaleRendering = function (charac) {
 
 KabbaleRendering.prototype = Object.create(EtreKaRendering.prototype)
 KabbaleRendering.prototype.constructor = KabbaleRendering
+
+KabbaleRendering.prototype.getTitle = function () {
+    return 'sceau'
+}

@@ -19,13 +19,8 @@ EtreKaRendering.prototype.getDocument = function () {
                         ],
                         [
                             this.getAttribut(),
-                            this.getAtoutCreation(0),
+                            [this.getAtoutCreation(0), this.getAtout(0)],
                             this.getCompetences(0)
-                        ],
-                        [
-                            this.getAtout(0),
-                            {text: ''},
-                            {text: ''}
                         ]
                     ]
                 },
