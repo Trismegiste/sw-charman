@@ -8,13 +8,14 @@
     <body>
         <div id="log"></div>
 
+        <script src="./js/riot+compiler.min.js"></script>
         <script src="./js/pdf/pdfmake.min.js"></script>
         <script src="./js/pdf/vfs_fonts.js"></script>
+        <script src="./js/Character.js"></script>
+        <script src="./js/Model.js"></script>
         <script>
-            var kaList = [
-                'air', 'eau', , 'feu', , 'terre', 'lune',
-                'soleil', 'orichalque', 'lune-noire'
-            ]
+
+            var model = new Model()
 
             function toDataUrl(url) {
                 return new Promise(function (fulfill, reject) {
@@ -37,8 +38,8 @@
             }
 
             var loading = []
-            for (var idx in kaList) {
-                var ka = kaList[idx]
+            for (var idx in model.kaList) {
+                var ka = model.kaList[idx]
                 loading.push(toDataUrl('./img/' + ka + '.png'))
             }
 

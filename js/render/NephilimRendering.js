@@ -23,7 +23,7 @@ NephilimRendering.prototype.getDocument = function () {
                 table: {
                     widths: ['33%', '33%', '33%'],
                     body: [
-                        [this.getIdentite(), {colSpan: 2, text: this.getHistoire(), fontSize: 10}, {}],
+                        [this.getIdentite(), {colSpan: 2, ul: this.getHistoire(), fontSize: 10}, {}],
                         [
                             this.getCompetences(0),
                             [
@@ -79,7 +79,7 @@ NephilimRendering.prototype.getHistoire = function () {
         var periode = this.character.incarnation[key];
         view.push(periode['Période'] + ': ' + periode.Titre)
     }
-    return view.join("\n")
+    return view
 }
 
 NephilimRendering.prototype.getAspect = function () {
