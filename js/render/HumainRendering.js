@@ -16,6 +16,12 @@ HumainRendering.prototype.getDocument = function () {
                     widths: ['33%', '33%', '33%'],
                     body: [
                         [
+                            this.getIdentite(),
+                            {},
+                            'ka'
+                    //        this.getMonoKa()
+                        ],
+                        [
                             this.getAttribut(),
                             [this.getHandicap(0), this.getAtoutCreation(0)],
                             this.getCompetences(0)
@@ -31,4 +37,10 @@ HumainRendering.prototype.getDocument = function () {
             }
         ]
     }
+}
+
+HumainRendering.prototype.getIdentite = function () {
+    var title = 'Humain '
+            + this.character.name.charAt(0).toUpperCase() + this.character.name.slice(1)
+    return {text: title, margin: [0, 0, 0, 6], fontSize: 16, colSpan: 2}
 }

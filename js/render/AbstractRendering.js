@@ -144,3 +144,25 @@ AbstractRendering.prototype.getPuce = function (nb) {
         layout: 'noBorders'
     }
 }
+
+AbstractRendering.prototype.getMonoKa = function () {
+    var essence = this.character.uniqueKa
+    var tablePuce = this.getPuce(essence.puce)
+    tablePuce.margin = [6, 6, 0, 0]
+
+    return {
+        table: {
+            body: [
+                [
+                    {
+                        image: SwCharman.assetManager.get(essence.ka),
+                        fit: [30, 30]
+                    },
+                    {text: this.getDiceText(essence.initiation), alignment: 'left', style: 'verticalAlign'},
+                    tablePuce
+                ]
+            ]
+        },
+        layout: 'noBorders'
+    }
+}
