@@ -31,13 +31,10 @@
         this.group = opts.group || 0;
         var self = this;
 
-        fetch('./data/competence.json')
-                .then(function(response){
-                    return response.json()
-                })
-                .then(function(data){
-                    self.competenceList = data
-                })
+        SwCharman.table.fetch('competence').then(function() {
+            self.competenceList = SwCharman.table.data['competence']
+            self.update()
+        })
 
         onAppendCompetence(e) {
             for(var k = 0; k < self.competenceList.length; k++) {
