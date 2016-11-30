@@ -1,7 +1,7 @@
 /*
  * Template for Character
  */
-CharacterBuilder = function (data) {
+var CharacterBuilder = function (data) {
     this.atoutList = data
     var self = this
     this.typeList = {

@@ -1,7 +1,7 @@
 /*
  * A repository class for all SW data
  */
-SwTable = function (rootDir) {
+var SwTable = function (rootDir) {
     this.rootDir = rootDir
     this.listing = ['atout', 'competence', 'handicap', 'histoire', 'metamorphe']
     this.data = {}
