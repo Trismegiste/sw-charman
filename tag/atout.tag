@@ -41,15 +41,8 @@
         this.group = opts.group || 0;
         this.checkedAtout = undefined;
         this.filter = opts.filter.split(" ")
+        this.atoutList = SwCharman.table.get('atout')
         var self = this;
-
-        fetch('./data/atout.json')
-                .then(function(response){
-                    return response.json()
-                })
-                .then(function(data){
-                    self.atoutList = data
-                })
 
         onAppendAtout(e) {
             for(var race in self.atoutList) {

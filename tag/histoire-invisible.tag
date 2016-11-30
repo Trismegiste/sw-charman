@@ -18,25 +18,21 @@
         this.evenement = {}
         var self = this;
 
-        fetch('./data/histoire.json')
-                .then(function (response) {
-                    return response.json()
-                })
-                .then(function (data) {
-                    for (var idx in data) {
-                        var ev = data[idx]
-                        if (-1 === self.periode.indexOf(ev['Période'])) {
-                            self.periode.push(ev['Période'])  // to keep the sorting
-                        }
-                    }
-                    for (var idx in data) {
-                        var ev = data[idx]
-                        if (!self.evenement.hasOwnProperty(ev['Période'])) {
-                            self.evenement[ev['Période']] = [];
-                        }
-                        self.evenement[ev['Période']].push(ev)
-                    }
-                })
+        (function (data) {
+            for (var idx in data) {
+                var ev = data[idx]
+                if (-1 === self.periode.indexOf(ev['Période'])) {
+                    self.periode.push(ev['Période'])  // to keep the sorting
+                }
+            }
+            for (var idx in data) {
+                var ev = data[idx]
+                if (!self.evenement.hasOwnProperty(ev['Période'])) {
+                    self.evenement[ev['Période']] = [];
+                }
+                self.evenement[ev['Période']].push(ev)
+            }
+        })(SwCharman.table.get('histoire'))
 
         onChange() {
             self.model.current.incarnation = {}

@@ -7,7 +7,7 @@
             <div class="pure-u-1">
                 <select name="type" value="{ model.current.type }" class="pure-input-1">
                     <option value="virtual"></option>
-                    <option each="{key, type in typeList}" value="{key}">{type.title}</option>
+                    <option each="{key, type in builder.getTemplate()}" value="{key}">{type.title}</option>
                 </select>
             </div>
         </form>
@@ -53,26 +53,11 @@
     <script>
         this.blockStyle = "webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"
         this.model = SwCharman.model
-        this.typeList = {
-            nephilim: {title: 'Nephilim', build: function () {
-                }
-            },
-            effetdragon: {title: 'Effet-dragon', build: function () {
-                }
-            },
-            kabbale: {title: 'Créature de Kabbale', build: function () {
-                }
-            },
-            humain: {title: 'Humain', build: function () {
-                }
-            }
-        }
+        this.builder = SwCharman.builder
         var self = this;
 
         onChange() {
-            var newType = self.type.value
-            self.model.current.type = newType
-            //self.typeList[newType].build(self.model.current)
+            self.builder.build(self.type.value, self.model.current)
         }
     </script>
 </content-detail>
