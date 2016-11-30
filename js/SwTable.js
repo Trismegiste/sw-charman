@@ -24,14 +24,3 @@ SwTable.prototype.fetch = function (filename) {
         }
     })
 }
-
-SwTable.prototype.atoutFindByName = function (name) {
-    for (var k in this.atout) {
-        var atout = atout[k]
-        if (atout.titre === name) {
-            return atout
-        }
-    }
-
-    return null
-}
