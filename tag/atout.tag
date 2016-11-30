@@ -4,7 +4,7 @@
         <div class="pure-u-1">
             <select name="atout" class="pure-input-1" onchange="{ onAppendAtout }">
                 <option value="0">Cliquez pour ajouter...</option>
-                <optgroup each="{ race in filter }" label="{race}">
+                <optgroup each="{ race in filter }" label="---{race.toUpperCase()}---">
                     <option each="{ atoutList[race] }" value="{titre}" if="{ enabled=='1' }">{titre}</option>
                 </optgroup>
             </select>
