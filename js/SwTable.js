@@ -39,5 +39,8 @@ SwTable.prototype.load = function () {
 }
 
 SwTable.prototype.get = function (key) {
+    if (!this.data.hasOwnProperty(key)) {
+        throw new Error(key + ' not found')
+    }
     return this.data[key]
 }
