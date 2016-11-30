@@ -39,8 +39,9 @@
             return ref === this.activeTab
         }
 
+        // this to hide waiting spinner
         this.on('mount', function() {
-            document.getElementById('waiting').className += ' hidden'
+            document.getElementById('waiting').remove()
             document.getElementById('mainapp').className = ''
         })
 
