@@ -45,12 +45,14 @@
     <script src="./js/Character.js"></script>
     <script src="./js/Repository.js"></script>
     <script src="./js/Model.js"></script>
+    <script src="./js/SwTable.js"></script>
     <script src="./js/dexie.min.js"></script>
     <script>
         // container for this SPA
         var SwCharman = {
             repository: new Repository(),
             model: new Model()
+            table: new SwTable('./data/')
         }
         // Here we go
         riot.mixin('toasty', Toasty)
