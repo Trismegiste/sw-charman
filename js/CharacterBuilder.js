@@ -21,8 +21,7 @@ CharacterBuilder = function (data) {
         kabbale: {title: 'Créature de Kabbale', build: function (c) {
                 c.type = 'kabbale'
                 c.atout[0] = [
-                    self.findAtoutByName('Créature de Ka'),
-                    self.findAtoutByName('Invisibilité de Ka'),
+                    self.findAtoutByName('Créature de Ka')
                 ]
                 c.atout[1] = []
             }
