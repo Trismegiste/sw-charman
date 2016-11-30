@@ -43,8 +43,8 @@
         this.filter = opts.filter.split(" ")
         var self = this;
 
-        SwCharman.table.fetch('atout').then(function() {
-            self.atoutList = SwCharman.table.data['atout']
+        SwCharman.table.fetch('atout').then(function(data) {
+            self.atoutList = data
             self.update()
         })
 
