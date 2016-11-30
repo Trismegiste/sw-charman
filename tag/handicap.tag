@@ -26,13 +26,10 @@
         this.group = opts.group || 0;
         var self = this;
 
-        fetch('./data/handicap.json')
-                .then(function(response){
-                    return response.json()
-                })
-                .then(function(data){
-                    self.handicapList = data[opts.filter]
-                })
+        SwCharman.table.fetch('handicap').then(function() {
+            self.handicapList = SwCharman.table.data['handicap'][opts.filter]
+            self.update()
+        })
 
         onAppendHandicap(e) {
             for(var k = 0; k < self.handicapList.length; k++) {
