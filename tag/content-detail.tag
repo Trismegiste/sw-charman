@@ -53,7 +53,7 @@
     <script>
         this.blockStyle = "webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"
         this.model = SwCharman.model
-        this.builder = new CharacterBuilder(SwCharman.table.get('atout'))
+        this.builder = SwCharman.builder
         var self = this;
 
         onChange() {

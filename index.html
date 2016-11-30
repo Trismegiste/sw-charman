@@ -57,6 +57,7 @@
         }
         // Here we go
         SwCharman.table.load().then(function () {
+            SwCharman.builder = new CharacterBuilder(SwCharman.table.get('atout'))
             riot.mixin('toasty', Toasty)
             riot.route.start(true);
             riot.mount('*');
