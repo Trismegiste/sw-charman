@@ -53,12 +53,8 @@
     <script>
         this.blockStyle = "webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"
         this.model = SwCharman.model
+        this.builder = new CharacterBuilder(SwCharman.table.get('atout'))
         var self = this;
-
-        SwCharman.table.fetch('atout').then(function(data) {
-            self.builder = new CharacterBuilder(data)
-            self.update()
-        })
 
         onChange() {
             self.builder.build(self.type.value, self.model.current)

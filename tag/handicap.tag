@@ -24,12 +24,8 @@
     <script>
         this.model = SwCharman.model
         this.group = opts.group || 0;
+        this.handicapList = SwCharman.table.get('handicap')[opts.filter]
         var self = this;
-
-        SwCharman.table.fetch('handicap').then(function() {
-            self.handicapList = SwCharman.table.data['handicap'][opts.filter]
-            self.update()
-        })
 
         onAppendHandicap(e) {
             for(var k = 0; k < self.handicapList.length; k++) {

@@ -29,12 +29,9 @@
     <script>
         this.model = SwCharman.model
         this.group = opts.group || 0;
+        this.competenceList = SwCharman.table.get('competence')
         var self = this;
 
-        SwCharman.table.fetch('competence').then(function() {
-            self.competenceList = SwCharman.table.data['competence']
-            self.update()
-        })
 
         onAppendCompetence(e) {
             for(var k = 0; k < self.competenceList.length; k++) {

@@ -15,16 +15,8 @@
     </form>
     <script>
         this.model = SwCharman.model
-        this.metamorpheList = []
+        this.metamorpheList = SwCharman.table.get('mtamorphe')
         var self = this;
-
-        fetch('./data/metamorphe.json')
-                .then(function (response) {
-                    return response.json()
-                })
-                .then(function (data) {
-                    self.metamorpheList = data
-                })
 
         this.model.on('update-pentacle', function (ka) {
             self.update()
