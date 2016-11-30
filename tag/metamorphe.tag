@@ -15,7 +15,7 @@
     </form>
     <script>
         this.model = SwCharman.model
-        this.metamorpheList = SwCharman.table.get('mtamorphe')
+        this.metamorpheList = SwCharman.table.get('metamorphe')
         var self = this;
 
         this.model.on('update-pentacle', function (ka) {
