@@ -3,25 +3,29 @@
  */
 SwTable = function (rootDir) {
     this.rootDir = rootDir
+    this.data = {}
+    this.promise = {}
 }
 
-SwTable.prototype.atoutFindAll = function () {
+SwTable.prototype.fetch = function (filename) {
     var self = this
-    if (!this.hasOwnProperty('atout')) {
-        fetch(this.rootDir + 'atout.json').then(function (response) {
-            return response.json()
-        }).then(function (data) {
-            self.atout = data
-        })
+    if (!this.promise.hasOwnProperty(filename)) {
+
+        this.promise[filename] = fetch(this.rootDir + filename + '.json')
+                .then(function (response) {
+                    return response.json()
+                })
+                .then(function (data) {
+                    self.data[filename] = data
+                })
     }
 
-    return this.atout;
+    return this.promise[filename]
 }
 
 SwTable.prototype.atoutFindByName = function (name) {
-    var tab = this.atoutFindAll();
-    for (var k in tab) {
-        var atout = tab[k]
+    for (var k in this.atout) {
+        var atout = atout[k]
         if (atout.titre === name) {
             return atout
         }

@@ -43,13 +43,10 @@
         this.filter = opts.filter.split(" ")
         var self = this;
 
-        fetch('./data/atout.json')
-                .then(function(response){
-                    return response.json()
-                })
-                .then(function(data){
-                    self.atoutList = data
-                })
+        SwCharman.table.fetch('atout').then(function() {
+            self.atoutList = SwCharman.table.data['atout']
+            self.update()
+        })
 
         onAppendAtout(e) {
             for(var race in self.atoutList) {
