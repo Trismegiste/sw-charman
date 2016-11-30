@@ -9,11 +9,17 @@
         <link rel="stylesheet" href="./css/main.css"/>
         <link rel="stylesheet" href="./css/toasts.css"/>
         <link rel="stylesheet" href="./css/fontello.css"/>
+        <link rel="stylesheet" href="./css/animation.css"/>
     </head>
     <body>
         <div class="content">
+            <div id="waiting" class="pure-g">
+                <div class="pure-u-1">
+                    <i class="icon-spinner animate-spin"></i>
+                </div>
+            </div>
             <rg-toasts></rg-toasts>
-            <spa-tabs></spa-tabs>
+            <spa-tabs id="mainapp" class="hidden"></spa-tabs>
         </div>
 
     <my-footer></my-footer>

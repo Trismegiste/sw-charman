@@ -39,6 +39,11 @@
             return ref === this.activeTab
         }
 
+        this.on('mount', function() {
+            document.getElementById('waiting').className += ' hidden'
+            document.getElementById('mainapp').className = ''
+        })
+
         var subRoute = riot.route.create()
         var self = this
         this.menuTab.forEach(function(tab) {
