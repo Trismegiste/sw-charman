@@ -33,7 +33,6 @@ SwTable.prototype.load = function () {
                 var result = loaded[k]
                 self.data[result[0]] = result[1]
             }
-            console.log(loaded)
             fulfill()
         })
     })
