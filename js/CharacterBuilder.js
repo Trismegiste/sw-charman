@@ -14,7 +14,10 @@ var CharacterBuilder = function (data) {
         effetdragon: {title: 'Effet-dragon', build: function (c) {
                 c.type = 'effetdragon'
                 var a = self.findAtoutByName('Créature de Ka')
-                c.atout[0] = [a]
+                c.atout[0] = [
+                    self.findAtoutByName('Créature de Ka'),
+                    self.findAtoutByName('Élémentaire'),
+                ]
                 c.atout[1] = []
             }
         },
@@ -22,7 +25,7 @@ var CharacterBuilder = function (data) {
                 c.type = 'kabbale'
                 c.atout[0] = [
                     self.findAtoutByName('Créature de Ka'),
-                    self.findAtoutByName('Invisibilité de Ka'),
+                    self.findAtoutByName('Invisibilité profane'),
                 ]
                 c.atout[1] = []
             }
