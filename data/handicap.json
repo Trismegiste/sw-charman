@@ -311,7 +311,7 @@
         {
             "titre": "Cruxim",
             "niveau": "Min/Maj",
-            "descr": "Charisme – 1 avec les nephilim. Mineur : pas d'action occulte avec l'opposé majeur. Majeur : Magie de Cruxim",
+            "descr": "Mineur : pas d'action occulte avec l'opposé majeur. Majeur : Magie de Cruxim",
             "enabled": "1"
         },
         {
@@ -413,7 +413,13 @@
         {
             "titre": "Pentacle déformé",
             "niveau": "Min/Maj",
-            "descr": "Charisme de -1 avec intégriste. Mineur : 0/+2/+2/+3/+3. Majeur : -1 TDD/+1/+2/+3/+1",
+            "descr": "Mineur : +0/+0/+4/+4/+4. Majeur : +0/+2/+4/+4/+4",
+            "enabled": "1"
+        },
+        {
+            "titre": "Pentacle instable",
+            "niveau": "Min/Maj",
+            "descr": "1 sort réussi => perte 1 puce temp. Mineur: Ka dominant, Majeur: tous",
             "enabled": "1"
         },
         {
