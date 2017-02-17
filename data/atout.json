@@ -963,19 +963,19 @@
             "info": "0"
         },
         {
-            "titre": "Entropie lente",
+            "titre": "Déliquescence lente",
             "descr": "durée en mois",
             "enabled": "1",
             "info": "0"
         },
         {
-            "titre": "Entropie moyenne",
+            "titre": "Déliquescence moyenne",
             "descr": "heures ou jours",
             "enabled": "1",
             "info": "0"
         },
         {
-            "titre": "Entropie rapide",
+            "titre": "Déliquescence rapide",
             "descr": "quelques rounds",
             "enabled": "1",
             "info": "0"
@@ -1012,6 +1012,11 @@
         },
         {
             "titre": "Spécial",
+            "enabled": "1",
+            "info": "1"
+        },
+        {
+            "titre": "Pouvoir",
             "enabled": "1",
             "info": "1"
         },
