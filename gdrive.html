@@ -17,14 +17,14 @@
 
         <script type="text/javascript">
             // Client ID and API key from the Developer Console
-            var CLIENT_ID = '374977961173-5novsbmqqspuvqr0s54jjocimluvos64.apps.googleusercontent.com';
+            var CLIENT_ID = '374977961173-o1qsjjbj0tnbb0smjdanpmvsraoshd8q.apps.googleusercontent.com';
 
             // Array of API discovery doc URLs for APIs used by the quickstart
             var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/drive/v3/rest"];
 
             // Authorization scopes required by the API; multiple scopes can be
             // included, separated by spaces.
-            var SCOPES = 'https://www.googleapis.com/auth/drive.metadata.readonly';
+            var SCOPES = 'https://www.googleapis.com/auth/drive';
 
             var authorizeButton = document.getElementById('authorize-button');
             var signoutButton = document.getElementById('signout-button');
@@ -65,9 +65,12 @@
                     authorizeButton.style.display = 'none';
                     signoutButton.style.display = 'block';
                     listFiles();
+                    // config
+                    //gapi.client.
                 } else {
                     authorizeButton.style.display = 'block';
                     signoutButton.style.display = 'none';
+                    gapi.auth2.getAuthInstance().signIn();
                 }
             }
 
@@ -122,11 +125,10 @@
 
         <script async defer src="https://apis.google.com/js/api.js"
                 onload="this.onload = function () {
-            };
-            handleClientLoad()"
+                };
+                handleClientLoad()"
                 onreadystatechange="if (this.readyState === 'complete') this.onload()">
         </script>
-
 
     </body>
 </html>
