@@ -16,19 +16,18 @@
         <pre id="content"></pre>
 
         <script type="text/javascript">
-            // Client ID and API key from the Developer Console
-            var CLIENT_ID = '374977961173-o1qsjjbj0tnbb0smjdanpmvsraoshd8q.apps.googleusercontent.com';
-
+            const boundary = '-------314159265358979323846264';
+                    const delimiter = "\r\n--" + boundary + "\r\n";
+                    const close_delim = "\r\n--" + boundary + "--";
+                    // Client ID and API key from the Developer Console
+                    var CLIENT_ID = '374977961173-o1qsjjbj0tnbb0smjdanpmvsraoshd8q.apps.googleusercontent.com';
             // Array of API discovery doc URLs for APIs used by the quickstart
             var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/drive/v3/rest"];
-
             // Authorization scopes required by the API; multiple scopes can be
             // included, separated by spaces.
             var SCOPES = 'https://www.googleapis.com/auth/drive';
-
             var authorizeButton = document.getElementById('authorize-button');
             var signoutButton = document.getElementById('signout-button');
-
             /**
              *  On load, called to load the auth2 library and API client library.
              */
@@ -48,12 +47,43 @@
                 }).then(function () {
                     // Listen for sign-in state changes.
                     gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
-
                     // Handle the initial sign-in state.
                     updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-                    authorizeButton.onclick = handleAuthClick;
-                    signoutButton.onclick = handleSignoutClick;
                 });
+            }
+
+            function insertFile(fileName, contentType, content) {
+                var metadata = {
+                    'title': fileName,
+                    'mimeType': contentType
+                };
+                var base64Data = btoa(content);
+                var multipartRequestBody =
+                        delimiter +
+                        'Content-Type: application/json\r\n\r\n' +
+                        JSON.stringify(metadata) +
+                        delimiter +
+                        'Content-Type: ' + contentType + '\r\n' +
+                        'Content-Transfer-Encoding: base64\r\n' +
+                        '\r\n' +
+                        base64Data +
+                        close_delim;
+                var request = gapi.client.request({
+                    'path': '/upload/drive/v2/files',
+                    'method': 'POST',
+                    'params': {'uploadType': 'multipart'},
+                    'headers': {
+                        'Content-Type': 'multipart/mixed; boundary="' + boundary + '"'
+                    },
+                    'body': multipartRequestBody
+                });
+                request.execute(function (arg) {
+                    console.log(arg);
+                });
+            }
+
+            function insertJson(filename, content) {
+                insertFile(filename, 'application/json', JSON.stringify(content))
             }
 
             /**
@@ -62,30 +92,17 @@
              */
             function updateSigninStatus(isSignedIn) {
                 if (isSignedIn) {
-                    authorizeButton.style.display = 'none';
-                    signoutButton.style.display = 'block';
                     listFiles();
-                    // config
-                    //gapi.client.
+
+                    var appState = {
+                        number: 12,
+                        text: 'hello'
+                    };
+                    insertJson('dump.json', appState)
+
                 } else {
-                    authorizeButton.style.display = 'block';
-                    signoutButton.style.display = 'none';
                     gapi.auth2.getAuthInstance().signIn();
                 }
-            }
-
-            /**
-             *  Sign in the user upon button click.
-             */
-            function handleAuthClick(event) {
-                gapi.auth2.getAuthInstance().signIn();
-            }
-
-            /**
-             *  Sign out the user upon button click.
-             */
-            function handleSignoutClick(event) {
-                gapi.auth2.getAuthInstance().signOut();
             }
 
             /**
