@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nephilim Savage Worlds edition Character Manager</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <div id="log"></div>
+
+        <script src="./js/riot+compiler.min.js"></script>
+
+        <script src="./js/Character.js"></script>
+        <script src="./js/Repository.js"></script>
+        <script src="./js/Model.js"></script>
+
+        <script src="./js/dexie.min.js"></script>
+        <script>
+            // container for this SPA
+            var SwCharman = {
+                repository: new Repository(),
+                model: new Model(),
+            }
+
+            SwCharman.repository.findAll().then(function(arr) {
+                var temp = [];
+                arr.forEach(function(item, idx) {
+                    temp.push(item);
+                })
+                console.log(JSON.stringify(temp));
+            })
+
+        </script>
+    </body>
+</html>
