@@ -52,7 +52,7 @@
                 });
             }
 
-            function insertFile(fileName, contentType, content) {
+            function uploadFile(fileName, contentType, content, fileId) {
                 var metadata = {
                     'title': fileName,
                     'mimeType': contentType
@@ -69,8 +69,8 @@
                         base64Data +
                         close_delim;
                 var request = gapi.client.request({
-                    'path': '/upload/drive/v2/files',
-                    'method': 'POST',
+                    'path': '/upload/drive/v2/files' + ((fileId === undefined) ? '' : '/' + fileId),
+                    'method': (fileId === undefined) ? 'POST' : 'PUT',
                     'params': {'uploadType': 'multipart'},
                     'headers': {
                         'Content-Type': 'multipart/mixed; boundary="' + boundary + '"'
@@ -80,6 +80,10 @@
                 request.execute(function (arg) {
                     console.log(arg);
                 });
+            }
+
+            function insertFile(fileName, contentType, content) {
+                uploadFile(fileName, contentType, content)
             }
 
             function insertJson(filename, content) {
@@ -117,13 +121,32 @@
                 pre.appendChild(textContent);
             }
 
+
+            function getFirstIdByFilename(name) {
+                return new Promise(function (fulfill, reject) {
+                    gapi.client.drive.files.list({
+                        'pageSize': 10,
+                        'fields': "nextPageToken, files(id, name)",
+                        q: "name='" + name + "'"
+                    }).then(function (response) {
+                        var files = response.result.files;
+                        if (files && files.length > 0) {
+                            fulfill(files[0].id);
+                        } else {
+                            reject('No files found.');
+                        }
+                    });
+                });
+            }
+
             /**
              * Print files.
              */
             function listFiles() {
                 gapi.client.drive.files.list({
                     'pageSize': 10,
-                    'fields': "nextPageToken, files(id, name)"
+                    'fields': "nextPageToken, files(id, name)",
+                    q: "name='dump.json'"
                 }).then(function (response) {
                     appendPre('Files:');
                     var files = response.result.files;
