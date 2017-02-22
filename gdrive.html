@@ -97,13 +97,17 @@
             function updateSigninStatus(isSignedIn) {
                 if (isSignedIn) {
                     listFiles();
+                    var cfgName = 'dump.json'
 
                     var appState = {
-                        number: 12,
+                        number: Math.random(),
                         text: 'hello'
                     };
-                    insertJson('dump.json', appState)
-
+                    getFirstIdByFilename(cfgName).then(function (id) {
+                        uploadFile(cfgName, 'application/json', JSON.stringify(appState), id)
+                    }).catch(function (err) {
+                        uploadFile(cfgName, 'application/json', JSON.stringify(appState))
+                    })
                 } else {
                     gapi.auth2.getAuthInstance().signIn();
                 }
