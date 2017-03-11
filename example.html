@@ -32,11 +32,13 @@
     <script src="./tag/cloud.tag" type="riot/tag"></script>
 
     <script>
-        var cloudClient = new GoogleDrive()
+        var cloudClient = new GoogleDrive({
+            clientId: '374977961173-o1qsjjbj0tnbb0smjdanpmvsraoshd8q.apps.googleusercontent.com',
+            appId: '374977961173'
+        })
 
         function handleClientLoad() {
-            var id = '374977961173-o1qsjjbj0tnbb0smjdanpmvsraoshd8q.apps.googleusercontent.com'
-            cloudClient.connect(id)
+            cloudClient.connect()
                     .then(function () {
                         cloudClient.trigger('connected')
                     })

@@ -2,7 +2,7 @@
  * Google drive wrapper
  */
 
-var GoogleDrive = function () {
+var GoogleDrive = function (param) {
     riot.observable(this);
 
     this.boundary = '-------314159265358979323846264';
@@ -10,11 +10,11 @@ var GoogleDrive = function () {
     this.close_delim = "\r\n--" + this.boundary + "--";
     this.DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/drive/v3/rest"];
     this.SCOPES = 'https://www.googleapis.com/auth/drive';
-    this.clientId = null
+    this.clientId = param.clientId
+    this.appId = param.appId
 }
 
-GoogleDrive.prototype.connect = function (id) {
-    this.clientId = id
+GoogleDrive.prototype.connect = function () {
     var self = this
 
     return new Promise(function (fulfill, reject) {
@@ -51,7 +51,7 @@ GoogleDrive.prototype.createPicker = function () {
 
     var picker = new google.picker.PickerBuilder()
             .enableFeature(google.picker.Feature.NAV_HIDDEN)
-            .setAppId('374977961173')
+            .setAppId(this.appId)
             .setOAuthToken(gapi.auth2.getAuthInstance().currentUser.get().getAuthResponse().access_token)
             .addView(docsView)
             .setCallback(function (res) {
