@@ -7,11 +7,13 @@
         <tr each="{listing}">
             <td>{name}</td>
             <td>{pk}</td>
+            <td>{folder}</td>
         </tr>
     </table>
     <script>
         var self = this
         this.listing = []
+        // application/vnd.google-apps.folder
 
         cloudClient.on('connected', function () {
             document.getElementById('waiting').remove()
@@ -20,7 +22,7 @@
             // listing
             gapi.client.drive.files.list({
                 pageSize: 10,
-                fields: "nextPageToken, files(id, name)",
+                fields: "nextPageToken, files(id, name, parents)",
                 q: "name='dump.json'"
             }).then(function (response) {
                 var listing = []
@@ -28,7 +30,8 @@
                 if (files && files.length > 0) {
                     for (var i = 0; i < files.length; i++) {
                         var file = files[i];
-                        listing.push({name: file.name, pk: file.id});
+                        console.log(file)
+                        listing.push({name: file.name, pk: file.id, folder: file.parents[0]});
                     }
                 }
                 self.trigger('listed', listing)

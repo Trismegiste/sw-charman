@@ -18,16 +18,24 @@ GoogleDrive.prototype.connect = function (id) {
     var self = this
 
     return new Promise(function (fulfill, reject) {
-        gapi.load('client:auth2', function () {
+        gapi.load('client:auth2:picker', function () {
             gapi.client.init({
                 discoveryDocs: self.DISCOVERY_DOCS,
                 clientId: self.clientId,
                 scope: self.SCOPES
             }).then(function () {
-                return gapi.auth2.getAuthInstance().signIn()
-            }).then(function (response, reason) {
-                if (undefined === reason) {
-                    fulfill(response)
+                if (!gapi.auth2.getAuthInstance().isSignedIn.get()) {
+                    console.log('OAuth process with popup')
+                    return gapi.auth2.getAuthInstance().signIn()
+                } else {
+                    return new Promise(function (f, r) {
+                        console.log('already logged')
+                        f()
+                    })
+                }
+            }).then(function () {
+                if (gapi.auth2.getAuthInstance().isSignedIn.get()) {
+                    fulfill()
                 }
             })
         })
