@@ -41,6 +41,7 @@
         this.on('listed', function (listing) {
             self.listing = listing
             self.update()
+            cloudClient.createPicker()
         })
 
 

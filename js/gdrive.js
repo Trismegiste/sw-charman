@@ -42,3 +42,21 @@ GoogleDrive.prototype.connect = function (id) {
     })
 
 }
+
+GoogleDrive.prototype.createPicker = function () {
+    var docsView = new google.picker.DocsView()
+            .setIncludeFolders(true)
+            .setMimeTypes('application/vnd.google-apps.folder')
+            .setSelectFolderEnabled(true);
+
+    var picker = new google.picker.PickerBuilder()
+            .enableFeature(google.picker.Feature.NAV_HIDDEN)
+            .setAppId('374977961173')
+            .setOAuthToken(gapi.auth2.getAuthInstance().currentUser.get().getAuthResponse().access_token)
+            .addView(docsView)
+            .setCallback(function (res) {
+                console.log(res)
+            })
+            .build();
+    picker.setVisible(true);
+}

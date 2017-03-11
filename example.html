@@ -37,8 +37,7 @@
         function handleClientLoad() {
             var id = '374977961173-o1qsjjbj0tnbb0smjdanpmvsraoshd8q.apps.googleusercontent.com'
             cloudClient.connect(id)
-                    .then(function (resp) {
-                        console.log('toto', resp)
+                    .then(function () {
                         cloudClient.trigger('connected')
                     })
         }
