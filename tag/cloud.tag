@@ -41,7 +41,10 @@
         this.on('listed', function (listing) {
             self.listing = listing
             self.update()
-            cloudClient.createPicker()
+            cloudClient.pickOneFolder()
+                    .then(function (choice) {
+                        console.log(choice.id)
+                    })
         })
 
 

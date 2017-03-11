@@ -43,20 +43,30 @@ GoogleDrive.prototype.connect = function () {
 
 }
 
-GoogleDrive.prototype.createPicker = function () {
-    var docsView = new google.picker.DocsView()
-            .setIncludeFolders(true)
-            .setMimeTypes('application/vnd.google-apps.folder')
-            .setSelectFolderEnabled(true);
+GoogleDrive.prototype.pickOneFolder = function () {
+    return new Promise(function (fulfill, reject) {
 
-    var picker = new google.picker.PickerBuilder()
-            .enableFeature(google.picker.Feature.NAV_HIDDEN)
-            .setAppId(this.appId)
-            .setOAuthToken(gapi.auth2.getAuthInstance().currentUser.get().getAuthResponse().access_token)
-            .addView(docsView)
-            .setCallback(function (res) {
-                console.log(res)
-            })
-            .build();
-    picker.setVisible(true);
+        var docsView = new google.picker.DocsView()
+                .setIncludeFolders(true)
+                .setMimeTypes('application/vnd.google-apps.folder')
+                .setSelectFolderEnabled(true)
+
+        var picker = new google.picker.PickerBuilder()
+                .enableFeature(google.picker.Feature.NAV_HIDDEN)
+                .setAppId(this.appId)
+                .setOAuthToken(gapi.auth2.getAuthInstance().currentUser.get().getAuthResponse().access_token)
+                .addView(docsView)
+                .setCallback(function (res) {
+                    console.log(res)
+                    if (res.action === 'picked') {
+                        fulfill(res.docs[0])
+                    }
+                    if (res.action === 'cancel') {
+                        reject(res)
+                    }
+                })
+                .build()
+
+        picker.setVisible(true)
+    })
 }
