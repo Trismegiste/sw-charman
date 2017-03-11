@@ -3,7 +3,7 @@
     <script>
         var self = this
 
-        riot.route('/connected', function (name) {
+        cloudClient.on('connected', function () {
             document.getElementById('waiting').remove()
             document.getElementById('mainapp').className = ''
         })

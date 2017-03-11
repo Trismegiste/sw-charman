@@ -3,6 +3,8 @@
  */
 
 var GoogleDrive = function () {
+    riot.observable(this);
+
     this.boundary = '-------314159265358979323846264';
     this.delimiter = "\r\n--" + this.boundary + "\r\n";
     this.close_delim = "\r\n--" + this.boundary + "--";
