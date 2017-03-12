@@ -43,7 +43,14 @@ GoogleDrive.prototype.connect = function () {
 
 }
 
+GoogleDrive.prototype.getAccessToken = function () {
+    return gapi.auth2.getAuthInstance().currentUser.get().getAuthResponse().access_token
+}
+
+
 GoogleDrive.prototype.pickOneFolder = function () {
+    var argggg = this
+
     return new Promise(function (fulfill, reject) {
 
         var docsView = new google.picker.DocsView()
@@ -54,7 +61,7 @@ GoogleDrive.prototype.pickOneFolder = function () {
         var picker = new google.picker.PickerBuilder()
                 .enableFeature(google.picker.Feature.NAV_HIDDEN)
                 //    .setAppId(this.appId)
-                .setOAuthToken(gapi.auth2.getAuthInstance().currentUser.get().getAuthResponse().access_token)
+                .setOAuthToken(argggg.getAccessToken())
                 .addView(docsView)
                 .setCallback(function (res) {
                     console.log(res)
@@ -83,7 +90,7 @@ GoogleDrive.prototype.uploadFile = function (fileName, contentType, content, roo
     var metadata = {
         title: fileName,
         mimeType: contentType,
-        parents: [rootId]
+        parents: [{id: rootId}]
     };
     console.log(metadata)
     var base64Data = base64js.fromByteArray(content)
@@ -108,5 +115,30 @@ GoogleDrive.prototype.uploadFile = function (fileName, contentType, content, roo
     });
     request.execute(function (arg) {
         console.log(arg);
+    });
+}
+
+GoogleDrive.prototype.saveFile = function (fileName, contentType, content, rootId) {
+    var fileMetadata = {
+        'name': 'xssai'
+    };
+
+    gapi.client.drive.files.create({
+        resource: fileMetadata,
+        fields: 'id'
+    }).execute(function (resp) {
+        console.log(resp);
+
+        gapi.client.request({
+            path: '/upload/drive/v3/files/' + resp.id,
+            method: 'PATCH',
+            params: {
+                uploadType: 'media'
+            },
+            headers: {'Content-Type': 'text/plain'},
+            body: '{"t":"waaaaaaaa"}'
+        }).then(function (rsp) {
+            console.log(rsp)
+        })
     });
 }

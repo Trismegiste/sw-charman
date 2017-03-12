@@ -48,6 +48,8 @@
         cloudClient.on('connected', function () {
             document.getElementById('waiting').remove()
             document.getElementById('mainapp').className = ''
+
+            cloudClient.saveFile()
         })
 
         onFolderPicking() {
