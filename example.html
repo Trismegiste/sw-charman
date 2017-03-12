@@ -28,7 +28,10 @@
     <script src="./js/rg-toasts.js"></script>
     <script src="./js/toasty-mixin.js"></script>
     <script src="./js/gdrive.js"></script>
+    <script src="./js/Repository.js"></script>
+    <script src="./js/Character.js"></script>
     <script src="./js/dexie.min.js"></script>
+    <script src="./js/base64js.min.js"></script>
     <script src="./tag/cloud.tag" type="riot/tag"></script>
 
     <script>
@@ -36,6 +39,8 @@
             clientId: '374977961173-o1qsjjbj0tnbb0smjdanpmvsraoshd8q.apps.googleusercontent.com',
             appId: '374977961173'
         })
+
+        var repository = new Repository()
 
         function handleClientLoad() {
             cloudClient.connect()

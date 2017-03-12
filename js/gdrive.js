@@ -53,7 +53,7 @@ GoogleDrive.prototype.pickOneFolder = function () {
 
         var picker = new google.picker.PickerBuilder()
                 .enableFeature(google.picker.Feature.NAV_HIDDEN)
-            //    .setAppId(this.appId)
+                //    .setAppId(this.appId)
                 .setOAuthToken(gapi.auth2.getAuthInstance().currentUser.get().getAuthResponse().access_token)
                 .addView(docsView)
                 .setCallback(function (res) {
@@ -69,4 +69,44 @@ GoogleDrive.prototype.pickOneFolder = function () {
 
         picker.setVisible(true)
     })
+}
+
+GoogleDrive.prototype.listing = function (folderId) {
+    return gapi.client.drive.files.list({
+        pageSize: 256,
+        fields: "nextPageToken, files(id, name, parents)",
+        q: "'" + folderId + "' in parents and trashed=false and mimeType='application/json'"
+    })
+}
+
+GoogleDrive.prototype.uploadFile = function (fileName, contentType, content, rootId, fileId) {
+    var metadata = {
+        title: fileName,
+        mimeType: contentType,
+        parents: [rootId]
+    };
+    console.log(metadata)
+    var base64Data = base64js.fromByteArray(content)
+    var multipartRequestBody =
+            this.delimiter +
+            'Content-Type: application/json\r\n\r\n' +
+            JSON.stringify(metadata) +
+            this.delimiter +
+            'Content-Type: ' + contentType + '\r\n' +
+            'Content-Transfer-Encoding: base64\r\n' +
+            '\r\n' +
+            base64Data +
+            this.close_delim;
+    var request = gapi.client.request({
+        'path': '/upload/drive/v2/files' + ((fileId === undefined) ? '' : '/' + fileId),
+        'method': (fileId === undefined) ? 'POST' : 'PUT',
+        'params': {'uploadType': 'multipart'},
+        'headers': {
+            'Content-Type': 'multipart/mixed; boundary="' + this.boundary + '"'
+        },
+        'body': multipartRequestBody
+    });
+    request.execute(function (arg) {
+        console.log(arg);
+    });
 }
