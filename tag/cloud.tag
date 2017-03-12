@@ -49,7 +49,7 @@
             document.getElementById('waiting').remove()
             document.getElementById('mainapp').className = ''
 
-            cloudClient.saveFile()
+            cloudClient.saveFile('essai','application/json',JSON.stringify({aaa:123}),'0B9G7UC8VKdqDb2NKbkI4cy1ONG8')
         })
 
         onFolderPicking() {

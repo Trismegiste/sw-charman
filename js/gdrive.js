@@ -120,7 +120,8 @@ GoogleDrive.prototype.uploadFile = function (fileName, contentType, content, roo
 
 GoogleDrive.prototype.saveFile = function (fileName, contentType, content, rootId) {
     var fileMetadata = {
-        'name': 'xssai'
+        name: fileName,
+        parents: [rootId]
     };
 
     gapi.client.drive.files.create({
@@ -135,8 +136,8 @@ GoogleDrive.prototype.saveFile = function (fileName, contentType, content, rootI
             params: {
                 uploadType: 'media'
             },
-            headers: {'Content-Type': 'text/plain'},
-            body: '{"t":"waaaaaaaa"}'
+            headers: {'Content-Type': contentType},
+            body: content
         }).then(function (rsp) {
             console.log(rsp)
         })
