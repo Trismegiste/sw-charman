@@ -125,15 +125,12 @@ GoogleDrive.prototype.saveFile = function (fileName, contentType, content, rootI
     }
     var self = this
 
-    gapi.client.drive.files.create({
+    return gapi.client.drive.files.create({
         resource: fileMetadata,
         fields: 'id'
     }).then(function (resp) {
         console.log(resp)
-        self.updateContent(resp.result.id, contentType, content)
-                .then(function (rsp) {
-                    console.log(rsp)
-                })
+        return self.updateContent(resp.result.id, contentType, content)
     })
 }
 

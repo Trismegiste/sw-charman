@@ -50,6 +50,9 @@
             document.getElementById('mainapp').className = ''
 
             cloudClient.saveFile('essai','application/json',JSON.stringify({aaa:456}),'0B9G7UC8VKdqDb2NKbkI4cy1ONG8')
+                    .then(function(rsp){
+                        console.log(rsp)
+                    })
         })
 
         onFolderPicking() {
