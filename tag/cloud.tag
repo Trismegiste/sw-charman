@@ -1,9 +1,18 @@
 <cloud>
     <div class="pure-g">
-        <div class="pure-u-1-2">{ driveFolder.name }</div>
-        <div class="pure-u-1-2"><button class="pure-button" onclick="{
-                    onFolderPicking
-                }">Pick a folder</button></div>
+        <div class="pure-u-2-3">
+            <section class="panel folder placeholder" if="{ !driveFolder.id }">Pick a folder on Google Drive</section>
+            <section class="panel folder" if="{ driveFolder.id }">{ driveFolder.name }</section>
+        </div>
+        <div class="pure-u-1-3">
+            <section class="panel">
+                <form>
+                    <button class="pure-button" onclick="{onFolderPicking}">
+                        <i class="icon-google-drive"></i>
+                    </button>
+                </form>
+            </section>
+        </div>
     </div>
     <table class="pure-table pure-table-striped">
         <tr>
