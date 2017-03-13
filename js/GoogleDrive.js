@@ -9,6 +9,7 @@ var GoogleDrive = function (param) {
     this.SCOPES = 'https://www.googleapis.com/auth/drive';
     this.clientId = param.clientId
     this.appId = param.appId
+    this.apiKey = param.apiKey
     this.maxPerPage = 256
 }
 
@@ -20,7 +21,8 @@ GoogleDrive.prototype.connect = function () {
             gapi.client.init({
                 discoveryDocs: self.DISCOVERY_DOCS,
                 clientId: self.clientId,
-                scope: self.SCOPES
+                scope: self.SCOPES,
+                apiKey: self.apiKey
             }).then(function () {
                 if (!gapi.auth2.getAuthInstance().isSignedIn.get()) {
                     console.log('OAuth process with popup')
