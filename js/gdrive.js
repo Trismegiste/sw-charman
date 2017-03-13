@@ -34,6 +34,8 @@ GoogleDrive.prototype.connect = function () {
             }).then(function () {
                 if (gapi.auth2.getAuthInstance().isSignedIn.get()) {
                     fulfill()
+                } else {
+                    reject()
                 }
             })
         })

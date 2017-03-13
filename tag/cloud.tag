@@ -9,12 +9,10 @@
         <tr>
             <th>name</th>
             <th>id</th>
-            <th></th>
         </tr>
         <tr each="{listing}">
             <td>{name}</td>
             <td>{id}</td>
-            <td>{parents}</td>
         </tr>
     </table>
 
@@ -62,9 +60,23 @@
         onSaveToDrive() {
             repository.findAll().then(function(arr) {
                 arr.forEach(function(item) {
+                    // todo: promise batch
                     cloudClient.saveFile(item.name, 'application/json', JSON.stringify(item), self.driveFolder.id)
                 })
                 self.notice(arr.length + ' items saved', 'success')
+            })
+        }
+
+        onLoadFromDrive() {
+            cloudClient.listing(self.driveFolder.id).then(function (response) {
+                for (var k = 0; k < response.result.files.length; k++) {
+                    var fch = response.result.files[k]
+                    gapi.client.drive.files.get({
+                        fileId: fch.id
+                    }).then(function(rsp) {
+                        console.log(rsp)
+                    })
+                }
             })
         }
 
