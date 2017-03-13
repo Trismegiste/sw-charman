@@ -5,9 +5,6 @@
 var GoogleDrive = function (param) {
     riot.observable(this);
 
-    this.boundary = '-------314159265358979323846264';
-    this.delimiter = "\r\n--" + this.boundary + "\r\n";
-    this.close_delim = "\r\n--" + this.boundary + "--";
     this.DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/drive/v3/rest"];
     this.SCOPES = 'https://www.googleapis.com/auth/drive';
     this.clientId = param.clientId
@@ -85,38 +82,6 @@ GoogleDrive.prototype.listing = function (folderId) {
         fields: "nextPageToken, files(id, name, parents)",
         q: "'" + folderId + "' in parents and trashed=false and mimeType='application/json'"
     })
-}
-
-GoogleDrive.prototype.uploadFile = function (fileName, contentType, content, rootId, fileId) {
-    var metadata = {
-        title: fileName,
-        mimeType: contentType,
-        parents: [{id: rootId}]
-    };
-    console.log(metadata)
-    var base64Data = base64js.fromByteArray(content)
-    var multipartRequestBody =
-            this.delimiter +
-            'Content-Type: application/json\r\n\r\n' +
-            JSON.stringify(metadata) +
-            this.delimiter +
-            'Content-Type: ' + contentType + '\r\n' +
-            'Content-Transfer-Encoding: base64\r\n' +
-            '\r\n' +
-            base64Data +
-            this.close_delim;
-    var request = gapi.client.request({
-        'path': '/upload/drive/v2/files' + ((fileId === undefined) ? '' : '/' + fileId),
-        'method': (fileId === undefined) ? 'POST' : 'PUT',
-        'params': {'uploadType': 'multipart'},
-        'headers': {
-            'Content-Type': 'multipart/mixed; boundary="' + this.boundary + '"'
-        },
-        'body': multipartRequestBody
-    });
-    request.execute(function (arg) {
-        console.log(arg);
-    });
 }
 
 GoogleDrive.prototype.saveFile = function (fileName, contentType, content, rootId) {
