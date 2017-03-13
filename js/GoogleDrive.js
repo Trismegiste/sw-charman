@@ -60,7 +60,7 @@ GoogleDrive.prototype.pickOneFolder = function () {
 
         var picker = new google.picker.PickerBuilder()
                 .enableFeature(google.picker.Feature.NAV_HIDDEN)
-                //    .setAppId(this.appId)
+                .setAppId(this.appId)
                 .setOAuthToken(argggg.getAccessToken())
                 .addView(docsView)
                 .setCallback(function (res) {

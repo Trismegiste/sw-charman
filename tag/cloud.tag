@@ -25,15 +25,24 @@
                 <p if="{ driveFolder.id }">{ listing.remote.length } éléments</p>
             </section>
         </div>
-    </div>
-
-    <div class="pure-g" if="{ driveFolder.id }">
-        <div class="pure-u-1-2"><button class="pure-button button-error" onclick="{
-                    onSaveToDrive
-                }">Save to drive</button></div>
-        <div class="pure-u-1-2"><button class="pure-button button-primary" onclick="{
+        <div class="pure-u-1-2" if="{ driveFolder.id }">
+            <section>
+                <button class="pure-button button-primary" onclick="{
                     onLoadFromDrive
-                }">Load from drive</button></div>
+                }">
+                    <i class="icon-download-cloud"></i>
+                </button>
+            </section>
+        </div>
+        <div class="pure-u-1-2" if="{ driveFolder.id }">
+            <section>
+                <button class="pure-button button-error" onclick="{
+                    onSaveToDrive
+                }">
+                    <i class="icon-upload-cloud"></i>
+                </button>
+            </section>
+        </div>
     </div>
 
     <script>
