@@ -72,11 +72,13 @@
                 for (var k = 0; k < response.result.files.length; k++) {
                     var fch = response.result.files[k]
                     gapi.client.drive.files.get({
-                        fileId: fch.id
+                        fileId: fch.id,
+                        alt: 'media'
                     }).then(function(rsp) {
-                        console.log(rsp)
+                        repository.persist(rsp.result)
                     })
                 }
+                self.notice(response.result.files.length + ' items imported', 'success')
             })
         }
 
