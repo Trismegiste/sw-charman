@@ -6,53 +6,53 @@
         </div>
         <div class="pure-u-1-3">
             <section class="panel">
-                <form>
-                    <button class="pure-button" onclick="{onFolderPicking}">
-                        <i class="icon-google-drive"></i>
-                    </button>
-                </form>
+                <button class="pure-button" onclick="{onFolderPicking}">
+                    <i class="icon-google-drive"></i>
+                </button>
             </section>
         </div>
     </div>
-    <table class="pure-table pure-table-striped">
-        <tr>
-            <th>id</th>
-            <th>name</th>
-            <th>modif</th>
-        </tr>
-        <tr each="{listing}">
-            <td>{id}</td>
-            <td>{name}</td>
-            <td>{modifiedTime}</td>
-        </tr>
-    </table>
-
-    <div>{listing.length} élément(s)</div>
+    <div class="pure-g dashboard">
+        <div class="pure-u-1-2">
+            <section>
+                <i class="icon-database"></i>
+                <p>{ listing.local.length } éléments</p>
+            </section>
+        </div>
+        <div class="pure-u-1-2">
+            <section>
+                <i class="icon-google-drive"></i>
+                <p if="{ driveFolder.id }">{ listing.remote.length } éléments</p>
+            </section>
+        </div>
+    </div>
 
     <div class="pure-g" if="{ driveFolder.id }">
         <div class="pure-u-1-2"><button class="pure-button button-error" onclick="{
                     onSaveToDrive
                 }">Save to drive</button></div>
-        <div class="pure-u-1-2"><button class="pure-button button-warning" onclick="{
+        <div class="pure-u-1-2"><button class="pure-button button-primary" onclick="{
                     onLoadFromDrive
                 }">Load from drive</button></div>
     </div>
 
     <script>
         var self = this
-        this.listing = []
+        this.listing = {remote: [], local: []}
         this.driveFolder = {}
         this.mixin('toasty')
 
         cloudClient.on('connected', function () {
             document.getElementById('waiting').remove()
             document.getElementById('mainapp').className = ''
+            self.trigger('update-database')
         })
 
         onFolderPicking() {
             cloudClient.pickOneFolder()
                     .then(function (choice) {
                         self.trigger('folder-updated', choice)
+                        self.trigger('update-database')
                     })
         }
 
@@ -62,10 +62,17 @@
             // listing
             cloudClient.listing(entry.id, 'application/json').then(function (response) {
                 if (response.result.files) {
-                    self.listing = response.result.files
+                    self.listing.remote = response.result.files
                     self.update()
                 }
-            });
+            })
+        })
+
+        this.on('update-database', function () {
+            repository.findAll().then(function(arr) {
+                    self.listing.local = arr
+                    self.update()
+            })
         })
 
         onSaveToDrive() {

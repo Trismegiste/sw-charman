@@ -89,3 +89,13 @@ h2 {
 .placeholder {
     color: #aaa;
 }
+
+.dashboard section {
+    color: #aaa;
+    text-align: center;
+    padding: 1em;
+}
+
+.dashboard section i {
+    font-size: 300%;
+}
