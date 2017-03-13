@@ -82,17 +82,19 @@
 
         onLoadFromDrive() {
             cloudClient.listing(self.driveFolder.id).then(function (response) {
-                // todo: batch
+                var batch = []
                 for (var k = 0; k < response.result.files.length; k++) {
                     var fch = response.result.files[k]
-                    gapi.client.drive.files.get({
+                    batch.push(gapi.client.drive.files.get({
                         fileId: fch.id,
                         alt: 'media'
                     }).then(function(rsp) {
-                        repository.persist(rsp.result)
-                    })
+                        return repository.persist(rsp.result)
+                    }))
                 }
-                self.notice(response.result.files.length + ' items imported', 'success')
+                Promise.all(batch).then(function(rsp) {
+                    self.notice(rsp.length + ' items imported', 'success')
+                })
             })
         }
 
