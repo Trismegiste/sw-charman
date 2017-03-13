@@ -119,17 +119,34 @@ GoogleDrive.prototype.uploadFile = function (fileName, contentType, content, roo
 }
 
 GoogleDrive.prototype.saveFile = function (fileName, contentType, content, rootId) {
+    var self = this
     var fileMetadata = {
         name: fileName,
         parents: [rootId]
     }
-    var self = this
 
-    return gapi.client.drive.files.create({
-        resource: fileMetadata,
-        fields: 'id'
+    return gapi.client.drive.files.list({
+        pageSize: 1,
+        fields: "files(id)",
+        q: "'" + rootId
+                + "' in parents and trashed=false and name='"
+                + fileName + "' and mimeType='"
+                + contentType + "'"
+    }).then(function (rsp) {
+        if (rsp.result.files.length === 1) {
+            console.log(fileName + ' existed, id=' + rsp.result.files[0].id)
+            return new Promise(function (f, r) {
+                f({result: {id: rsp.result.files[0].id}})
+            })
+        } else {
+            console.log('Creating ' + fileName)
+            return gapi.client.drive.files.create({
+                resource: fileMetadata,
+                fields: 'id'
+            })
+        }
     }).then(function (resp) {
-        console.log(resp)
+        console.log('Updating ' + resp.result.id)
         return self.updateContent(resp.result.id, contentType, content)
     })
 }
