@@ -12,6 +12,7 @@ var GoogleDrive = function (param) {
     this.SCOPES = 'https://www.googleapis.com/auth/drive';
     this.clientId = param.clientId
     this.appId = param.appId
+    this.maxPerPage = 256
 }
 
 GoogleDrive.prototype.connect = function () {
@@ -80,7 +81,7 @@ GoogleDrive.prototype.pickOneFolder = function () {
 
 GoogleDrive.prototype.listing = function (folderId) {
     return gapi.client.drive.files.list({
-        pageSize: 256,
+        pageSize: this.maxPerPage,
         fields: "nextPageToken, files(id, name, parents)",
         q: "'" + folderId + "' in parents and trashed=false and mimeType='application/json'"
     })

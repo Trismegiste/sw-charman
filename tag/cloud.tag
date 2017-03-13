@@ -35,24 +35,9 @@
         this.driveFolder = {}
         this.mixin('toasty')
 
-        function findListingItem(name) {
-            for(var k = 0; k < self.listing.length; k++) {
-                if (self.listing[k].name === name) {
-                    return k
-                }
-            }
-
-            return -1
-        }
-
         cloudClient.on('connected', function () {
             document.getElementById('waiting').remove()
             document.getElementById('mainapp').className = ''
-
-            cloudClient.saveFile('autr','text/plain',JSON.stringify({aaa:Math.random()}),'0B9G7UC8VKdqDb2NKbkI4cy1ONG8')
-                    .then(function(rsp){
-                        console.log(rsp)
-                    })
         })
 
         onFolderPicking() {
@@ -76,14 +61,8 @@
 
         onSaveToDrive() {
             repository.findAll().then(function(arr) {
-                var temp = [];
-                arr.forEach(function(localItem) {
-                    var idx = findListingItem(localItem.name)
-                    if (-1 === idx) {
-                        cloudClient.uploadFile(localItem.name, 'application/json', JSON.stringify(localItem), self.driveFolder.id)
-                    } else {
-                        cloudClient.uploadFile(localItem.name, 'application/json', JSON.stringify(localItem), self.driveFolder.id, self.listing[idx].id)
-                    }
+                arr.forEach(function(item) {
+                    cloudClient.saveFile(item.name, 'application/json', JSON.stringify(item), self.driveFolder.id)
                 })
                 self.notice(arr.length + ' items saved', 'success')
             })
