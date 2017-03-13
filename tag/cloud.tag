@@ -51,7 +51,7 @@
             self.driveFolder = entry
 
             // listing
-            cloudClient.listing(entry.id).then(function (response) {
+            cloudClient.listing(entry.id, 'application/json').then(function (response) {
                 if (response.result.files) {
                     self.listing = response.result.files
                     self.update()

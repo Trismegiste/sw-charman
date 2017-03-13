@@ -78,11 +78,15 @@ GoogleDrive.prototype.pickOneFolder = function () {
     })
 }
 
-GoogleDrive.prototype.listing = function (folderId) {
+GoogleDrive.prototype.listing = function (folderId, filterOnType) {
+    var query = "'" + folderId + "' in parents and trashed=false"
+    if (filterOnType !== undefined) {
+        query += " and mimeType='" + filterOnType + "'"
+    }
     return gapi.client.drive.files.list({
         pageSize: this.maxPerPage,
         fields: "nextPageToken, files(id, name, parents, modifiedTime)",
-        q: "'" + folderId + "' in parents and trashed=false and mimeType='application/json'"
+        q: query
     })
 }
 
