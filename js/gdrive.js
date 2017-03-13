@@ -81,7 +81,7 @@ GoogleDrive.prototype.pickOneFolder = function () {
 GoogleDrive.prototype.listing = function (folderId) {
     return gapi.client.drive.files.list({
         pageSize: this.maxPerPage,
-        fields: "nextPageToken, files(id, name, parents)",
+        fields: "nextPageToken, files(id, name, parents, modifiedTime)",
         q: "'" + folderId + "' in parents and trashed=false and mimeType='application/json'"
     })
 }
@@ -120,13 +120,15 @@ GoogleDrive.prototype.saveFile = function (fileName, contentType, content, rootI
 }
 
 GoogleDrive.prototype.updateContent = function (id, contentType, content) {
-    return  gapi.client.request({
-        path: '/upload/drive/v3/files/' + id,
-        method: 'PATCH',
-        params: {
-            uploadType: 'media'
-        },
-        headers: {'Content-Type': contentType},
-        body: content
+    return new Promise(function (fulfill, reject) {
+        gapi.client.request({
+            path: '/upload/drive/v3/files/' + id,
+            method: 'PATCH',
+            params: {
+                uploadType: 'media'
+            },
+            headers: {'Content-Type': contentType},
+            body: content
+        }).then(fulfill, reject)
     })
 }

@@ -7,22 +7,24 @@
     </div>
     <table class="pure-table pure-table-striped">
         <tr>
-            <th>name</th>
             <th>id</th>
+            <th>name</th>
+            <th>modif</th>
         </tr>
         <tr each="{listing}">
-            <td>{name}</td>
             <td>{id}</td>
+            <td>{name}</td>
+            <td>{modifiedTime}</td>
         </tr>
     </table>
 
     <div>{listing.length} élément(s)</div>
 
     <div class="pure-g" if="{ driveFolder.id }">
-        <div class="pure-u-1-2"><button class="pure-button" onclick="{
+        <div class="pure-u-1-2"><button class="pure-button button-error" onclick="{
                     onSaveToDrive
                 }">Save to drive</button></div>
-        <div class="pure-u-1-2"><button class="pure-button" onclick="{
+        <div class="pure-u-1-2"><button class="pure-button button-warning" onclick="{
                     onLoadFromDrive
                 }">Load from drive</button></div>
     </div>
@@ -59,16 +61,28 @@
 
         onSaveToDrive() {
             repository.findAll().then(function(arr) {
-                arr.forEach(function(item) {
-                    // todo: promise batch
-                    cloudClient.saveFile(item.name, 'application/json', JSON.stringify(item), self.driveFolder.id)
+                var actions = []
+                for(var idx = 0; idx < arr.length; idx++) {
+                    var item = arr[idx]
+                    actions.push(cloudClient.saveFile(item.name, 'application/json', JSON.stringify(item), self.driveFolder.id))
+                }
+                Promise.all(actions).then(function(rsp) {
+                    var cpt = 0
+                    for(var k=0; k<rsp.length; k++) {
+                        cpt += (rsp[k].status === 200) ? 1 : 0
+                    }
+                    if (cpt === arr.length) {
+                        self.notice(cpt + ' items saved', 'success')
+                    } else {
+                        self.notice('Unable to save ' + (arr.length - cpt) + ' items', 'error')
+                    }
                 })
-                self.notice(arr.length + ' items saved', 'success')
             })
         }
 
         onLoadFromDrive() {
             cloudClient.listing(self.driveFolder.id).then(function (response) {
+                // todo: batch
                 for (var k = 0; k < response.result.files.length; k++) {
                     var fch = response.result.files[k]
                     gapi.client.drive.files.get({
