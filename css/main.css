@@ -73,29 +73,3 @@ h2 {
     font-size: 1000%;
     color: lightgray;
 }
-
-/* for cloud */
-.panel {
-    margin: 0.6em 0.6em 1em;
-}
-
-.folder {
-    padding: 0.5em 1em;
-    border-color: #aaa;
-    border-style: solid;
-    border-width: 1px;
-}
-
-.placeholder {
-    color: #aaa;
-}
-
-.dashboard section {
-    color: #aaa;
-    text-align: center;
-    padding: 1em;
-}
-
-.dashboard section i {
-    font-size: 300%;
-}
