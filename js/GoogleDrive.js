@@ -94,10 +94,6 @@ GoogleDrive.prototype.listing = function (folderId, filterOnType) {
 
 GoogleDrive.prototype.saveFile = function (fileName, contentType, content, rootId) {
     var self = this
-    var fileMetadata = {
-        name: fileName,
-        parents: [rootId]
-    }
 
     return gapi.client.drive.files.list({
         pageSize: 1,
@@ -110,18 +106,29 @@ GoogleDrive.prototype.saveFile = function (fileName, contentType, content, rootI
         if (rsp.result.files.length === 1) {
             console.log(fileName + ' existed, id=' + rsp.result.files[0].id)
             return new Promise(function (f, r) {
-                f({result: {id: rsp.result.files[0].id}})
+                f(rsp.result.files[0].id)
             })
         } else {
             console.log('Creating ' + fileName)
-            return gapi.client.drive.files.create({
-                resource: fileMetadata,
-                fields: 'id'
-            })
+            return self.createFile(fileName, rootId)
         }
-    }).then(function (resp) {
-        console.log('Updating ' + resp.result.id)
-        return self.updateContent(resp.result.id, contentType, content)
+    }).then(function (id) {
+        console.log('Updating ' + id)
+        return self.updateContent(id, contentType, content)
+    })
+}
+
+GoogleDrive.prototype.createFile = function (fileName, rootId) {
+    return new Promise(function (fulfill, reject) {
+        gapi.client.drive.files.create({
+            resource: {
+                name: fileName,
+                parents: [rootId]
+            },
+            fields: 'id'
+        }).then(function (rsp) {
+            fulfill(rsp.result.id)
+        }, reject)
     })
 }
 

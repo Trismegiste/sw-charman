@@ -101,6 +101,8 @@
                     } else {
                         self.notice('Unable to save ' + (arr.length - cpt) + ' items', 'error')
                     }
+                }).catch(function(rsp) {
+                    console.log(rsp)
                 })
             })
         }
