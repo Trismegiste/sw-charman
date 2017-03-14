@@ -92,17 +92,9 @@
                     actions.push(cloudClient.saveFile(item.name, 'application/json', JSON.stringify(item), self.driveFolder.id))
                 }
                 Promise.all(actions).then(function(rsp) {
-                    var cpt = 0
-                    for(var k=0; k<rsp.length; k++) {
-                        cpt += (rsp[k].status === 200) ? 1 : 0
-                    }
-                    if (cpt === arr.length) {
-                        self.notice(cpt + ' items saved', 'success')
-                    } else {
-                        self.notice('Unable to save ' + (arr.length - cpt) + ' items', 'error')
-                    }
+                    self.notice(arr.length + ' items saved', 'success')
                 }).catch(function(rsp) {
-                    console.log(rsp)
+                    self.notice(rsp.result.error.message, 'error')
                 })
             })
         }
