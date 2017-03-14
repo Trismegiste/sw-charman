@@ -51,7 +51,7 @@ GoogleDrive.prototype.getAccessToken = function () {
 
 
 GoogleDrive.prototype.pickOneFolder = function () {
-    var argggg = this
+    var self = this
 
     return new Promise(function (fulfill, reject) {
 
@@ -62,7 +62,36 @@ GoogleDrive.prototype.pickOneFolder = function () {
 
         var picker = new google.picker.PickerBuilder()
                 .enableFeature(google.picker.Feature.NAV_HIDDEN)
-                .setAppId(this.appId)
+                .setAppId(self.appId)
+                .setOAuthToken(self.getAccessToken())
+                .addView(docsView)
+                .setCallback(function (res) {
+                    console.log(res)
+                    if (res.action === 'picked') {
+                        fulfill(res.docs[0])
+                    }
+                    if (res.action === 'cancel') {
+                        reject(res)
+                    }
+                })
+                .build()
+
+        picker.setVisible(true)
+    })
+}
+
+GoogleDrive.prototype.pickOneFile = function (mimeFilter) {
+    var argggg = this
+
+    return new Promise(function (fulfill, reject) {
+
+        var docsView = new google.picker.DocsView()
+             //   .setIncludeFolders(true)
+                .setMimeTypes(mimeFilter)
+
+        var picker = new google.picker.PickerBuilder()
+                .enableFeature(google.picker.Feature.NAV_HIDDEN)
+                .setAppId(argggg.appId)
                 .setOAuthToken(argggg.getAccessToken())
                 .addView(docsView)
                 .setCallback(function (res) {
