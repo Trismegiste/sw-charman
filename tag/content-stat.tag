@@ -60,7 +60,7 @@
 
         onReset() {
             self.model.trigger('reset');
-            riot.route('stat');
+            riot.route('stat', 'New...');
         }
 
         onAppend() {
