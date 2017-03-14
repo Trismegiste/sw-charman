@@ -7,11 +7,6 @@
                     <i class="{ tab.title }"></i>
                 </a>
             </li>
-            <li class="pure-menu-item">
-                <a href="index.html" class="pure-menu-link">
-                    <i class="icon-up-open"></i>
-                </a>
-            </li>
         </ul>
     </nav>
     <div class="pure-g">
