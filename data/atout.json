@@ -247,8 +247,8 @@
         },
         {
             "titre": "Don des langues",
-            "prerequis": "N, Int d6",
-            "descr": "Commence le jeu en maîtrisant un nombre de langues égal à son dé d'Intellect ; possibilité de se faire comprendre par n'importe qui avec un jet d'Intellect à -2 après une semaine d'immersion.",
+            "prerequis": "N, Int d6, 2× max",
+            "descr": "Donne 6 pts de création à répartir dans les 'Connaissances Langue'",
             "enabled": "1",
             "info": "0"
         },
