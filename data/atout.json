@@ -769,154 +769,210 @@
             "titre": "Accès à un Akasha",
             "prerequis": "Nephilim",
             "descr": "Rives avec 2 Portes et d4 en Plans subtils",
-            "enabled": "1",
-            "info": "0"
+            "enabled": 1,
+            "info": 0
         },
         {
             "titre": "Admirateurs",
             "prerequis": "Nephilim, [Réseaux d8+ ou Persuasion d8+ ou Charisme +2+] et Arcanes mineurs d4+",
             "descr": "groupe constitué de 5+2d4 humains profanes",
-            "enabled": "1",
-            "info": "0"
+            "enabled": 1,
+            "info": 0
         },
         {
             "titre": "Adopté Arcane majeur",
             "prerequis": "cf Codex AM",
             "descr": "Adopté & d4 en Arcanes majeurs",
-            "enabled": "1",
-            "info": "1"
+            "enabled": 1,
+            "info": 1
         },
         {
             "titre": "Artefact",
             "prerequis": "Nephilim",
             "descr": "1 er ou 2 e cercle & PUI=15",
-            "enabled": "1",
-            "info": "0"
+            "enabled": 1,
+            "info": 0
         },
         {
             "titre": "Artefact Atlante",
             "prerequis": "L",
-            "descr": "Cénobite",
-            "enabled": "1",
-            "info": "0"
+            "descr": "3 e cercle & PUI=15",
+            "enabled": 1,
+            "info": 0
         },
         {
             "titre": "Augmentation Initiation",
             "prerequis": "Nephilim",
             "descr": "Augmente le niveau d'Initiation (INI) de 2 puces",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Cénobite MdK",
-            "prerequis": "Nephilim, V, Séminariste même MdK + 2 autres Seminariste",
-            "descr": "Tipheret, Geburah, Chesed",
-            "enabled": "1",
-            "info": "1"
+            "enabled": 1,
+            "info": 0
         },
         {
             "titre": "Compréhension solaire",
             "prerequis": "Nephilim, BG, incompatible Ombre",
             "descr": "+ 6 pts Compétence profanes",
-            "enabled": "1",
-            "info": "0"
+            "enabled": 1,
+            "info": 0
         },
         {
             "titre": "Disciple",
             "prerequis": "Nephilim",
             "descr": "Premier Cercle de Magie + 10 Mots",
-            "enabled": "1",
-            "info": "1"
+            "enabled": 1,
+            "info": 1
         },
         {
             "titre": "Domaines Analogiques",
             "prerequis": "Disciple",
             "descr": "+ 10 Mots",
-            "enabled": "1",
-            "info": "1"
+            "enabled": 1,
+            "info": 1
         },
         {
             "titre": "Effet-Dragon",
             "prerequis": "Nephilim",
             "descr": "INI du nephilim -1TDD. Retrouve en 2d6 jours",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Enchantement d'outil",
-            "prerequis": "Outil Alchimique",
-            "descr": "+0 au lieu de +1 et production +1 substance",
-            "enabled": "1",
-            "info": "1"
+            "enabled": 1,
+            "info": 0
         },
         {
             "titre": "Glorieux Alliage",
             "prerequis": "L, 9 Substances au blanc, Outil du glorieux alliage",
             "descr": "3 e cercle d'Alchimie",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "Inconnaissable MdK",
-            "prerequis": "L, Cénobite",
-            "descr": "Kabbale du 3 e cercle",
-            "enabled": "1",
-            "info": "1"
+            "enabled": 1,
+            "info": 1
         },
         {
             "titre": "Magicien",
             "prerequis": "Disciple, V, 30 Mots",
             "descr": "sortilèges du Deuxième Cercle",
-            "enabled": "1",
-            "info": "0"
+            "enabled": 1,
+            "info": 0
         },
         {
             "titre": "Magistère",
             "prerequis": "L, Magicien, 50 Mots",
             "descr": "sortilèges du Troisième Cercle",
-            "enabled": "1",
-            "info": "0"
+            "enabled": 1,
+            "info": 0
         },
         {
             "titre": "Nephilim",
             "prerequis": "Race",
             "descr": "INI démarre à d4 + 0 puce",
-            "enabled": "1",
-            "info": "0"
+            "enabled": 1,
+            "info": 0
         },
         {
-            "titre": "Outil Alchimique",
-            "prerequis": "Nephilim",
+            "titre": "Outil Primaire",
+            "prerequis": "Outil Secondaire",
             "descr": "Cornue, Forge, Creuset, Alambic et Athanor",
-            "enabled": "1",
-            "info": "1"
+            "enabled": 1,
+            "info": 1
         },
         {
-            "titre": "Séminariste MdK",
+            "titre": "Outil Secondaire",
+            "prerequis": "Outil Tertiaire",
+            "descr": "Cornue, Forge, Creuset, Alambic et Athanor, Malus-1",
+            "enabled": 1,
+            "info": 1
+        },
+        {
+            "titre": "Outil Tertiaire",
             "prerequis": "Nephilim",
-            "descr": "Kabbale du 1 er cercle",
-            "enabled": "1",
-            "info": "1"
+            "descr": "Cornue, Forge, Creuset, Alambic et Athanor, Malus -2",
+            "enabled": 1,
+            "info": 1
+        },
+        {
+            "titre": "Substances d'œuvre au Blanc",
+            "prerequis": "V,  Outil primaire, Outils des substances",
+            "descr": "2 substances œuvre au blanc",
+            "enabled": 1,
+            "info": 1
+        },
+        {
+            "titre": "Malkut",
+            "prerequis": "Nephilim",
+            "descr": "Malkut pour 3 MdK",
+            "enabled": 1,
+            "info": 1
+        },
+        {
+            "titre": "Yesod",
+            "prerequis": "Malkut",
+            "descr": "Yesod pour 2 MdK",
+            "enabled": 1,
+            "info": 1
+        },
+        {
+            "titre": "Hod",
+            "prerequis": "Yesod",
+            "descr": "Hod pour 2 MdK",
+            "enabled": 1,
+            "info": 1
+        },
+        {
+            "titre": "Netzah",
+            "prerequis": "Hod",
+            "descr": "Netzah pour 2 MdK",
+            "enabled": 1,
+            "info": 1
+        },
+        {
+            "titre": "Tipheret",
+            "prerequis": "V, Netzah",
+            "descr": "Tipheret pour 1 MdK",
+            "enabled": 1,
+            "info": 1
+        },
+        {
+            "titre": "Geburah",
+            "prerequis": "V, Tipheret",
+            "descr": "Geburah pour 1 MdK",
+            "enabled": 1,
+            "info": 1
+        },
+        {
+            "titre": "Chesed",
+            "prerequis": "V, Geburah",
+            "descr": "Chesed pour 1 MdK",
+            "enabled": 1,
+            "info": 1
+        },
+        {
+            "titre": "Binah",
+            "prerequis": "L, Chesed",
+            "descr": "Binah pour 1 MdK",
+            "enabled": 1,
+            "info": 1
+        },
+        {
+            "titre": "Chokmah",
+            "prerequis": "L, Binah",
+            "descr": "Chokmah pour 1 MdK",
+            "enabled": 1,
+            "info": 1
+        },
+        {
+            "titre": "Kether",
+            "prerequis": "L, Chokmah",
+            "descr": "Kether pour 1 MdK",
+            "enabled": 1,
+            "info": 1
         },
         {
             "titre": "Spécial",
             "prerequis": "Nephilim",
             "descr": "customisable",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "Substances d'œuvre au Blanc",
-            "prerequis": "V, 3 atouts Outil, Outils des substances",
-            "descr": "2 e cercle alchimique (le Leukossi)",
-            "enabled": "1",
-            "info": "1"
+            "enabled": 1,
+            "info": 1
         }
     ],
     "monstre": [
         {
             "titre": "Allure",
-            "descr": "Allure = km/h divisé par 4 à 6",
+            "descr": "Allure = km/h divisé par 4",
             "enabled": "1",
             "info": "1"
         },
