@@ -31,7 +31,7 @@
     <script>
         var self = this
         this.driveFolder = {}
-        this.backupName = ''
+        this.backupName = 'Character Manager'
         this.mixin('toasty')
 
         onFolderPicking() {
