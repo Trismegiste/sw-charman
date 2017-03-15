@@ -30,7 +30,6 @@
 
         // this to hide waiting spinner
         this.on('mount', function() {
-            console.log('toto')
             document.getElementById('waiting').remove()
             document.getElementById('mainapp').className = ''
         })
