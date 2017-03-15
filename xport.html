@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="./css/pure-min.css"/>
         <link rel="stylesheet" href="./css/grids-responsive-min.css"/>
         <link rel="stylesheet" href="./css/main.css"/>
-        <link rel="stylesheet" href="./css/toasts.css"/>
+        <link rel="stylesheet" href="./css/xport.css"/>
         <link rel="stylesheet" href="./css/fontello.css"/>
         <link rel="stylesheet" href="./css/animation.css"/>
         <link rel="apple-touch-icon-precomposed" href="app.jpg">
@@ -28,8 +28,6 @@
 
     <script src="./js/fetch.js"></script>
     <script src="./js/riot+compiler.min.js"></script>
-    <script src="./js/rg-toasts.js"></script>
-    <script src="./js/toasty-mixin.js"></script>
 
     <script src="./tag/spa-xport.tag" type="riot/tag"></script>
     <script src="./tag/xport-atout.tag" type="riot/tag"></script>
@@ -42,7 +40,6 @@
         }
         // Here we go
         Xport.table.load().then(function () {
-            riot.mixin('toasty', Toasty)
             riot.route.start(true);
             riot.mount('*');
         })

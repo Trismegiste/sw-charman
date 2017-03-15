@@ -1,11 +1,11 @@
-<xport-atout>
+<xport-atout class="exported">
     <div  each="{race, listing in atout}">
         <h1>{race}</h1>
         <table class="pure-table">
             <thead>
                 <tr>
-                    <th>titre</th>
-                    <th>prérequis</th>
+                    <th width="25%">titre</th>
+                    <th width="25%">prérequis</th>
                     <th>description</th>
                 </tr>
             </thead>
