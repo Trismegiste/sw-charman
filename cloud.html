@@ -30,6 +30,7 @@
     <script src="./js/rg-toasts.js"></script>
     <script src="./js/toasty-mixin.js"></script>
     <script src="./js/GoogleDrive.js"></script>
+    <script src="./js/icon-google-drive.js"></script>
     <script src="./js/Repository.js"></script>
     <script src="./js/Character.js"></script>
     <script src="./js/dexie.min.js"></script>
@@ -44,6 +45,7 @@
             appId: '374977961173',
             apiKey: 'AIzaSyDgilBkA3oUaSyczUAHLmK41IqehCbzpqI'
         })
+        cloudClient.setIcon(googleDriveThumbnail)
 
         var repository = new Repository()
 

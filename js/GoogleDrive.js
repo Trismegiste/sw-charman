@@ -86,7 +86,6 @@ GoogleDrive.prototype.pickOneFile = function (mimeFilter) {
     return new Promise(function (fulfill, reject) {
 
         var docsView = new google.picker.DocsView()
-             //   .setIncludeFolders(true)
                 .setMimeTypes(mimeFilter)
 
         var picker = new google.picker.PickerBuilder()
@@ -148,14 +147,18 @@ GoogleDrive.prototype.saveFile = function (fileName, contentType, content, rootI
 }
 
 GoogleDrive.prototype.createFile = function (fileName, rootId) {
+    var metadata = {
+        resource: {
+            name: fileName,
+            parents: [rootId]
+        },
+        fields: 'id'
+    }
+    if (this.icon !== undefined) {
+        metadata.resource.contentHints = {thumbnail: this.icon}
+    }
     return new Promise(function (fulfill, reject) {
-        gapi.client.drive.files.create({
-            resource: {
-                name: fileName,
-                parents: [rootId]
-            },
-            fields: 'id'
-        }).then(function (rsp) {
+        gapi.client.drive.files.create(metadata).then(function (rsp) {
             fulfill(rsp.result.id)
         }, reject)
     })
@@ -173,4 +176,8 @@ GoogleDrive.prototype.updateContent = function (id, contentType, content) {
             body: content
         }).then(fulfill, reject)
     })
+}
+
+GoogleDrive.prototype.setIcon = function (thumb) {
+    this.icon = thumb
 }
