@@ -817,14 +817,14 @@
         {
             "titre": "Disciple",
             "prerequis": "Nephilim",
-            "descr": "Premier Cercle de Magie + 10 Mots",
+            "descr": "Premier Cercle de Magie + 6 Mots",
             "enabled": 1,
             "info": 1
         },
         {
             "titre": "Domaines Analogiques",
             "prerequis": "Disciple",
-            "descr": "+ 10 Mots",
+            "descr": "+ 9 Mots",
             "enabled": 1,
             "info": 1
         },
@@ -837,21 +837,21 @@
         },
         {
             "titre": "Glorieux Alliage",
-            "prerequis": "L, 9 Substances au blanc, Outil du glorieux alliage",
-            "descr": "3 e cercle d'Alchimie",
+            "prerequis": "L, 6 × Substances Œuvr.Blanc, Outil du glorieux alliage",
+            "descr": "3e cercle d'Alchimie",
             "enabled": 1,
             "info": 1
         },
         {
             "titre": "Magicien",
-            "prerequis": "Disciple, V, 30 Mots",
+            "prerequis": "V, Disciple, 3 × Domaines analog",
             "descr": "sortilèges du Deuxième Cercle",
             "enabled": 1,
             "info": 0
         },
         {
             "titre": "Magistère",
-            "prerequis": "L, Magicien, 50 Mots",
+            "prerequis": "L, Magicien, 7 × Domaines analog",
             "descr": "sortilèges du Troisième Cercle",
             "enabled": 1,
             "info": 0
