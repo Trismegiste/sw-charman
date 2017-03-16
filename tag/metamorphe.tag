@@ -16,7 +16,19 @@
     <script>
         this.model = SwCharman.model
         this.metamorpheList = SwCharman.table.get('metamorphe')
+        var basaltiq = ['Ænarim', 'Etohïm', 'Ataraxim']
+        var adj = {air:'aérien', feu:'pyrique', lune:'lunaire', eau:'hydrique', terre:'terrien'}
         var self = this;
+        SwCharman.model.equilibrePentacle.forEach(function(obj) {
+            var ka = obj.dominant
+            basaltiq.forEach(function(etat) {
+                self.metamorpheList.push({
+                    element: ka,
+                    humeur: "n.a",
+                    nom: etat + ' ' + adj[ka]
+                })
+            })
+        })
 
         this.model.on('update-pentacle', function (ka) {
             self.update()
