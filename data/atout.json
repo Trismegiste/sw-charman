@@ -1148,5 +1148,413 @@
             "enabled": "1",
             "info": "1"
         }
+    ],
+    "antediluvien": [
+        {
+            "titre": "Basaltique",
+            "prerequis": "B, Nephilim",
+            "descr": "Armure phys de 6. 1 action. KAD FD RM[Ka-Soleil]. 5 (10) rd",
+            "enabled": "1",
+            "info": "1"
+        },
+        {
+            "titre": "Cycle basaltique 1 Ka",
+            "prerequis": "N*, 3 cycles maxi",
+            "descr": "2x +1d10 effet basaltique Ka opposé. ",
+            "enabled": "1",
+            "info": "1"
+        },
+        {
+            "titre": "Métamorphisme",
+            "prerequis": "Cycle basaltique",
+            "descr": "Bonus +1 à la RM (cumulable) mais non-cumulable avec armure",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Dracomaque",
+            "prerequis": "B, Nephilim",
+            "descr": "Réseaux dracomaque + clef de refuge akashique",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Dracologie",
+            "prerequis": "N",
+            "descr": "Détection/pistage/analyse/prédiction. Ka-élément selon action",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Esto-Ka-de",
+            "prerequis": "N",
+            "descr": "1d8+KAD. 1 action. Ka au choix FD 4. Portée contact. ",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Saltillera",
+            "prerequis": "N",
+            "descr": "Attire effet-dragon. 1 action. Ka-Feu FD 4. Portée 24. 2d6 rd",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Purification draconique",
+            "prerequis": "N",
+            "descr": "apaise les champs magiques en dissipant un ED. 1 action. KAD FD 4 + puce. Portée 12. ",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Véronique",
+            "prerequis": "V, Saltillera",
+            "descr": "+2 Parade contre ED",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Rebolera",
+            "prerequis": "V, Saltillera, Esto-Ka-de",
+            "descr": "Secoue 3 ED. 1 action. Ka-Lune FD 4. Portée 24. variable",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Dompter",
+            "prerequis": "V, Dracologie, Esto-Ka-de",
+            "descr": "dompte un ED. 1 action. Ka ED FD 4. Portée 12. ",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Cristal-dragon",
+            "prerequis": "V, Dracologie, Purifi draco",
+            "descr": "stocke l'energie magique d'un ED dans urne. 1 action. Ka ED ou KAD FD 4 ou RM. Portée contact. ",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Arme-dragon",
+            "prerequis": "L, Rebolera,  Purifi draco",
+            "descr": "fabrique une arme magique contenant un ED. 1 action. Ka ED FD 4. Portée contact. ",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Tatouage-dragon",
+            "prerequis": "L, Rebolera,  Cristal-dragon",
+            "descr": "1 action. Ka-élément selon action FD 4. Portée contact",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Tueur de dragon",
+            "prerequis": "L, Véronique",
+            "descr": "+1d8 dégats physiques & +1d6 dégâts magiques sur Taille >= 3. .  FD . Portée contact. ",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Vahana",
+            "prerequis": "L, Dompter",
+            "descr": "Le pentacle chevauche un ED précédemment dompté (incarné ou désincarné). 1 action. Ka-Eau FD 4. Portée ED à vue. 1 h",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Prime",
+            "prerequis": "B, Nephilim",
+            "descr": "Passer en vision-ka = 1 puce de prime-essence. Occultisme d4",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Attraction de Ka",
+            "prerequis": "N",
+            "descr": "Attire champs avec jet cumulatif avec +2 puces min/h/j. 1 rd. KAD FD 4. coût de base 2 ",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Apostasie de l'opposition",
+            "prerequis": "N",
+            "descr": "conjonction de l'opposé majeur. 1 action. KAD FD 4. coût 3. Portée Personnel. prochain j",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Armure étincelante",
+            "prerequis": "N",
+            "descr": "4 armure magique. 1 action. KAD FD 4. coût 2. Portée Personnel. 1 (2) h",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Message élémentaire",
+            "prerequis": "N",
+            "descr": "SMS par champs magiques. 1 minute. KAD FD 4. coût 2. Portée même plan. 1 minute",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Intensification plexus",
+            "prerequis": "V, Attraction de Ka",
+            "descr": "PUI + 4 (8). 1 minute. KAD FD 4. coût 4. Portée plexus. présence",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Apostasie de la neutralité",
+            "prerequis": "V",
+            "descr": "conjonction du neutre défavorable. 1 minute. KAD FD 4. coût 5. Portée Personnel. prochain j",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Transe curative",
+            "prerequis": "V, Armure étincelante, Apostasie opposition",
+            "descr": "guérison de blessure magique tempo. 1 heure. KAD FD 4. coût 5. Portée Personnel. ",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Narcose voorique",
+            "prerequis": "V, Armure étincelante, Attraction Ka",
+            "descr": "Désincarné, Narcose : 2 puces de prime à la place d'un puce de Ka. 1 action. KAD FD 4. coût 4",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Création de plexus",
+            "prerequis": "L, Intensification plexus",
+            "descr": "PUI 4 (8). 1 heure. KAD FD 4. coût 8. Portée plexus. présence",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Apostasie pentaclique",
+            "prerequis": "L, Apostasie opposition & neutralité",
+            "descr": "Réorganise le pentacle un jour de GC. 1 heure. KAD FD 4. coût 10. jusqu'à GC ou mois",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Projection éthérée",
+            "prerequis": "L, Apostasie pentaclique",
+            "descr": "Attaque magique à distance 2xKAD. 1 action. KAD FD 4. coût 2. Portée 24. ",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Transsubstantiation",
+            "prerequis": "L, Création de plexus",
+            "descr": "transforme puce de prime en puce de bonus de SO. 1 action. KAD FD 4. coût 2 par +1. Portée Personnel. rd suivant",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Phare cosmique",
+            "prerequis": "L, Projection éthérée, Projection éthérée, Message élémentaire",
+            "descr": "1 action. KAD FD 4. coût pool. +1d8 dégâts par 4 puces sur 12 cases",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Adepte du dragon",
+            "prerequis": "B, Nephilim",
+            "descr": "TP par omphalos, protection contre ED, bonus plexus/omphalos",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Apaiser effet-dragon",
+            "prerequis": "N",
+            "descr": "endort un ED. 1 action. KAD FD RM ED. Portée 12. 2d6 (3d6) min",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Confusion",
+            "prerequis": "N",
+            "descr": "Secoue 3 cibles. 1 action. KAD FD 6. Portée 12. variable",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Écaille de dragon",
+            "prerequis": "N",
+            "descr": "armure phys de 5. 1 action. KAD FD 6. Portée Personnel. 1 (2) h",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Griffe de dragon",
+            "prerequis": "N",
+            "descr": "+1 TDD en Combat, Escalade, Natation, For, Vig, Agi & 50% Allure. 1 action. KAD FD 6. 1 (2) h",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Contrôler effet-dragon",
+            "prerequis": "V, Apaiser D, Confusion",
+            "descr": "1 action. KAD FD RM ED. coût 1 puce. Portée 24. 2d6 (3d6) min",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Spasme de furie",
+            "prerequis": "V, Confusion, Griffe de dragon",
+            "descr": "Dégâts combat +1d10 & KAD FD 5 pour att. 1 action. KAD FD 6. Portée Personnel. combat",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Dent du dragon",
+            "prerequis": "V, Griffe de dragon",
+            "descr": "Souffle de dragon à 2d8. 1 action. KAD FD 6. Portée 24. ",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Régénération draconique",
+            "prerequis": "V, Écaille de dragon",
+            "descr": "1 blessure / rd. 1 action. KAD FD 6. Portée Personnel. 5 (10) minutes",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Aile de dragon",
+            "prerequis": "L",
+            "descr": "200 km/h. 1 action. KAD FD 6. Portée Personnel. 1 (2) h",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Créer effet-dragon",
+            "prerequis": "L, Contrôler ED",
+            "descr": "réduction par sacrifice. 1 heure. KAD FD 6. coût 1 puce / TDD. Portée conjonction. 1 semaine",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Dissiper un effet-dragon",
+            "prerequis": "L, Contrôler ED, Dent du dragon",
+            "descr": "réduction par sacrifice. 1 action. KAD FD 6. coût 1 puce / TDD. Portée 24. ",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Transformation draconique",
+            "prerequis": "L, Écaille,  Aile et dent du dragon",
+            "descr": "réduction par sacrifice. 1 action. KAD FD 6. coût 3 puces. Portée Personnel. 1 (2) h",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Héros-dragon",
+            "prerequis": "L, Spasme de furie, Régèn draco, Pyrim ou Eolim, mâle",
+            "descr": "Invulnérabilité aux attaques physiques. 1 action. KAD FD 6. coût 1 + 1 puce/rd. Portée Personnel. 1+ round",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Prêtresse-dragon",
+            "prerequis": "L, Créer et dissiper ED, Onirim ou Faërim ou Hydrim, femelle",
+            "descr": "Rituel en coopératif (+1 /succès/relance) max +2. Portée Personnel. un rituel",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Prométhéen",
+            "prerequis": "B, Nephilim",
+            "descr": "Metabonus sur culture-g, Arcanes mineurs d4 et le simulacre aime son nephilim",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Liaison corporelle",
+            "prerequis": "N",
+            "descr": "Si la comp est possédée par les 2 : d4=+0, d6/d8=+1, d10/12=+2. 1 action. KAD FD RM[Ka-Soleil]. 1 heure",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Entretien initiatique",
+            "prerequis": "N",
+            "descr": "Conversation sur un thème. 1 minute. KAD FD RM[Ka-Soleil] cible. Portée humain. discussion",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Eclipse solaire",
+            "prerequis": "N",
+            "descr": "Métamorphe & Pentacle cachés. SO : KAD plafonné par Ka-Soleil. 1 minute. KAD FD RM[Ka-Soleil]. Personnel. Prochain jour astro",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Liaison onirique",
+            "prerequis": "N",
+            "descr": "Bonus de +2 en Akasha sur Nef, Boussole & passage de Porte",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Liaison spirituelle",
+            "prerequis": "V, Liaison corpo & orinique",
+            "descr": "Ombre réduit d'un ordre de grandeur",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Sapience profane",
+            "prerequis": "V, Liaison corporelle",
+            "descr": "substitue Trad pour Comp. 1 minute. KAD FD RM[Ka-Soleil]. Portée Personnel.  Proch jour astro",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Voile prométhéen",
+            "prerequis": "V, Éclipse solaire",
+            "descr": "Orichalque échelle neutre. KAD plafonné. 1 minute. KAD FD RM[Ka-Soleil]. Portée Personnel. 1 h",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Compagnonnage prométhéen",
+            "prerequis": "V, Éclipse solaire, Entretien initiatique",
+            "descr": "KAD / 2 membres à choisir parmi Épée, Bâton ou Coupe. 1d4 sem. Portée Initié a.min. Jusqu'à contre-emploi",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Absorption initiatique",
+            "prerequis": "L, Compagnonnage prom. & Sapience profane",
+            "descr": "Copier une Compétence à hauteur de Ka-Soleil max. 1 heure. KAD FD RM[Ka-Soleil] cible. Portée humain. définitif",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Daïmon",
+            "prerequis": "L, Immunité saturnienne",
+            "descr": "Invoquer un daïmon. INI plafonnée par Ka-Soleil. 2d6 j. KAD FD RM daïmon. Portée Personnel. définitif",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Immunité saturnienne",
+            "prerequis": "L, Compagnonnage & Voile prométhéen",
+            "descr": "Orichalque échelle zéro. KAD plafonné. 1 action. KAD FD RM[Ka-Soleil]. Portée Personnel. 1 h",
+            "enabled": "1",
+            "info": "0"
+        },
+        {
+            "titre": "Initiation solaire",
+            "prerequis": "L, Compagnonnage prométhéen, 2 × max",
+            "descr": "+1 rang en Ka-Soleil. 1 sem..  FD . Portée Personnel. définitif",
+            "enabled": "1",
+            "info": "0"
+        }
     ]
 }

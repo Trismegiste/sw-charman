@@ -30,7 +30,7 @@
     <!-- atouts -->
     <section class="{ blockStyle }">
         <atout filter="general humain" if="{ model.current.type == 'humain' }"></atout>
-        <atout filter="nephilim humain general" if="{ model.current.type == 'nephilim' }"></atout>
+        <atout filter="nephilim humain general antediluvien" if="{ model.current.type == 'nephilim' }"></atout>
         <atout filter="monstre humain general"
                if="{ ['kabbale', 'effetdragon'].indexOf(model.current.type) != -1 }"></atout>
     </section>
