@@ -1050,19 +1050,19 @@
         },
         {
             "titre": "Invisibilité profane",
-            "descr": "Invisible sauf ombre et Ka-Soleil FD [10 – KAD/2]",
+            "descr": "Invisible sauf l'ombre et les initiés avec jet Ka-Soleil FD [10 – KAD/2]",
             "enabled": "1",
             "info": "0"
         },
         {
             "titre": "Invulnérabilité de Kabbale",
-            "descr": "armes enduites de sang",
+            "descr": "Invulnérable aux dégâts physiques sauf aux armes enduites de sang",
             "enabled": "1",
             "info": "0"
         },
         {
             "titre": "Ka-élémentaire",
-            "descr": "être éthéré de pur(s) Ka-élément(s).",
+            "descr": "Un être éthéré de pur(s) Ka-élément(s).",
             "enabled": "1",
             "info": "0"
         },
@@ -1103,13 +1103,13 @@
         },
         {
             "titre": "Terreur",
-            "descr": "ÂME FD 4 à 8",
+            "descr": "Pour les profanes : jet d'ÂME (malus -0 à -4) pour résister",
             "enabled": "1",
             "info": "1"
         },
         {
             "titre": "Terreur de Ka",
-            "descr": "Opposition KAD. Echec : Secoué, Maladresse : Ombre",
+            "descr": "Jet de KAD (malus -0 à -4) pour résister. Echec : Secoué, Sur un 1 (qqsoit dé joker) : Ombre",
             "enabled": "1",
             "info": "1"
         },
