@@ -1,7 +1,7 @@
 <xport-handicap class="exported">
     <div  each="{race, listing in atout}">
         <h1>{race}</h1>
-        <table class="pure-table">
+        <table class="pure-table pure-table-horizontal">
             <thead>
                 <tr>
                     <th width="25%">Titre</th>
