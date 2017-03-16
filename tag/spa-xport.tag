@@ -23,6 +23,7 @@
             {ref: 'atout', title: 'Atouts'},
             {ref: 'handicap', title: 'Handicaps'}
         ]
+        this.activeTab = 'atout'
 
         isActiveTab(ref) {
             return ref === this.activeTab
@@ -40,10 +41,6 @@
         this.on('mount', function() {
             document.getElementById('waiting').remove()
             document.getElementById('mainapp').className = ''
-            // this part is lill' buggy
-            riot.route('atout')
-            self.activeTab = 'atout'
-            self.update()
         })
     </script>
 </spa-xport>
