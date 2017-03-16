@@ -33,6 +33,7 @@
             {ref: 'detail', title: 'icon-zoom-in'},
             {ref: 'database', title: 'icon-database'}
         ]
+        this.activeTab = 'list'
 
         isActiveTab(ref) {
             return ref === this.activeTab
@@ -42,7 +43,6 @@
         this.on('mount', function() {
             document.getElementById('waiting').remove()
             document.getElementById('mainapp').className = ''
-            riot.route('list')
         })
 
         var subRoute = riot.route.create()
