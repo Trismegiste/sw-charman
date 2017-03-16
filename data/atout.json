@@ -367,7 +367,7 @@
         {
             "titre": "Grand contre-attaque",
             "prerequis": "V, Contre-attaque",
-            "descr": "Comme ci-dessus, sans le malus de -2.",
+            "descr": "Comme Contre-attaque, sans le malus de -2.",
             "enabled": "1",
             "info": "0"
         },
@@ -388,7 +388,7 @@
         {
             "titre": "Grande extraction",
             "prerequis": "N, Extraction",
-            "descr": "Comme ci-dessus. Avec une Relance, empêche toutes les attaques.",
+            "descr": "Comme Extraction. Avec une Relance, empêche toutes les attaques.",
             "enabled": "1",
             "info": "0"
         },

@@ -31,6 +31,7 @@
 
     <script src="./tag/spa-xport.tag" type="riot/tag"></script>
     <script src="./tag/xport-atout.tag" type="riot/tag"></script>
+    <script src="./tag/xport-handicap.tag" type="riot/tag"></script>
 
     <script src="./js/SwTable.js"></script>
     <script>
@@ -42,6 +43,7 @@
         Xport.table.load().then(function () {
             riot.route.start(true);
             riot.mount('*');
+            riot.route('atout')
         })
     </script>
 </body>

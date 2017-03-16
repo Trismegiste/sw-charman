@@ -6,3 +6,12 @@
 .content {
     margin: 1em;
 }
+
+@media print{
+    .top-menu {
+        display:none;
+    }
+    body {
+        font-size: 60%;
+    }
+}

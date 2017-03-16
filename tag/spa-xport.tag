@@ -18,29 +18,32 @@
         </div>
     </div>
     <script>
+        var self = this
         this.menuTab = [
             {ref: 'atout', title: 'Atouts'},
             {ref: 'handicap', title: 'Handicaps'}
         ]
-        this.activeTab = 'atout'
 
         isActiveTab(ref) {
             return ref === this.activeTab
         }
 
-        // this to hide waiting spinner
-        this.on('mount', function() {
-            document.getElementById('waiting').remove()
-            document.getElementById('mainapp').className = ''
-        })
-
         var subRoute = riot.route.create()
-        var self = this
         this.menuTab.forEach(function(tab) {
             subRoute('/' + tab.ref, function() {
                 self.activeTab = tab.ref
                 self.update()
             })
+        })
+
+        // this to hide waiting spinner
+        this.on('mount', function() {
+            document.getElementById('waiting').remove()
+            document.getElementById('mainapp').className = ''
+            // this part is lill' buggy
+            riot.route('atout')
+            self.activeTab = 'atout'
+            self.update()
         })
     </script>
 </spa-xport>
