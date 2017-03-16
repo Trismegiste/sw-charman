@@ -817,42 +817,42 @@
         {
             "titre": "Disciple",
             "prerequis": "Nephilim",
-            "descr": "Premier Cercle de Magie + 6 Mots",
+            "descr": "Premier Cercle de Magie (verbe Percevoir) + donne 6 Mots",
             "enabled": 1,
             "info": 1
         },
         {
             "titre": "Domaines Analogiques",
             "prerequis": "Disciple",
-            "descr": "+ 9 Mots",
+            "descr": "Donne 9 Mots de la table analogique",
             "enabled": 1,
             "info": 1
         },
         {
             "titre": "Effet-Dragon",
             "prerequis": "Nephilim",
-            "descr": "INI du nephilim -1TDD. Retrouve en 2d6 jours",
+            "descr": "Compagnon Effet-Dragon. INI du nephilim -1TDD. Ka non-opposé. Retrouve en 2d6 jours",
             "enabled": 1,
             "info": 0
         },
         {
             "titre": "Glorieux Alliage",
-            "prerequis": "L, 6 × Substances Œuvr.Blanc, Outil du glorieux alliage",
-            "descr": "3e cercle d'Alchimie",
+            "prerequis": "L, 6 × Atouts Substances Œuvr.Blanc, Outil du glorieux alliage",
+            "descr": "Donne accès au 3e cercle d'Alchimie & au mentor alchimique",
             "enabled": 1,
             "info": 1
         },
         {
             "titre": "Magicien",
-            "prerequis": "V, Disciple, 3 × Domaines analog",
-            "descr": "sortilèges du Deuxième Cercle",
+            "prerequis": "V, Disciple, 3 × Atouts Domaines analog",
+            "descr": "Donne accès aux sortilèges du 2e Cercle (verbe Manipuler)",
             "enabled": 1,
             "info": 0
         },
         {
             "titre": "Magistère",
-            "prerequis": "L, Magicien, 7 × Domaines analog",
-            "descr": "sortilèges du Troisième Cercle",
+            "prerequis": "L, Magicien, 7 × Atouts Domaines analog",
+            "descr": "Donne accès aux sortilèges du 3e Cercle (verbe Maîtriser)",
             "enabled": 1,
             "info": 0
         },
@@ -866,98 +866,98 @@
         {
             "titre": "Outil Primaire",
             "prerequis": "Outil Secondaire",
-            "descr": "Cornue, Forge, Creuset, Alambic et Athanor",
+            "descr": "Alchimie du 1er cercle. Donne accès aux formules Œuvre au noir de l'Outil à choisir parmi [Cornue, Forge, Creuset, Alambic et Athanor]",
             "enabled": 1,
             "info": 1
         },
         {
             "titre": "Outil Secondaire",
             "prerequis": "Outil Tertiaire",
-            "descr": "Cornue, Forge, Creuset, Alambic et Athanor, Malus-1",
+            "descr": "Alchimie du 1er cercle. Donne accès aux formules Œuvre au noir de l'Outil à choisir parmi [Cornue, Forge, Creuset, Alambic et Athanor]. Malus-1",
             "enabled": 1,
             "info": 1
         },
         {
             "titre": "Outil Tertiaire",
             "prerequis": "Nephilim",
-            "descr": "Cornue, Forge, Creuset, Alambic et Athanor, Malus -2",
+            "descr": "Alchimie du 1er cercle. Donne accès aux formules Œuvre au noir de l'Outil à choisir parmi [Cornue, Forge, Creuset, Alambic et Athanor]. Malus-2",
             "enabled": 1,
             "info": 1
         },
         {
             "titre": "Substances d'œuvre au Blanc",
             "prerequis": "V,  Outil primaire, Outils des substances",
-            "descr": "2 substances œuvre au blanc",
+            "descr": "Permet d'utiliser les formules de 2 Substances œuvre au blanc à choisir",
             "enabled": 1,
             "info": 1
         },
         {
             "titre": "Malkut",
             "prerequis": "Nephilim",
-            "descr": "Malkut pour 3 MdK",
+            "descr": "Kabbale 1er cercle. Donne accès aux invocations de la sephirah Malkut pour 3 Mondes de Kabbale",
             "enabled": 1,
             "info": 1
         },
         {
             "titre": "Yesod",
             "prerequis": "Malkut",
-            "descr": "Yesod pour 2 MdK",
+            "descr": "Kabbale 1er cercle. Donne accès aux invocations de la sephirah Yesod pour 2 Mondes de Kabbale",
             "enabled": 1,
             "info": 1
         },
         {
             "titre": "Hod",
             "prerequis": "Yesod",
-            "descr": "Hod pour 2 MdK",
+            "descr": "Kabbale 1er cercle. Donne accès aux invocations de la sephirah Hod pour 2 Mondes de Kabbale",
             "enabled": 1,
             "info": 1
         },
         {
             "titre": "Netzah",
             "prerequis": "Hod",
-            "descr": "Netzah pour 2 MdK",
+            "descr": "Kabbale 1er cercle. Donne accès aux invocations de la sephirah Netzah pour 2 Mondes de Kabbale",
             "enabled": 1,
             "info": 1
         },
         {
             "titre": "Tipheret",
             "prerequis": "V, Netzah",
-            "descr": "Tipheret pour 1 MdK",
+            "descr": "Kabbale 2e cercle. Donne accès aux invocations de la sephirah Tipheret pour 1 Monde de Kabbale",
             "enabled": 1,
             "info": 1
         },
         {
             "titre": "Geburah",
             "prerequis": "V, Tipheret",
-            "descr": "Geburah pour 1 MdK",
+            "descr": "Kabbale 2e cercle. Donne accès aux invocations de la sephirah Geburah pour 1 Monde de Kabbale",
             "enabled": 1,
             "info": 1
         },
         {
             "titre": "Chesed",
             "prerequis": "V, Geburah",
-            "descr": "Chesed pour 1 MdK",
+            "descr": "Kabbale 2e cercle. Donne accès aux invocations de la sephirah Chesed pour 1 Monde de Kabbale",
             "enabled": 1,
             "info": 1
         },
         {
             "titre": "Binah",
             "prerequis": "L, Chesed",
-            "descr": "Binah pour 1 MdK",
+            "descr": "Kabbale 3e cercle. Donne accès aux invocations de la sephirah Binah pour 1 Monde de Kabbale",
             "enabled": 1,
             "info": 1
         },
         {
             "titre": "Chokmah",
             "prerequis": "L, Binah",
-            "descr": "Chokmah pour 1 MdK",
+            "descr": "Kabbale 3e cercle. Donne accès aux invocations de la sephirah Chokmah pour 1 Monde de Kabbale",
             "enabled": 1,
             "info": 1
         },
         {
             "titre": "Kether",
             "prerequis": "L, Chokmah",
-            "descr": "Kether pour 1 MdK",
+            "descr": "Kabbale 3e cercle. Donne accès aux invocations de la sephirah Kether pour 1 Monde de Kabbale",
             "enabled": 1,
             "info": 1
         },
