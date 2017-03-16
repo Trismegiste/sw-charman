@@ -59,14 +59,14 @@
         {
             "titre": "Artisan",
             "prerequis": "N",
-            "descr": "Jet INT",
+            "descr": "Capable de réaliser ouvrages d'artisanat (épées, bijoux, artefacts...). Jet INT",
             "enabled": "1",
             "info": "1"
         },
         {
             "titre": "Artiste",
             "prerequis": "N",
-            "descr": "Jet ÂME",
+            "descr": "Capable de réaliser œuvres d'art (sculpture, fugue, poème, tableau...). Jet ÂME",
             "enabled": "1",
             "info": "1"
         },
@@ -367,7 +367,7 @@
         {
             "titre": "Grand contre-attaque",
             "prerequis": "V, Contre-attaque",
-            "descr": "Comme ci-dessus, sans le malus de -2.",
+            "descr": "Comme Contre-attaque, sans le malus de -2.",
             "enabled": "1",
             "info": "0"
         },
@@ -388,7 +388,7 @@
         {
             "titre": "Grande extraction",
             "prerequis": "N, Extraction",
-            "descr": "Comme ci-dessus. Avec une Relance, empêche toutes les attaques.",
+            "descr": "Comme Extraction. Avec une Relance, empêche toutes les attaques.",
             "enabled": "1",
             "info": "0"
         },
@@ -768,7 +768,7 @@
         {
             "titre": "Accès à un Akasha",
             "prerequis": "Nephilim",
-            "descr": "Rives avec 2 Portes et d4 en Plans subtils",
+            "descr": "Rives avec 2 Portes connues et donne d4 en Tradition Plans subtils",
             "enabled": 1,
             "info": 0
         },
@@ -781,22 +781,22 @@
         },
         {
             "titre": "Adopté Arcane majeur",
-            "prerequis": "cf Codex AM",
-            "descr": "Adopté & d4 en Arcanes majeurs",
+            "prerequis": "cf Codex Arcanes Majeurs",
+            "descr": "Le nephilim est un Adopté & donne d4 en Tradition Arcanes majeurs",
             "enabled": 1,
             "info": 1
         },
         {
             "titre": "Artefact",
             "prerequis": "Nephilim",
-            "descr": "1 er ou 2 e cercle & PUI=15",
+            "descr": "Artefact avec sortilège de 1er ou 2e cercle & PUI=15",
             "enabled": 1,
             "info": 0
         },
         {
             "titre": "Artefact Atlante",
             "prerequis": "L",
-            "descr": "3 e cercle & PUI=15",
+            "descr": "Artefact avec sortilège de 3e cercle & PUI=15",
             "enabled": 1,
             "info": 0
         },
@@ -810,7 +810,7 @@
         {
             "titre": "Compréhension solaire",
             "prerequis": "Nephilim, BG, incompatible Ombre",
-            "descr": "+ 6 pts Compétence profanes",
+            "descr": "Donne 6 pts en plus à répartir dans les Compétences profanes",
             "enabled": 1,
             "info": 0
         },
