@@ -1,4 +1,4 @@
-.exported h1 {
+.exported h1, .exported h2 {
     font-weight: 100;
     text-transform: capitalize;
 }

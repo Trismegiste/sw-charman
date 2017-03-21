@@ -48,13 +48,10 @@ CharacterBuilder.prototype.build = function (templateName, charac) {
 }
 
 CharacterBuilder.prototype.findAtoutByName = function (name) {
-    for (var g in this.atoutList) {
-        var group = this.atoutList[g]
-        for (var a in group) {
-            var atout = group[a]
-            if (atout.titre === name) {
-                return atout
-            }
+    for (var idx in this.atoutList) {
+        var atout = this.atoutList[idx]
+        if (atout.titre === name) {
+            return atout
         }
     }
 

@@ -1,1560 +1,2000 @@
-{
-    "humain": [
-        {
-            "titre": "Acolyte",
-            "prerequis": "L, Joker",
-            "descr": "Un Joker Novice se met au service du personnage.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Acrobate",
-            "prerequis": "N, Agi d8, For d6",
-            "descr": "+2 aux jets d'Agilité liés à la souplesse, +1 en Parade si non-encombré.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Adepte",
-            "prerequis": "N, Arcanes (Miracles), Foi d8, Combat d8",
-            "descr": "For+d4 pour les attaques à mains nues ; toujours considéré armé ; peut lancer certains pouvoirs en tant qu'actions libres (voir texte)",
-            "enabled": "0",
-            "info": "0"
-        },
-        {
-            "titre": "Afflux de Pouvoir",
-            "prerequis": "Joker, A, Compétence d'Arcane d10",
-            "descr": "+2d6 PP en cas de Joker lors de l'Initiative.",
-            "enabled": "0",
-            "info": "0"
-        },
-        {
-            "titre": "Ambidextre",
-            "prerequis": "N, Agi d8",
-            "descr": "Ignore le malus de -2 pour la main non directrice.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Arcanes",
-            "prerequis": "N, Spécial",
-            "descr": "Permet de disposer de pouvoirs surnaturels.",
-            "enabled": "0",
-            "info": "0"
-        },
-        {
-            "titre": "Arme fétiche",
-            "prerequis": "N, Combat ou Tir d10",
-            "descr": "+1 en Combat ou en Tir avec une arme précise.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Arme fétiche adorée",
-            "prerequis": "V, Arme fétiche",
-            "descr": "+2 en Combat ou en Tir avec une arme précise.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Artisan",
-            "prerequis": "N",
-            "descr": "Capable de réaliser ouvrages d'artisanat (épées, bijoux, artefacts...). Jet INT",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "Artiste",
-            "prerequis": "N",
-            "descr": "Capable de réaliser œuvres d'art (sculpture, fugue, poème, tableau...). Jet ÂME",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "Arts martiaux",
-            "prerequis": "N, Combat d6",
-            "descr": "For+d4 pour les attaques à mains nues ; toujours considéré armé",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "As",
-            "prerequis": "N, Agi d8",
-            "descr": "+2 en Conduite, Navigation et Pilotage. Peut faire un jet de Résistance pour un véhicule en réussissant un jet à -2.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Assassin",
-            "prerequis": "N, Agi d8, Combat d6, Discrétion d8, Escalade d6",
-            "descr": "+2 aux dégâts contre une cible surprise",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Bagarreur",
-            "prerequis": "N, For d8",
-            "descr": "+2 aux dégâts à mains nues",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Balayage",
-            "prerequis": "N, For d8, Combat d8",
-            "descr": "Attaque tous les adversaires adjacents à -2.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Bidouilleur",
-            "prerequis": "N, voir texte",
-            "descr": "+2 aux jets de Réparation, temps de réparation réduit de moitié avec un Relance.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Blocage",
-            "prerequis": "A, Combat d8",
-            "descr": "Parade +1",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Brave",
-            "prerequis": "N, Âme d6 +2",
-            "descr": "+2 aux jets de Terreur",
-            "enabled": "0",
-            "info": "0"
-        },
-        {
-            "titre": "Bricoleur de génie",
-            "prerequis": "N, voir texte",
-            "descr": "Peut bidouiller un engin une fois par session de jeu.",
-            "enabled": "0",
-            "info": "0"
-        },
-        {
-            "titre": "Champion",
-            "prerequis": "N, voir texte",
-            "descr": "+2 au dégâts et en Résistance contre le mal d'origine surnaturelle.",
-            "enabled": "0",
-            "info": "0"
-        },
-        {
-            "titre": "Chanceux",
-            "prerequis": "N",
-            "descr": "+1 Jeton par session.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Charismatique",
-            "prerequis": "N, Âme d8",
-            "descr": "Charisme +2",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Cogneur",
-            "prerequis": "A, Bagarreur",
-            "descr": "Le dé de bonus de dégâts à mains nues passe à d8",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Combat à deux armes",
-            "prerequis": "N, Agi d8",
-            "descr": "Peut attaquer avec une arme dans chaque main sans subir le malus d'Actions multiples",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Combatif",
-            "prerequis": "A",
-            "descr": "+2 pour récupérer d'un état Secoué.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Commandement",
-            "prerequis": "N, Int d6",
-            "descr": "Les troupes ont un bonus de +1 pour récupérer d'un état Secoué.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Contacts",
-            "prerequis": "N",
-            "descr": "Peut demander de l'aide à des amis bien placés.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Contre-attaque",
-            "prerequis": "A, Combat d8",
-            "descr": "Attaque gratuite par Round à -2 contre un adversaire ayant raté son attaque.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Coriace",
-            "prerequis": "L, Endurci",
-            "descr": "Résistance +2",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Costaud",
-            "prerequis": "N, For d6, Vig d6",
-            "descr": "Résistance +1, limite de poids à 8 x For",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Coup Puissant",
-            "prerequis": "Joker, A, Combat d10",
-            "descr": "Double les dégâts en mêlée en cas de Joker lors de l'Initiative.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Courage liquide",
-            "prerequis": "N, Vig d6",
-            "descr": "Gagne un dé de Vigueur en buvant 25 cl d'alcool fort.",
-            "enabled": "0",
-            "info": "0"
-        },
-        {
-            "titre": "Dans le mille !",
-            "prerequis": "Joker, A, Tir/Lancer d10",
-            "descr": "Double les dégâts à distance en cas de Joker lors de l'Initiative.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Débrouillard",
-            "prerequis": "N, Int d6, Réparation d6, Perception d8",
-            "descr": "Peut improviser des gadgets.",
-            "enabled": "0",
-            "info": "0"
-        },
-        {
-            "titre": "Dégaine comme l'éclair",
-            "prerequis": "N, Agi d8",
-            "descr": "Peut dégainer une arme en action gratuite.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Don des langues",
-            "prerequis": "N, Int d6, 2× max",
-            "descr": "Donne 6 pts de création à répartir dans les 'Connaissances Langue'",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Drain de l'âme",
-            "prerequis": "A, voir texte",
-            "descr": "Spécial.",
-            "enabled": "0",
-            "info": "0"
-        },
-        {
-            "titre": "Endurci",
-            "prerequis": "L",
-            "descr": "Résistance +1",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Enragé",
-            "prerequis": "N",
-            "descr": "Voir texte.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Érudit",
-            "prerequis": "N, d8 dans les Compétences concernées",
-            "descr": "+2 dans deux Connaissances.",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "Esquive",
-            "prerequis": "A, Agi d8",
-            "descr": "-1 aux attaques à distance contre le personnage.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Expert",
-            "prerequis": "L, Professionnel dans le Trait",
-            "descr": "Le Trait passe à d12+2",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "Extraction",
-            "prerequis": "N, Agi d8",
-            "descr": "Empêche une attaque ennemie sur une retraite avec un jet d'Agilité.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Ferveur",
-            "prerequis": "V, Âme d8, Commandement",
-            "descr": "Les troupes ont un bonus de +1 aux dégâts.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Florentine",
-            "prerequis": "N, Agi d8, Combat d8",
-            "descr": "+1 en Combat contre les cibles n'ayant qu'une arme et sans bouclier. Ignore 1 point de bonus pour des attaquants multiples.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Forestier",
-            "prerequis": "N, Âme d6, Survie d8, Pistage d8",
-            "descr": "+2 en Survie, Pistage et Discrétion.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Frappe éclair",
-            "prerequis": "N, Agi d8",
-            "descr": "Peut attaquer un adversaire se portant au contact.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Frappe Foudroyante",
-            "prerequis": "H, Frappe éclair",
-            "descr": "Peut attaque tous les adversaires se portant au contact.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Frénésie",
-            "prerequis": "A, Combat d10",
-            "descr": "Peut faire une attaque supplémentaire avec un malus de -2.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Frénésie Suprême",
-            "prerequis": "V, Frénésie",
-            "descr": "Peut faire une attaque supplémentaire.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Grand balayage",
-            "prerequis": "V, Balayage",
-            "descr": "Attaque tous les adversaires adjacents.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Grand blocage",
-            "prerequis": "V, Blocage",
-            "descr": "Parade +2",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Grand contre-attaque",
-            "prerequis": "V, Contre-attaque",
-            "descr": "Comme Contre-attaque, sans le malus de -2.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Grande aura de commandement",
-            "prerequis": "N, Commandement",
-            "descr": "L'aura de commandement a un rayon de 10 cases.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Grande esquive",
-            "prerequis": "V, Esquive",
-            "descr": "-2 aux attaques à distance contre le personnage.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Grande extraction",
-            "prerequis": "N, Extraction",
-            "descr": "Comme Extraction. Avec une Relance, empêche toutes les attaques.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Grande résistance aux arcanes",
-            "prerequis": "N, Résistance aux arcanes",
-            "descr": "Armure +4 contre la magie, +4 pour résister aux pouvoirs.",
-            "enabled": "0",
-            "info": "0"
-        },
-        {
-            "titre": "Grande source de pouvoir",
-            "prerequis": "V, Source de pouvoir",
-            "descr": "Regagne 1 PP toutes les 15 minutes.",
-            "enabled": "0",
-            "info": "0"
-        },
-        {
-            "titre": "Guérison rapide",
-            "prerequis": "N, Vigueur d8",
-            "descr": "+2 au jets de guérison naturelle.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Guérisseur",
-            "prerequis": "N, Âme d8",
-            "descr": "+2 au jets de Soins.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Guerrier saint / impie",
-            "prerequis": "N, voir texte",
-            "descr": "Voir texte",
-            "enabled": "0",
-            "info": "0"
-        },
-        {
-            "titre": "Increvable",
-            "prerequis": "N, Joker, Âme d8",
-            "descr": "Ignore le malus de Blessures sur les jets lorsqu'il passe dans un État critique.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Inspiration",
-            "prerequis": "A, Commandement",
-            "descr": "Les troupes ont un bonus de +1 à leurs jets d'Âme.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Instinct de tueur",
-            "prerequis": "H",
-            "descr": "Remporte les oppositions en cas d'égalité. Possibilité de relancer un 1 sur un jet Opposé.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Investigateur",
-            "prerequis": "N, Int d8, Investigation d8, Réseaux d8",
-            "descr": "+2 en Investigation et Réseaux.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Leader naturel",
-            "prerequis": "N, Âme d8, Commandement",
-            "descr": "Le leader peut donner des Jetons à ses troupes.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Lien animal",
-            "prerequis": "N",
-            "descr": "Le personnage peut donner des Jetons à ses animaux.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Lien mutuel",
-            "prerequis": "N, Joker, Âme d8",
-            "descr": "Le personnage peut donner des Jetons à ses compagnons.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Mage",
-            "prerequis": "N, voir texte",
-            "descr": "Chaque Relance sur le jet d'Arcanes réduit le coût en pouvoir du sort de 1.",
-            "enabled": "0",
-            "info": "0"
-        },
-        {
-            "titre": "Maître",
-            "prerequis": "L, Joker, Expert dans le Trait",
-            "descr": "Le dé Joker passe à d10 pour ce Trait.",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "Maître d'armes",
-            "prerequis": "L, Combat d12",
-            "descr": "Parade +1",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Maître d'armes légendaire",
-            "prerequis": "L, Maître d'armes",
-            "descr": "Parade +2",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Maître des bêtes",
-            "prerequis": "N, Âme d8",
-            "descr": "Vous obtenez un compagnon animal.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Maîtrise des arts martiaux",
-            "prerequis": "V, Art martiaux, Combat d10",
-            "descr": "For+d6 pour les attaques à mains nues",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Meneur d'hommes",
-            "prerequis": "V, Commandement",
-            "descr": "Dé Joker à d10 pour les jets de groupe des alliés",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Mentaliste",
-            "prerequis": "N, Arcanes (Psioniques), Int d8, Psioniques d6",
-            "descr": "+2 pour tout jet de Psioniques Opposé.",
-            "enabled": "0",
-            "info": "0"
-        },
-        {
-            "titre": "Nerfs d'acier",
-            "prerequis": "N, Joker, Vigueur d8",
-            "descr": "Ignore 1 point de malus lié aux Blessures.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Nerfs d'acier trempé",
-            "prerequis": "N, Nerfs d'acier",
-            "descr": "Ignore 2 points de malus liés aux Blessures.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Noble",
-            "prerequis": "N",
-            "descr": "Riche, Charisme +2, Statut et richesse.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Nouveau Pouvoir",
-            "prerequis": "N, Arcanes",
-            "descr": "Le personnage obtient un nouveau pouvoir.",
-            "enabled": "0",
-            "info": "0"
-        },
-        {
-            "titre": "Panache",
-            "prerequis": "N, Âme d8",
-            "descr": "+2 en cas d'utilisation de Jeton pour un jet de Trait (y compris pour un jet d'Encaissement)",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Poigne Ferme",
-            "prerequis": "N, Agi d8",
-            "descr": "Ignore la pénalité lié à une Plateforme instable.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Points de Pouvoir",
-            "prerequis": "N, Arcanes",
-            "descr": "+5 PP, une fois par Rang.",
-            "enabled": "0",
-            "info": "0"
-        },
-        {
-            "titre": "Professionnel",
-            "prerequis": "L, d12 dans le Trait",
-            "descr": "Le Trait passe à d12+1",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "Recycleur",
-            "prerequis": "N, Chanceux",
-            "descr": "Possibilité de trouver un équipement utile une fois par session",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Résistance aux arcanes",
-            "prerequis": "N, Âme d8",
-            "descr": "Armure +2 contre la magie, +2 pour résister aux pouvoirs.",
-            "enabled": "0",
-            "info": "0"
-        },
-        {
-            "titre": "Riche",
-            "prerequis": "N",
-            "descr": "3 fois les fonds de départ, 75 000 $ de salaire annuel.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Rock n' Roll !",
-            "prerequis": "A, Tir d8",
-            "descr": "Le tireur ignore le malus de Tir automatique s'il ne se déplace pas.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Sang-froid",
-            "prerequis": "A, Tête Froide",
-            "descr": "Agit sur la meilleure de trois cartes en combat.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Sans pitié",
-            "prerequis": "A",
-            "descr": "Peut utiliser des Jetons sur les jets de dégâts.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Séduisant",
-            "prerequis": "N",
-            "descr": "Charisme +2",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Serrez les Rang !",
-            "prerequis": "A, Int d8, Commandement",
-            "descr": "Les troupes ont un bonus de +1 aux Résistance.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Sixième sens",
-            "prerequis": "N",
-            "descr": "Jet de Perception à -2 pour anticiper pièges et embuscades.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Source de pouvoir",
-            "prerequis": "A, Âme d6, Arcanes",
-            "descr": "Regagne 1 PP toutes les 30 minutes.",
-            "enabled": "0",
-            "info": "0"
-        },
-        {
-            "titre": "Suivants",
-            "prerequis": "L, Joker",
-            "descr": "Attire 5 suivants.",
-            "enabled": "0",
-            "info": "0"
-        },
-        {
-            "titre": "Tacticien",
-            "prerequis": "A, Joker, Int d8, Conn. (Bataille) d6",
-            "descr": "Le joueur fait un jet de Connaissance (Bataille) et gagne une carte d'action par Succès et Relance. Il peut par la suiteremplacer la carte d'un allié par une de celles-ci durant le combat.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Tête froide",
-            "prerequis": "A, Int d8",
-            "descr": "Agit sur la meilleure de deux cartes en combat.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Tireur d'élite",
-            "prerequis": "A",
-            "descr": "La manœuvre Visée (+2 en Tir) est automatique si le personnage ne se déplace pas.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Touche-à-tout",
-            "prerequis": "N, Int d10",
-            "descr": "Pas de malus de -2 sur les jets de Connaissance non maitrisées.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Très Chanceux",
-            "prerequis": "N, Chanceux",
-            "descr": "+2 Jetons par session.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Très riche",
-            "prerequis": "N, Riche",
-            "descr": "5 fois les fonds de départ, 250 000 $ de salaire annuel.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Très séduisant",
-            "prerequis": "N, Séduisant",
-            "descr": "Charisme +4",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Trompe-la-mort",
-            "prerequis": "V, Increvable",
-            "descr": "50 % de chance de survivre à une « mort ».",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Tueur de géant",
-            "prerequis": "V",
-            "descr": "+1d6 aux dégâts contre les grandes créatures.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Véloce",
-            "prerequis": "N, Agi d6",
-            "descr": "Allure +2, le dé de Course passe à d10.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Vif",
-            "prerequis": "N",
-            "descr": "Défausse les cartes de 5 ou moins lors de l'Initiative.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Vigilant",
-            "prerequis": "N",
-            "descr": "+2 en Perception",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Voleur",
-            "prerequis": "N, Agi d8, Escalade d6, Crochetage d6, Discrétion d8",
-            "descr": "+2 en Escalade, Crochetage, Discrétion, et pour désamorcer les pièges.",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Volonté de Fer",
-            "prerequis": "N, Intimidation d6",
-            "descr": "+2 en Intimidation et Sarcasme, +2 pour y résister.",
-            "enabled": "1",
-            "info": "0"
-        }
-    ],
-    "nephilim": [
-        {
-            "titre": "Accès à un Akasha",
-            "prerequis": "Nephilim",
-            "descr": "Rives avec 2 Portes connues et donne d4 en Tradition Plans subtils",
-            "enabled": 1,
-            "info": 0
-        },
-        {
-            "titre": "Admirateurs",
-            "prerequis": "Nephilim, [Réseaux d8+ ou Persuasion d8+ ou Charisme +2+] et Arcanes mineurs d4+",
-            "descr": "groupe constitué de 5+2d4 humains profanes",
-            "enabled": 1,
-            "info": 0
-        },
-        {
-            "titre": "Adopté Arcane majeur",
-            "prerequis": "cf Codex Arcanes Majeurs",
-            "descr": "Le nephilim est un Adopté & donne d4 en Tradition Arcanes majeurs",
-            "enabled": 1,
-            "info": 1
-        },
-        {
-            "titre": "Artefact",
-            "prerequis": "Nephilim",
-            "descr": "Artefact avec sortilège de 1er ou 2e cercle & PUI=15",
-            "enabled": 1,
-            "info": 0
-        },
-        {
-            "titre": "Artefact Atlante",
-            "prerequis": "L",
-            "descr": "Artefact avec sortilège de 3e cercle & PUI=15",
-            "enabled": 1,
-            "info": 0
-        },
-        {
-            "titre": "Augmentation Initiation",
-            "prerequis": "Nephilim",
-            "descr": "Augmente le niveau d'Initiation (INI) de 2 puces",
-            "enabled": 1,
-            "info": 0
-        },
-        {
-            "titre": "Compréhension solaire",
-            "prerequis": "Nephilim, BG, incompatible Ombre",
-            "descr": "Donne 6 pts en plus à répartir dans les Compétences profanes",
-            "enabled": 1,
-            "info": 0
-        },
-        {
-            "titre": "Disciple",
-            "prerequis": "Nephilim",
-            "descr": "Premier Cercle de Magie (verbe Percevoir) + donne 6 Mots",
-            "enabled": 1,
-            "info": 1
-        },
-        {
-            "titre": "Domaines Analogiques",
-            "prerequis": "Disciple",
-            "descr": "Donne 9 Mots de la table analogique",
-            "enabled": 1,
-            "info": 1
-        },
-        {
-            "titre": "Effet-Dragon",
-            "prerequis": "Nephilim",
-            "descr": "Compagnon Effet-Dragon. INI du nephilim -1TDD. Ka non-opposé. Retrouve en 2d6 jours",
-            "enabled": 1,
-            "info": 0
-        },
-        {
-            "titre": "Glorieux Alliage",
-            "prerequis": "L, 6 × Atouts Substances Œuvr.Blanc, Outil du glorieux alliage",
-            "descr": "Donne accès au 3e cercle d'Alchimie & au mentor alchimique",
-            "enabled": 1,
-            "info": 1
-        },
-        {
-            "titre": "Magicien",
-            "prerequis": "V, Disciple, 3 × Atouts Domaines analog",
-            "descr": "Donne accès aux sortilèges du 2e Cercle (verbe Manipuler)",
-            "enabled": 1,
-            "info": 0
-        },
-        {
-            "titre": "Magistère",
-            "prerequis": "L, Magicien, 7 × Atouts Domaines analog",
-            "descr": "Donne accès aux sortilèges du 3e Cercle (verbe Maîtriser)",
-            "enabled": 1,
-            "info": 0
-        },
-        {
-            "titre": "Nephilim",
-            "prerequis": "Race",
-            "descr": "INI démarre à d4 + 0 puce",
-            "enabled": 1,
-            "info": 0
-        },
-        {
-            "titre": "Outil Primaire",
-            "prerequis": "Outil Secondaire",
-            "descr": "Alchimie du 1er cercle. Donne accès aux formules Œuvre au noir de l'Outil à choisir parmi [Cornue, Forge, Creuset, Alambic et Athanor]",
-            "enabled": 1,
-            "info": 1
-        },
-        {
-            "titre": "Outil Secondaire",
-            "prerequis": "Outil Tertiaire",
-            "descr": "Alchimie du 1er cercle. Donne accès aux formules Œuvre au noir de l'Outil à choisir parmi [Cornue, Forge, Creuset, Alambic et Athanor]. Malus-1",
-            "enabled": 1,
-            "info": 1
-        },
-        {
-            "titre": "Outil Tertiaire",
-            "prerequis": "Nephilim",
-            "descr": "Alchimie du 1er cercle. Donne accès aux formules Œuvre au noir de l'Outil à choisir parmi [Cornue, Forge, Creuset, Alambic et Athanor]. Malus-2",
-            "enabled": 1,
-            "info": 1
-        },
-        {
-            "titre": "Substances d'œuvre au Blanc",
-            "prerequis": "V,  Outil primaire, Outils des substances",
-            "descr": "Permet d'utiliser les formules de 2 Substances œuvre au blanc à choisir",
-            "enabled": 1,
-            "info": 1
-        },
-        {
-            "titre": "Malkut",
-            "prerequis": "Nephilim",
-            "descr": "Kabbale 1er cercle. Donne accès aux invocations de la sephirah Malkut pour 3 Mondes de Kabbale",
-            "enabled": 1,
-            "info": 1
-        },
-        {
-            "titre": "Yesod",
-            "prerequis": "Malkut",
-            "descr": "Kabbale 1er cercle. Donne accès aux invocations de la sephirah Yesod pour 2 Mondes de Kabbale",
-            "enabled": 1,
-            "info": 1
-        },
-        {
-            "titre": "Hod",
-            "prerequis": "Yesod",
-            "descr": "Kabbale 1er cercle. Donne accès aux invocations de la sephirah Hod pour 2 Mondes de Kabbale",
-            "enabled": 1,
-            "info": 1
-        },
-        {
-            "titre": "Netzah",
-            "prerequis": "Hod",
-            "descr": "Kabbale 1er cercle. Donne accès aux invocations de la sephirah Netzah pour 2 Mondes de Kabbale",
-            "enabled": 1,
-            "info": 1
-        },
-        {
-            "titre": "Tipheret",
-            "prerequis": "V, Netzah",
-            "descr": "Kabbale 2e cercle. Donne accès aux invocations de la sephirah Tipheret pour 1 Monde de Kabbale",
-            "enabled": 1,
-            "info": 1
-        },
-        {
-            "titre": "Geburah",
-            "prerequis": "V, Tipheret",
-            "descr": "Kabbale 2e cercle. Donne accès aux invocations de la sephirah Geburah pour 1 Monde de Kabbale",
-            "enabled": 1,
-            "info": 1
-        },
-        {
-            "titre": "Chesed",
-            "prerequis": "V, Geburah",
-            "descr": "Kabbale 2e cercle. Donne accès aux invocations de la sephirah Chesed pour 1 Monde de Kabbale",
-            "enabled": 1,
-            "info": 1
-        },
-        {
-            "titre": "Binah",
-            "prerequis": "L, Chesed",
-            "descr": "Kabbale 3e cercle. Donne accès aux invocations de la sephirah Binah pour 1 Monde de Kabbale",
-            "enabled": 1,
-            "info": 1
-        },
-        {
-            "titre": "Chokmah",
-            "prerequis": "L, Binah",
-            "descr": "Kabbale 3e cercle. Donne accès aux invocations de la sephirah Chokmah pour 1 Monde de Kabbale",
-            "enabled": 1,
-            "info": 1
-        },
-        {
-            "titre": "Kether",
-            "prerequis": "L, Chokmah",
-            "descr": "Kabbale 3e cercle. Donne accès aux invocations de la sephirah Kether pour 1 Monde de Kabbale",
-            "enabled": 1,
-            "info": 1
-        },
-        {
-            "titre": "Spécial",
-            "prerequis": "Nephilim",
-            "descr": "customisable",
-            "enabled": 1,
-            "info": 1
-        }
-    ],
-    "monstre": [
-        {
-            "titre": "Allure",
-            "descr": "Allure = km/h divisé par 4",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "Armure magique",
-            "descr": "protection magique",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "Armure physique",
-            "descr": "protection physique",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "Attaque de Ka",
-            "descr": "attaques magiques de son Ka dominant",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Créature artificielle",
-            "descr": "Jet secoué +2, pas de loca, pas de malus blessure",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Créature de Ka",
-            "descr": "affectée par les armes magiques",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Élémentaire",
-            "descr": "pas de loca, pas de malus blessure",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Enfouissement",
-            "descr": "déplacement normal",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Déliquescence lente",
-            "descr": "durée en mois",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Déliquescence moyenne",
-            "descr": "heures ou jours",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Déliquescence rapide",
-            "descr": "quelques rounds",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Immunité",
-            "descr": "Immunité à un type de dégats physiques",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "Invisibilité de Ka",
-            "descr": "invisible hormis en Vision-Ka",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Invisibilité profane",
-            "descr": "Invisible sauf l'ombre et les initiés avec jet Ka-Soleil FD [10 – KAD/2]",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Invulnérabilité de Kabbale",
-            "descr": "Invulnérable aux dégâts physiques sauf aux armes enduites de sang",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Ka-élémentaire",
-            "descr": "Un être éthéré de pur(s) Ka-élément(s).",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Spécial",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "Pouvoir",
-            "descr": "Pouvoir SW. Lancé avec KAD FD 4",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "Taille Énorme",
-            "descr": "Rés +8 à +10+ et Toucher +4",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "Taille Grand",
-            "descr": "Rés +4 à +7 et Toucher +2",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "Taille Normal",
-            "descr": "Rés -2 à +3 et Toucher +0",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "Taille Petit",
-            "descr": "Rés -2 et Toucher -2",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Terreur",
-            "descr": "Pour les profanes : jet d'ÂME (malus -0 à -4) pour résister",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "Terreur de Ka",
-            "descr": "Jet de KAD (malus -0 à -4) pour résister. Echec : Secoué, Sur un 1 (qqsoit dé joker) : Ombre",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "Vision nocturne",
-            "descr": "pas de malus d'obscurité",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Vol",
-            "descr": "Vol à l'allure indiquée",
-            "enabled": "1",
-            "info": "1"
-        }
-    ],
-    "general": [
-        {
-            "titre": "Attribut +1TDD",
-            "prerequis": "Limité à 1 par rang",
-            "descr": "Un attribut augmente d'un type de dé",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "2 Compétences +1TDD",
-            "prerequis": "si compétence < attribut",
-            "descr": "2 compétences augmentent d'un type de dé",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "1 Compétence +1TDD",
-            "prerequis": "si compétence ≥ attribut",
-            "descr": "1 compétences augmente d'un type de dé",
-            "enabled": "1",
-            "info": "1"
-        }
-    ],
-    "antediluvien": [
-        {
-            "titre": "Basaltique",
-            "prerequis": "B, Nephilim",
-            "descr": "Armure phys de 6. 1 action. KAD FD RM[Ka-Soleil]. 5 (10) rd",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "Cycle basaltique 1 Ka",
-            "prerequis": "N*, 3 cycles maxi",
-            "descr": "2x +1d10 effet basaltique Ka opposé. ",
-            "enabled": "1",
-            "info": "1"
-        },
-        {
-            "titre": "Métamorphisme",
-            "prerequis": "Cycle basaltique",
-            "descr": "Bonus +1 à la RM (cumulable) mais non-cumulable avec armure",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Dracomaque",
-            "prerequis": "B, Nephilim",
-            "descr": "Réseaux dracomaque + clef de refuge akashique",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Dracologie",
-            "prerequis": "N",
-            "descr": "Détection/pistage/analyse/prédiction. Ka-élément selon action",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Esto-Ka-de",
-            "prerequis": "N",
-            "descr": "1d8+KAD. 1 action. Ka au choix FD 4. Portée contact. ",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Saltillera",
-            "prerequis": "N",
-            "descr": "Attire effet-dragon. 1 action. Ka-Feu FD 4. Portée 24. 2d6 rd",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Purification draconique",
-            "prerequis": "N",
-            "descr": "apaise les champs magiques en dissipant un ED. 1 action. KAD FD 4 + puce. Portée 12. ",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Véronique",
-            "prerequis": "V, Saltillera",
-            "descr": "+2 Parade contre ED",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Rebolera",
-            "prerequis": "V, Saltillera, Esto-Ka-de",
-            "descr": "Secoue 3 ED. 1 action. Ka-Lune FD 4. Portée 24. variable",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Dompter",
-            "prerequis": "V, Dracologie, Esto-Ka-de",
-            "descr": "dompte un ED. 1 action. Ka ED FD 4. Portée 12. ",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Cristal-dragon",
-            "prerequis": "V, Dracologie, Purifi draco",
-            "descr": "stocke l'energie magique d'un ED dans urne. 1 action. Ka ED ou KAD FD 4 ou RM. Portée contact. ",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Arme-dragon",
-            "prerequis": "L, Rebolera,  Purifi draco",
-            "descr": "fabrique une arme magique contenant un ED. 1 action. Ka ED FD 4. Portée contact. ",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Tatouage-dragon",
-            "prerequis": "L, Rebolera,  Cristal-dragon",
-            "descr": "1 action. Ka-élément selon action FD 4. Portée contact",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Tueur de dragon",
-            "prerequis": "L, Véronique",
-            "descr": "+1d8 dégats physiques & +1d6 dégâts magiques sur Taille >= 3. .  FD . Portée contact. ",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Vahana",
-            "prerequis": "L, Dompter",
-            "descr": "Le pentacle chevauche un ED précédemment dompté (incarné ou désincarné). 1 action. Ka-Eau FD 4. Portée ED à vue. 1 h",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Prime",
-            "prerequis": "B, Nephilim",
-            "descr": "Passer en vision-ka = 1 puce de prime-essence. Occultisme d4",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Attraction de Ka",
-            "prerequis": "N",
-            "descr": "Attire champs avec jet cumulatif avec +2 puces min/h/j. 1 rd. KAD FD 4. coût de base 2 ",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Apostasie de l'opposition",
-            "prerequis": "N",
-            "descr": "conjonction de l'opposé majeur. 1 action. KAD FD 4. coût 3. Portée Personnel. prochain j",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Armure étincelante",
-            "prerequis": "N",
-            "descr": "4 armure magique. 1 action. KAD FD 4. coût 2. Portée Personnel. 1 (2) h",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Message élémentaire",
-            "prerequis": "N",
-            "descr": "SMS par champs magiques. 1 minute. KAD FD 4. coût 2. Portée même plan. 1 minute",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Intensification plexus",
-            "prerequis": "V, Attraction de Ka",
-            "descr": "PUI + 4 (8). 1 minute. KAD FD 4. coût 4. Portée plexus. présence",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Apostasie de la neutralité",
-            "prerequis": "V",
-            "descr": "conjonction du neutre défavorable. 1 minute. KAD FD 4. coût 5. Portée Personnel. prochain j",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Transe curative",
-            "prerequis": "V, Armure étincelante, Apostasie opposition",
-            "descr": "guérison de blessure magique tempo. 1 heure. KAD FD 4. coût 5. Portée Personnel. ",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Narcose voorique",
-            "prerequis": "V, Armure étincelante, Attraction Ka",
-            "descr": "Désincarné, Narcose : 2 puces de prime à la place d'un puce de Ka. 1 action. KAD FD 4. coût 4",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Création de plexus",
-            "prerequis": "L, Intensification plexus",
-            "descr": "PUI 4 (8). 1 heure. KAD FD 4. coût 8. Portée plexus. présence",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Apostasie pentaclique",
-            "prerequis": "L, Apostasie opposition & neutralité",
-            "descr": "Réorganise le pentacle un jour de GC. 1 heure. KAD FD 4. coût 10. jusqu'à GC ou mois",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Projection éthérée",
-            "prerequis": "L, Apostasie pentaclique",
-            "descr": "Attaque magique à distance 2xKAD. 1 action. KAD FD 4. coût 2. Portée 24. ",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Transsubstantiation",
-            "prerequis": "L, Création de plexus",
-            "descr": "transforme puce de prime en puce de bonus de SO. 1 action. KAD FD 4. coût 2 par +1. Portée Personnel. rd suivant",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Phare cosmique",
-            "prerequis": "L, Projection éthérée, Projection éthérée, Message élémentaire",
-            "descr": "1 action. KAD FD 4. coût pool. +1d8 dégâts par 4 puces sur 12 cases",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Adepte du dragon",
-            "prerequis": "B, Nephilim",
-            "descr": "TP par omphalos, protection contre ED, bonus plexus/omphalos",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Apaiser effet-dragon",
-            "prerequis": "N",
-            "descr": "endort un ED. 1 action. KAD FD RM ED. Portée 12. 2d6 (3d6) min",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Confusion",
-            "prerequis": "N",
-            "descr": "Secoue 3 humains. 1 action. KAD FD 6. Portée 12. variable",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Écaille de dragon",
-            "prerequis": "N",
-            "descr": "armure phys de 5. 1 action. KAD FD 6. Portée Personnel. 1 (2) h",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Griffe de dragon",
-            "prerequis": "N",
-            "descr": "+1 TDD en Combat, Escalade, Natation, For, Vig, Agi & 50% Allure. 1 action. KAD FD 6. 1 (2) h",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Contrôler effet-dragon",
-            "prerequis": "V, Apaiser D, Confusion",
-            "descr": "1 action. KAD FD RM ED. coût 1 puce. Portée 24. 2d6 (3d6) min",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Spasme de furie",
-            "prerequis": "V, Confusion, Griffe de dragon",
-            "descr": "Dégâts combat +1d10 & KAD FD 5 pour att. 1 action. KAD FD 6. Portée Personnel. combat",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Dent du dragon",
-            "prerequis": "V, Griffe de dragon",
-            "descr": "Souffle de dragon à 2d8. 1 action. KAD FD 6. Portée 24. ",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Régénération draconique",
-            "prerequis": "V, Écaille de dragon",
-            "descr": "1 blessure / rd. 1 action. KAD FD 6. Portée Personnel. 5 (10) minutes",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Aile de dragon",
-            "prerequis": "L",
-            "descr": "200 km/h. 1 action. KAD FD 6. Portée Personnel. 1 (2) h",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Créer effet-dragon",
-            "prerequis": "L, Contrôler ED",
-            "descr": "réduction par sacrifice. 1 heure. KAD FD 6. coût 1 puce / TDD. Portée conjonction. 1 semaine",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Dissiper un effet-dragon",
-            "prerequis": "L, Contrôler ED, Dent du dragon",
-            "descr": "réduction par sacrifice. 1 action. KAD FD 6. coût 1 puce / TDD. Portée 24. ",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Transformation draconique",
-            "prerequis": "L, Écaille,  Aile et dent du dragon",
-            "descr": "réduction par sacrifice. 1 action. KAD FD 6. coût 3 puces. Portée Personnel. 1 (2) h",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Héros-dragon",
-            "prerequis": "L, Spasme de furie, Régèn draco, Pyrim ou Eolim, mâle",
-            "descr": "réduction par sacrifice. Invulnérabilité aux attaques physiques. 1 action. KAD FD 6. coût 1 + 1 puce/rd. Portée Personnel. 1+ round",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Prêtresse-dragon",
-            "prerequis": "L, Créer et dissiper ED, Onirim ou Faërim ou Hydrim, femelle",
-            "descr": "Rituel en coopératif (+1 /succès/relance) max +2. Portée Personnel. un rituel",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Prométhéen",
-            "prerequis": "B, Nephilim",
-            "descr": "Metabonus sur culture-g, Arcanes mineurs d4 et le simulacre aime son nephilim",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Liaison corporelle",
-            "prerequis": "N",
-            "descr": "Si la comp est possédée par les 2 : d4=+0, d6/d8=+1, d10/12=+2. 1 action. KAD FD RM[Ka-Soleil]. 1 heure",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Entretien initiatique",
-            "prerequis": "N",
-            "descr": "Conversation sur un thème. 1 minute. KAD FD RM[Ka-Soleil] cible. Portée humain. discussion",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Eclipse solaire",
-            "prerequis": "N",
-            "descr": "Métamorphe & Pentacle cachés. SO : KAD plafonné par Ka-Soleil. 1 minute. KAD FD RM[Ka-Soleil]. Personnel. Prochain jour astro",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Liaison onirique",
-            "prerequis": "N",
-            "descr": "Bonus de +2 en Akasha sur Nef, Boussole & passage de Porte",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Liaison spirituelle",
-            "prerequis": "V, Liaison corpo & orinique",
-            "descr": "Ombre réduit d'un ordre de grandeur",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Sapience profane",
-            "prerequis": "V, Liaison corporelle",
-            "descr": "substitue Trad pour Comp. 1 minute. KAD FD RM[Ka-Soleil]. Portée Personnel.  Proch jour astro",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Voile prométhéen",
-            "prerequis": "V, Éclipse solaire",
-            "descr": "Orichalque échelle neutre. KAD plafonné. 1 minute. KAD FD RM[Ka-Soleil]. Portée Personnel. 1 h",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Compagnonnage prométhéen",
-            "prerequis": "V, Éclipse solaire, Entretien initiatique",
-            "descr": "KAD / 2 membres à choisir parmi Épée, Bâton ou Coupe. 1d4 sem. Portée Initié a.min. Jusqu'à contre-emploi",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Absorption initiatique",
-            "prerequis": "L, Compagnonnage prom. & Sapience profane",
-            "descr": "Copier une Compétence à hauteur de Ka-Soleil max. 1 heure. KAD FD RM[Ka-Soleil] cible. Portée humain. définitif",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Daïmon",
-            "prerequis": "L, Immunité saturnienne",
-            "descr": "Invoquer un daïmon. INI plafonnée par Ka-Soleil. 2d6 j. KAD FD RM daïmon. Portée Personnel. définitif",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Immunité saturnienne",
-            "prerequis": "L, Compagnonnage & Voile prométhéen",
-            "descr": "Orichalque échelle zéro. KAD plafonné. 1 action. KAD FD RM[Ka-Soleil]. Portée Personnel. 1 h",
-            "enabled": "1",
-            "info": "0"
-        },
-        {
-            "titre": "Initiation solaire",
-            "prerequis": "L, Compagnonnage prométhéen, 2 × max",
-            "descr": "+1 rang en Ka-Soleil. 1 sem..  FD . Portée Personnel. définitif",
-            "enabled": "1",
-            "info": "0"
-        }
-    ]
-}
+[
+    {
+        "titre": "Acolyte",
+        "prerequis": "L, Joker",
+        "descr": "Un Joker Novice se met au service du personnage.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "légendaire"
+    },
+    {
+        "titre": "Acrobate",
+        "prerequis": "N, Agi d8, For d6",
+        "descr": "+2 aux jets d'Agilité liés à la souplesse, +1 en Parade si non-encombré.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "professionnel"
+    },
+    {
+        "titre": "Adepte",
+        "prerequis": "N, Arcanes (Miracles), Foi d8, Combat d8",
+        "descr": "For+d4 pour les attaques à mains nues ; toujours considéré armé ; peut lancer certains pouvoirs en tant qu'actions libres (voir texte)",
+        "enabled": "0",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "professionnel"
+    },
+    {
+        "titre": "Afflux de Pouvoir",
+        "prerequis": "Joker, A, Compétence d'Arcane d10",
+        "descr": "+2d6 PP en cas de Joker lors de l'Initiative.",
+        "enabled": "0",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "joker"
+    },
+    {
+        "titre": "Ambidextre",
+        "prerequis": "N, Agi d8",
+        "descr": "Ignore le malus de -2 pour la main non directrice.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Arcanes",
+        "prerequis": "N, Spécial",
+        "descr": "Permet de disposer de pouvoirs surnaturels.",
+        "enabled": "0",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Arme fétiche",
+        "prerequis": "N, Combat ou Tir d10",
+        "descr": "+1 en Combat ou en Tir avec une arme précise.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Arme fétiche adorée",
+        "prerequis": "V, Arme fétiche",
+        "descr": "+2 en Combat ou en Tir avec une arme précise.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Artisan",
+        "prerequis": "N",
+        "descr": "Capable de réaliser ouvrages d'artisanat (épées, bijoux, artefacts...). Jet INT",
+        "enabled": "1",
+        "info": "1",
+        "group": "humain",
+        "subgroup": "professionnel"
+    },
+    {
+        "titre": "Artiste",
+        "prerequis": "N",
+        "descr": "Capable de réaliser œuvres d'art (sculpture, fugue, poème, tableau...). Jet ÂME",
+        "enabled": "1",
+        "info": "1",
+        "group": "humain",
+        "subgroup": "professionnel"
+    },
+    {
+        "titre": "Arts martiaux",
+        "prerequis": "N, Combat d6",
+        "descr": "For+d4 pour les attaques à mains nues ; toujours considéré armé",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "As",
+        "prerequis": "N, Agi d8",
+        "descr": "+2 en Conduite, Navigation et Pilotage. Peut faire un jet de Résistance pour un véhicule en réussissant un jet à -2.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "professionnel"
+    },
+    {
+        "titre": "Assassin",
+        "prerequis": "N, Agi d8, Combat d6, Discrétion d8, Escalade d6",
+        "descr": "+2 aux dégâts contre une cible surprise",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "professionnel"
+    },
+    {
+        "titre": "Bagarreur",
+        "prerequis": "N, For d8",
+        "descr": "+2 aux dégâts à mains nues",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Balayage",
+        "prerequis": "N, For d8, Combat d8",
+        "descr": "Attaque tous les adversaires adjacents à -2.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Bidouilleur",
+        "prerequis": "N, voir texte",
+        "descr": "+2 aux jets de Réparation, temps de réparation réduit de moitié avec un Relance.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "professionnel"
+    },
+    {
+        "titre": "Blocage",
+        "prerequis": "A, Combat d8",
+        "descr": "Parade +1",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Brave",
+        "prerequis": "N, Âme d6 +2",
+        "descr": "+2 aux jets de Terreur",
+        "enabled": "0",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Bricoleur de génie",
+        "prerequis": "N, voir texte",
+        "descr": "Peut bidouiller un engin une fois par session de jeu.",
+        "enabled": "0",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "professionnel"
+    },
+    {
+        "titre": "Champion",
+        "prerequis": "N, voir texte",
+        "descr": "+2 au dégâts et en Résistance contre le mal d'origine surnaturelle.",
+        "enabled": "0",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "professionnel"
+    },
+    {
+        "titre": "Chanceux",
+        "prerequis": "N",
+        "descr": "+1 Jeton par session.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Charismatique",
+        "prerequis": "N, Âme d8",
+        "descr": "Charisme +2",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "social"
+    },
+    {
+        "titre": "Cogneur",
+        "prerequis": "A, Bagarreur",
+        "descr": "Le dé de bonus de dégâts à mains nues passe à d8",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Combat à deux armes",
+        "prerequis": "N, Agi d8",
+        "descr": "Peut attaquer avec une arme dans chaque main sans subir le malus d'Actions multiples",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Combatif",
+        "prerequis": "A",
+        "descr": "+2 pour récupérer d'un état Secoué.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Commandement",
+        "prerequis": "N, Int d6",
+        "descr": "Les troupes ont un bonus de +1 pour récupérer d'un état Secoué.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "commandement"
+    },
+    {
+        "titre": "Contacts",
+        "prerequis": "N",
+        "descr": "Peut demander de l'aide à des amis bien placés.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "social"
+    },
+    {
+        "titre": "Contre-attaque",
+        "prerequis": "A, Combat d8",
+        "descr": "Attaque gratuite par Round à -2 contre un adversaire ayant raté son attaque.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Coriace",
+        "prerequis": "L, Endurci",
+        "descr": "Résistance +2",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "légendaire"
+    },
+    {
+        "titre": "Costaud",
+        "prerequis": "N, For d6, Vig d6",
+        "descr": "Résistance +1, limite de poids à 8 x For",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Coup Puissant",
+        "prerequis": "Joker, A, Combat d10",
+        "descr": "Double les dégâts en mêlée en cas de Joker lors de l'Initiative.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "joker"
+    },
+    {
+        "titre": "Courage liquide",
+        "prerequis": "N, Vig d6",
+        "descr": "Gagne un dé de Vigueur en buvant 25 cl d'alcool fort.",
+        "enabled": "0",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "étrange"
+    },
+    {
+        "titre": "Dans le mille !",
+        "prerequis": "Joker, A, Tir/Lancer d10",
+        "descr": "Double les dégâts à distance en cas de Joker lors de l'Initiative.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "joker"
+    },
+    {
+        "titre": "Débrouillard",
+        "prerequis": "N, Int d6, Réparation d6, Perception d8",
+        "descr": "Peut improviser des gadgets.",
+        "enabled": "0",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "professionnel"
+    },
+    {
+        "titre": "Dégaine comme l'éclair",
+        "prerequis": "N, Agi d8",
+        "descr": "Peut dégainer une arme en action gratuite.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Don des langues",
+        "prerequis": "N, Int d6, 2× max",
+        "descr": "Donne 6 pts de création à répartir dans les 'Connaissances Langue'",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Drain de l'âme",
+        "prerequis": "A, voir texte",
+        "descr": "Spécial.",
+        "enabled": "0",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "pouvoir"
+    },
+    {
+        "titre": "Endurci",
+        "prerequis": "L",
+        "descr": "Résistance +1",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "légendaire"
+    },
+    {
+        "titre": "Enragé",
+        "prerequis": "N",
+        "descr": "Voir texte.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Érudit",
+        "prerequis": "N, d8 dans les Compétences concernées",
+        "descr": "+2 dans deux Connaissances.",
+        "enabled": "1",
+        "info": "1",
+        "group": "humain",
+        "subgroup": "professionnel"
+    },
+    {
+        "titre": "Esquive",
+        "prerequis": "A, Agi d8",
+        "descr": "-1 aux attaques à distance contre le personnage.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Expert",
+        "prerequis": "L, Professionnel dans le Trait",
+        "descr": "Le Trait passe à d12+2",
+        "enabled": "1",
+        "info": "1",
+        "group": "humain",
+        "subgroup": "légendaire"
+    },
+    {
+        "titre": "Extraction",
+        "prerequis": "N, Agi d8",
+        "descr": "Empêche une attaque ennemie sur une retraite avec un jet d'Agilité.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Ferveur",
+        "prerequis": "V, Âme d8, Commandement",
+        "descr": "Les troupes ont un bonus de +1 aux dégâts.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "commandement"
+    },
+    {
+        "titre": "Florentine",
+        "prerequis": "N, Agi d8, Combat d8",
+        "descr": "+1 en Combat contre les cibles n'ayant qu'une arme et sans bouclier. Ignore 1 point de bonus pour des attaquants multiples.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Forestier",
+        "prerequis": "N, Âme d6, Survie d8, Pistage d8",
+        "descr": "+2 en Survie, Pistage et Discrétion.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "professionnel"
+    },
+    {
+        "titre": "Frappe éclair",
+        "prerequis": "N, Agi d8",
+        "descr": "Peut attaquer un adversaire se portant au contact.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Frappe Foudroyante",
+        "prerequis": "H, Frappe éclair",
+        "descr": "Peut attaque tous les adversaires se portant au contact.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Frénésie",
+        "prerequis": "A, Combat d10",
+        "descr": "Peut faire une attaque supplémentaire avec un malus de -2.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Frénésie Suprême",
+        "prerequis": "V, Frénésie",
+        "descr": "Peut faire une attaque supplémentaire.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Grand balayage",
+        "prerequis": "V, Balayage",
+        "descr": "Attaque tous les adversaires adjacents.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Grand blocage",
+        "prerequis": "V, Blocage",
+        "descr": "Parade +2",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Grande contre-attaque",
+        "prerequis": "V, Contre-attaque",
+        "descr": "Comme Contre-attaque, sans le malus de -2.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Grande aura de commandement",
+        "prerequis": "N, Commandement",
+        "descr": "L'aura de commandement a un rayon de 10 cases.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "commandement"
+    },
+    {
+        "titre": "Grande esquive",
+        "prerequis": "V, Esquive",
+        "descr": "-2 aux attaques à distance contre le personnage.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Grande extraction",
+        "prerequis": "N, Extraction",
+        "descr": "Comme Extraction. Avec une Relance, empêche toutes les attaques.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Grande résistance aux arcanes",
+        "prerequis": "N, Résistance aux arcanes",
+        "descr": "Armure +4 contre la magie, +4 pour résister aux pouvoirs.",
+        "enabled": "0",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Grande source de pouvoir",
+        "prerequis": "V, Source de pouvoir",
+        "descr": "Regagne 1 PP toutes les 15 minutes.",
+        "enabled": "0",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "pouvoir"
+    },
+    {
+        "titre": "Guérison rapide",
+        "prerequis": "N, Vigueur d8",
+        "descr": "+2 au jets de guérison naturelle.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Guérisseur",
+        "prerequis": "N, Âme d8",
+        "descr": "+2 au jets de Soins.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "étrange"
+    },
+    {
+        "titre": "Guerrier saint / impie",
+        "prerequis": "N, voir texte",
+        "descr": "Voir texte",
+        "enabled": "0",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "professionnel"
+    },
+    {
+        "titre": "Increvable",
+        "prerequis": "N, Joker, Âme d8",
+        "descr": "Ignore le malus de Blessures sur les jets lorsqu'il passe dans un État critique.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Inspiration",
+        "prerequis": "A, Commandement",
+        "descr": "Les troupes ont un bonus de +1 à leurs jets d'Âme.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "commandement"
+    },
+    {
+        "titre": "Instinct de tueur",
+        "prerequis": "H",
+        "descr": "Remporte les oppositions en cas d'égalité. Possibilité de relancer un 1 sur un jet Opposé.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Investigateur",
+        "prerequis": "N, Int d8, Investigation d8, Réseaux d8",
+        "descr": "+2 en Investigation et Réseaux.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "professionnel"
+    },
+    {
+        "titre": "Leader naturel",
+        "prerequis": "N, Âme d8, Commandement",
+        "descr": "Le leader peut donner des Jetons à ses troupes.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "commandement"
+    },
+    {
+        "titre": "Lien animal",
+        "prerequis": "N",
+        "descr": "Le personnage peut donner des Jetons à ses animaux.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "étrange"
+    },
+    {
+        "titre": "Lien mutuel",
+        "prerequis": "N, Joker, Âme d8",
+        "descr": "Le personnage peut donner des Jetons à ses compagnons.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "social"
+    },
+    {
+        "titre": "Mage",
+        "prerequis": "N, voir texte",
+        "descr": "Chaque Relance sur le jet d'Arcanes réduit le coût en pouvoir du sort de 1.",
+        "enabled": "0",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "professionnel"
+    },
+    {
+        "titre": "Maître",
+        "prerequis": "L, Joker, Expert dans le Trait",
+        "descr": "Le dé Joker passe à d10 pour ce Trait.",
+        "enabled": "1",
+        "info": "1",
+        "group": "humain",
+        "subgroup": "légendaire"
+    },
+    {
+        "titre": "Maître d'armes",
+        "prerequis": "L, Combat d12",
+        "descr": "Parade +1",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "légendaire"
+    },
+    {
+        "titre": "Maître d'armes légendaire",
+        "prerequis": "L, Maître d'armes",
+        "descr": "Parade +2",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "légendaire"
+    },
+    {
+        "titre": "Maître des bêtes",
+        "prerequis": "N, Âme d8",
+        "descr": "Vous obtenez un compagnon animal.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "étrange"
+    },
+    {
+        "titre": "Maîtrise des arts martiaux",
+        "prerequis": "V, Art martiaux, Combat d10",
+        "descr": "For+d6 pour les attaques à mains nues",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Meneur d'hommes",
+        "prerequis": "V, Commandement",
+        "descr": "Dé Joker à d10 pour les jets de groupe des alliés",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "commandement"
+    },
+    {
+        "titre": "Mentaliste",
+        "prerequis": "N, Arcanes (Psioniques), Int d8, Psioniques d6",
+        "descr": "+2 pour tout jet de Psioniques Opposé.",
+        "enabled": "0",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "professionnel"
+    },
+    {
+        "titre": "Nerfs d'acier",
+        "prerequis": "N, Joker, Vigueur d8",
+        "descr": "Ignore 1 point de malus lié aux Blessures.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Nerfs d'acier trempé",
+        "prerequis": "N, Nerfs d'acier",
+        "descr": "Ignore 2 points de malus liés aux Blessures.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Noble",
+        "prerequis": "N",
+        "descr": "Riche, Charisme +2, Statut et richesse.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Nouveau Pouvoir",
+        "prerequis": "N, Arcanes",
+        "descr": "Le personnage obtient un nouveau pouvoir.",
+        "enabled": "0",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "pouvoir"
+    },
+    {
+        "titre": "Panache",
+        "prerequis": "N, Âme d8",
+        "descr": "+2 en cas d'utilisation de Jeton pour un jet de Trait (y compris pour un jet d'Encaissement)",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Poigne Ferme",
+        "prerequis": "N, Agi d8",
+        "descr": "Ignore la pénalité lié à une Plateforme instable.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Points de Pouvoir",
+        "prerequis": "N, Arcanes",
+        "descr": "+5 PP, une fois par Rang.",
+        "enabled": "0",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "pouvoir"
+    },
+    {
+        "titre": "Professionnel",
+        "prerequis": "L, d12 dans le Trait",
+        "descr": "Le Trait passe à d12+1",
+        "enabled": "1",
+        "info": "1",
+        "group": "humain",
+        "subgroup": "légendaire"
+    },
+    {
+        "titre": "Recycleur",
+        "prerequis": "N, Chanceux",
+        "descr": "Possibilité de trouver un équipement utile une fois par session",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "étrange"
+    },
+    {
+        "titre": "Résistance aux arcanes",
+        "prerequis": "N, Âme d8",
+        "descr": "Armure +2 contre la magie, +2 pour résister aux pouvoirs.",
+        "enabled": "0",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Riche",
+        "prerequis": "N",
+        "descr": "3 fois les fonds de départ, 75 000 $ de salaire annuel.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Rock n' Roll !",
+        "prerequis": "A, Tir d8",
+        "descr": "Le tireur ignore le malus de Tir automatique s'il ne se déplace pas.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Sang-froid",
+        "prerequis": "A, Tête Froide",
+        "descr": "Agit sur la meilleure de trois cartes en combat.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Sans pitié",
+        "prerequis": "A",
+        "descr": "Peut utiliser des Jetons sur les jets de dégâts.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Séduisant",
+        "prerequis": "N",
+        "descr": "Charisme +2",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Serrez les Rang !",
+        "prerequis": "A, Int d8, Commandement",
+        "descr": "Les troupes ont un bonus de +1 aux Résistance.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "commandement"
+    },
+    {
+        "titre": "Sixième sens",
+        "prerequis": "N",
+        "descr": "Jet de Perception à -2 pour anticiper pièges et embuscades.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "étrange"
+    },
+    {
+        "titre": "Source de pouvoir",
+        "prerequis": "A, Âme d6, Arcanes",
+        "descr": "Regagne 1 PP toutes les 30 minutes.",
+        "enabled": "0",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "pouvoir"
+    },
+    {
+        "titre": "Suivants",
+        "prerequis": "L, Joker",
+        "descr": "Attire 5 suivants.",
+        "enabled": "0",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "légendaire"
+    },
+    {
+        "titre": "Tacticien",
+        "prerequis": "A, Joker, Int d8, Conn. (Bataille) d6",
+        "descr": "Le joueur fait un jet de Connaissance (Bataille) et gagne une carte d'action par Succès et Relance. Il peut par la suiteremplacer la carte d'un allié par une de celles-ci durant le combat.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "commandement"
+    },
+    {
+        "titre": "Tête froide",
+        "prerequis": "A, Int d8",
+        "descr": "Agit sur la meilleure de deux cartes en combat.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Tireur d'élite",
+        "prerequis": "A",
+        "descr": "La manœuvre Visée (+2 en Tir) est automatique si le personnage ne se déplace pas.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Touche-à-tout",
+        "prerequis": "N, Int d10",
+        "descr": "Pas de malus de -2 sur les jets de Connaissance non maitrisées.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "professionnel"
+    },
+    {
+        "titre": "Très Chanceux",
+        "prerequis": "N, Chanceux",
+        "descr": "+2 Jetons par session.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Très riche",
+        "prerequis": "N, Riche",
+        "descr": "5 fois les fonds de départ, 250 000 $ de salaire annuel.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Très séduisant",
+        "prerequis": "N, Séduisant",
+        "descr": "Charisme +4",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Trompe-la-mort",
+        "prerequis": "V, Increvable",
+        "descr": "50 % de chance de survivre à une « mort ».",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Tueur de géant",
+        "prerequis": "V",
+        "descr": "+1d6 aux dégâts contre les grandes créatures.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Véloce",
+        "prerequis": "N, Agi d6",
+        "descr": "Allure +2, le dé de Course passe à d10.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Vif",
+        "prerequis": "N",
+        "descr": "Défausse les cartes de 5 ou moins lors de l'Initiative.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Vigilant",
+        "prerequis": "N",
+        "descr": "+2 en Perception",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Voleur",
+        "prerequis": "N, Agi d8, Escalade d6, Crochetage d6, Discrétion d8",
+        "descr": "+2 en Escalade, Crochetage, Discrétion, et pour désamorcer les pièges.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "professionnel"
+    },
+    {
+        "titre": "Volonté de Fer",
+        "prerequis": "N, Intimidation d6",
+        "descr": "+2 en Intimidation et Sarcasme, +2 pour y résister.",
+        "enabled": "1",
+        "info": "0",
+        "group": "humain",
+        "subgroup": "social"
+    },
+    {
+        "titre": "Accès à un Akasha",
+        "prerequis": "Nephilim",
+        "descr": "Rives avec 2 Portes connues et donne d4 en Tradition Plans subtils",
+        "enabled": 1,
+        "info": 0,
+        "group": "nephilim",
+        "subgroup": "général"
+    },
+    {
+        "titre": "Admirateurs",
+        "prerequis": "Nephilim, [Réseaux d8+ ou Persuasion d8+ ou Charisme +2+] et Arcanes mineurs d4+",
+        "descr": "groupe constitué de 5+2d4 humains profanes",
+        "enabled": 1,
+        "info": 0,
+        "group": "nephilim",
+        "subgroup": "général"
+    },
+    {
+        "titre": "Adopté Arcane majeur",
+        "prerequis": "cf Codex Arcanes Majeurs",
+        "descr": "Le nephilim est un Adopté & donne d4 en Tradition Arcanes majeurs",
+        "enabled": 1,
+        "info": 1,
+        "group": "nephilim",
+        "subgroup": "général"
+    },
+    {
+        "titre": "Artefact",
+        "prerequis": "Nephilim",
+        "descr": "Artefact avec sortilège de 1er ou 2e cercle & PUI=15",
+        "enabled": 1,
+        "info": 0,
+        "group": "nephilim",
+        "subgroup": "général"
+    },
+    {
+        "titre": "Artefact Atlante",
+        "prerequis": "L",
+        "descr": "Artefact avec sortilège de 3e cercle & PUI=15",
+        "enabled": 1,
+        "info": 0,
+        "group": "nephilim",
+        "subgroup": "général"
+    },
+    {
+        "titre": "Augmentation Initiation",
+        "prerequis": "Nephilim",
+        "descr": "Augmente le niveau d'Initiation (INI) de 2 puces",
+        "enabled": 1,
+        "info": 0,
+        "group": "nephilim",
+        "subgroup": "général"
+    },
+    {
+        "titre": "Compréhension solaire",
+        "prerequis": "Nephilim, BG, incompatible Ombre",
+        "descr": "Donne 6 pts en plus à répartir dans les Compétences profanes",
+        "enabled": 1,
+        "info": 0,
+        "group": "nephilim",
+        "subgroup": "général"
+    },
+    {
+        "titre": "Disciple",
+        "prerequis": "Nephilim",
+        "descr": "Premier Cercle de Magie (verbe Percevoir) + donne 6 Mots",
+        "enabled": 1,
+        "info": 1,
+        "group": "nephilim",
+        "subgroup": "magie"
+    },
+    {
+        "titre": "Domaines Analogiques",
+        "prerequis": "Disciple",
+        "descr": "Donne 9 Mots de la table analogique",
+        "enabled": 1,
+        "info": 1,
+        "group": "nephilim",
+        "subgroup": "magie"
+    },
+    {
+        "titre": "Effet-Dragon",
+        "prerequis": "Nephilim",
+        "descr": "Compagnon Effet-Dragon. INI du nephilim -1TDD. Ka non-opposé. Retrouve en 2d6 jours",
+        "enabled": 1,
+        "info": 0,
+        "group": "nephilim",
+        "subgroup": "général"
+    },
+    {
+        "titre": "Glorieux Alliage",
+        "prerequis": "L, 6 × Atouts Substances Œuvr.Blanc, Outil du glorieux alliage",
+        "descr": "Donne accès au 3e cercle d'Alchimie & au mentor alchimique",
+        "enabled": 1,
+        "info": 1,
+        "group": "nephilim",
+        "subgroup": "alchimie"
+    },
+    {
+        "titre": "Magicien",
+        "prerequis": "V, Disciple, 3 × Atouts Domaines analog",
+        "descr": "Donne accès aux sortilèges du 2e Cercle (verbe Manipuler)",
+        "enabled": 1,
+        "info": 0,
+        "group": "nephilim",
+        "subgroup": "magie"
+    },
+    {
+        "titre": "Magistère",
+        "prerequis": "L, Magicien, 7 × Atouts Domaines analog",
+        "descr": "Donne accès aux sortilèges du 3e Cercle (verbe Maîtriser)",
+        "enabled": 1,
+        "info": 0,
+        "group": "nephilim",
+        "subgroup": "magie"
+    },
+    {
+        "titre": "Nephilim",
+        "prerequis": "Race",
+        "descr": "INI démarre à d4 + 0 puce",
+        "enabled": 1,
+        "info": 0,
+        "group": "nephilim",
+        "subgroup": "général"
+    },
+    {
+        "titre": "Outil Primaire",
+        "prerequis": "Outil Secondaire",
+        "descr": "Alchimie du 1er cercle. Donne accès aux formules Œuvre au noir de l'Outil à choisir parmi [Cornue, Forge, Creuset, Alambic et Athanor]",
+        "enabled": 1,
+        "info": 1,
+        "group": "nephilim",
+        "subgroup": "alchimie"
+    },
+    {
+        "titre": "Outil Secondaire",
+        "prerequis": "Outil Tertiaire",
+        "descr": "Alchimie du 1er cercle. Donne accès aux formules Œuvre au noir de l'Outil à choisir parmi [Cornue, Forge, Creuset, Alambic et Athanor]. Malus-1",
+        "enabled": 1,
+        "info": 1,
+        "group": "nephilim",
+        "subgroup": "alchimie"
+    },
+    {
+        "titre": "Outil Tertiaire",
+        "prerequis": "Nephilim",
+        "descr": "Alchimie du 1er cercle. Donne accès aux formules Œuvre au noir de l'Outil à choisir parmi [Cornue, Forge, Creuset, Alambic et Athanor]. Malus-2",
+        "enabled": 1,
+        "info": 1,
+        "group": "nephilim",
+        "subgroup": "alchimie"
+    },
+    {
+        "titre": "Substances d'œuvre au Blanc",
+        "prerequis": "V,  Outil primaire, Outils des substances",
+        "descr": "Permet d'utiliser les formules de 2 Substances œuvre au blanc à choisir",
+        "enabled": 1,
+        "info": 1,
+        "group": "nephilim",
+        "subgroup": "alchimie"
+    },
+    {
+        "titre": "Malkut",
+        "prerequis": "Nephilim",
+        "descr": "Kabbale 1er cercle. Donne accès aux invocations de la sephirah Malkut pour 3 Mondes de Kabbale",
+        "enabled": 1,
+        "info": 1,
+        "group": "nephilim",
+        "subgroup": "kabbale"
+    },
+    {
+        "titre": "Yesod",
+        "prerequis": "Malkut",
+        "descr": "Kabbale 1er cercle. Donne accès aux invocations de la sephirah Yesod pour 2 Mondes de Kabbale",
+        "enabled": 1,
+        "info": 1,
+        "group": "nephilim",
+        "subgroup": "kabbale"
+    },
+    {
+        "titre": "Hod",
+        "prerequis": "Yesod",
+        "descr": "Kabbale 1er cercle. Donne accès aux invocations de la sephirah Hod pour 2 Mondes de Kabbale",
+        "enabled": 1,
+        "info": 1,
+        "group": "nephilim",
+        "subgroup": "kabbale"
+    },
+    {
+        "titre": "Netzah",
+        "prerequis": "Hod",
+        "descr": "Kabbale 1er cercle. Donne accès aux invocations de la sephirah Netzah pour 2 Mondes de Kabbale",
+        "enabled": 1,
+        "info": 1,
+        "group": "nephilim",
+        "subgroup": "kabbale"
+    },
+    {
+        "titre": "Tipheret",
+        "prerequis": "V, Netzah",
+        "descr": "Kabbale 2e cercle. Donne accès aux invocations de la sephirah Tipheret pour 1 Monde de Kabbale",
+        "enabled": 1,
+        "info": 1,
+        "group": "nephilim",
+        "subgroup": "kabbale"
+    },
+    {
+        "titre": "Geburah",
+        "prerequis": "V, Tipheret",
+        "descr": "Kabbale 2e cercle. Donne accès aux invocations de la sephirah Geburah pour 1 Monde de Kabbale",
+        "enabled": 1,
+        "info": 1,
+        "group": "nephilim",
+        "subgroup": "kabbale"
+    },
+    {
+        "titre": "Chesed",
+        "prerequis": "V, Geburah",
+        "descr": "Kabbale 2e cercle. Donne accès aux invocations de la sephirah Chesed pour 1 Monde de Kabbale",
+        "enabled": 1,
+        "info": 1,
+        "group": "nephilim",
+        "subgroup": "kabbale"
+    },
+    {
+        "titre": "Binah",
+        "prerequis": "L, Chesed",
+        "descr": "Kabbale 3e cercle. Donne accès aux invocations de la sephirah Binah pour 1 Monde de Kabbale",
+        "enabled": 1,
+        "info": 1,
+        "group": "nephilim",
+        "subgroup": "kabbale"
+    },
+    {
+        "titre": "Chokmah",
+        "prerequis": "L, Binah",
+        "descr": "Kabbale 3e cercle. Donne accès aux invocations de la sephirah Chokmah pour 1 Monde de Kabbale",
+        "enabled": 1,
+        "info": 1,
+        "group": "nephilim",
+        "subgroup": "kabbale"
+    },
+    {
+        "titre": "Kether",
+        "prerequis": "L, Chokmah",
+        "descr": "Kabbale 3e cercle. Donne accès aux invocations de la sephirah Kether pour 1 Monde de Kabbale",
+        "enabled": 1,
+        "info": 1,
+        "group": "nephilim",
+        "subgroup": "kabbale"
+    },
+    {
+        "titre": "Spécial",
+        "prerequis": "Nephilim",
+        "descr": "customisable",
+        "enabled": 1,
+        "info": 1,
+        "group": "nephilim",
+        "subgroup": "général"
+    },
+    {
+        "titre": "Allure",
+        "descr": "Allure = km/h divisé par 4",
+        "enabled": "1",
+        "info": "1",
+        "group": "monstre",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Armure magique",
+        "descr": "protection magique",
+        "enabled": "1",
+        "info": "1",
+        "group": "monstre",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Armure physique",
+        "descr": "protection physique",
+        "enabled": "1",
+        "info": "1",
+        "group": "monstre",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Attaque de Ka",
+        "descr": "attaques magiques de son Ka dominant",
+        "enabled": "1",
+        "info": "0",
+        "group": "monstre",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Créature artificielle",
+        "descr": "Jet secoué +2, pas de loca, pas de malus blessure",
+        "enabled": "1",
+        "info": "0",
+        "group": "monstre",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Créature de Ka",
+        "descr": "affectée par les armes magiques",
+        "enabled": "1",
+        "info": "0",
+        "group": "monstre",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Élémentaire",
+        "descr": "pas de loca, pas de malus blessure",
+        "enabled": "1",
+        "info": "0",
+        "group": "monstre",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Enfouissement",
+        "descr": "déplacement normal",
+        "enabled": "1",
+        "info": "0",
+        "group": "monstre",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Déliquescence lente",
+        "descr": "durée en mois",
+        "enabled": "1",
+        "info": "0",
+        "group": "monstre",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Déliquescence moyenne",
+        "descr": "heures ou jours",
+        "enabled": "1",
+        "info": "0",
+        "group": "monstre",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Déliquescence rapide",
+        "descr": "quelques rounds",
+        "enabled": "1",
+        "info": "0",
+        "group": "monstre",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Immunité",
+        "descr": "Immunité à un type de dégats physiques",
+        "enabled": "1",
+        "info": "1",
+        "group": "monstre",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Invisibilité de Ka",
+        "descr": "invisible hormis en Vision-Ka",
+        "enabled": "1",
+        "info": "0",
+        "group": "monstre",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Invisibilité profane",
+        "descr": "Invisible sauf l'ombre et les initiés avec jet Ka-Soleil FD [10 – KAD/2]",
+        "enabled": "1",
+        "info": "0",
+        "group": "monstre",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Invulnérabilité de Kabbale",
+        "descr": "Invulnérable aux dégâts physiques sauf aux armes enduites de sang",
+        "enabled": "1",
+        "info": "0",
+        "group": "monstre",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Ka-élémentaire",
+        "descr": "Un être éthéré de pur(s) Ka-élément(s).",
+        "enabled": "1",
+        "info": "0",
+        "group": "monstre",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Spécial",
+        "enabled": "1",
+        "info": "1",
+        "group": "monstre",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Pouvoir",
+        "descr": "Pouvoir SW. Lancé avec KAD FD 4",
+        "enabled": "1",
+        "info": "1",
+        "group": "monstre",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Taille Énorme",
+        "descr": "Rés +8 à +10+ et Toucher +4",
+        "enabled": "1",
+        "info": "1",
+        "group": "monstre",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Taille Grand",
+        "descr": "Rés +4 à +7 et Toucher +2",
+        "enabled": "1",
+        "info": "1",
+        "group": "monstre",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Taille Normal",
+        "descr": "Rés -2 à +3 et Toucher +0",
+        "enabled": "1",
+        "info": "1",
+        "group": "monstre",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Taille Petit",
+        "descr": "Rés -2 et Toucher -2",
+        "enabled": "1",
+        "info": "0",
+        "group": "monstre",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Terreur",
+        "descr": "Pour les profanes : jet d'ÂME (malus -0 à -4) pour résister",
+        "enabled": "1",
+        "info": "1",
+        "group": "monstre",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Terreur de Ka",
+        "descr": "Jet de KAD (malus -0 à -4) pour résister. Echec : Secoué, Sur un 1 (qqsoit dé joker) : Ombre",
+        "enabled": "1",
+        "info": "1",
+        "group": "monstre",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Vision nocturne",
+        "descr": "pas de malus d'obscurité",
+        "enabled": "1",
+        "info": "0",
+        "group": "monstre",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Vol",
+        "descr": "Vol à l'allure indiquée",
+        "enabled": "1",
+        "info": "1",
+        "group": "monstre",
+        "subgroup": "background"
+    },
+    {
+        "titre": "Attribut +1TDD",
+        "prerequis": "Limité à 1 par rang",
+        "descr": "Un attribut augmente d'un type de dé",
+        "enabled": "1",
+        "info": "1",
+        "group": "general",
+        "subgroup": "progression"
+    },
+    {
+        "titre": "2 Compétences +1TDD",
+        "prerequis": "si compétence < attribut",
+        "descr": "2 compétences augmentent d'un type de dé",
+        "enabled": "1",
+        "info": "1",
+        "group": "general",
+        "subgroup": "progression"
+    },
+    {
+        "titre": "1 Compétence +1TDD",
+        "prerequis": "si compétence ≥ attribut",
+        "descr": "1 compétences augmente d'un type de dé",
+        "enabled": "1",
+        "info": "1",
+        "group": "general",
+        "subgroup": "progression"
+    },
+    {
+        "titre": "Basaltique",
+        "prerequis": "B, Nephilim",
+        "descr": "Armure phys de 6. 1 action. KAD FD RM[Ka-Soleil]. 5 (10) rd",
+        "enabled": "1",
+        "info": "1",
+        "group": "antediluvien",
+        "subgroup": "basaltique"
+    },
+    {
+        "titre": "Cycle basaltique 1 Ka",
+        "prerequis": "N*, 3 cycles maxi",
+        "descr": "2x +1d10 effet basaltique Ka opposé. ",
+        "enabled": "1",
+        "info": "1",
+        "group": "antediluvien",
+        "subgroup": "basaltique"
+    },
+    {
+        "titre": "Métamorphisme",
+        "prerequis": "Cycle basaltique",
+        "descr": "Bonus +1 à la RM (cumulable) mais non-cumulable avec armure",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "basaltique"
+    },
+    {
+        "titre": "Dracomaque",
+        "prerequis": "B, Nephilim",
+        "descr": "Réseaux dracomaque + clef de refuge akashique",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "dracomaque"
+    },
+    {
+        "titre": "Dracologie",
+        "prerequis": "N",
+        "descr": "Détection/pistage/analyse/prédiction. Ka-élément selon action",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "dracomaque"
+    },
+    {
+        "titre": "Esto-Ka-de",
+        "prerequis": "N",
+        "descr": "1d8+KAD. 1 action. Ka au choix FD 4. Portée contact. ",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "dracomaque"
+    },
+    {
+        "titre": "Saltillera",
+        "prerequis": "N",
+        "descr": "Attire effet-dragon. 1 action. Ka-Feu FD 4. Portée 24. 2d6 rd",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "dracomaque"
+    },
+    {
+        "titre": "Purification draconique",
+        "prerequis": "N",
+        "descr": "apaise les champs magiques en dissipant un ED. 1 action. KAD FD 4 + puce. Portée 12. ",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "dracomaque"
+    },
+    {
+        "titre": "Véronique",
+        "prerequis": "V, Saltillera",
+        "descr": "+2 Parade contre ED",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "dracomaque"
+    },
+    {
+        "titre": "Rebolera",
+        "prerequis": "V, Saltillera, Esto-Ka-de",
+        "descr": "Secoue 3 ED. 1 action. Ka-Lune FD 4. Portée 24. variable",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "dracomaque"
+    },
+    {
+        "titre": "Dompter",
+        "prerequis": "V, Dracologie, Esto-Ka-de",
+        "descr": "dompte un ED. 1 action. Ka ED FD 4. Portée 12. ",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "dracomaque"
+    },
+    {
+        "titre": "Cristal-dragon",
+        "prerequis": "V, Dracologie, Purifi draco",
+        "descr": "stocke l'energie magique d'un ED dans urne. 1 action. Ka ED ou KAD FD 4 ou RM. Portée contact. ",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "dracomaque"
+    },
+    {
+        "titre": "Arme-dragon",
+        "prerequis": "L, Rebolera,  Purifi draco",
+        "descr": "fabrique une arme magique contenant un ED. 1 action. Ka ED FD 4. Portée contact. ",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "dracomaque"
+    },
+    {
+        "titre": "Tatouage-dragon",
+        "prerequis": "L, Rebolera,  Cristal-dragon",
+        "descr": "1 action. Ka-élément selon action FD 4. Portée contact",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "dracomaque"
+    },
+    {
+        "titre": "Tueur de dragon",
+        "prerequis": "L, Véronique",
+        "descr": "+1d8 dégats physiques & +1d6 dégâts magiques sur Taille >= 3. .  FD . Portée contact. ",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "dracomaque"
+    },
+    {
+        "titre": "Vahana",
+        "prerequis": "L, Dompter",
+        "descr": "Le pentacle chevauche un ED précédemment dompté (incarné ou désincarné). 1 action. Ka-Eau FD 4. Portée ED à vue. 1 h",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "dracomaque"
+    },
+    {
+        "titre": "Prime",
+        "prerequis": "B, Nephilim",
+        "descr": "Passer en vision-ka = 1 puce de prime-essence. Occultisme d4",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prime-essence"
+    },
+    {
+        "titre": "Attraction de Ka",
+        "prerequis": "N",
+        "descr": "Attire champs avec jet cumulatif avec +2 puces min/h/j. 1 rd. KAD FD 4. coût de base 2 ",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prime-essence"
+    },
+    {
+        "titre": "Apostasie de l'opposition",
+        "prerequis": "N",
+        "descr": "conjonction de l'opposé majeur. 1 action. KAD FD 4. coût 3. Portée Personnel. prochain j",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prime-essence"
+    },
+    {
+        "titre": "Armure étincelante",
+        "prerequis": "N",
+        "descr": "4 armure magique. 1 action. KAD FD 4. coût 2. Portée Personnel. 1 (2) h",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prime-essence"
+    },
+    {
+        "titre": "Message élémentaire",
+        "prerequis": "N",
+        "descr": "SMS par champs magiques. 1 minute. KAD FD 4. coût 2. Portée même plan. 1 minute",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prime-essence"
+    },
+    {
+        "titre": "Intensification plexus",
+        "prerequis": "V, Attraction de Ka",
+        "descr": "PUI + 4 (8). 1 minute. KAD FD 4. coût 4. Portée plexus. présence",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prime-essence"
+    },
+    {
+        "titre": "Apostasie de la neutralité",
+        "prerequis": "V",
+        "descr": "conjonction du neutre défavorable. 1 minute. KAD FD 4. coût 5. Portée Personnel. prochain j",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prime-essence"
+    },
+    {
+        "titre": "Transe curative",
+        "prerequis": "V, Armure étincelante, Apostasie opposition",
+        "descr": "guérison de blessure magique tempo. 1 heure. KAD FD 4. coût 5. Portée Personnel. ",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prime-essence"
+    },
+    {
+        "titre": "Narcose voorique",
+        "prerequis": "V, Armure étincelante, Attraction Ka",
+        "descr": "Désincarné, Narcose : 2 puces de prime à la place d'un puce de Ka. 1 action. KAD FD 4. coût 4",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prime-essence"
+    },
+    {
+        "titre": "Création de plexus",
+        "prerequis": "L, Intensification plexus",
+        "descr": "PUI 4 (8). 1 heure. KAD FD 4. coût 8. Portée plexus. présence",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prime-essence"
+    },
+    {
+        "titre": "Apostasie pentaclique",
+        "prerequis": "L, Apostasie opposition & neutralité",
+        "descr": "Réorganise le pentacle un jour de GC. 1 heure. KAD FD 4. coût 10. jusqu'à GC ou mois",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prime-essence"
+    },
+    {
+        "titre": "Projection éthérée",
+        "prerequis": "L, Apostasie pentaclique",
+        "descr": "Attaque magique à distance 2xKAD. 1 action. KAD FD 4. coût 2. Portée 24. ",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prime-essence"
+    },
+    {
+        "titre": "Transsubstantiation",
+        "prerequis": "L, Création de plexus",
+        "descr": "transforme puce de prime en puce de bonus de SO. 1 action. KAD FD 4. coût 2 par +1. Portée Personnel. rd suivant",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prime-essence"
+    },
+    {
+        "titre": "Phare cosmique",
+        "prerequis": "L, Projection éthérée, Projection éthérée, Message élémentaire",
+        "descr": "1 action. KAD FD 4. coût pool. +1d8 dégâts par 4 puces sur 12 cases",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prime-essence"
+    },
+    {
+        "titre": "Adepte du dragon",
+        "prerequis": "B, Nephilim",
+        "descr": "TP par omphalos, protection contre ED, bonus plexus/omphalos",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "culte du dragon"
+    },
+    {
+        "titre": "Apaiser effet-dragon",
+        "prerequis": "N",
+        "descr": "endort un ED. 1 action. KAD FD RM ED. Portée 12. 2d6 (3d6) min",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "culte du dragon"
+    },
+    {
+        "titre": "Confusion",
+        "prerequis": "N",
+        "descr": "Secoue 3 humains. 1 action. KAD FD 6. Portée 12. variable",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "culte du dragon"
+    },
+    {
+        "titre": "Écaille de dragon",
+        "prerequis": "N",
+        "descr": "armure phys de 5. 1 action. KAD FD 6. Portée Personnel. 1 (2) h",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "culte du dragon"
+    },
+    {
+        "titre": "Griffe de dragon",
+        "prerequis": "N",
+        "descr": "+1 TDD en Combat, Escalade, Natation, For, Vig, Agi & 50% Allure. 1 action. KAD FD 6. 1 (2) h",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "culte du dragon"
+    },
+    {
+        "titre": "Contrôler effet-dragon",
+        "prerequis": "V, Apaiser D, Confusion",
+        "descr": "1 action. KAD FD RM ED. coût 1 puce. Portée 24. 2d6 (3d6) min",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "culte du dragon"
+    },
+    {
+        "titre": "Spasme de furie",
+        "prerequis": "V, Confusion, Griffe de dragon",
+        "descr": "Dégâts combat +1d10 & KAD FD 5 pour att. 1 action. KAD FD 6. Portée Personnel. combat",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "culte du dragon"
+    },
+    {
+        "titre": "Dent du dragon",
+        "prerequis": "V, Griffe de dragon",
+        "descr": "Souffle de dragon à 2d8. 1 action. KAD FD 6. Portée 24. ",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "culte du dragon"
+    },
+    {
+        "titre": "Régénération draconique",
+        "prerequis": "V, Écaille de dragon",
+        "descr": "1 blessure / rd. 1 action. KAD FD 6. Portée Personnel. 5 (10) minutes",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "culte du dragon"
+    },
+    {
+        "titre": "Aile de dragon",
+        "prerequis": "L",
+        "descr": "200 km/h. 1 action. KAD FD 6. Portée Personnel. 1 (2) h",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "culte du dragon"
+    },
+    {
+        "titre": "Créer effet-dragon",
+        "prerequis": "L, Contrôler ED",
+        "descr": "réduction par sacrifice. 1 heure. KAD FD 6. coût 1 puce / TDD. Portée conjonction. 1 semaine",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "culte du dragon"
+    },
+    {
+        "titre": "Dissiper un effet-dragon",
+        "prerequis": "L, Contrôler ED, Dent du dragon",
+        "descr": "réduction par sacrifice. 1 action. KAD FD 6. coût 1 puce / TDD. Portée 24. ",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "culte du dragon"
+    },
+    {
+        "titre": "Transformation draconique",
+        "prerequis": "L, Écaille,  Aile et dent du dragon",
+        "descr": "réduction par sacrifice. 1 action. KAD FD 6. coût 3 puces. Portée Personnel. 1 (2) h",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "culte du dragon"
+    },
+    {
+        "titre": "Héros-dragon",
+        "prerequis": "L, Spasme de furie, Régèn draco, Pyrim ou Eolim, mâle",
+        "descr": "réduction par sacrifice. Invulnérabilité aux attaques physiques. 1 action. KAD FD 6. coût 1 + 1 puce/rd. Portée Personnel. 1+ round",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "culte du dragon"
+    },
+    {
+        "titre": "Prêtresse-dragon",
+        "prerequis": "L, Créer et dissiper ED, Onirim ou Faërim ou Hydrim, femelle",
+        "descr": "Rituel en coopératif (+1 /succès/relance) max +2. Portée Personnel. un rituel",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "culte du dragon"
+    },
+    {
+        "titre": "Prométhéen",
+        "prerequis": "B, Nephilim",
+        "descr": "Metabonus sur culture-g, Arcanes mineurs d4 et le simulacre aime son nephilim",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prométhéen"
+    },
+    {
+        "titre": "Liaison corporelle",
+        "prerequis": "N",
+        "descr": "Si la comp est possédée par les 2 : d4=+0, d6/d8=+1, d10/12=+2. 1 action. KAD FD RM[Ka-Soleil]. 1 heure",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prométhéen"
+    },
+    {
+        "titre": "Entretien initiatique",
+        "prerequis": "N",
+        "descr": "Conversation sur un thème. 1 minute. KAD FD RM[Ka-Soleil] cible. Portée humain. discussion",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prométhéen"
+    },
+    {
+        "titre": "Eclipse solaire",
+        "prerequis": "N",
+        "descr": "Métamorphe & Pentacle cachés. SO : KAD plafonné par Ka-Soleil. 1 minute. KAD FD RM[Ka-Soleil]. Personnel. Prochain jour astro",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prométhéen"
+    },
+    {
+        "titre": "Liaison onirique",
+        "prerequis": "N",
+        "descr": "Bonus de +2 en Akasha sur Nef, Boussole & passage de Porte",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prométhéen"
+    },
+    {
+        "titre": "Liaison spirituelle",
+        "prerequis": "V, Liaison corpo & orinique",
+        "descr": "Ombre réduit d'un ordre de grandeur",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prométhéen"
+    },
+    {
+        "titre": "Sapience profane",
+        "prerequis": "V, Liaison corporelle",
+        "descr": "substitue Trad pour Comp. 1 minute. KAD FD RM[Ka-Soleil]. Portée Personnel.  Proch jour astro",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prométhéen"
+    },
+    {
+        "titre": "Voile prométhéen",
+        "prerequis": "V, Éclipse solaire",
+        "descr": "Orichalque échelle neutre. KAD plafonné. 1 minute. KAD FD RM[Ka-Soleil]. Portée Personnel. 1 h",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prométhéen"
+    },
+    {
+        "titre": "Compagnonnage prométhéen",
+        "prerequis": "V, Éclipse solaire, Entretien initiatique",
+        "descr": "KAD / 2 membres à choisir parmi Épée, Bâton ou Coupe. 1d4 sem. Portée Initié a.min. Jusqu'à contre-emploi",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prométhéen"
+    },
+    {
+        "titre": "Absorption initiatique",
+        "prerequis": "L, Compagnonnage prom. & Sapience profane",
+        "descr": "Copier une Compétence à hauteur de Ka-Soleil max. 1 heure. KAD FD RM[Ka-Soleil] cible. Portée humain. définitif",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prométhéen"
+    },
+    {
+        "titre": "Daïmon",
+        "prerequis": "L, Immunité saturnienne",
+        "descr": "Invoquer un daïmon. INI plafonnée par Ka-Soleil. 2d6 j. KAD FD RM daïmon. Portée Personnel. définitif",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prométhéen"
+    },
+    {
+        "titre": "Immunité saturnienne",
+        "prerequis": "L, Compagnonnage & Voile prométhéen",
+        "descr": "Orichalque échelle zéro. KAD plafonné. 1 action. KAD FD RM[Ka-Soleil]. Portée Personnel. 1 h",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prométhéen"
+    },
+    {
+        "titre": "Initiation solaire",
+        "prerequis": "L, Compagnonnage prométhéen, 2 × max",
+        "descr": "+1 rang en Ka-Soleil. 1 sem..  FD . Portée Personnel. définitif",
+        "enabled": "1",
+        "info": "0",
+        "group": "antediluvien",
+        "subgroup": "prométhéen"
+    }
+]
