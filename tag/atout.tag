@@ -8,7 +8,7 @@
                 <option value="0">Filtrez un groupe...</option>
                 <option each="{ race in filter }" value="{race}">{race}</option>
             </select>
-            <select name="subgroup" class="pure-input-1" value="{ selectedSubgroup }" onchange="{
+            <select name="subgroup" class="pure-input-1 capitalize" value="{ selectedSubgroup }" onchange="{
                         onChangeSubgroup
                     }">
                 <option value="0">Filtrez un sous-groupe...</option>

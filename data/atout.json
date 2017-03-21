@@ -1048,7 +1048,7 @@
         "prerequis": "Nephilim",
         "descr": "Premier Cercle de Magie (verbe Percevoir) + donne 6 Mots",
         "enabled": 1,
-        "info": 1,
+        "info": 0,
         "group": "nephilim",
         "subgroup": "magie"
     },
@@ -1057,7 +1057,7 @@
         "prerequis": "Disciple",
         "descr": "Donne 9 Mots de la table analogique",
         "enabled": 1,
-        "info": 1,
+        "info": 0,
         "group": "nephilim",
         "subgroup": "magie"
     },
@@ -1604,7 +1604,7 @@
     {
         "titre": "Tueur de dragon",
         "prerequis": "L, Véronique",
-        "descr": "+1d8 dégats physiques & +1d6 dégâts magiques sur Taille >= 3. .  FD . Portée contact. ",
+        "descr": "+1d8 dégats physiques & +1d6 dégâts magiques sur Taille >= 3. Portée contact. ",
         "enabled": "1",
         "info": "0",
         "group": "antediluvien",
@@ -1982,7 +1982,7 @@
     {
         "titre": "Immunité saturnienne",
         "prerequis": "L, Compagnonnage & Voile prométhéen",
-        "descr": "Orichalque échelle zéro. KAD plafonné. 1 action. KAD FD RM[Ka-Soleil]. Portée Personnel. 1 h",
+        "descr": "Immunité Orichalque. KAD plafonné. 1 action. KAD FD RM[Ka-Soleil]. Portée Personnel. 1 h",
         "enabled": "1",
         "info": "0",
         "group": "antediluvien",
@@ -1991,7 +1991,7 @@
     {
         "titre": "Initiation solaire",
         "prerequis": "L, Compagnonnage prométhéen, 2 × max",
-        "descr": "+1 rang en Ka-Soleil. 1 sem..  FD . Portée Personnel. définitif",
+        "descr": "+1 rang en Ka-Soleil. 1 semaine pour initier. Portée Personnel. définitif",
         "enabled": "1",
         "info": "0",
         "group": "antediluvien",
