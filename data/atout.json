@@ -1377,7 +1377,7 @@
         {
             "titre": "Confusion",
             "prerequis": "N",
-            "descr": "Secoue 3 cibles. 1 action. KAD FD 6. Portée 12. variable",
+            "descr": "Secoue 3 humains. 1 action. KAD FD 6. Portée 12. variable",
             "enabled": "1",
             "info": "0"
         },
@@ -1454,7 +1454,7 @@
         {
             "titre": "Héros-dragon",
             "prerequis": "L, Spasme de furie, Régèn draco, Pyrim ou Eolim, mâle",
-            "descr": "Invulnérabilité aux attaques physiques. 1 action. KAD FD 6. coût 1 + 1 puce/rd. Portée Personnel. 1+ round",
+            "descr": "réduction par sacrifice. Invulnérabilité aux attaques physiques. 1 action. KAD FD 6. coût 1 + 1 puce/rd. Portée Personnel. 1+ round",
             "enabled": "1",
             "info": "0"
         },

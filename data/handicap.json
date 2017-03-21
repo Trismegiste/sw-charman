@@ -305,7 +305,7 @@
         {
             "titre": "Contaminé",
             "niveau": "Min/Maj",
-            "descr": "Contact avec KLN : Ka-élément ejecté sur echec FD 4. Mineur prochaine GC, Majeur : définitif",
+            "descr": "Contact avec KLN : Ka-élément ejecté sur echec FD 4. Mineur prochaine GC. Majeur : Mineur + perte def. de 2 puces",
             "enabled": "1"
         },
         {
@@ -413,7 +413,7 @@
         {
             "titre": "Pentacle déformé",
             "niveau": "Min/Maj",
-            "descr": "Mineur : +0/+0/+4/+4/+4. Majeur : +0/+2/+4/+4/+4",
+            "descr": "Mineur : Malus de -2 sur tout sort lié au neutre fav. Majeur : Idem avec les 2 neutres",
             "enabled": "1"
         },
         {
