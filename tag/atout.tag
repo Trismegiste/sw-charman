@@ -63,7 +63,6 @@
         this.group = opts.group || 0;
         this.checkedAtout = undefined;
         this.filter = opts.filter.split(" ")
-        this.atoutList = SwCharman.table.get('atout')
         this.selectedGroup = 0
         this.selectedSubgroup = 0
         this.subGroupList = []
@@ -72,38 +71,20 @@
 
         this.onChangeGroup = function () {
             self.selectedGroup = self.groupe.value
-            self.selectedSubgroup = 0
-            self.subGroupList = self.getSubgroupFor(self.selectedGroup)
-            self.filteredAtoutList = []
+            self.subGroupList = SwCharman.table.getAtoutSubGroupListFor(self.selectedGroup)
+
+            if (self.subGroupList.length === 1) {
+                self.selectedSubgroup = self.subGroupList[0]
+                self.filteredAtoutList = SwCharman.table.getAtoutListFor(self.selectedGroup, self.selectedSubgroup)
+            } else {
+                self.selectedSubgroup = 0
+                self.filteredAtoutList = []
+            }
         }
 
         this.onChangeSubgroup = function () {
             self.selectedSubgroup = self.subgroup.value
-            self.filteredAtoutList = self.getAtoutListFor(self.selectedGroup, self.selectedSubgroup)
-        }
-
-        this.getSubgroupFor = function (group) {
-            var result = []
-            for (var idx in self.atoutList) {
-                var atout = self.atoutList[idx]
-                if ((atout.group === group) && (-1 === result.indexOf(atout.subgroup))) {
-                    result.push(atout.subgroup)
-                }
-            }
-
-            return result
-        }
-
-        this.getAtoutListFor = function (group, subgroup) {
-            var result = []
-            for (var idx in self.atoutList) {
-                var atout = self.atoutList[idx]
-                if ((atout.group === group) && (atout.subgroup === subgroup)) {
-                    result.push(atout)
-                }
-            }
-
-            return result
+            self.filteredAtoutList = SwCharman.table.getAtoutListFor(self.selectedGroup, self.selectedSubgroup)
         }
 
         this.onAppendAtout = function (e) {

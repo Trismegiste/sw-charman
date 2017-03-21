@@ -44,3 +44,27 @@ SwTable.prototype.get = function (key) {
     }
     return this.data[key]
 }
+
+SwTable.prototype.getAtoutSubGroupListFor = function (group) {
+    var result = []
+    for (var idx in this.data['atout']) {
+        var atout = this.data['atout'][idx]
+        if ((atout.enabled == 1) && (atout.group === group) && (-1 === result.indexOf(atout.subgroup))) {
+            result.push(atout.subgroup)
+        }
+    }
+
+    return result
+}
+
+SwTable.prototype.getAtoutListFor = function (group, subgroup) {
+    var result = []
+    for (var idx in this.data['atout']) {
+        var atout = this.data['atout'][idx]
+        if ((atout.enabled == 1) && (atout.group === group) && (atout.subgroup === subgroup)) {
+            result.push(atout)
+        }
+    }
+
+    return result
+}
