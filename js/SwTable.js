@@ -45,6 +45,18 @@ SwTable.prototype.get = function (key) {
     return this.data[key]
 }
 
+SwTable.prototype.getAtoutGroupList = function () {
+    var result = []
+    for (var idx in this.data['atout']) {
+        var atout = this.data['atout'][idx]
+        if ((atout.enabled == 1) && (-1 === result.indexOf(atout.group))) {
+            result.push(atout.group)
+        }
+    }
+
+    return result
+}
+
 SwTable.prototype.getAtoutSubGroupListFor = function (group) {
     var result = []
     for (var idx in this.data['atout']) {
