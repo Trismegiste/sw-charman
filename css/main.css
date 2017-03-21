@@ -39,6 +39,10 @@ form label.centered {
     margin-bottom: 0.3em;
 }
 
+.capitalize {
+    text-transform: capitalize
+}
+
 .pure-form label {
     display: block;
     margin-bottom: 0.3em;
