@@ -11,8 +11,9 @@ AbstractRendering.prototype.getDiceText = function (val) {
     for (var k = 4; k <= 12; k += 2) {
         choice[k] = 'd' + k
     }
-    choice[13] = 'd12+1'
-    choice[14] = 'd12+2'
+    for (var k = 1; k <= 5; k++) {
+        choice[12 + k] = 'd12+' + k
+    }
 
     return choice[val]
 }
