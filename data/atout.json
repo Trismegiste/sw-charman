@@ -1486,8 +1486,8 @@
     },
     {
         "titre": "Cycle basaltique 1 Ka",
-        "prerequis": "N*, 3 cycles maxi",
-        "descr": "2x +1d10 effet basaltique Ka opposé. ",
+        "prerequis": "N*, 3 cycles maxi, 2× par Ka maxi",
+        "descr": "Bonus +1 en Magie sur ce Ka. Dégats +1d6 ou Save -1 d'effets basaltiques sur les 2 Ka opposés",
         "enabled": "1",
         "info": "1",
         "group": "antediluvien",
