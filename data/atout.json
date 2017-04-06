@@ -1703,7 +1703,7 @@
     {
         "titre": "Création de plexus",
         "prerequis": "L, Intensification plexus",
-        "descr": "PUI 4 (8). 1 heure. KAD FD 4. coût 8. Portée plexus. présence",
+        "descr": "PUI 4 (8 sur Relance ou ligne de Ley). 1 heure. KAD FD 4. coût 8. Portée plexus. présence",
         "enabled": "1",
         "info": "0",
         "group": "antediluvien",
