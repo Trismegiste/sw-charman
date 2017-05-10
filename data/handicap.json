@@ -347,7 +347,7 @@
         {
             "titre": "Hanté",
             "niveau": "Min/Maj",
-            "descr": "Poursuivi par entité une fois pas séance. Majeur : une fois par session",
+            "descr": "Poursuivi par entité une fois pas scénario. Majeur : une fois par session",
             "enabled": "1"
         },
         {
