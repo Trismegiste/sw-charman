@@ -1339,7 +1339,7 @@
     },
     {
         "titre": "Invisibilité de Ka",
-        "descr": "invisible hormis en Vision-Ka",
+        "descr": "invisible hormis en Vision-Ka. Malus de 6 pour être touché en Combat/Tir (+ Surprise au 1er rd)",
         "enabled": "1",
         "info": "0",
         "group": "monstre",
@@ -1347,7 +1347,7 @@
     },
     {
         "titre": "Invisibilité profane",
-        "descr": "Invisible sauf l'ombre et les initiés avec jet Ka-Soleil FD [10 – KAD/2]",
+        "descr": "Invisible sauf l'ombre. Malus de 4 pour être touché en Combat/Tir (+ Surprise au 1er rd si Per. ratée)",
         "enabled": "1",
         "info": "0",
         "group": "monstre",
