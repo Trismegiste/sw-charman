@@ -1,14 +1,22 @@
 <content-detail class="pure-g">
     <header class="{ blockStyle }">
-        <form class="pure-form pure-g" onchange="{
-                    onChange
-                }">
+        <form class="pure-form pure-g">
             <legend class="pure-u-1">Template</legend>
             <div class="pure-u-1">
-                <select name="type" value="{ model.current.type }" class="pure-input-1">
+                <select name="type" value="{ model.current.type }" class="pure-input-1" onchange="{
+                            onChange
+                        }">
                     <option value="virtual"></option>
                     <option each="{key, type in builder.getTemplate()}" value="{key}">{type.title}</option>
                 </select>
+            </div>
+            <div class="pure-u-1">
+                <label>
+                    <input type="checkbox" name="wildcard" checked="{ model.current.wildCard }"  onclick="{
+                                onWildCard
+                            }"/>
+                    Wild Card
+                </label>
             </div>
         </form>
     </header>
@@ -49,15 +57,19 @@
     <histoire-invisible if="{ model.current.type == 'nephilim' }"
                         class="{ blockStyle }"></histoire-invisible>
     <metamorphe if="{ model.current.type == 'nephilim' }"
-                        class="{ blockStyle }"></metamorphe>
+                class="{ blockStyle }"></metamorphe>
     <script>
         this.blockStyle = "webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"
         this.model = SwCharman.model
         this.builder = SwCharman.builder
         var self = this;
 
-        onChange() {
+        this.onChange = function () {
             self.builder.build(self.type.value, self.model.current)
+        }
+
+        this.onWildCard = function () {
+            self.model.current.wildCard = self.wildcard.checked
         }
     </script>
 </content-detail>
