@@ -1374,7 +1374,8 @@
         "enabled": "1",
         "info": "1",
         "group": "monstre",
-        "subgroup": "background"
+        "subgroup": "background",
+        "descr": "customisable"
     },
     {
         "titre": "Pouvoir",
