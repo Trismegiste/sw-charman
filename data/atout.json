@@ -1071,6 +1071,42 @@
         "subgroup": "général"
     },
     {
+        "titre": "Herméticien",
+        "prerequis": "d8+ dans la Tradition, un par Tradition",
+        "descr": "Donne un bonus de +2 dans une Tradition",
+        "enabled": 1,
+        "info": 1,
+        "group": "nephilim",
+        "subgroup": "général"
+    },
+    {
+        "titre": "Herméthèque",
+        "prerequis": "Recherche d8+",
+        "descr": "Possède une bibliothèque hermétique. Centaine de doc. Niveau occulte 6",
+        "enabled": 1,
+        "info": 0,
+        "group": "nephilim",
+        "subgroup": "général"
+    },
+    {
+        "titre": "Grande Herméthèque",
+        "prerequis": "V, Recherche d10+, Herméthèque",
+        "descr": "Possède une bibliothèque hermétique. Millier de doc. Niveau occulte 7",
+        "enabled": 1,
+        "info": 0,
+        "group": "nephilim",
+        "subgroup": "général"
+    },
+    {
+        "titre": "Herméthèque Légendaire",
+        "prerequis": "L, Recherche d12+, Grande Herméthèque",
+        "descr": "Possède une bibliothèque hermétique. 1 bâtiment + ED. Niveau occulte 8",
+        "enabled": 1,
+        "info": 0,
+        "group": "nephilim",
+        "subgroup": "général"
+    },
+    {
         "titre": "Glorieux Alliage",
         "prerequis": "L, 6 × Atouts Substances Œuvr.Blanc, Outil du glorieux alliage",
         "descr": "Donne accès au 3e cercle d'Alchimie & au mentor alchimique",
