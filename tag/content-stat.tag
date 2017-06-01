@@ -1,6 +1,8 @@
 <content-stat class="webcomponent pure-g">
     <div class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
-        <form class="pure-form pure-g form-label-aligned" onchange="{ updateCurrent }">
+        <form class="pure-form pure-g form-label-aligned" onchange="{
+                    updateCurrent
+                }">
             <div class="pure-u-1-4"><label>Nom</label></div>
             <div class="pure-u-3-4"><input class="pure-input-1" type="text" name="name" value="{model.current.name}" required="true"/></div>
             <div class="pure-u-1-4"><label>Cible</label></div>
@@ -44,13 +46,26 @@
                 </select>
             </div>
         </form>
-        <div class="pure-g button-spacing">
-            <div class="pure-u-1-3"><a class="pure-button" onclick="{ onReset }">Reset</a></div>
-            <div class="pure-u-1-3"><a class="pure-button button-primary" onclick="{ onAppend }">Append</a></div>
-            <div class="pure-u-1-3"><a class="pure-button button-error" onclick="{ onDelete }">Delete</a></div>
+        <div class="pure-g">
+            <div class="pure-u-1-1 footnote" if="{model.current.detailedNote}">
+                <strong>Notes</strong> : {model.current.detailedNote}
+            </div>
         </div>
         <div class="pure-g button-spacing">
-            <div class="pure-u-1"><a class="pure-button button-success" onclick="{ storeToRepository }">Store to DB</a></div>
+            <div class="pure-u-1-3"><a class="pure-button" onclick="{
+                        onReset
+                    }">Reset</a></div>
+            <div class="pure-u-1-3"><a class="pure-button button-primary" onclick="{
+                        onAppend
+                    }">Append</a></div>
+            <div class="pure-u-1-3"><a class="pure-button button-error" onclick="{
+                        onDelete
+                    }">Delete</a></div>
+        </div>
+        <div class="pure-g button-spacing">
+            <div class="pure-u-1"><a class="pure-button button-success" onclick="{
+                        storeToRepository
+                    }">Store to DB</a></div>
         </div>
     </div>
     <script>
@@ -58,12 +73,12 @@
         this.model = SwCharman.model
         var self = this
 
-        onReset() {
+        this.onReset = function () {
             self.model.trigger('reset');
             riot.route('stat', 'New...');
         }
 
-        onAppend() {
+        this.onAppend = function () {
             // checking non-empty name
             if (self.name.value == '') {
                 return;
@@ -74,7 +89,7 @@
             riot.route('char/' + (self.model.characterList.length - 1));
         }
 
-        onDelete() {
+        this.onDelete = function () {
             var idx = self.model.characterList.indexOf(self.model.current);
             if (idx !== -1) {
                 self.model.characterList.splice(idx, 1);
@@ -83,7 +98,7 @@
             }
         }
 
-        updateCurrent() {
+        this.updateCurrent = function () {
             var obj = self.model.current;
             obj.name = self.name.value;
             obj.toughness = self.toughness.value;
@@ -97,12 +112,12 @@
         }
 
         // store the current char into the Repository
-        storeToRepository() {
+        this.storeToRepository = function () {
             if (self.model.current.name != '') {
                 var temp = self.model.clone(self.model.current);
                 temp.restart();
                 SwCharman.repository.persist(temp)
-                        .then(function() {
+                        .then(function () {
                             self.notice(temp.name + ' sauvegardé', 'success')
                             self.model.trigger('update-db');
                         })
@@ -116,6 +131,6 @@
                 self.model.current = self.model.characterList[id];
             }
             subRoute('stat', 'Stat ' + self.model.current.name, true)
-        });
+        })
     </script>
 </content-stat>

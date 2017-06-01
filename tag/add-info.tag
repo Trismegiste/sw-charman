@@ -4,7 +4,7 @@
             }">
         <legend class="pure-u-1">Information</legend>
         <div class="pure-u-1">
-            <textarea class="pure-input-1" rows="4" name="info">{ model.current.detailedNote }</textarea>
+            <textarea class="pure-input-1" rows="5" name="info">{ model.current.detailedNote }</textarea>
         </div>
     </form>
     <script>
