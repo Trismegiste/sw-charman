@@ -4,8 +4,8 @@
                     updateCurrent
                 }">
             <div class="pure-u-1-4"><label>Nom</label></div>
-            <div class="pure-u-15-24"><input class="pure-input-1" type="text" name="name" value="{model.current.name}" required="true"/></div>
-            <div class="pure-u-3-24 wildcard"><i class="icon-wildcard" if="{model.current.wildCard}"></i></div>
+            <div class="pure-u-14-24"><input class="pure-input-1" type="text" name="name" value="{model.current.name}" required="true"/></div>
+            <div class="pure-u-4-24 wildcard"><i class="icon-wildcard" if="{model.current.wildCard}"></i></div>
             <div class="pure-u-1-4"><label>Cible</label></div>
             <div class="pure-u-3-4">
                 <select class="pure-input-1" name="target" value="{model.current.target}">
