@@ -23,6 +23,8 @@ var Character = function () {
     this.atout = [[], []]
     this.incarnation = {}
     this.metamorphe = {}
+    this.detailedNote = ''
+    this.wildCard = false
 };
 
 Character.prototype = {
