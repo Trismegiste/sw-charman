@@ -58,6 +58,7 @@
                         class="{ blockStyle }"></histoire-invisible>
     <metamorphe if="{ model.current.type == 'nephilim' }"
                 class="{ blockStyle }"></metamorphe>
+    <add-info class="{ blockStyle }"></add-info>
     <script>
         this.blockStyle = "webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"
         this.model = SwCharman.model
