@@ -534,7 +534,7 @@
         "titre": "Guérisseur",
         "prerequis": "N, Âme d8",
         "descr": "+2 au jets de Soins.",
-        "enabled": "1",
+        "enabled": "0",
         "info": "0",
         "group": "humain",
         "subgroup": "étrange"
