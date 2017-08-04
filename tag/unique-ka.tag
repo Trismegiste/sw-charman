@@ -16,7 +16,7 @@
         </div>
         <div class="pure-u-1-4">
             <select name="initiation" class="pure-input-1" data-is="dice-option"
-                    value="{ model.current.uniqueKa.initiation || opts.value }"></select>
+                    value="{ model.current.uniqueKa.initiation || opts.value }" max="17"></select>
         </div>
         <div class="pure-u-1-2">
             <label>

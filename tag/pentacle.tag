@@ -17,7 +17,7 @@
         </div>
         <div class="pure-u-1-4">
             <select name="initiation" class="pure-input-1"
-                    data-is="dice-option" value="{ model.current.pentacle.initiation }"></select>
+                    data-is="dice-option" value="{ model.current.pentacle.initiation }" max="17"></select>
         </div>
         <div class="pure-u-1-2"></div>
         <div class="pure-u-1-2">
