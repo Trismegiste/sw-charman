@@ -44,11 +44,6 @@
         "meta": "air",
         "editable": false
     }, {
-        "title": "Connaissance Langue",
-        "attr": "INT",
-        "meta": "air",
-        "editable": true
-    }, {
         "title": "Crochetage",
         "attr": "AGI",
         "meta": "eau",
@@ -83,6 +78,11 @@
         "attr": "AGI",
         "meta": "air",
         "editable": false
+    }, {
+        "title": "Langue",
+        "attr": "INT",
+        "meta": "air",
+        "editable": true
     }, {
         "title": "Natation",
         "attr": "AGI",

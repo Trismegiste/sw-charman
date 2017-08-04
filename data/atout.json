@@ -1269,15 +1269,6 @@
         "subgroup": "kabbale"
     },
     {
-        "titre": "Spécial",
-        "prerequis": "Nephilim",
-        "descr": "customisable",
-        "enabled": 1,
-        "info": 1,
-        "group": "nephilim",
-        "subgroup": "général"
-    },
-    {
         "titre": "Allure",
         "descr": "Allure = km/h divisé par 4",
         "enabled": "1",
@@ -1509,6 +1500,15 @@
         "descr": "1 compétences augmente d'un type de dé",
         "enabled": "1",
         "info": "1",
+        "group": "general",
+        "subgroup": "progression"
+    },
+    {
+        "titre": "Spécial",
+        "prerequis": "Nephilim",
+        "descr": "customisable",
+        "enabled": 1,
+        "info": 1,
         "group": "general",
         "subgroup": "progression"
     },
