@@ -263,7 +263,7 @@
         {
             "titre": "Amour perdu",
             "niveau": "Min/Maj",
-            "descr": "Maladresse SO d'un Ka = torpeur nostalgique pour 2d4 rounds. 2d8 heures si Majeur",
+            "descr": "Maladresse SO = torpeur nostalgique pour 2d4 rounds. 2d8 heures si Majeur",
             "enabled": "1"
         },
         {
