@@ -279,12 +279,6 @@
             "enabled": "1"
         },
         {
-            "titre": "Blessure permanente",
-            "niveau": "Mineur",
-            "descr": "Jour opposé majeur : +2 blessures",
-            "enabled": "1"
-        },
-        {
             "titre": "Chasse saturnale",
             "niveau": "Mineur",
             "descr": "Traqué pendant le mois d'orichalque",
