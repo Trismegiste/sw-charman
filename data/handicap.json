@@ -317,7 +317,7 @@
         {
             "titre": "Enkhaïbaté",
             "niveau": "Min/Maj",
-            "descr": "Maladresse de SO = crise de Khaïba. Mineur : contrôlé par PJ. Majeur : contrôlé par MJ",
+            "descr": "Animosité du XI. Maladresse de SO = crise de Khaïba. Mineur : contrôlé par PJ. Majeur : contrôlé par MJ.",
             "enabled": "1"
         },
         {
@@ -348,12 +348,6 @@
             "titre": "Incarnation sélective",
             "niveau": "Min/Maj",
             "descr": "Mineur : mâle ou femelle. Majeur : 1/10 de la population",
-            "enabled": "1"
-        },
-        {
-            "titre": "Khaïba chronique",
-            "niveau": "Min/Maj",
-            "descr": "Crise de Khaïba toutes les GC. Majeur : contrôlé par MJ",
             "enabled": "1"
         },
         {
