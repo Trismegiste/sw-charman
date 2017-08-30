@@ -407,7 +407,7 @@
         {
             "titre": "Pentacle instable",
             "niveau": "Min/Maj",
-            "descr": "1 sort réussi => perte 1 puce temp. Mineur: Ka dominant, Majeur: tous",
+            "descr": "Lancer un sort = perte 1 puce temp. Mineur: Opposé majeur, Majeur: Opposé majeur + Neutre défavorable",
             "enabled": "1"
         },
         {
