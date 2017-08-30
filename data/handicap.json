@@ -298,8 +298,8 @@
         },
         {
             "titre": "Contaminé",
-            "niveau": "Min/Maj",
-            "descr": "Contact avec KLN : Ka-élément ejecté sur echec FD 4. Mineur prochaine GC. Majeur : Mineur + perte def. de 2 puces",
+            "niveau": "Majeur",
+            "descr": "Maladresse de SO : 1d4 pour choisir le Ka-élément ejecté. Prisonnier jusqu'à prochaine GC ou bien Rituel plexus & sacrifice 1 puce",
             "enabled": "1"
         },
         {
