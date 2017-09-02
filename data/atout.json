@@ -1632,7 +1632,7 @@
     {
         "titre": "Tatouage-dragon",
         "prerequis": "L, Rebolera,  Cristal-dragon",
-        "descr": "1 action. Ka-élément selon action FD 4. Portée contact",
+        "descr": "1 action au contact par tatouer un pouvoir d'effet-dragon (coût pouvoir ≤ KAD-2). Nombre par Ka 3/2/2/1/1. KAD FD (3+Cout/2). Activation: KAD FD idem / 1 action / durée 1(2) minutes",
         "enabled": "1",
         "info": "0",
         "group": "antediluvien",
