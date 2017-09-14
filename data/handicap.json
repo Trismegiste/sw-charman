@@ -401,7 +401,7 @@
         {
             "titre": "Pentacle déformé",
             "niveau": "Min/Maj",
-            "descr": "Mineur : Malus de -2 sur tout sort lié au neutre fav. Majeur : Idem avec les 2 neutres",
+            "descr": "Mineur : Malus de -2 sur Neutre Défav. Majeur : Mineur + Malus de -1 sur Neutre Fav.",
             "enabled": "1"
         },
         {
