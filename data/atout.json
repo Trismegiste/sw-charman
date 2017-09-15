@@ -884,7 +884,7 @@
     {
         "titre": "Touche-à-tout",
         "prerequis": "N, Int d10",
-        "descr": "Pas de malus de -2 sur les jets de Connaissance non maitrisées.",
+        "descr": "Pas de malus d'Incompétence (-2) sur les jets de Compétences reliées à l'INT.",
         "enabled": "1",
         "info": "0",
         "group": "humain",
