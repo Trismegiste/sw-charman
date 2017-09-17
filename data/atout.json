@@ -1902,7 +1902,7 @@
     {
         "titre": "Héros-dragon",
         "prerequis": "L, Spasme de furie, Régèn draco, Pyrim ou Eolim, mâle",
-        "descr": "réduction par sacrifice. Invulnérabilité aux attaques physiques. 1 action. KAD FD 6. coût 1 + 1 puce/rd. Portée Personnel. 1+ round",
+        "descr": "Invulnérabilité aux attaques physiques. 1 action. KAD FD 6. coût 1 + 1 puce/rd. Portée Personnel. 1+ round",
         "enabled": "1",
         "info": "0",
         "group": "antediluvien",
