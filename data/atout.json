@@ -1381,14 +1381,6 @@
         "subgroup": "background"
     },
     {
-        "titre": "Spécial",
-        "enabled": "1",
-        "info": "1",
-        "group": "monstre",
-        "subgroup": "background",
-        "descr": "customisable"
-    },
-    {
         "titre": "Pouvoir",
         "descr": "Pouvoir SW. Lancé avec KAD FD 4",
         "enabled": "1",
@@ -1489,7 +1481,7 @@
     },
     {
         "titre": "Spécial",
-        "prerequis": "Nephilim",
+        "prerequis": "",
         "descr": "customisable",
         "enabled": 1,
         "info": 1,
