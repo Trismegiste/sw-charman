@@ -1469,14 +1469,6 @@
         "subgroup": "background"
     },
     {
-        "titre": "Vol",
-        "descr": "Vol à l'allure indiquée",
-        "enabled": "1",
-        "info": "1",
-        "group": "monstre",
-        "subgroup": "background"
-    },
-    {
         "titre": "Attribut +1TDD",
         "prerequis": "Limité à 1 par rang",
         "descr": "Un attribut augmente d'un type de dé",
