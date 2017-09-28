@@ -13,7 +13,7 @@
                     <option each="{model.characterList}" value="{name}">{name}</option>
                 </select>
             </div>
-            <div class="pure-u-4-24">
+            <div class="pure-u-4-24 direct-link">
                 <a href="#char/{ findIdx(model.current.target) }" if="{model.current.target}">
                     <i class="icon-address-card-o"></i>
                 </a>
