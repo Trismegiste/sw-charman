@@ -1277,22 +1277,6 @@
         "subgroup": "background"
     },
     {
-        "titre": "Armure magique",
-        "descr": "protection magique",
-        "enabled": "1",
-        "info": "1",
-        "group": "monstre",
-        "subgroup": "combat"
-    },
-    {
-        "titre": "Armure physique",
-        "descr": "protection physique",
-        "enabled": "1",
-        "info": "1",
-        "group": "monstre",
-        "subgroup": "combat"
-    },
-    {
         "titre": "Créature artificielle",
         "descr": "Jet secoué +2, pas de loca, pas de malus blessure",
         "enabled": "1",
@@ -1382,7 +1366,47 @@
     },
     {
         "titre": "Pouvoir",
-        "descr": "Pouvoir SW. Lancé avec KAD FD 4",
+        "descr": "Pouvoir du Bestiare",
+        "enabled": "1",
+        "info": "1",
+        "group": "monstre",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Pouv. Att Melee",
+        "descr": "Pouvoir d'attaque au contact FOR + N d6. 2pts par d6. Physique/Magique/+/+Orichalque = 0/2/4/+2",
+        "enabled": "1",
+        "info": "1",
+        "group": "monstre",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Pouv. Att Ranged",
+        "descr": "Pouvoir d'attaque à distance. 2pts par [N+1] d6. Cone/MBT/LBT. Phys/Mag.",
+        "enabled": "1",
+        "info": "1",
+        "group": "monstre",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Pouv. Toughness",
+        "descr": "Pouvoir bonus de Résistance. Physique ou Magique indépendant",
+        "enabled": "1",
+        "info": "1",
+        "group": "monstre",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Pouv. Speed",
+        "descr": "Pouvoir de déplacement rapide.",
+        "enabled": "1",
+        "info": "1",
+        "group": "monstre",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Pouv. Flight",
+        "descr": "Pouvoir de vol",
         "enabled": "1",
         "info": "1",
         "group": "monstre",
