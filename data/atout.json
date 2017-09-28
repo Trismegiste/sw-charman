@@ -1767,7 +1767,7 @@
     {
         "titre": "Répulsion du Ka",
         "prerequis": "L, Création de plexus, Apostasie pentaclique",
-        "descr": "Zone d'interdiction de la pratique des SO pour 1 heure. 1 action. KAD FD 4. coût 6. Portée 24",
+        "descr": "Zone d'interdiction de la pratique des SO pour 1 heure. 1 action. KAD FD 4. coût 6. Portée 48",
         "enabled": "1",
         "info": "0",
         "group": "antediluvien",
