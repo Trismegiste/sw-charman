@@ -1293,14 +1293,6 @@
         "subgroup": "combat"
     },
     {
-        "titre": "Attaque de Ka",
-        "descr": "attaques magiques de son Ka dominant",
-        "enabled": "1",
-        "info": "0",
-        "group": "monstre",
-        "subgroup": "combat"
-    },
-    {
         "titre": "Créature artificielle",
         "descr": "Jet secoué +2, pas de loca, pas de malus blessure",
         "enabled": "1",
@@ -1319,14 +1311,6 @@
     {
         "titre": "Élémentaire",
         "descr": "pas de loca, pas de malus blessure",
-        "enabled": "1",
-        "info": "0",
-        "group": "monstre",
-        "subgroup": "background"
-    },
-    {
-        "titre": "Enfouissement",
-        "descr": "déplacement normal",
         "enabled": "1",
         "info": "0",
         "group": "monstre",
@@ -1358,7 +1342,7 @@
     },
     {
         "titre": "Immunité",
-        "descr": "Immunité à un type de dégats physiques",
+        "descr": "Immunité à un type de dégats physiques (feu, froid...)",
         "enabled": "1",
         "info": "1",
         "group": "monstre",
@@ -1389,8 +1373,8 @@
         "subgroup": "combat"
     },
     {
-        "titre": "Ka-élémentaire",
-        "descr": "Un être éthéré de pur(s) Ka-élément(s).",
+        "titre": "Immatériel",
+        "descr": "Invulnérable aux dégâts physiques, pas de niveau de blessures.",
         "enabled": "1",
         "info": "0",
         "group": "monstre",
