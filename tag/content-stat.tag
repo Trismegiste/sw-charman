@@ -7,11 +7,16 @@
             <div class="pure-u-14-24"><input class="pure-input-1" type="text" name="name" value="{model.current.name}" required="true"/></div>
             <div class="pure-u-4-24 wildcard"><i class="icon-wildcard" if="{model.current.wildCard}"></i></div>
             <div class="pure-u-1-4"><label>Cible</label></div>
-            <div class="pure-u-3-4">
+            <div class="pure-u-14-24">
                 <select class="pure-input-1" name="target" value="{model.current.target}">
                     <option value=""></option>
                     <option each="{model.characterList}" value="{name}">{name}</option>
                 </select>
+            </div>
+            <div class="pure-u-4-24">
+                <a href="#char/{ findIdx(model.current.target) }" if="{model.current.target}">
+                    <i class="icon-address-card-o"></i>
+                </a>
             </div>
             <div class="pure-u-1-4"><label>Attaq.</label></div>
             <div class="pure-u-1-4">
@@ -122,6 +127,15 @@
                             self.notice(temp.name + ' sauvegardé', 'success')
                             self.model.trigger('update-db');
                         })
+            }
+        }
+
+        this.findIdx = function (search) {
+            for (var idx in self.model.characterList) {
+                var pc = self.model.characterList[idx]
+                if (pc.name === search) {
+                    return idx
+                }
             }
         }
 
