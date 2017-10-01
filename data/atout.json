@@ -1750,7 +1750,7 @@
     {
         "titre": "Projection éthérée",
         "prerequis": "L, Apostasie pentaclique",
-        "descr": "Attaque magique à distance 2xKAD. 1 action. KAD FD 4. coût 2. Portée 24. ",
+        "descr": "Attaque magique à distance [N+1] d6 pour 4×N puces de prime-essence, plafonné à 5d6. 1 action. KAD FD 4. Portée 24.",
         "enabled": "1",
         "info": "0",
         "group": "antediluvien",
@@ -1903,7 +1903,7 @@
     {
         "titre": "Prêtresse-dragon",
         "prerequis": "L, Créer et dissiper ED, Onirim ou Faërim ou Hydrim, femelle",
-        "descr": "Rituel en coopératif (+1 /succès/relance) max +2. Portée Personnel. un rituel",
+        "descr": "Rituel en coopératif (+1 /succès/relance) max +2. Un rituel ED INI d12+. Répartition des puces",
         "enabled": "1",
         "info": "0",
         "group": "antediluvien",
