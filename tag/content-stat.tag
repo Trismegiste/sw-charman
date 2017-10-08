@@ -20,7 +20,13 @@
             </div>
             <div class="pure-u-1-4"><label>Attaq.</label></div>
             <div class="pure-u-1-4">
-                <select name="attack" value="{model.current.attack}" data-is="dice-option"></select>
+                <select name="attack" value="{model.current.attack}" data-is="dice-option" class="pure-input-1"></select>
+            </div>
+            <div class="pure-u-1-4"><label>Parade</label></div>
+            <div class="pure-u-1-4"><input type="number" value="{model.current.toHit}" name="toHit" class="pure-input-1"/></div>
+            <div class="pure-u-1-4"><label>Dégâts</label></div>
+            <div class="pure-u-3-4">
+                <input type="text" name="damage" value="{ model.current.damage }" class="pure-input-1"/>
             </div>
             <div class="pure-u-1-2">
                 <label class="pure-checkbox">
@@ -28,27 +34,21 @@
                     <input type="checkbox" name="shaken" checked="{ model.current.shaken }"/>
                 </label>
             </div>
-            <div class="pure-u-1-4"><label>Dégâts</label></div>
-            <div class="pure-u-3-4">
-                <input type="text" name="damage" value="{ model.current.damage }" class="pure-input-1"/>
+            <div class="pure-u-1-4"><label>Jeton</label></div>
+            <div class="pure-u-1-4">
+                <select name="token" value="{model.current.spentToken}" max="{model.current.getMaxToken()}" data-is="token-option" class="pure-input-1">
+                </select>
             </div>
-            <div class="pure-u-1-4"><label>Parade</label></div>
-            <div class="pure-u-1-4"><input type="number" value="{model.current.toHit}" name="toHit" class="pure-input-1"/></div>
             <div class="pure-u-1-4"><label>Résis.</label></div>
             <div class="pure-u-1-4"><input type="number" value="{model.current.toughness}" name="toughness" class="pure-input-1"/></div>
             <div class="pure-u-1-4"><label>Bless.</label></div>
             <div class="pure-u-1-4">
-                <select name="wounds" value="{model.current.currentWounds}">
+                <select name="wounds" value="{model.current.currentWounds}" class="pure-input-1">
                     <option value="0">0</option>
                     <option value="-1">-1</option>
                     <option value="-2">-2</option>
                     <option value="-3">-3</option>
                     <option value="-4">Crit.</option>
-                </select>
-            </div>
-            <div class="pure-u-1-4"><label>Jeton</label></div>
-            <div class="pure-u-1-4">
-                <select name="token" value="{model.current.spentToken}" max="{model.current.getMaxToken()}" data-is="token-option" class="pure-input-1">
                 </select>
             </div>
         </form>
