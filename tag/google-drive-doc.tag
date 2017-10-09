@@ -16,14 +16,14 @@
             </div>
             <div class="pure-u-1-4"><label>Nom</label></div>
             <div class="pure-u-3-4"><input class="pure-input-1" type="text"
-                                           name="filename" value="{backupName}"
+                                           name="filename" value="{SwCharman.cloudFile.name}"
                                            placeholder="A filename to backup to"
                                            required="true"/>
             </div>
             <div class="pure-u-1-4"><label>Folder</label></div>
             <div class="pure-u-3-4"><input class="pure-input-1" type="text"
                                            name="folder" required="true" readonly="true"
-                                           value="{SwCharman.driveFolder.name}"
+                                           value="{SwCharman.cloudFolder.name}"
                                            placeholder="Click to pick a folder"
                                            onclick="{
                                                        onFolderPicking
@@ -34,7 +34,6 @@
 
     <script>
         var self = this
-        this.backupName = 'Sans-Titre'
         this.message = ''
         this.mixin('toasty')
 
@@ -70,14 +69,14 @@
             cloudClient.pickOneFile('application/json')
                     .then(function (choice) {
                         console.log(choice)
-                        self.backupName = choice.name
+                        SwCharman.cloudFile = choice
 
                         // folder info
                         var request = gapi.client.drive.files.get({
                             'fileId': choice.parentId
                         }).then(function (rsp) {
                             console.log(rsp)
-                            SwCharman.driveFolder = rsp.result
+                            SwCharman.cloudFolder = rsp.result
                         })
 
                         // dl file content

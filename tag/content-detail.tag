@@ -59,7 +59,7 @@
     <metamorphe if="{ model.current.type == 'nephilim' }"
                 class="{ blockStyle }"></metamorphe>
     <add-info class="{ blockStyle }"></add-info>
-    <div class="pure-u-1 button-spacing" if="{ SwCharman.driveFolder.id }"><a class="pure-button button-success" onclick="{
+    <div class="pure-u-1 button-spacing" if="{ SwCharman.cloudFolder.id }"><a class="pure-button button-success" onclick="{
                 storeToRepository
             }">Store to DB</a>
     </div>
@@ -83,24 +83,19 @@
                 var temp = self.model.clone(self.model.current);
                 temp.restart();
 
+
+                cloudClient.saveFile(SwCharman.backupName, 'application/json', JSON.stringify(temp), SwCharman.driveFolder.id)
+                        .then(function (rsp) {
+                            self.notice(temp.vertex.length + ' vertices saved', 'success')
+                            self.parent.trigger('toggle-cloud')
+                        })
+
                 SwCharman.repository.persist(temp)
                         .then(function () {
                             self.notice(temp.name + ' sauvegardé', 'success')
                             self.model.trigger('update-db');
                         })
             }
-        }
-
-
-        // upload to google
-        this.onBackup = function () {
-            var temp = RpgImpro.document
-
-            cloudClient.saveFile(self.filename.value, 'application/json', JSON.stringify(temp), self.driveFolder.id)
-                    .then(function (rsp) {
-                        self.notice(temp.vertex.length + ' vertices saved', 'success')
-                        self.parent.trigger('toggle-cloud')
-                    })
         }
 
     </script>
