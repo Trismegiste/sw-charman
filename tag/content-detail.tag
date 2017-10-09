@@ -59,9 +59,13 @@
     <metamorphe if="{ model.current.type == 'nephilim' }"
                 class="{ blockStyle }"></metamorphe>
     <add-info class="{ blockStyle }"></add-info>
-    <div class="pure-u-1 button-spacing" if="{ SwCharman.cloudFolder.id }"><a class="pure-button button-success" onclick="{
-                storeToRepository
-            }">Store to DB</a>
+    <div class="pure-u-1 button-spacing" if="{ SwCharman.cloudFolder.id }">
+        <a class="pure-button button-success" onclick="{
+                    storeToRepository
+                }">Store to DB</a>
+        <a class="pure-button button-error" onclick="{
+                    deleteFromRepository
+                }">Delete from DB</a>
     </div>
     <script>
         this.blockStyle = "webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"
@@ -86,5 +90,13 @@
             }
         }
 
+        // delete the current char into the Repository
+        this.deleteFromRepository = function () {
+            if (self.model.current.name != '') {
+                var temp = self.model.clone(self.model.current);
+                temp.restart();
+                self.model.trigger('delete-db', temp)
+            }
+        }
     </script>
 </content-detail>
