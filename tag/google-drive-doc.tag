@@ -4,30 +4,30 @@
                     onConnect
                 }">Connexion</a>
     </div>
-    <form if="{ isAuthenticated() }" class="pure-form form-label-aligned" onsubmit="{
-                onBackup
-            }">
+    <form if="{ isAuthenticated() }" class="pure-form form-label-aligned">
         <div class="pure-g">
-            <div class="pure-u-1-4"></div>
-            <div class="pure-u-3-4">
+            <div class="pure-u-1 pure-u-md-1-3">
                 <button class="pure-button button-primary pure-input-1" onclick="{
                             onFilePicking
                         }">Load</button>
             </div>
-            <div class="pure-u-1-4"><label>Nom</label></div>
-            <div class="pure-u-3-4"><input class="pure-input-1" type="text"
-                                           name="filename" value="{SwCharman.cloudFile.name}"
-                                           placeholder="A filename to backup to"
-                                           required="true"/>
+            <div class="pure-u-1-2 pure-u-md-1-6"><label>Nom</label></div>
+            <div class="pure-u-1-2 pure-u-md-1-6"><input class="pure-input-1" type="text"
+                                                         name="filename" value="{SwCharman.cloudFile.name}"
+                                                         placeholder="A filename to backup to"
+                                                         required="true"
+                                                         onchange="{
+                                                                     onChangeName
+                                                                 }"/>
             </div>
-            <div class="pure-u-1-4"><label>Folder</label></div>
-            <div class="pure-u-3-4"><input class="pure-input-1" type="text"
-                                           name="folder" required="true" readonly="true"
-                                           value="{SwCharman.cloudFolder.name}"
-                                           placeholder="Click to pick a folder"
-                                           onclick="{
-                                                       onFolderPicking
-                                                   }"/>
+            <div class="pure-u-1-2 pure-u-md-1-6"><label>Folder</label></div>
+            <div class="pure-u-1-2 pure-u-md-1-6"><input class="pure-input-1" type="text"
+                                                         name="folder" required="true" readonly="true"
+                                                         value="{SwCharman.cloudFolder.name}"
+                                                         placeholder="Click to pick a folder"
+                                                         onclick="{
+                                                                     onFolderPicking
+                                                                 }"/>
             </div>
         </div>
     </form>
@@ -88,6 +88,11 @@
                         })
                     }, function () {
                     })
+        }
+
+        this.onChangeName = function () {
+            SwCharman.cloudFile.id = null
+            SwCharman.cloudFile.name = self.filename.value
         }
 
     </script>

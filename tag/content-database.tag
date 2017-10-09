@@ -10,7 +10,9 @@
             </td>
         </tr>
     </table>
-    <google-drive-doc></google-drive-doc>
+    <div class="button-spacing">
+        <google-drive-doc></google-drive-doc>
+    </div>
     <script>
         this.mixin('toasty')
         this.model = SwCharman.model
