@@ -35,5 +35,29 @@
             self.listing = rows
             self.update()
         })
+
+        this.model.on('store-db', function (temp) {
+            var found = -1
+            for (var idx in self.listing) {
+                var pc = self.listing[idx]
+                if (pc.name === temp.name) {
+                    found = idx
+                }
+            }
+            // insert/update
+            if (found !== -1) {
+                self.listing[found] = temp
+            } else {
+                self.listing.push(temp)
+            }
+
+            cloudClient.saveFile(SwCharman.cloudFile.name, 'application/json', JSON.stringify(self.listing), SwCharman.cloudFolder.id)
+                    .then(function (rsp) {
+                        self.notice(self.listing.length + ' personnages sauvés', 'success')
+                    })
+
+        })
+
+
     </script>
 </content-database>

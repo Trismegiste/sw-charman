@@ -60,7 +60,7 @@
         this.onFolderPicking = function () {
             cloudClient.pickOneFolder()
                     .then(function (choice) {
-                        SwCharman.driveFolder = choice
+                        SwCharman.cloudFolder = choice
                         self.update()
                     })
         }

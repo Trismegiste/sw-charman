@@ -82,19 +82,7 @@
             if (self.model.current.name != '') {
                 var temp = self.model.clone(self.model.current);
                 temp.restart();
-
-
-                cloudClient.saveFile(SwCharman.backupName, 'application/json', JSON.stringify(temp), SwCharman.driveFolder.id)
-                        .then(function (rsp) {
-                            self.notice(temp.vertex.length + ' vertices saved', 'success')
-                            self.parent.trigger('toggle-cloud')
-                        })
-
-                SwCharman.repository.persist(temp)
-                        .then(function () {
-                            self.notice(temp.name + ' sauvegardé', 'success')
-                            self.model.trigger('update-db');
-                        })
+                self.model.trigger('store-db', temp)
             }
         }
 
