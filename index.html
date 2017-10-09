@@ -49,6 +49,7 @@
     <script src="./tag/histoire-invisible.tag" type="riot/tag"></script>
     <script src="./tag/metamorphe.tag" type="riot/tag"></script>
     <script src="./tag/add-info.tag" type="riot/tag"></script>
+    <script src="./tag/google-drive-doc.tag" type="riot/tag"></script>
 
     <script src="./js/diceRoller.js"></script>
     <script src="./js/Character.js"></script>
@@ -57,7 +58,17 @@
     <script src="./js/Model.js"></script>
     <script src="./js/SwTable.js"></script>
     <script src="./js/dexie.min.js"></script>
+    <script src="./js/GoogleDrive.js"></script>
+    <script src="./js/icon-google-drive.js"></script>
+
     <script>
+        var cloudClient = new GoogleDrive({
+            clientId: '374977961173-5novsbmqqspuvqr0s54jjocimluvos64.apps.googleusercontent.com',
+            appId: '374977961173',
+            apiKey: 'AIzaSyDgilBkA3oUaSyczUAHLmK41IqehCbzpqI'
+        })
+        cloudClient.setIcon(googleDriveThumbnail)
+
         // container for this SPA
         var SwCharman = {
             repository: new Repository(),
@@ -73,5 +84,7 @@
             riot.route('list')
         })
     </script>
+
+    <script async defer src="https://apis.google.com/js/api.js"></script>
 </body>
 </html>

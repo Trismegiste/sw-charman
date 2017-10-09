@@ -1,4 +1,5 @@
 <content-database>
+    <google-drive-doc></google-drive-doc>
     <table class="pure-table pure-table-striped checkable-listing" style="width: 100%">
         <tr each="{ listing }">
             <td>

@@ -45,10 +45,21 @@ GoogleDrive.prototype.connect = function () {
 
 }
 
+GoogleDrive.prototype.isTokenExpired = function () {
+    return (Date.now() > gapi.auth2.getAuthInstance().currentUser.get().getAuthResponse().expires_at)
+}
+
+GoogleDrive.prototype.refreshToken = function () {
+    return gapi.auth2.getAuthInstance().currentUser.get().reloadAuthResponse()
+}
+
 GoogleDrive.prototype.getAccessToken = function () {
     return gapi.auth2.getAuthInstance().currentUser.get().getAuthResponse().access_token
 }
 
+GoogleDrive.prototype.isSignedIn = function () {
+    return gapi.auth2 && gapi.auth2.getAuthInstance().isSignedIn.get()
+}
 
 GoogleDrive.prototype.pickOneFolder = function () {
     var self = this
