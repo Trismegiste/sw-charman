@@ -2,10 +2,10 @@
     <table class="pure-table pure-table-striped checkable-listing" style="width: 100%">
         <tr each="{ listing }">
             <td>
+                <i class="icon-{ type }"></i>
                 <a href="#" onclick="{
                             parent.onAppend
                         }">{name}</a>
-                <i class="icon-{ type }"></i>
                 <i if="{wildCard}" class="icon-wildcard"></i>
             </td>
         </tr>
@@ -34,6 +34,10 @@
         }
 
         this.model.on('update-db', function (rows) {
+            rows.sort(function (a, b) {
+                return a.name.localeCompare(b.name)
+            })
+
             self.listing = rows
             self.update()
         })
