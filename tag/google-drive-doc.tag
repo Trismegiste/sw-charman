@@ -7,7 +7,6 @@
     <form if="{ isAuthenticated() }" class="pure-form form-label-aligned" onsubmit="{
                 onBackup
             }">
-        <h2>Document ({RpgImpro.document.vertex.length} vertex)</h2>
         <div class="pure-g">
             <div class="pure-u-1-4"></div>
             <div class="pure-u-3-4">
@@ -45,6 +44,7 @@
         this.backupName = 'Sans-Titre'
         this.message = ''
         this.mixin('toasty')
+        var repository = SwCharman.repository
 
         this.onConnect = function () {
             cloudClient.connect()
@@ -104,10 +104,17 @@
                             fileId: choice.id,
                             alt: 'media'
                         }).then(function (rsp) {
-                            var graph = rsp.result
-                            RpgImpro.document.vertex = graph.vertex
-                            RpgImpro.document.edge = graph.edge
-                            RpgImpro.repository.vertex = graph.vertex
+                            var insert = []
+                            rsp.result.forEach(function (obj) {
+                                insert.push(repository.persist(obj))
+                            })
+                            Promise.all(insert).then(function (rsp) {
+                                self.notice(rsp.length + ' items imported', 'success')
+                            }).catch(function (rsp) {
+                                console.log(rsp)
+                                self.notice('Import has failed', 'error')
+                            })
+
                             self.notice(graph.vertex.length + ' vertices imported', 'success')
                             self.parent.trigger('toggle-cloud')
                             RpgImpro.document.trigger('update')
