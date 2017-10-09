@@ -29,12 +29,6 @@
                                                        onFolderPicking
                                                    }"/>
             </div>
-            <div class="pure-u-1-4"></div>
-            <div class="pure-u-3-4">
-                <button class="pure-button button-error pure-input-1" if="{driveFolder.id}">
-                    Save
-                </button>
-            </div>
         </div>
     </form>
 
@@ -44,7 +38,6 @@
         this.backupName = 'Sans-Titre'
         this.message = ''
         this.mixin('toasty')
-        var repository = SwCharman.repository
 
         this.onConnect = function () {
             cloudClient.connect()
@@ -104,21 +97,7 @@
                             fileId: choice.id,
                             alt: 'media'
                         }).then(function (rsp) {
-                            var insert = []
-                            // promise clear char repo :
-                            insert.push(repository.reset())
-                            // promises insert :
-                            rsp.result.forEach(function (obj) {
-                                insert.push(repository.persist(obj))
-                            })
-
-                            Promise.all(insert).then(function (rsp) {
-                                self.notice((rsp.length - 1) + ' items imported', 'success')
-                                sef.parent.update()
-                            }).catch(function (rsp) {
-                                console.log(rsp)
-                                self.notice('Import has failed', 'error')
-                            })
+                            SwCharman.model.trigger('update-db', rsp.result)
                         })
                     }, function () {
                     })
