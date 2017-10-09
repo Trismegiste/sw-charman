@@ -12,21 +12,6 @@
         </tr>
     </table>
     <google-drive-doc></google-drive-doc>
-    <footer class="pure-g button-spacing">
-        <div class="pure-u-1-4">
-            <a href="#" class="pure-button button-primary" onclick="{
-                        onPdf
-                    }"><i class="icon-file-pdf"></i></a>
-        </div>
-        <div class="pure-u-1-2">
-            <a href="cloud.html" target="_blank" class="pure-button"><i class="icon-google-drive"></i></a>
-        </div>
-        <div class="pure-u-1-4">
-            <a href="#" class="pure-button button-error" onclick="{
-                        onDelete
-                    }"><i class="icon-trash-empty"></i></a>
-        </div>
-    </footer>
     <script>
         this.mixin('toasty')
         this.model = SwCharman.model
@@ -53,40 +38,6 @@
                 self.model.characterList.push(pc);
                 self.notice(pc.name + ' ajouté', 'primary')
             })
-        }
-
-        this.onDelete = function () {
-            // search the checked radio
-            var item = self.radio
-            for (var idx in self.radiochoice) {
-                var radio = self.radiochoice[idx]
-                if (radio.checked) {
-                    radio.checked = false;
-                    var name = radio.value
-                    SwCharman.repository.deleteByPk(name).then(function () {
-                        self.notice(name + ' effacé', 'error')
-                        // updating listing because, dexie returns only promise
-                        self.listing.forEach(function (obj, idx) {
-                            if (obj.name === name) {  // name is unique in DB
-                                self.listing.splice(idx, 1)
-                            }
-                        })
-                        self.update()
-                    })
-                }
-            }
-        }
-
-        this.onPdf = function () {
-            // search the checked radio
-            var item = self.radio
-            for (var idx in self.radiochoice) {
-                var radio = self.radiochoice[idx]
-                if (radio.checked) {
-                    radio.checked = false;
-                    window.open('pdf.html?key=' + encodeURIComponent(radio.value), '_blank')
-                }
-            }
         }
 
         this.model.on('update-db', function () {
