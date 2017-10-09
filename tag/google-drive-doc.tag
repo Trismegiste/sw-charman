@@ -40,7 +40,7 @@
 
     <script>
         var self = this
-        this.driveFolder = {}
+        this.driveFolder = SwCharman.cloudFile
         this.backupName = 'Sans-Titre'
         this.message = ''
         this.mixin('toasty')
@@ -105,19 +105,20 @@
                             alt: 'media'
                         }).then(function (rsp) {
                             var insert = []
+                            // promise clear char repo :
+                            insert.push(repository.reset())
+                            // promises insert :
                             rsp.result.forEach(function (obj) {
                                 insert.push(repository.persist(obj))
                             })
+
                             Promise.all(insert).then(function (rsp) {
-                                self.notice(rsp.length + ' items imported', 'success')
+                                self.notice((rsp.length - 1) + ' items imported', 'success')
+                                sef.parent.update()
                             }).catch(function (rsp) {
                                 console.log(rsp)
                                 self.notice('Import has failed', 'error')
                             })
-
-                            self.notice(graph.vertex.length + ' vertices imported', 'success')
-                            self.parent.trigger('toggle-cloud')
-                            RpgImpro.document.trigger('update')
                         })
                     }, function () {
                     })

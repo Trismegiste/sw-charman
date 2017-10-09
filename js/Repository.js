@@ -37,6 +37,10 @@ Repository.prototype.persist = function (character) {
     return this.cnx.character.put(character)
 };
 
+Repository.prototype.reset = function (character) {
+    return this.cnx.character.clear()
+}
+
 Repository.prototype.saveCurrent = function (arr) {
     var self = this;
     self.cnx.current.clear()

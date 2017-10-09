@@ -1,5 +1,4 @@
 <content-database>
-    <google-drive-doc></google-drive-doc>
     <table class="pure-table pure-table-striped checkable-listing" style="width: 100%">
         <tr each="{ listing }">
             <td>
@@ -12,6 +11,7 @@
             </td>
         </tr>
     </table>
+    <google-drive-doc></google-drive-doc>
     <footer class="pure-g button-spacing">
         <div class="pure-u-1-4">
             <a href="#" class="pure-button button-primary" onclick="{
