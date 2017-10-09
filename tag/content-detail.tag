@@ -59,6 +59,10 @@
     <metamorphe if="{ model.current.type == 'nephilim' }"
                 class="{ blockStyle }"></metamorphe>
     <add-info class="{ blockStyle }"></add-info>
+    <div class="pure-u-1 button-spacing" if="{ SwCharman.driveFolder.id }"><a class="pure-button button-success" onclick="{
+                storeToRepository
+            }">Store to DB</a>
+    </div>
     <script>
         this.blockStyle = "webcomponent pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"
         this.model = SwCharman.model
@@ -72,5 +76,32 @@
         this.onWildCard = function () {
             self.model.current.wildCard = self.wildcard.checked
         }
+
+        // store the current char into the Repository
+        this.storeToRepository = function () {
+            if (self.model.current.name != '') {
+                var temp = self.model.clone(self.model.current);
+                temp.restart();
+
+                SwCharman.repository.persist(temp)
+                        .then(function () {
+                            self.notice(temp.name + ' sauvegardé', 'success')
+                            self.model.trigger('update-db');
+                        })
+            }
+        }
+
+
+        // upload to google
+        this.onBackup = function () {
+            var temp = RpgImpro.document
+
+            cloudClient.saveFile(self.filename.value, 'application/json', JSON.stringify(temp), self.driveFolder.id)
+                    .then(function (rsp) {
+                        self.notice(temp.vertex.length + ' vertices saved', 'success')
+                        self.parent.trigger('toggle-cloud')
+                    })
+        }
+
     </script>
 </content-detail>

@@ -68,11 +68,6 @@
                         onDelete
                     }">Delete</a></div>
         </div>
-        <div class="pure-g button-spacing">
-            <div class="pure-u-1"><a class="pure-button button-success" onclick="{
-                        storeToRepository
-                    }">Store to DB</a></div>
-        </div>
     </div>
     <script>
         this.mixin('toasty')
@@ -115,19 +110,6 @@
             obj.shaken = self.shaken.checked;
             obj.spentToken = self.token.value;
             obj.target = self.target.value;
-        }
-
-        // store the current char into the Repository
-        this.storeToRepository = function () {
-            if (self.model.current.name != '') {
-                var temp = self.model.clone(self.model.current);
-                temp.restart();
-                SwCharman.repository.persist(temp)
-                        .then(function () {
-                            self.notice(temp.name + ' sauvegardé', 'success')
-                            self.model.trigger('update-db');
-                        })
-            }
         }
 
         this.findIdx = function (search) {

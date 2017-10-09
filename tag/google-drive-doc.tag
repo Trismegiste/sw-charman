@@ -23,7 +23,7 @@
             <div class="pure-u-1-4"><label>Folder</label></div>
             <div class="pure-u-3-4"><input class="pure-input-1" type="text"
                                            name="folder" required="true" readonly="true"
-                                           value="{driveFolder.name}"
+                                           value="{SwCharman.driveFolder.name}"
                                            placeholder="Click to pick a folder"
                                            onclick="{
                                                        onFolderPicking
@@ -34,7 +34,6 @@
 
     <script>
         var self = this
-        this.driveFolder = SwCharman.cloudFile
         this.backupName = 'Sans-Titre'
         this.message = ''
         this.mixin('toasty')
@@ -62,19 +61,8 @@
         this.onFolderPicking = function () {
             cloudClient.pickOneFolder()
                     .then(function (choice) {
-                        self.driveFolder = choice
+                        SwCharman.driveFolder = choice
                         self.update()
-                    })
-        }
-
-        // upload to google
-        this.onBackup = function () {
-            var temp = RpgImpro.document
-
-            cloudClient.saveFile(self.filename.value, 'application/json', JSON.stringify(temp), self.driveFolder.id)
-                    .then(function (rsp) {
-                        self.notice(temp.vertex.length + ' vertices saved', 'success')
-                        self.parent.trigger('toggle-cloud')
                     })
         }
 
@@ -89,7 +77,7 @@
                             'fileId': choice.parentId
                         }).then(function (rsp) {
                             console.log(rsp)
-                            self.driveFolder = rsp.result
+                            SwCharman.driveFolder = rsp.result
                         })
 
                         // dl file content
