@@ -41,13 +41,7 @@
 
         // persist
         this.model.on('store-db', function (temp) {
-            var found = -1
-            for (var idx in self.model.cloudList) {
-                var pc = self.model.cloudList[idx]
-                if (pc.name === temp.name) {
-                    found = idx
-                }
-            }
+            var found = self.model.findIdxByName(temp.name)
             // insert/update
             if (found !== -1) {
                 self.model.cloudList[found] = temp
@@ -55,31 +49,26 @@
                 self.model.cloudList.push(temp)
             }
 
-            cloudClient.saveFile(SwCharman.cloudFile.name, 'application/json', JSON.stringify(self.model.cloudList), SwCharman.cloudFolder.id)
-                    .then(function (rsp) {
-                        self.notice(self.model.cloudList.length + ' personnages sauvés', 'success')
-                    })
+            self.saveToCloud()
+
         })
 
         // delete
         this.model.on('delete-db', function (temp) {
-            var found = -1
-            for (var idx in self.model.cloudList) {
-                var pc = self.model.cloudList[idx]
-                if (pc.name === temp.name) {
-                    found = idx
-                }
-            }
-            // insert/update
+            var found = self.model.findIdxByName(temp.name)
+            // delete
             if (found !== -1) {
                 self.model.cloudList.splice(found, 1)
-
-                cloudClient.saveFile(SwCharman.cloudFile.name, 'application/json', JSON.stringify(self.model.cloudList), SwCharman.cloudFolder.id)
-                        .then(function (rsp) {
-                            self.notice(self.model.cloudList.length + ' personnages sauvés', 'error')
-                        })
+                self.saveToCloud()
             }
         })
+
+        this.saveToCloud = function () {
+            cloudClient.saveFile(SwCharman.cloudFile.name, 'application/json', JSON.stringify(self.model.cloudList), SwCharman.cloudFolder.id)
+                    .then(function (rsp) {
+                        self.notice(self.model.cloudList.length + ' personnages sauvés', 'success')
+                    })
+        }
 
     </script>
 </content-database>

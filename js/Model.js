@@ -93,15 +93,23 @@ Model.prototype = {
         throw new Error(ka + ' is not one of the five Ka')
     },
     findByName: function (name) {
+        var idx = this.findIdxByName(name)
+        if (idx !== -1) {
+            return this.cloudList[idx]
+        }
+
+        return null
+    },
+    findIdxByName: function (name) {
         var pc
         for (var idx in this.cloudList) {
             pc = this.cloudList[idx]
             if (pc.name === name) {
-                return pc
+                return idx
             }
         }
 
-        return null
+        return -1
     },
     createFrom: function (json) {
         return Object.assign(new Character, json)
