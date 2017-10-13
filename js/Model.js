@@ -4,8 +4,8 @@
 
 var Model = function () {
     riot.observable(this);
-    this.characterList = [];
-    this.cloudList = [];
+    this.characterList = [];  // Array of Character
+    this.cloudList = [];  // Array of POJO
     this.current = new Character();
     var self = this;
 
@@ -92,15 +92,19 @@ Model.prototype = {
         }
         throw new Error(ka + ' is not one of the five Ka')
     },
-    findCloudIdx: function (name) {
-        var pc;
+    findByName: function (name) {
+        var pc
         for (var idx in this.cloudList) {
             pc = this.cloudList[idx]
             if (pc.name === name) {
-                return idx
+                return pc
             }
         }
 
-        return -1
+        return null
+    },
+    stackNew: function (json) {
+        var obj = Object.assign(new Character, json)
+        this.characterList.push(obj);
     }
 }

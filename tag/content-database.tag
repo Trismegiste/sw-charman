@@ -1,6 +1,6 @@
 <content-database>
     <table class="pure-table pure-table-striped checkable-listing" style="width: 100%">
-        <tr each="{ model.listing }">
+        <tr each="{ model.cloudList }">
             <td>
                 <i class="icon-{ type }"></i>
                 <a href="#" onclick="{
@@ -19,15 +19,10 @@
         var self = this
 
         this.onAppend = function (event) {
-            // looped item
-            var item = event.item
-            for (var idx in self.model.listing) {
-                var pc = self.model.listing[idx]
-                if (item.name === pc.name) {
-                    var obj = Object.assign(new Character, pc)
-                    self.model.characterList.push(obj);
-                    self.notice(pc.name + ' ajouté', 'primary')
-                }
+            var pc = self.model.findByName(event.item.name)
+            if (pc) {
+                self.model.stackNew(pc)
+                self.notice(pc.name + ' ajouté', 'primary')
             }
         }
 
@@ -36,48 +31,48 @@
                 return a.name.localeCompare(b.name)
             })
 
-            self.model.listing = rows
+            self.model.cloudList = rows
             self.update()
         })
 
         // persist
         this.model.on('store-db', function (temp) {
             var found = -1
-            for (var idx in self.model.listing) {
-                var pc = self.model.listing[idx]
+            for (var idx in self.model.cloudList) {
+                var pc = self.model.cloudList[idx]
                 if (pc.name === temp.name) {
                     found = idx
                 }
             }
             // insert/update
             if (found !== -1) {
-                self.model.listing[found] = temp
+                self.model.cloudList[found] = temp
             } else {
-                self.model.listing.push(temp)
+                self.model.cloudList.push(temp)
             }
 
-            cloudClient.saveFile(SwCharman.cloudFile.name, 'application/json', JSON.stringify(self.model.listing), SwCharman.cloudFolder.id)
+            cloudClient.saveFile(SwCharman.cloudFile.name, 'application/json', JSON.stringify(self.model.cloudList), SwCharman.cloudFolder.id)
                     .then(function (rsp) {
-                        self.notice(self.model.listing.length + ' personnages sauvés', 'success')
+                        self.notice(self.model.cloudList.length + ' personnages sauvés', 'success')
                     })
         })
 
         // delete
         this.model.on('delete-db', function (temp) {
             var found = -1
-            for (var idx in self.model.listing) {
-                var pc = self.model.listing[idx]
+            for (var idx in self.model.cloudList) {
+                var pc = self.model.cloudList[idx]
                 if (pc.name === temp.name) {
                     found = idx
                 }
             }
             // insert/update
             if (found !== -1) {
-                self.model.listing.splice(found, 1)
+                self.model.cloudList.splice(found, 1)
 
-                cloudClient.saveFile(SwCharman.cloudFile.name, 'application/json', JSON.stringify(self.model.listing), SwCharman.cloudFolder.id)
+                cloudClient.saveFile(SwCharman.cloudFile.name, 'application/json', JSON.stringify(self.model.cloudList), SwCharman.cloudFolder.id)
                         .then(function (rsp) {
-                            self.notice(self.model.listing.length + ' personnages sauvés', 'error')
+                            self.notice(self.model.cloudList.length + ' personnages sauvés', 'error')
                         })
             }
         })
