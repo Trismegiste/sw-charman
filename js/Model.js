@@ -5,6 +5,7 @@
 var Model = function () {
     riot.observable(this);
     this.characterList = [];
+    this.cloudList = [];
     this.current = new Character();
     var self = this;
 
@@ -90,5 +91,16 @@ Model.prototype = {
             }
         }
         throw new Error(ka + ' is not one of the five Ka')
+    },
+    findCloudIdx: function (name) {
+        var pc;
+        for (var idx in this.cloudList) {
+            pc = this.cloudList[idx]
+            if (pc.name === name) {
+                return idx
+            }
+        }
+
+        return -1
     }
 }
