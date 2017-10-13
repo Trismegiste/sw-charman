@@ -5,7 +5,7 @@
 var Model = function () {
     riot.observable(this);
     this.characterList = [];  // Array of Character
-    this.cloudList = [];  // Array of POJO
+    this.cloudList = [];  // Array of Character from Cloud
     this.current = new Character();
     var self = this;
 
@@ -103,8 +103,7 @@ Model.prototype = {
 
         return null
     },
-    stackNew: function (json) {
-        var obj = Object.assign(new Character, json)
-        this.characterList.push(obj);
+    createFrom: function (json) {
+        return Object.assign(new Character, json)
     }
 }

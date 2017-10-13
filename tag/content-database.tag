@@ -21,7 +21,7 @@
         this.onAppend = function (event) {
             var pc = self.model.findByName(event.item.name)
             if (pc) {
-                self.model.stackNew(pc)
+                self.model.characterList.push(pc)
                 self.notice(pc.name + ' ajouté', 'primary')
             }
         }
@@ -31,7 +31,11 @@
                 return a.name.localeCompare(b.name)
             })
 
-            self.model.cloudList = rows
+            self.model.cloudList = []
+            for (var idx in rows) {
+                var pc = self.model.createFrom(rows[idx])
+                self.model.cloudList.push(pc)
+            }
             self.update()
         })
 
