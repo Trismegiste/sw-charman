@@ -27,15 +27,7 @@
         }
 
         this.model.on('update-db', function (rows) {
-            rows.sort(function (a, b) {
-                return a.name.localeCompare(b.name)
-            })
-
-            self.model.cloudList = []
-            for (var idx in rows) {
-                var pc = self.model.createFrom(rows[idx])
-                self.model.cloudList.push(pc)
-            }
+            self.model.importFromJson(rows)
             self.update()
         })
 

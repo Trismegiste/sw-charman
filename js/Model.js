@@ -113,5 +113,16 @@ Model.prototype = {
     },
     createFrom: function (json) {
         return Object.assign(new Character, json)
+    },
+    importFromJson: function (rows) {
+        rows.sort(function (a, b) {
+            return a.name.localeCompare(b.name)
+        })
+
+        this.cloudList = []
+        for (var idx in rows) {
+            var pc = this.createFrom(rows[idx])
+            this.cloudList.push(pc)
+        }
     }
 }
