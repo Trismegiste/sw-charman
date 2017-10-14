@@ -35,13 +35,13 @@
                 }
             }
 
-            for (var idx in SwCharman.model.cloudList) {
-                var character = SwCharman.model.cloudList[idx]
-                var docDefinition = factory.create(character);
-                compil.content.push(docDefinition.getDocument().content)
-            }
-
             try {
+                for (var idx in SwCharman.model.cloudList) {
+                    var character = SwCharman.model.cloudList[idx]
+                    var docDefinition = factory.create(character);
+                    compil.content.push(docDefinition.getDocument().content)
+                }
+
                 pdfMake.createPdf(compil).download('bestiaire.pdf')
             } catch (e) {
                 document.getElementById('log').innerHTML = "Error: " + (e.stack || e)

@@ -101,6 +101,9 @@ NephilimRendering.prototype.getHistoire = function () {
 
 NephilimRendering.prototype.getAspect = function () {
     var meta = this.character.metamorphe;
+    if (!meta.nom) {
+        throw new Error('Métamorphe indéfini pour ' + this.character.name)
+    }
     var rm = Math.floor(this.character.pentacle.initiation / 2) + 2
     var asp = 12 - rm
 
