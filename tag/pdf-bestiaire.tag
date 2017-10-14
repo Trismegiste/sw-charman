@@ -1,9 +1,12 @@
 <pdf-bestiaire>
-    <form class="pure-form" if="{ready}">
+    <form class="pure-form" if="{ready}" onsubmit="{
+                onGenerate
+            }">
         <button class="pure-button pure-button-primary">
             Generate
         </button>
     </form>
+    <div id="log"></div>
     <script>
         var self = this
         self.ready = false
@@ -21,5 +24,28 @@
             self.ready = true
         })
 
+        this.onGenerate = function () {
+            var factory = new RenderingFactory();
+            var compil = {
+                content: [],
+                styles: {
+                    verticalAlign: {
+                        margin: [0, 6, 0, 0]
+                    }
+                }
+            }
+
+            for (var idx in SwCharman.model.cloudList) {
+                var character = SwCharman.model.cloudList[idx]
+                var docDefinition = factory.create(character);
+                compil.content.push(docDefinition.getDocument().content)
+            }
+
+            try {
+                pdfMake.createPdf(compil).download('bestiaire.pdf')
+            } catch (e) {
+                document.getElementById('log').innerHTML = "Error: " + (e.stack || e)
+            }
+        }
     </script>
 </pdf-bestiaire>
