@@ -50,6 +50,19 @@
     <script src="./tag/metamorphe.tag" type="riot/tag"></script>
     <script src="./tag/add-info.tag" type="riot/tag"></script>
     <script src="./tag/google-drive-doc.tag" type="riot/tag"></script>
+    <script src="./tag/pdf-bestiaire.tag" type="riot/tag"></script>
+
+    <script src="./js/render/RenderingFactory.js"></script>
+    <script src="./js/render/AbstractRendering.js"></script>
+    <script src="./js/render/NephilimRendering.js"></script>
+    <script src="./js/render/HumainRendering.js"></script>
+    <script src="./js/render/EtreKaRendering.js"></script>
+    <script src="./js/render/EffetdragonRendering.js"></script>
+    <script src="./js/render/KabbaleRendering.js"></script>
+    <script src="./js/render/ConstructRendering.js"></script>
+    <script src="./js/render/Asset.js"></script>
+    <script src="./js/pdf/pdfmake.min.js"></script>
+    <script src="./js/pdf/vfs_fonts.js"></script>
 
     <script src="./js/diceRoller.js"></script>
     <script src="./js/Character.js"></script>
@@ -75,7 +88,8 @@
             model: new Model(),
             table: new SwTable('./data/'),
             cloudFolder: {},
-            cloudFile: {name: 'Sans-Titre'}
+            cloudFile: {name: 'Sans-Titre'},
+            assetManager: new Asset()
         }
         // Here we go
         SwCharman.table.load().then(function () {
