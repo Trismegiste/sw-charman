@@ -226,3 +226,30 @@ AbstractRendering.prototype.getHandicapDescription = function (group) {
 
     return {text: listing, fontSize: 8}
 }
+
+AbstractRendering.prototype.getFightingStat = function () {
+    return {
+        table: {
+            headerRows: 1,
+            widths: ['20%', '40%', '20%', '20%'],
+            body: [
+                [
+                    'Attaque',
+                    'Dégâts',
+                    'Parade',
+                    'Résistance'
+                ],
+                [
+                    this.character.attack,
+                    this.character.damage,
+                    this.character.toHit,
+                    this.character.toughness
+                ],
+                [{text: this.character.detailedNote, colSpan: 4}, {}, {}, {}]
+            ]
+        },
+        layout: 'lightHorizontalLines',
+        margin: [0, 5],
+        pageBreak: 'after'
+    }
+}

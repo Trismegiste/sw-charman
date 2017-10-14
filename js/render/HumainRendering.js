@@ -36,7 +36,8 @@ HumainRendering.prototype.getDocument = function () {
             },
             {text: 'Notes'},
             this.getHandicapDescription(0),
-            this.getAtoutDescription(0)
+            this.getAtoutDescription(0),
+            this.getFightingStat()
         ],
         styles: {
             verticalAlign: {
