@@ -7,7 +7,7 @@ AbstractRendering.prototype.getDocument = function () {
 }
 
 AbstractRendering.prototype.getDiceText = function (val) {
-    var choice = [];
+    var choice = ['-']
     for (var k = 4; k <= 12; k += 2) {
         choice[k] = 'd' + k
     }
@@ -240,7 +240,7 @@ AbstractRendering.prototype.getFightingStat = function () {
                     'Résistance'
                 ],
                 [
-                    this.character.attack,
+                    this.getDiceText(this.character.attack),
                     this.character.damage,
                     this.character.toHit,
                     this.character.toughness
