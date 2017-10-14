@@ -43,5 +43,8 @@ EtreKaRendering.prototype.getIdentite = function () {
     title = title.charAt(0).toUpperCase() + title.slice(1)
             + ' '
             + this.character.name.charAt(0).toUpperCase() + this.character.name.slice(1)
+    if (this.character.wildCard) {
+        title += ' [J]'
+    }
     return {text: title, margin: [0, 0, 0, 6], fontSize: 16, colSpan: 2}
 }
