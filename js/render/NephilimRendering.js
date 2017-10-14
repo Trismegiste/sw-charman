@@ -72,7 +72,8 @@ NephilimRendering.prototype.getDocument = function () {
             this.getHandicapDescription(0),
             this.getAtoutDescription(0),
             this.getHandicapDescription(1),
-            this.getAtoutDescription(1)
+            this.getAtoutDescription(1),
+            this.getFightingStat()
         ],
         styles: {
             verticalAlign: {

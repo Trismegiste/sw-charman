@@ -38,8 +38,6 @@
             try {
                 for (var idx in SwCharman.model.cloudList) {
                     var character = SwCharman.model.cloudList[idx]
-                    if (character.type != 'humain')
-                        continue
                     var docDefinition = factory.create(character);
                     compil.content.push(docDefinition.getDocument().content)
                 }

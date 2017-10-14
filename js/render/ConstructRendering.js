@@ -27,7 +27,8 @@ ConstructRendering.prototype.getDocument = function () {
                 layout: 'noBorders'
             },
             {text: 'Notes'},
-            this.getAtoutDescription(0)
+            this.getAtoutDescription(0),
+            this.getFightingStat()
         ],
         styles: {
             verticalAlign: {
