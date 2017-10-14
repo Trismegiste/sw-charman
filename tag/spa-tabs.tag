@@ -22,9 +22,6 @@
         <div class="pure-u-1-1 {hidden: !isActiveTab('detail')}">
             <content-detail></content-detail>
         </div>
-        <div class="pure-u-1-1 {hidden: !isActiveTab('dump')}">
-            <dump-database></dump-database>
-        </div>
     </div>
     <script>
         this.menuTab = [
