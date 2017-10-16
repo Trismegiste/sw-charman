@@ -42,7 +42,7 @@
                     compil.content.push(docDefinition.getDocument().content)
                 }
 
-                pdfMake.createPdf(compil).download('bestiaire.pdf')
+                pdfMake.createPdf(compil).download('bestiaire-listing.pdf')
             } catch (e) {
                 document.getElementById('log').innerHTML = "Error: " + (e.stack || e)
             }
