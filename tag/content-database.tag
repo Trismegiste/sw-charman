@@ -21,8 +21,9 @@
         this.onAppend = function (event) {
             var pc = self.model.findByName(event.item.name)
             if (pc) {
-                self.model.characterList.push(pc)
-                self.notice(pc.name + ' ajouté', 'primary')
+                var tmp = self.model.clone(pc)
+                self.model.characterList.push(tmp)
+                self.notice(tmp.name + ' ajouté', 'primary')
             }
         }
 
