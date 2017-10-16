@@ -1349,6 +1349,14 @@
         "subgroup": "background"
     },
     {
+        "titre": "Ka add.",
+        "descr": "Un Ka additionnel constitue l'essence de l'être-Ka",
+        "enabled": "1",
+        "info": "1",
+        "group": "monstre",
+        "subgroup": "background"
+    },
+    {
         "titre": "Invulnérabilité de Kabbale",
         "descr": "Invulnérable aux dégâts physiques sauf aux armes enduites de sang",
         "enabled": "1",
