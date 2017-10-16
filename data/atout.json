@@ -1397,6 +1397,22 @@
         "subgroup": "combat"
     },
     {
+        "titre": "Pouv. Ensnare",
+        "descr": "Pouvoir ensnaring (3). Jet de Combat. MBT/LBT = +2/+4. SaveRoll-4 = +2",
+        "enabled": "1",
+        "info": "1",
+        "group": "monstre",
+        "subgroup": "combat"
+    },
+    {
+        "titre": "Pouv. Stun",
+        "descr": "Pouvoir Stun (2). Jet de Combat Touch Attack. MBT/LBT = +2/+4. SaveRoll-2 = +1",
+        "enabled": "1",
+        "info": "1",
+        "group": "monstre",
+        "subgroup": "combat"
+    },
+    {
         "titre": "Pouv. Toughness",
         "descr": "Pouvoir bonus de Résistance. Physique ou Magique indépendant",
         "enabled": "1",
