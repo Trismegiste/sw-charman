@@ -1413,6 +1413,14 @@
         "subgroup": "combat"
     },
     {
+        "titre": "Résistant",
+        "descr": "2 états Secoué ne provoquent pas une blessure",
+        "enabled": "1",
+        "info": "0",
+        "group": "monstre",
+        "subgroup": "combat"
+    },
+    {
         "titre": "Taille Énorme",
         "descr": "Rés +8 à +10+ et Toucher +4",
         "enabled": "1",
