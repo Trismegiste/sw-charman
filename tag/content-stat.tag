@@ -18,26 +18,34 @@
                     <i class="icon-address-card-o"></i>
                 </a>
             </div>
-            <div class="pure-u-1-4"><label>Attaq.</label></div>
-            <div class="pure-u-1-4">
-                <select name="attack" value="{model.current.attack}" data-is="dice-option" class="pure-input-1"></select>
+            <div class="pure-u-1-4"><label>Attaq. 1</label></div>
+            <div class="pure-u-3-8">
+                <input type="text" class="pure-input-1"/>
+            </div>
+            <div class="pure-u-3-8">
+                <input type="text" class="pure-input-1"/>
+            </div>
+            <div class="pure-u-1-4"><label>Attaq. 2</label></div>
+            <div class="pure-u-3-8">
+                <input type="text" class="pure-input-1"/>
+            </div>
+            <div class="pure-u-3-8">
+                <input type="text" class="pure-input-1"/>
             </div>
             <div class="pure-u-1-4"><label>Parade</label></div>
             <div class="pure-u-1-4"><input type="number" value="{model.current.toHit}" name="toHit" class="pure-input-1"/></div>
-            <div class="pure-u-1-4"><label>Dégâts</label></div>
-            <div class="pure-u-3-4">
-                <input type="text" name="damage" value="{ model.current.damage }" class="pure-input-1"/>
+            <div class="pure-u-1-4"><label>Esquive</label></div>
+            <div class="pure-u-1-4"><input type="number" value="{model.current.toShoot}" name="toShoot" class="pure-input-1"/></div>
+            <div class="pure-u-1-4"><label>Jeton</label></div>
+            <div class="pure-u-1-4">
+                <select name="token" value="{model.current.spentToken}" max="{model.current.getMaxToken()}" data-is="token-option" class="pure-input-1">
+                </select>
             </div>
             <div class="pure-u-1-2">
                 <label class="pure-checkbox">
                     Secoué
                     <input type="checkbox" name="shaken" checked="{ model.current.shaken }"/>
                 </label>
-            </div>
-            <div class="pure-u-1-4"><label>Jeton</label></div>
-            <div class="pure-u-1-4">
-                <select name="token" value="{model.current.spentToken}" max="{model.current.getMaxToken()}" data-is="token-option" class="pure-input-1">
-                </select>
             </div>
             <div class="pure-u-1-4"><label>Résis.</label></div>
             <div class="pure-u-1-4"><input type="number" value="{model.current.toughness}" name="toughness" class="pure-input-1"/></div>
