@@ -228,28 +228,54 @@ AbstractRendering.prototype.getHandicapDescription = function (group) {
 }
 
 AbstractRendering.prototype.getFightingStat = function () {
-    return {
-        table: {
-            headerRows: 1,
-            widths: ['20%', '40%', '20%', '20%'],
-            body: [
-                [
-                    'Attaque',
-                    'Dégâts',
-                    'Parade',
-                    'Résistance'
-                ],
-                [
-                    this.getDiceText(this.character.attack),
-                    this.character.damage,
-                    this.character.toHit,
-                    this.character.toughness
-                ],
-                [{text: this.character.detailedNote, colSpan: 4}, {}, {}, {}]
-            ]
+    return  [
+        {
+            table: {
+                headerRows: 1,
+                widths: ['25%', '25%', '25%', '25%'],
+                body: [
+                    [
+                        'Attaque 1',
+                        'Dégâts 1',
+                        'Attaque 2',
+                        'Dégâts 2'
+                    ],
+                    [
+                        this.character.attack[0],
+                        this.character.damage[0],
+                        this.character.attack[1],
+                        this.character.damage[1]
+                    ]
+                ]
+            },
+            layout: 'lightHorizontalLines',
+            margin: [0, 5]
         },
-        layout: 'lightHorizontalLines',
-        margin: [0, 5],
-        pageBreak: 'after'
-    }
+        {
+            table: {
+                headerRows: 1,
+                widths: ['25%', '25%', '25%', '25%'],
+                body: [
+                    [
+                        'Parade',
+                        'Esquive',
+                        'Résistance',
+                        'RM'
+                    ],
+                    [
+                        this.character.toHit,
+                        this.character.toShoot,
+                        this.character.toughness,
+                        ''
+                    ]
+                ]
+            },
+            layout: 'lightHorizontalLines',
+            margin: [0, 5]
+        },
+        {
+            text: this.character.detailedNote,
+            pageBreak: 'after'
+        }
+    ]
 }
