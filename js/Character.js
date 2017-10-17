@@ -7,12 +7,13 @@ var Character = function () {
     this.currentWounds = 0;
     this.spentToken = 0;
     this.currentFatigue = 0;
-    this.attack = 0;
-    this.damage = '';
+    this.attack = ['',''];
+    this.damage = ['',''];
     this.toughness = 4;
     this.target = '';
     this.shaken = false;
     this.toHit = 2;
+    this.toShoot = 4;
     // detail
     this.type = 'virtual';
     this.attribute = {}
