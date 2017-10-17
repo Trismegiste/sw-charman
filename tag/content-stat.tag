@@ -18,19 +18,16 @@
                     <i class="icon-address-card-o"></i>
                 </a>
             </div>
-            <div class="pure-u-1-4"><label>Attaq. 1</label></div>
-            <div class="pure-u-3-8">
-                <input type="text" class="pure-input-1"/>
-            </div>
-            <div class="pure-u-3-8">
-                <input type="text" class="pure-input-1"/>
-            </div>
-            <div class="pure-u-1-4"><label>Attaq. 2</label></div>
-            <div class="pure-u-3-8">
-                <input type="text" class="pure-input-1"/>
-            </div>
-            <div class="pure-u-3-8">
-                <input type="text" class="pure-input-1"/>
+            <div class="pure-u-1">
+                <div class="pure-g" each="{idx, k in [1, 2]}">
+                    <div class="pure-u-1-4"><label>Att #{idx}</label></div>
+                    <div class="pure-u-3-8">
+                        <input type="text" value="{model.current.attack[k]}" name="attack" class="pure-input-1"/>
+                    </div>
+                    <div class="pure-u-3-8">
+                        <input type="text" value="{model.current.damage[k]}" name="damage" class="pure-input-1"/>
+                    </div>
+                </div>
             </div>
             <div class="pure-u-1-4"><label>Parade</label></div>
             <div class="pure-u-1-4"><input type="number" value="{model.current.toHit}" name="toHit" class="pure-input-1"/></div>
@@ -111,9 +108,12 @@
             var obj = self.model.current;
             obj.name = self.name.value;
             obj.toughness = self.toughness.value;
-            obj.attack = self.attack.value;
-            obj.damage = self.damage.value;
+            for (var k = 0; k < 2; k++) {
+                obj.attack[k] = self.attack[k].value;
+                obj.damage[k] = self.damage[k].value;
+            }
             obj.toHit = self.toHit.value;
+            obj.toShoot = self.toShoot.value;
             obj.currentWounds = self.wounds.value;
             obj.shaken = self.shaken.checked;
             obj.spentToken = self.token.value;
