@@ -266,7 +266,7 @@ AbstractRendering.prototype.getFightingStat = function () {
                         this.character.toHit,
                         this.character.toShoot,
                         this.character.toughness,
-                        ''
+                        this.character.magicToughness
                     ]
                 ]
             },
