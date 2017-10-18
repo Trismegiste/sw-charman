@@ -5,11 +5,13 @@
 var Character = function () {
     this.name = '';
     this.currentWounds = 0;
+    this.magicWounds = 0;
     this.spentToken = 0;
     this.currentFatigue = 0;
     this.attack = ['',''];
     this.damage = ['',''];
     this.toughness = 4;
+    this.magicToughness = 0;
     this.target = '';
     this.shaken = false;
     this.toHit = 2;
@@ -34,6 +36,7 @@ Character.prototype = {
     },
     restart: function () {
         this.currentWounds = 0;
+        this.magicWounds = 0;
         this.spentToken = 0;
         this.currentFatigue = 0;
         this.target = '';
