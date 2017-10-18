@@ -116,7 +116,12 @@ Model.prototype = {
     },
     importFromJson: function (rows) {
         rows.sort(function (a, b) {
-            return a.name.localeCompare(b.name)
+            var c = a.type.localeCompare(b.type)
+            if (c === 0) {
+                c = a.name.localeCompare(b.name)
+            }
+
+            return c
         })
 
         this.cloudList = []
