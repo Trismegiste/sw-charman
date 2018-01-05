@@ -53,10 +53,6 @@ form label.centered {
     font-size: 140%;
 }
 
-.checkable-listing input[type=radio] {
-    margin-right: 1em;
-}
-
 h2 {
     font-weight: 100;
 }
@@ -99,4 +95,8 @@ h2 {
 .direct-link a {
     text-decoration: none;
     color: graytext;
+}
+
+content-database div.character {
+    padding-bottom: 0.6em;
 }

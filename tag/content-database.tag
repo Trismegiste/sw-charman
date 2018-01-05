@@ -1,15 +1,13 @@
 <content-database>
-    <table class="pure-table pure-table-striped checkable-listing" style="width: 100%">
-        <tr each="{ model.cloudList }">
-            <td>
-                <i class="icon-{ type }"></i>
-                <a href="#" onclick="{
-                            parent.onAppend
-                        }">{name}</a>
-                <i if="{wildCard}" class="icon-wildcard"></i>
-            </td>
-        </tr>
-    </table>
+    <div class="pure-g">
+        <div class="pure-u-1-3 character" each="{ model.cloudList }">
+            <i class="icon-{ type }"></i>
+            <a href="#" onclick="{
+                        parent.onAppend
+                    }">{name}</a>
+            <i if="{wildCard}" class="icon-wildcard"></i>
+        </div>
+    </div>
     <div class="button-spacing">
         <google-drive-doc></google-drive-doc>
     </div>
