@@ -1,6 +1,6 @@
 <content-database>
     <div class="pure-g">
-        <div class="pure-u-1-3 character" each="{ model.cloudList }">
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3 character" each="{ model.cloudList }">
             <i class="icon-{ type }"></i>
             <a href="#" onclick="{
                         parent.onAppend
