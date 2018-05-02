@@ -59,7 +59,7 @@
                 if (indices.length >= 2) {
                     for (var i in indices) {
                         var changedIdx = indices[i]
-                        self.model.characterList[changedIdx].name = currName + ' ' + (i + 1)
+                        self.model.characterList[changedIdx].name = currName + ' ' + (1 + parseInt(i))
                     }
                 }
             }
