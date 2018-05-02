@@ -10,10 +10,13 @@
         </ul>
     </nav>
     <footer class="pure-g button-spacing">
-        <div class="pure-u-1-2"><a class="pure-button button-primary" onclick="{
+        <div class="pure-u-1-3"><a class="pure-button" onclick="{
+                    nonDuplicatedNaming
+                }">N.D.N</a></div>
+        <div class="pure-u-1-3"><a class="pure-button button-primary" onclick="{
                     restore
                 }">Load</a></div>
-        <div class="pure-u-1-2"><a class="pure-button button-error" onclick="{
+        <div class="pure-u-1-3"><a class="pure-button button-error" onclick="{
                     persist
                 }">Save</a></div>
     </footer>
@@ -23,22 +26,45 @@
         this.model = SwCharman.model
         var self = this
 
-        persist() {
+        this.persist = function () {
             SwCharman.repository.saveCurrent(self.model.characterList);
             self.notice('Etat courant enregistré', 'error')
         };
 
-        restore() {
+        this.restore = function () {
             self.model.characterList = [];
             SwCharman.repository.loadCurrent()
-                .then(function (arr) {
-                    console.log('load ' + arr.length);
-                    arr.forEach(function (item) {
-                        self.model.characterList.push(item);
+                    .then(function (arr) {
+                        console.log('load ' + arr.length);
+                        arr.forEach(function (item) {
+                            self.model.characterList.push(item);
+                        })
+                        self.update();
                     })
-                    self.update();
-                })
         };
+
+        this.nonDuplicatedNaming = function () {
+            var nameCount = {}
+            for (var k in  self.model.characterList) {
+                var curr = self.model.characterList[k]
+                if (nameCount[curr.name] === undefined) {
+                    nameCount[curr.name] = []
+                }
+                nameCount[curr.name].push(k)
+            }
+
+            console.log(nameCount)
+            for (var currName in nameCount) {
+                var indices = nameCount[currName]
+                if (indices.length >= 2) {
+                    for (var i in indices) {
+                        var changedIdx = indices[i]
+                        self.model.characterList[changedIdx].name = currName + ' ' + (i + 1)
+                    }
+                }
+            }
+        }
+
 
     </script>
 </content-list>
