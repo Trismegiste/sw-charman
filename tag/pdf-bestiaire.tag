@@ -38,13 +38,18 @@
             try {
                 for (var idx in SwCharman.model.cloudList) {
                     var character = SwCharman.model.cloudList[idx]
-                    var docDefinition = factory.create(character);
-                    compil.content.push(docDefinition.getDocument().content)
+                    var docDefinition = factory.create(character)
+                    try {
+                        compil.content.push(docDefinition.getDocument().content)
+                    } catch (e) {
+                        e.character = character.name
+                        throw e
+                    }
                 }
 
                 pdfMake.createPdf(compil).download('bestiaire-listing.pdf')
             } catch (e) {
-                document.getElementById('log').innerHTML = "Error: " + (e.stack || e)
+                document.getElementById('log').innerHTML = "Error in " + e.character + " : " + (e.stack || e)
             }
         }
     </script>
