@@ -1539,7 +1539,7 @@
     {
         "titre": "Basaltique",
         "prerequis": "B, Nephilim",
-        "descr": "Armure phys de 6. 1 action. KAD FD RM[Ka-Soleil]. 5 (10) rd",
+        "descr": "Armure phys de 6. 1 action. KAD FD 4. 3 (10) rd",
         "enabled": "1",
         "info": "1",
         "group": "antediluvien",
