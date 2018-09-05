@@ -1665,7 +1665,7 @@
     {
         "titre": "Tueur de dragon",
         "prerequis": "L, Véronique",
-        "descr": "+1d8 dégats physiques & +1d6 dégâts magiques sur Taille >= 3. Portée contact. ",
+        "descr": "+1d10 dégats physiques & magiques sur ED Taille >= 3. Portée contact. ",
         "enabled": "1",
         "info": "0",
         "group": "antediluvien",
