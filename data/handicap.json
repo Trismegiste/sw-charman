@@ -413,7 +413,7 @@
         {
             "titre": "Petite stase",
             "niveau": "Mineur",
-            "descr": "Les 5 contenances sont de 1/1/2/3/5",
+            "descr": "La stase contient 4 puces au lieu de 10 et le jet d'emprisonnement est effectué avec un d4 au lieu d'un d10",
             "enabled": "1"
         },
         {
