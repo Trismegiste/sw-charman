@@ -7,7 +7,7 @@ AbstractRendering.prototype.getDocument = function () {
 }
 
 AbstractRendering.prototype.getDiceText = function (val) {
-    var choice = [];
+    var choice = ['-']
     for (var k = 4; k <= 12; k += 2) {
         choice[k] = 'd' + k
     }
@@ -225,4 +225,57 @@ AbstractRendering.prototype.getHandicapDescription = function (group) {
     }
 
     return {text: listing, fontSize: 8}
+}
+
+AbstractRendering.prototype.getFightingStat = function () {
+    return  [
+        {
+            table: {
+                headerRows: 1,
+                widths: ['25%', '25%', '25%', '25%'],
+                body: [
+                    [
+                        'Attaque 1',
+                        'Dégâts 1',
+                        'Attaque 2',
+                        'Dégâts 2'
+                    ],
+                    [
+                        this.character.attack[0],
+                        this.character.damage[0],
+                        this.character.attack[1],
+                        this.character.damage[1]
+                    ]
+                ]
+            },
+            layout: 'lightHorizontalLines',
+            margin: [0, 5]
+        },
+        {
+            table: {
+                headerRows: 1,
+                widths: ['25%', '25%', '25%', '25%'],
+                body: [
+                    [
+                        'Parade',
+                        'Esquive',
+                        'Résistance',
+                        'RM'
+                    ],
+                    [
+                        this.character.toHit,
+                        this.character.toShoot,
+                        this.character.toughness,
+                        this.character.magicToughness
+                    ]
+                ]
+            },
+            layout: 'lightHorizontalLines',
+            margin: [0, 5]
+        },
+        {
+            text: this.character.detailedNote,
+            pageBreak: 'after'
+        }
+    ]
 }

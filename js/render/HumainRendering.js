@@ -36,7 +36,8 @@ HumainRendering.prototype.getDocument = function () {
             },
             {text: 'Notes'},
             this.getHandicapDescription(0),
-            this.getAtoutDescription(0)
+            this.getAtoutDescription(0),
+            this.getFightingStat()
         ],
         styles: {
             verticalAlign: {
@@ -49,5 +50,8 @@ HumainRendering.prototype.getDocument = function () {
 HumainRendering.prototype.getIdentite = function () {
     var title = 'Humain '
             + this.character.name.charAt(0).toUpperCase() + this.character.name.slice(1)
+    if (this.character.wildCard) {
+        title += ' [J]'
+    }
     return {text: title, margin: [0, 0, 0, 6], fontSize: 16, colSpan: 2}
 }

@@ -11,6 +11,9 @@
     <div class="button-spacing">
         <google-drive-doc></google-drive-doc>
     </div>
+    <div class="button-spacing">
+        <pdf-bestiaire></pdf-bestiaire>
+    </div>
     <script>
         this.mixin('toasty')
         this.model = SwCharman.model

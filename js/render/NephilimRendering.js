@@ -72,7 +72,8 @@ NephilimRendering.prototype.getDocument = function () {
             this.getHandicapDescription(0),
             this.getAtoutDescription(0),
             this.getHandicapDescription(1),
-            this.getAtoutDescription(1)
+            this.getAtoutDescription(1),
+            this.getFightingStat()
         ],
         styles: {
             verticalAlign: {
@@ -87,6 +88,9 @@ NephilimRendering.prototype.getIdentite = function () {
     title = title.charAt(0).toUpperCase() + title.slice(1)
             + ' '
             + this.character.name.charAt(0).toUpperCase() + this.character.name.slice(1)
+    if (this.character.wildCard) {
+        title += ' [J]'
+    }
     return {text: title, margin: [0, 6, 0, 6], fontSize: 16}
 }
 
@@ -101,6 +105,9 @@ NephilimRendering.prototype.getHistoire = function () {
 
 NephilimRendering.prototype.getAspect = function () {
     var meta = this.character.metamorphe;
+    if (!meta.nom) {
+        throw new Error('Métamorphe indéfini pour ' + this.character.name)
+    }
     var rm = Math.floor(this.character.pentacle.initiation / 2) + 2
     var asp = 12 - rm
 
