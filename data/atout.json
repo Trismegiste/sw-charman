@@ -1065,7 +1065,7 @@
         "titre": "Effet-Dragon",
         "prerequis": "Nephilim",
         "descr": "Compagnon Effet-Dragon. INI du nephilim -1TDD. Ka non-opposé. Retrouve en 2d6 jours",
-        "enabled": 1,
+        "enabled": 0,
         "info": 0,
         "group": "nephilim",
         "subgroup": "général"
